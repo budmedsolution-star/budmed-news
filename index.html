@@ -95,7 +95,7 @@
         </div>
         <a href="#" class="body-sm" style="font-weight:500;" data-ru="Все статьи →" data-en="All articles →">Все статьи →</a>
       </div>
-      <div class="articles-grid">
+      <div class="articles-grid" data-category="ai-health">
 
         <!-- Article 1 (Featured) -->
         <article class="news-card featured" data-category="ai-health">
@@ -214,7 +214,7 @@
           <span class="section-badge badge-health">Здоровье</span>
         </div>
       </div>
-      <div class="articles-grid">
+      <div class="articles-grid" data-category="health">
 
         <!-- Article 6 -->
         <article class="news-card" data-category="health">
@@ -311,7 +311,7 @@
           <span class="section-badge badge-guidelines">Гайдлайны</span>
         </div>
       </div>
-      <div class="articles-grid">
+      <div class="articles-grid" data-category="guidelines">
 
         <!-- Article 10 (CKD-MBD / Osteoporosis — Free, full article) -->
         <article class="news-card" data-category="guidelines">
@@ -474,7 +474,7 @@
           <span class="section-badge badge-ecosystem">BudMed</span>
         </div>
       </div>
-      <div class="articles-grid">
+      <div class="articles-grid" data-category="ecosystem">
 
         <!-- Article 13 -->
         <article class="news-card" data-category="ecosystem">
@@ -596,6 +596,103 @@
     <svg viewBox="0 0 20 20" fill="none"><path d="M10 15V5M5 10l5-5 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
 
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <script>
+  (function(){
+    window.__renderCards = function(){}; // placeholder, set below
+    var SVG_MAP = {
+      'ai-health': '<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="450" fill="#e8eaf6"/><rect x="300" y="80" width="200" height="280" rx="16" fill="#c5cae9" stroke="#3949ab" stroke-width="2"/><circle cx="400" cy="180" r="50" fill="#e8eaf6" stroke="#7986cb" stroke-width="2"/><path d="M380 170 l10 20 10-20" fill="none" stroke="#3949ab" stroke-width="3" stroke-linecap="round"/><line x1="400" y1="200" x2="400" y2="260" stroke="#3949ab" stroke-width="2"/><circle cx="400" cy="280" r="15" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5"/><text x="400" y="380" text-anchor="middle" fill="#3949ab" font-size="16" font-weight="600">AI &amp; Health</text></svg>',
+      'health': '<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="450" fill="#e8f5e9"/><rect x="320" y="100" width="160" height="240" rx="12" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/><path d="M400 160 v-30 M385 145 h30" stroke="#2e7d32" stroke-width="4" stroke-linecap="round"/><circle cx="400" cy="280" r="20" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5"/><text x="400" y="380" text-anchor="middle" fill="#2e7d32" font-size="16" font-weight="600">Health &amp; Pharmacy</text></svg>',
+      'guidelines': '<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="450" fill="#e8eaf6"/><rect x="280" y="60" width="240" height="320" rx="12" fill="#c5cae9" stroke="#3949ab" stroke-width="2"/><rect x="310" y="90" width="180" height="14" rx="4" fill="#3949ab" opacity="0.4"/><rect x="310" y="300" width="180" height="30" rx="8" fill="#5c6bc0" opacity="0.3"/><text x="400" y="410" text-anchor="middle" fill="#3949ab" font-size="16" font-weight="600">Guidelines</text></svg>',
+      'ecosystem': '<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="450" fill="#e8f5e9"/><circle cx="400" cy="200" r="120" fill="#86efac" opacity="0.2" stroke="#006d3e" stroke-width="2"/><circle cx="400" cy="130" r="22" fill="#006d3e" opacity="0.6"/><circle cx="310" cy="240" r="22" fill="#006d3e" opacity="0.4"/><circle cx="490" cy="240" r="22" fill="#006d3e" opacity="0.4"/><text x="400" y="380" text-anchor="middle" fill="#006d3e" font-size="16" font-weight="600">BudMed Ecosystem</text></svg>'
+    };
+    var BADGE_MAP = {
+      'ai-health': 'AI',
+      'health': 'Здоровье',
+      'guidelines': 'Гайдлайны',
+      'ecosystem': 'BudMed'
+    };
+    var BADGE_CLASS = {
+      'ai-health': 'badge-ai',
+      'health': 'badge-health',
+      'guidelines': 'badge-guidelines',
+      'ecosystem': 'badge-ecosystem'
+    };
+
+    function renderCard(a) {
+      var lang = localStorage.getItem('budmed-news-lang') || 'ru';
+      var t = a.title[lang] || a.title.ru;
+      var ex = a.excerpt[lang] || a.excerpt.ru;
+      var cat = a.category;
+      var badge = BADGE_MAP[cat] || cat;
+      var badgeCls = BADGE_CLASS[cat] || '';
+      var svg = SVG_MAP[cat] || SVG_MAP['ai-health'];
+      var href = a.file ? a.file : '#';
+      var premium = a.premium ? ' premium-locked' : '';
+      var premiumOverlay = a.premium ? '<div class="premium-overlay"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span data-ru="\u0421 \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u043e\u0439" data-en="With subscription">\u0421 \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u043e\u0439</span></div>' : '';
+      var premiumBlur = a.premium ? '<div class="premium-blur"><div class="premium-blur-content"><p class="body-sm" style="color:var(--on-surface-variant);margin-bottom:8px;" data-ru="\u0427\u0438\u0442\u0430\u0442\u044c \u0434\u0430\u043b\u0435\u0435 \u2014 \u0441 \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u043e\u0439" data-en="Read more \u2014 with subscription">\u0427\u0438\u0442\u0430\u0442\u044c \u0434\u0430\u043b\u0435\u0435 \u2014 \u0441 \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u043e\u0439</p></div><a href="#subscribe" class="premium-cta"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span data-ru="\u0427\u0438\u0442\u0430\u0442\u044c \u0434\u0430\u043b\u0435\u0435 \u2014 \u0441 \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u043e\u0439" data-en="Read more \u2014 with subscription">\u0427\u0438\u0442\u0430\u0442\u044c \u0434\u0430\u043b\u0435\u0435 \u2014 \u0441 \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u043e\u0439</span></a></div>' : '';
+      var dateFormatted = a.date ? new Date(a.date + 'T00:00:00').toLocaleDateString(lang === 'en' ? 'en-US' : 'ru-RU', {day:'numeric',month:'short',year:'numeric'}) : '';
+      return '<article class="news-card' + premium + '" data-category="' + cat + '">'
+        + '<div class="card-thumbnail">'
+        + svg
+        + '<span class="badge ' + badgeCls + '">' + badge + '</span>'
+        + '<span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span>' + a.read_time + ' ' + (lang==='en'?'min':'\u043c\u0438\u043d') + '</span></span>'
+        + premiumOverlay
+        + '</div>'
+        + '<div class="card-body">'
+        + '<h3 class="card-title"><a href="' + href + '">' + t + '</a></h3>'
+        + '<p class="card-excerpt">' + ex + '</p>'
+        + premiumBlur
+        + '<div class="card-meta"><time datetime="' + a.date + '"><span>' + dateFormatted + '</span></time><span class="category">' + badge + '</span></div>'
+        + '</div></article>';
+    }
+
+    function loadArticles() {
+      fetch('_data/articles.yml?t=' + Date.now())
+        .then(function(r){ return r.text(); })
+        .then(function(yaml){
+          var articles = jsyaml.load(yaml);
+          if (!articles || !articles.length) return;
+          document.querySelectorAll('.articles-grid[data-category]').forEach(function(grid){
+            var cat = grid.getAttribute('data-category');
+            var filtered = articles.filter(function(a){ return a.category === cat; });
+            filtered.sort(function(a,b){ return (a.order||0)-(b.order||0); });
+            if (filtered.length) {
+              grid.innerHTML = filtered.map(renderCard).join('');
+            }
+          });
+          if (typeof window.__reapplyAnimations === 'function') window.__reapplyAnimations();
+        })
+        .catch(function(e){ console.warn('CMS: YAML load failed, using static cards', e); });
+    }
+
+    window.__renderCards = loadArticles;
+
+    // Re-apply card animations after dynamic render
+    function reapplyAnimations() {
+      if (!('IntersectionObserver' in window)) return;
+      var cards = document.querySelectorAll('.news-card');
+      var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';obs.unobserve(e.target);}
+        });
+      },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+      cards.forEach(function(c){
+        if(!c.dataset.animated){
+          c.style.opacity='0';c.style.transform='translateY(20px)';c.style.transition='opacity 0.5s ease, transform 0.5s ease';
+          c.dataset.animated='1';obs.observe(c);
+        }
+      });
+    }
+    window.__reapplyAnimations = reapplyAnimations;
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadArticles);
+    } else {
+      loadArticles();
+    }
+  })();
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>

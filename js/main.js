@@ -60,6 +60,15 @@
         el.setAttribute('placeholder', placeholder);
       }
     });
+
+    // Re-render CMS-driven article cards
+    if (typeof window.__renderCards === 'function') {
+      window.__renderCards();
+      // Re-apply animations after re-render
+      if (typeof window.__reapplyAnimations === 'function') {
+        setTimeout(function(){ window.__reapplyAnimations(); }, 100);
+      }
+    }
   }
 
   // ─── 2. Sticky Header ───

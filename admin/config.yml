@@ -1,0 +1,106 @@
+backend:
+  name: github
+  repo: budmedsolution-star/budmed-news
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "articles"
+    label: "Articles"
+    folder: "_data"
+    create: true
+    extension: "yml"
+    format: "yaml"
+    slug: "{{slug}}"
+    path: "{{slug}}"
+    summary: "{{title.ru}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "object"
+        fields:
+          - { label: "Русский", name: "ru", widget: "string", required: true }
+          - { label: "English", name: "en", widget: "string", required: true }
+
+      - label: "Excerpt"
+        name: "excerpt"
+        widget: "object"
+        fields:
+          - { label: "Русский", name: "ru", widget: "text", required: true }
+          - { label: "English", name: "en", widget: "text", required: true }
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "AI & Здоровье", value: "ai-health" }
+          - { label: "Здоровье & Фармакология", value: "health" }
+          - { label: "Клинические гайдлайны", value: "guidelines" }
+          - { label: "Об экосистеме BudMed", value: "ecosystem" }
+
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+
+      - label: "Read Time (min)"
+        name: "read_time"
+        widget: "number"
+        value_type: "int"
+        default: 5
+
+      - label: "Premium"
+        name: "premium"
+        widget: "boolean"
+        default: false
+
+      - label: "Custom HTML Article"
+        name: "manual_html"
+        widget: "boolean"
+        default: false
+        hint: "Enable if the full article is a standalone HTML file in articles/"
+
+      - label: "Article File"
+        name: "file"
+        widget: "string"
+        required: false
+        hint: "Relative path from repo root, e.g. articles/my-article.html"
+
+      - label: "Order"
+        name: "order"
+        widget: "number"
+        value_type: "int"
+        default: 0
+        hint: "Lower numbers appear first within their section"
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "hero"
+        label: "Hero Section"
+        file: "_data/settings.yml"
+        fields:
+          - label: "Hero Title"
+            name: "hero_title"
+            widget: "object"
+            fields:
+              - { label: "Русский", name: "ru", widget: "string" }
+              - { label: "English", name: "en", widget: "string" }
+
+          - label: "Hero Subtitle"
+            name: "hero_subtitle"
+            widget: "object"
+            fields:
+              - { label: "Русский", name: "ru", widget: "text" }
+              - { label: "English", name: "en", widget: "text" }
+
+          - label: "CTA Text"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Русский", name: "ru", widget: "string" }
+              - { label: "English", name: "en", widget: "string" }

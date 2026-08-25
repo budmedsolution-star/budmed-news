@@ -11,6 +11,10 @@
 !assets/**
 !articles/
 !articles/**
+!admin/
+!admin/**
+!_data/
+!_data/**
 !README.md
 !.gitignore
 

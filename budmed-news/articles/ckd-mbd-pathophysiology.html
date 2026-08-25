@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Патофизиология ХБП-МКН: Wnt, активин, FGF23 — BudMed News</title>
+  <meta name="description" content="Обзор ключевых механизмов ХБП-МКН: ингибиторы Wnt (Dkk1), активин A, потеря клофо, гиперфосфатемия и кардиоваскулярный риск. По Hruska et al., 2015." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="BudMed &amp; MedCore" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    .article-header {
+      background: linear-gradient(135deg, #1a237e 0%, #0d47a1 40%, #00838f 100%);
+      color: #fff;
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      margin-bottom: var(--space-2xl);
+    }
+    .article-header .breadcrumb {
+      font-size: 0.8125rem;
+      opacity: 0.7;
+      margin-bottom: var(--space-lg);
+    }
+    .article-header .breadcrumb a {
+      color: #fff;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
+    .article-header .breadcrumb a:hover { opacity: 1; }
+    .article-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: var(--space-md);
+      color: #fff;
+    }
+    @media (min-width: 768px) {
+      .article-header h1 { font-size: 2.5rem; }
+    }
+    .article-header .article-meta {
+      display: flex;
+      gap: var(--space-lg);
+      flex-wrap: wrap;
+      font-size: 0.875rem;
+      opacity: 0.85;
+    }
+    .article-header .article-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .article-body {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 var(--margin-mobile);
+    }
+    @media (min-width: 768px) {
+      .article-body { padding: 0 var(--margin-desktop); }
+    }
+
+    .article-body h2 {
+      font-size: 1.625rem;
+      font-weight: 700;
+      margin: var(--space-2xl) 0 var(--space-lg);
+      color: var(--on-surface);
+      padding-bottom: var(--space-sm);
+      border-bottom: 3px solid var(--primary);
+      display: inline-block;
+    }
+    .article-body h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: var(--space-xl) 0 var(--space-md);
+      color: var(--on-surface);
+    }
+    .article-body p {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      margin-bottom: var(--space-lg);
+      color: var(--on-surface);
+    }
+    .article-body ul, .article-body ol {
+      margin-bottom: var(--space-lg);
+      padding-left: var(--space-xl);
+    }
+    .article-body li {
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      margin-bottom: var(--space-sm);
+      color: var(--on-surface);
+    }
+    .article-body li::marker { color: var(--primary); }
+
+    .callout {
+      background: var(--surface-container-low);
+      border-left: 4px solid var(--primary);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin: var(--space-xl) 0;
+    }
+    .callout.warning {
+      background: #fff8e1;
+      border-left-color: #f57f17;
+    }
+    .callout.danger {
+      background: var(--error-container);
+      border-left-color: var(--error);
+    }
+    .callout.info {
+      background: #e3f2fd;
+      border-left-color: #1565c0;
+    }
+    .callout-title {
+      font-weight: 700;
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-sm);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .callout p:last-child { margin-bottom: 0; }
+
+    .data-table-wrapper {
+      overflow-x: auto;
+      margin: var(--space-xl) 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--outline-variant);
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9375rem;
+    }
+    .data-table th {
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 16px;
+      text-align: left;
+      white-space: nowrap;
+    }
+    .data-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--outline-variant);
+      vertical-align: top;
+    }
+    .data-table tbody tr:nth-child(even) {
+      background: var(--surface-container-low);
+    }
+    .data-table tbody tr:hover {
+      background: var(--primary-container);
+    }
+
+    .diagram-container {
+      margin: var(--space-xl) 0;
+      text-align: center;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--outline-variant);
+      background: var(--surface-container-lowest);
+      padding: var(--space-lg);
+    }
+    .diagram-container svg {
+      max-width: 100%;
+      height: auto;
+    }
+    .diagram-caption {
+      font-size: 0.8125rem;
+      color: var(--on-surface-variant);
+      margin-top: var(--space-sm);
+      font-style: italic;
+    }
+
+    .evidence-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .evidence-a { background: #c8e6c9; color: #1b5e20; }
+    .evidence-b { background: #fff9c4; color: #f57f17; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--primary);
+      margin-bottom: var(--space-xl);
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .article-section-divider {
+      border: none;
+      border-top: 1px solid var(--outline-variant);
+      margin: var(--space-2xl) 0;
+    }
+
+    .toc {
+      background: var(--surface-container-low);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg) var(--space-xl);
+      margin: var(--space-xl) 0;
+    }
+    .toc h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: var(--space-md);
+      color: var(--primary);
+    }
+    .toc ol {
+      padding-left: var(--space-lg);
+      counter-reset: toc-counter;
+      list-style: none;
+    }
+    .toc li {
+      counter-increment: toc-counter;
+      font-size: 0.9375rem;
+      line-height: 1.8;
+    }
+    .toc li::before {
+      content: counter(toc-counter) ". ";
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .toc a {
+      color: var(--on-surface);
+      text-decoration: none;
+    }
+    .toc a:hover { color: var(--primary); text-decoration: underline; }
+
+    .article-disclaimer {
+      background: var(--surface-container-low);
+      border-left: 4px solid var(--error);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin: var(--space-2xl) 0;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    .ref-list {
+      font-size: 0.875rem;
+      line-height: 1.65;
+    }
+    .ref-list li {
+      margin-bottom: var(--space-sm);
+      font-size: 0.875rem;
+      line-height: 1.65;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo" aria-label="BudMed News Home">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="28" height="28" rx="8" fill="#006d3e"/>
+          <path d="M7 14h4l2-4 3 8 2-4h3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>BudMed News</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="../index.html#ai-health">AI в медицине</a>
+        <a href="../index.html#health">Здоровье</a>
+        <a href="../index.html#guidelines">Гайдлайны</a>
+        <a href="../index.html#ecosystem">Об экосистеме</a>
+      </nav>
+      <a href="../index.html" class="back-link" style="font-size:0.875rem;margin:0;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 4l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Назад</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="article-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">BudMed News</a> / <a href="../index.html#guidelines">Гайдлайны</a> / Патофизиология ХБП-МКН
+      </nav>
+      <h1>Патофизиология ХБП-МКН: Wnt, активин, FGF23 и сердечно-сосудистый риск</h1>
+      <div class="article-meta">
+        <span>
+          <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          14 мин чтения
+        </span>
+        <span>25 авг 2026</span>
+        <span><span class="evidence-badge evidence-b">Уровень B</span></span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <article class="article-body" role="article">
+
+      <a href="../index.html#guidelines" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 4l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Все статьи раздела «Гайдлайны»
+      </a>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h3>Содержание</h3>
+        <ol>
+          <li><a href="#intro">Введение: почему ХБП-МКН — системный кризис</a></li>
+          <li><a href="#wnt">Путь Wnt и ингибитор Dkk1: сигнал почечного ремонта</a></li>
+          <li><a href="#activin">Активин A: второй циркулирующий фактор</a></li>
+          <li><a href="#fgf23">FGF23: самый ранний биомаркер ХБП-МКН</a></li>
+          <li><a href="#klotho">Клофо: ко-рецептор, который теряется</a></li>
+          <li><a href="#hyperphos">Гиперфосфатемия: декомпенсация адаптации</a></li>
+          <li><a href="#vitd">Дефицит витамина D и вторичный гиперпаратиреоз</a></li>
+          <li><a href="#rod">Ренальная остеодистрофия: высокая vs низкая оборачиваемость</a></li>
+          <li><a href="#cvd">Сердечно-сосудистая патология: EndMT и кальцификация</a></li>
+          <li><a href="#future">Перспективы: терапевтические мишени</a></li>
+          <li><a href="#references">Литература</a></li>
+        </ol>
+      </nav>
+
+      <!-- ===== SECTION 1 ===== -->
+      <h2 id="intro">1. Введение: почему ХБП-МКН — системный кризис</h2>
+
+      <p>
+        Хроническая болезнь почек (ХБП) ассоциирована с <strong>экстремально высокой смертностью</strong>, основная часть которой обусловлена сердечно-сосудистыми заболеваниями (ССЗ). Даже при мягкой-умеренной ХБП (стадия 2–3) риск атеросклеротических ССЗ возрастает на <strong>87%</strong> у пациентов с сахарным диабетом 2 типа.
+      </p>
+
+      <div class="callout info">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#1565c0" stroke-width="1.5"/><path d="M8 5v4M8 11h.005" stroke="#1565c0" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Ключевая идея
+        </div>
+        <p>ХБП-МКН (chronic kidney disease – mineral bone disorder) — это <strong>синдром нарушения системной биологии</strong> между почкой, скелетом и сердечно-сосудистой системой. Три новых кардиоваскулярных фактора риска — <strong>гиперфосфатемия</strong>, <strong>сосудистая кальцификация</strong> и <strong>повышение FGF23</strong> — были обнаружены именно в рамках ХБП-МКН и позже подтверждены в общей популяции.</p>
+      </div>
+
+      <p>
+        Синдром начинается рано — уже на <strong>стадии 2 ХБП</strong> — и включает сосудистую дедифференциацию/кальцификацию, остеодистрофию, потерю клофо и нарастание секреции FGF23. До недавнего времени причины этого синдрома оставались в основном неизвестными.
+      </p>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 2 ===== -->
+      <h2 id="wnt">2. Путь Wnt и ингибитор Dkk1: сигнал почечного ремонта</h2>
+
+      <p>
+        При почечных заболеваниях реактивируются <strong>программы развития нефрогенеза</strong>, которые в норме молчаливы во взрослой почке. Среди них семейство <strong>Wnt</strong> (portmanteau от Wingless и Integrated) играет ключевую роль в пролиферации и полярности tubular эпителия.
+      </p>
+
+      <p>
+        Канонический Wnt-путь транскрипционно индуцирует экспрессию <strong>ингибиторов Wnt</strong> — секретируемых белков, ограничивающих дистанцию Wnt-стимуляции аутокринными/паракринными факторами. Среди ингибиторов Wnt — <strong>Dickkopf (Dkk)</strong>, <strong>склеростин</strong>, <strong>sFRP</strong> и <strong>Wise</strong>.
+      </p>
+
+      <div class="diagram-container">
+        <svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Схема: почечный ремонт и системные эффекты Wnt-ингибиторов">
+          <defs>
+            <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#e3f2fd"/>
+              <stop offset="100%" style="stop-color:#bbdefb"/>
+            </linearGradient>
+            <marker id="arrow-red" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+              <path d="M0,0 L8,3 L0,6" fill="#c62828"/>
+            </marker>
+            <marker id="arrow-green" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+              <path d="M0,0 L8,3 L0,6" fill="#2e7d32"/>
+            </marker>
+            <marker id="arrow-blue2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+              <path d="M0,0 L8,3 L0,6" fill="#1565c0"/>
+            </marker>
+          </defs>
+          <rect width="720" height="380" fill="url(#bg-grad)" rx="8"/>
+
+          <!-- Injured Kidney -->
+          <rect x="40" y="130" width="140" height="120" rx="12" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
+          <text x="110" y="165" text-anchor="middle" fill="#c62828" font-size="13" font-weight="700">Повреждённая</text>
+          <text x="110" y="185" text-anchor="middle" fill="#c62828" font-size="13" font-weight="700">почка</text>
+          <text x="110" y="215" text-anchor="middle" fill="#c62828" font-size="11">↑ Wnt-ингибиторы</text>
+          <text x="110" y="232" text-anchor="middle" fill="#c62828" font-size="11">↑ Активин A</text>
+
+          <!-- Arrow: Kidney -> Blood -->
+          <line x1="180" y1="190" x2="260" y2="190" stroke="#c62828" stroke-width="2" marker-end="url(#arrow-red)"/>
+          <text x="220" y="180" text-anchor="middle" fill="#c62828" font-size="10">секреция</text>
+
+          <!-- Blood pool -->
+          <rect x="270" y="100" width="180" height="180" rx="12" fill="#e8eaf6" stroke="#1565c0" stroke-width="2"/>
+          <text x="360" y="130" text-anchor="middle" fill="#1565c0" font-size="12" font-weight="700">Циркуляция</text>
+          <text x="360" y="155" text-anchor="middle" fill="#1a237e" font-size="11">↑ Dkk1 (Wnt-ингибитор)</text>
+          <text x="360" y="175" text-anchor="middle" fill="#1a237e" font-size="11">↑ Склеростин</text>
+          <text x="360" y="195" text-anchor="middle" fill="#1a237e" font-size="11">↑ Активин A</text>
+          <text x="360" y="215" text-anchor="middle" fill="#1a237e" font-size="11">↑ FGF23</text>
+          <text x="360" y="245" text-anchor="middle" fill="#1565c0" font-size="10" font-style="italic">(Wnt — аутокрин/паракрин;</text>
+          <text x="360" y="260" text-anchor="middle" fill="#1565c0" font-size="10" font-style="italic">ингибиторы — системные)</text>
+
+          <!-- Arrow: Blood -> Vasculature -->
+          <line x1="450" y1="160" x2="520" y2="100" stroke="#c62828" stroke-width="2" marker-end="url(#arrow-red)"/>
+
+          <!-- Arrow: Blood -> Skeleton -->
+          <line x1="450" y1="220" x2="520" y2="280" stroke="#c62828" stroke-width="2" marker-end="url(#arrow-red)"/>
+
+          <!-- Vasculature -->
+          <rect x="530" y="30" width="170" height="130" rx="12" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+          <text x="615" y="58" text-anchor="middle" fill="#c62828" font-size="12" font-weight="700">Сосуды</text>
+          <text x="615" y="80" text-anchor="middle" fill="#c62828" font-size="10">↓ Сократительные белки</text>
+          <text x="615" y="97" text-anchor="middle" fill="#c62828" font-size="10">Дедифференциация VSMC</text>
+          <text x="615" y="114" text-anchor="middle" fill="#c62828" font-size="10">Остеобластная трансформация</text>
+          <text x="615" y="131" text-anchor="middle" fill="#c62828" font-size="10">Кальцификация сосудов</text>
+          <text x="615" y="148" text-anchor="middle" fill="#c62828" font-size="10">EndMT</text>
+
+          <!-- Skeleton -->
+          <rect x="530" y="230" width="170" height="130" rx="12" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+          <text x="615" y="258" text-anchor="middle" fill="#e65100" font-size="12" font-weight="700">Скелет</text>
+          <text x="615" y="280" text-anchor="middle" fill="#e65100" font-size="10">↓ Формирование кости</text>
+          <text x="615" y="297" text-anchor="middle" fill="#e65100" font-size="10">↑ Секреция FGF23</text>
+          <text x="615" y="314" text-anchor="middle" fill="#e65100" font-size="10">Ренальная остеодистрофия</text>
+          <text x="615" y="331" text-anchor="middle" fill="#e65100" font-size="10">↑ Риск переломов</text>
+
+          <!-- Dkk1 neutralization -->
+          <rect x="250" y="310" width="220" height="50" rx="10" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+          <text x="360" y="332" text-anchor="middle" fill="#2e7d32" font-size="11" font-weight="700">Нейтрализация Dkk1</text>
+          <text x="360" y="350" text-anchor="middle" fill="#2e7d32" font-size="10">↑ Формирование кости · ↓ Кальцификация</text>
+        </svg>
+        <p class="diagram-caption">Рис. 1. Повреждённая почка секретирует Wnt-ингибиторы (Dkk1, склеростин) и активин A в циркуляцию, где они подавляют физиологические эффекты Wnt в сосудах и скелете. Нейтрализация Dkk1 антителом обратила изменения.</p>
+      </div>
+
+      <h3>Ключевой эксперимент: нейтрализация Dkk1</h3>
+      <p>
+        Моноклональное антитело к Dkk1 в моделях ранней ХБП приводило к:
+      </p>
+      <ul>
+        <li><strong>↑ Формирование кости</strong> и объём костной ткани</li>
+        <li><strong>↑ Сосудистая функция</strong> (восстановление сократительных белков)</li>
+        <li><strong>↓ Остеобластная трансформация</strong> сосудистых миоцитов</li>
+        <li><strong>↓ Сосудистая кальцификация</strong></li>
+      </ul>
+
+      <div class="callout warning">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 14H1L8 1z" stroke="#f57f17" stroke-width="1.5" fill="none"/><path d="M8 6v3M8 11h.005" stroke="#f57f17" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Парадокс Wnt в сосудах
+        </div>
+        <p>Ранее считалось, что Wnt-сигналинг в сосудистых миоцитах <strong>стимулирует</strong> остеобластную трансформацию и кальцификацию. Однако недавние исследования показали, что Dkk1-опосредованное торможение <strong>Wnt7b</strong> в аорте стимулирует <strong>EndMT</strong> (эндотелиально-мезенхимальную трансформацию) через Smad-факторы. Таким образом, Dkk1 действует <strong>опосредованно</strong>, через эндотелий, а не напрямую через миоциты.</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 3 ===== -->
+      <h2 id="activin">3. Активин A: второй циркулирующий фактор почечного ремонта</h2>
+
+      <p>
+        Поскольку ингибиторы Wntоказались лишь частью патогенеза, была выдвинута гипотеза о <strong>других циркулирующих факторах</strong> из семейства TGFβ (трансформирующий фактор роста β), участвующих в ремонте почки.
+      </p>
+
+      <div class="callout info">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#1565c0" stroke-width="1.5"/><path d="M8 5v4M8 11h.005" stroke="#1565c0" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Активин A — ключевые факты
+        </div>
+        <p><strong>Активин A</strong> — фактор развития почки и циркулирующий гормон из семейства TGFβ. При ХБП его уровень в крови повышается за счёт increased экспрессии в почке. Источник — <strong>перитубулярные миофибробласты</strong> повреждённых почек, где активин стимулирует фиброз и снижает экспрессию клофо.</p>
+      </div>
+
+      <h3>Рецептор ActRIIA</h3>
+      <p>
+        Удивительно, что рецептор активина типа 2A (<strong>ActRIIA</strong>) индуцируется ХБП в <strong>сосудистых миоцитах аорты</strong>, а не в эндотелии. Ингибирование ActRIIA-сигналинга с помощью <strong>лиганд-ловушки</strong> (ActRIIA-Fc) приводило к:
+      </p>
+      <ul>
+        <li><strong>↓ Остеобластная трансформация</strong> сосудистых миоцитов</li>
+        <li><strong>↓ Сосудистая кальцификация</strong></li>
+        <li><strong>↓ Фиброз почек</strong> и протеинурия</li>
+        <li><strong>↓ Активация Wnt</strong> в почке и циркулирующий Dkk1</li>
+      </ul>
+
+      <div class="diagram-container">
+        <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Схема: двойной эффект ActRIIA ловушки">
+          <defs>
+            <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#e8f5e9"/>
+              <stop offset="100%" style="stop-color:#c8e6c9"/>
+            </linearGradient>
+          </defs>
+          <rect width="700" height="200" fill="url(#bg2)" rx="8"/>
+
+          <text x="350" y="30" text-anchor="middle" fill="#1b5e20" font-size="14" font-weight="700">ActRIIA Ligand Trap — двойной механизм</text>
+
+          <!-- VSMC -->
+          <rect x="40" y="60" width="200" height="110" rx="10" fill="#fff" stroke="#2e7d32" stroke-width="2"/>
+          <text x="140" y="85" text-anchor="middle" fill="#2e7d32" font-size="12" font-weight="700">Сосудистые миоциты (VSMC)</text>
+          <text x="140" y="110" text-anchor="middle" fill="#333" font-size="10">Блок ActRIIA → прямой эффект:</text>
+          <text x="140" y="128" text-anchor="middle" fill="#c62828" font-size="10">↓ Дедифференциация</text>
+          <text x="140" y="146" text-anchor="middle" fill="#c62828" font-size="10">↓ Кальцификация</text>
+
+          <!-- Kidney -->
+          <rect x="280" y="60" width="160" height="110" rx="10" fill="#fff" stroke="#2e7d32" stroke-width="2"/>
+          <text x="360" y="85" text-anchor="middle" fill="#2e7d32" font-size="12" font-weight="700">Почка</text>
+          <text x="360" y="110" text-anchor="middle" fill="#333" font-size="10">Блок ActRIIA → непрямой:</text>
+          <text x="360" y="128" text-anchor="middle" fill="#1565c0" font-size="10">↓ Wnt-активация</text>
+          <text x="360" y="146" text-anchor="middle" fill="#1565c0" font-size="10">↓ Циркулирующий Dkk1</text>
+          <text x="360" y="164" text-anchor="middle" fill="#1565c0" font-size="10">↑ Клофо</text>
+
+          <!-- Composite effect -->
+          <rect x="480" y="60" width="200" height="110" rx="10" fill="#c8e6c9" stroke="#1b5e20" stroke-width="2"/>
+          <text x="580" y="85" text-anchor="middle" fill="#1b5e20" font-size="12" font-weight="700">Композитный сосудистый эффект</text>
+          <text x="580" y="110" text-anchor="middle" fill="#1b5e20" font-size="10">→ ↓ Dkk1 → ↑ Wnt в эндотелии</text>
+          <text x="580" y="128" text-anchor="middle" fill="#1b5e20" font-size="10">→ ↓ Wnt в VSMC</text>
+          <text x="580" y="146" text-anchor="middle" fill="#1b5e20" font-size="10">→ Блок EndMT</text>
+          <text x="580" y="164" text-anchor="middle" fill="#1b5e20" font-size="10">→ Защита сосудов</text>
+
+          <!-- Arrows -->
+          <line x1="240" y1="115" x2="280" y2="115" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow-green)"/>
+          <line x1="440" y1="115" x2="480" y2="115" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow-green)"/>
+        </svg>
+        <p class="diagram-caption">Рис. 2. ActRIIA-ловушка блокирует активин A в сосудах (прямой эффект) и снижает Dkk1 через почечный Wnt (непрямой эффект), обеспечивая композитную сосудистую защиту.</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 4 ===== -->
+      <h2 id="fgf23">4. FGF23: самый ранний биомаркер ХБП-МКН</h2>
+
+      <p>
+        <strong>FGF23</strong> (fibroblast growth factor 23) — первичный фосфатонин (гормон, регулирующий экскрецию фосфата), открытый при изучении аутосомно-доминантного гипофосфатемического рахита и онкогенной остеомалации. FGF23 продуцируется <strong>остеоцитами и остеобластами</strong>, представляя прямую связь «кость–почка» и «кость–паращитовидные железы».
+      </p>
+
+      <div class="callout danger">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#c62828" stroke-width="1.5"/><path d="M8 5v4M8 11h.005" stroke="#c62828" stroke-width="1.5" stroke-linecap="round"/></svg>
+          FGF23 — прямой кардиотоксин
+        </div>
+        <p>FGF23 — не просто биомаркер. Faul et al. продемонстрировали, что FGF23 напрямую вызывает <strong>гипертрофию левого желудочка (ГЛЖ)</strong> через активацию пути <strong>кальциневрин-NFAT</strong> в кардиомиоцитах. Этот эффект подтверждён и в моделях животных, и у человека.</p>
+      </div>
+
+      <h3>Раннее повышение</h3>
+      <p>
+        Уровни FGF23 повышаются <strong>до изменений кальция, фосфора или PTH</strong> и считаются одним из самых ранних обнаруживаемых биомаркеров ХБП-МКН. С нарастанием ХБП уровень FGF23 прогрессивно нарастает за счёт increased секреции остеоцитами и decreased катаболизма повреждённой почкой.
+      </p>
+
+      <h3>Механизмы кардиоваскулярного действия FGF23</h3>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Механизм</th>
+              <th>Описание</th>
+              <th>Клиническое значение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>ГЛЖ (кальциневрин-NFAT)</strong></td>
+              <td>FGF23 активирует кальциневрин → NFAT → транскрипция гипертрофии в кардиомиоцитах</td>
+              <td>Прямая причина сердечной недостаточности и смертности</td>
+            </tr>
+            <tr>
+              <td><strong>Активация NCC</strong></td>
+              <td>FGF23 напрямую регулирует тиазид-чувствительный NaCl-транспортёр (NCC) в дистальном извитом канальце → ↑ реабсорбция Na → ↑ объём циркулирующей крови</td>
+              <td>Гипертония, кардиогипертрофия; обратимы тиазидными диуретиками</td>
+            </tr>
+            <tr>
+              <td><strong>Взаимодействие с РААС</strong></td>
+              <td>Эффекты FGF23 на NCC усиливаются при низком Na в диете (стимуляция альдостерона)</td>
+              <td>Возможное взаимодействие с ренин-ангиотензин-альдостероновой системой</td>
+            </tr>
+            <tr>
+              <td><strong>↑ Реабсорбция Ca</strong></td>
+              <td>FGF23 стимулирует TRPV5 (апикальный Ca-канал) в дистальном канальце</td>
+              <td>Кальциевый гомеостаз; зависит от клофо</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        Humalda et al. показали, что пациенты с более высоким исходным уровнем FGF23 имели <strong>сниженный антипротеинурический ответ</strong> на диетическое ограничение натрия и терапию ингибиторами АПФ, что ассоциировано с повышением риска ССЗ и терминальной ХБП.
+      </p>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 5 ===== -->
+      <h2 id="klotho">5. Клофо: ко-рецептор, который теряется</h2>
+
+      <p>
+        Сигналинг FGF23 через рецепторы FGF通常 требует <strong>ко-рецепторной функции мембраносвязанного α-клофо</strong>. α-клофо highly экспрессирован лишь в нескольких тканях и определяет мишени FGF23: проксимальные и дистальные почечные канальцы, паращитовидные железы и мозг.
+      </p>
+
+      <h3>Двойная роль клофо</h3>
+      <ul>
+        <li><strong>Мембраносвязанный клофо</strong> — ко-рецептор для FGF23 через FGF-рецепторы</li>
+        <li><strong>Растворимый (секретируемый) клофо</strong> — продукт альтернативного сплайсинга или отщепления ADAM-10/-17 в дистальном канальце; регулирует экскрецию Ca и P, активность 1-α-гидроксилазы, секрецию PTH и FGF23</li>
+      </ul>
+
+      <div class="callout warning">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 14H1L8 1z" stroke="#f57f17" stroke-width="1.5" fill="none"/><path d="M8 6v3M8 11h.005" stroke="#f57f17" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Каскад потери клофо
+        </div>
+        <p>Экспрессия клофо значительно снижается при AKI, гломерулонефрите, использовании ингибиторов кальциневрина и хроническом аллотрансплант-повреждении. Потеря клофо приводит к: (1) потере негативной обратной связи → бесконтрольная секреция FGF23; (2) потере ко-рецепторной функции → аномальная активация FGF-рецепторов независимо от клофо при очень высоких уровнях FGF23 → ГЛЖ. Кроме того, дефицит клофо напрямую связан с сосудистой кальцификацией, ригидностью артерий и уремической васкулопатией.</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 6 ===== -->
+      <h2 id="hyperphos">6. Гиперфосфатемия: декомпенсация адаптации</h2>
+
+      <p>
+        По мере утраты функционирующих нефронов экскреция фосфата поддерживается снижением тубулярной реабсорбции фильтрованного фосфата в оставшихся нефронах под влиянием FGF23 и PTH. Однако эффекты FGF23 ограничены дефицитом клофо в проксимальном канальце, и PTH становится основным адаптивным механизмом.
+      </p>
+
+      <div class="callout danger">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#c62828" stroke-width="1.5"/><path d="M8 5v4M8 11h.005" stroke="#c62828" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Декомпенсация на стадии 4–5 ХБП
+        </div>
+        <p>При GFR &lt; 30% от нормы адаптация больше не поддерживает нормофосфатемию — развивается <strong>гиперфосфатемия</strong> на фоне высоких уровней PTH и FGF23. Гиперфосфатемия — мультиорганная токсина: подавляет 1-α-гидроксилазу в почке, напрямую стимулирует паратиреоциты (узловая гиперплазия), стимулирует секрецию FGF23 остеоцитами и обуславливает экстракостальную минерализацию через Ca×P产物.</p>
+      </div>
+
+      <h3>Мультиорганные эффекты гиперфосфатемии</h3>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Орган / система</th>
+              <th>Эффект</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Почка</td>
+              <td>Подавление 1-α-гидроксилазы → ↑ дефицит кальцитриола</td>
+            </tr>
+            <tr>
+              <td>Паращитовидные железы</td>
+              <td>Напрямую стимулирует паратиреоциты (независимо от Ca и кальцитриола) → узловая гиперплазия → ↑ PTH</td>
+            </tr>
+            <tr>
+              <td>Скелет</td>
+              <td>Стимулирует FGF23-секрецию остеоцитами</td>
+            </tr>
+            <tr>
+              <td>Сосуды</td>
+              <td>↑ Ca×P продукт → экстракостальная минерализация; остеобластная трансформация VSMC</td>
+            </tr>
+            <tr>
+              <td>Кость</td>
+              <td>Резорбция → ↑ высвобождение фосфата в плазму → ещё бо́льшая гиперфосфатемия</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 7 ===== -->
+      <h2 id="vitd">7. Дефицит витамина D и вторичный гиперпаратиреоз</h2>
+
+      <p>
+        На ранних стадиях ХБП секреция FGF23 из остеоцита подавляет <strong>1-α-гидроксилазу</strong> и стимулирует <strong>24-гидроксилазу</strong> в проксимальных канальцах, снижая продукцию кальцитриола и создавая дефицит 25(OH)D.
+      </p>
+
+      <p>
+        По мере прогрессирования ХБП снижение массы функционирующих нефронов в сочетании с гиперфосфатемией и высоким FGF23 приводит к дефициту и <strong>кальцитриола (1,25(OH)₂D)</strong>. Дефицит кальцитриола снижает кишечную абсорбцию кальция → гипокальциемия, а также снижает тканевую экспрессию витамин D-рецепторов, что в паращитовидных железах обуславливает <strong>резистентность к кальцитриолу</strong> и стимуляцию секреции PTH → <strong>вторичный гиперпаратиреоз</strong>.
+      </p>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 8 ===== -->
+      <h2 id="rod">8. Ренальная остеодистрофия: высокая vs низкая оборачиваемость</h2>
+
+      <p>
+        PTH регулирует секрецию FGF23 и необходим для ранней стимуляции FGF23-секреции — самой ранней обнаруживаемой аномалии ХБП-МКН. С прогрессированием ХБП компоненты ХБП-МКН приводят к повышению PTH и узловой гиперплазии паращитовидных желез.
+      </p>
+
+      <div class="callout info">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#1565c0" stroke-width="1.5"/><path d="M8 5v4M8 11h.005" stroke="#1565c0" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Аномальный фенотип остеобласта
+        </div>
+        <p>Хроническое повышение PTH поддерживает поверхности остеобластов, но связано с <strong>аномальным фенотипом функции остеобласта</strong>: относительно меньше коллагена типа I и больше RANKL-лиганда по сравнению с анаболическими остеобластами. Другие факторы — FGF23 и активин A — также влияют на функцию остеобластов, изменяя минерализацию и материал свойства кости.</p>
+      </div>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Тип остеодистрофии</th>
+              <th>Оборачиваемость</th>
+              <th>Механизм</th>
+              <th>Клиническое значение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Высокооборотная</strong></td>
+              <td>↑↑ Формирование и резорбция</td>
+              <td>Вторичный гиперпаратиреоз (остеит фиброза)</td>
+              <td>Резорбция &gt; формирования → остеопения/остеопороз</td>
+            </tr>
+            <tr>
+              <td><strong>Низкооборотная</strong></td>
+              <td>↓ Формирование и резорбция</td>
+              <td>Чрезмерное подавление PTH</td>
+              <td>Резорбция по-прежнему относительно выше → потеря массы кости</td>
+            </tr>
+            <tr>
+              <td><strong>Адьювантная</strong></td>
+              <td>Нормальная оборачиваемость</td>
+              <td>Нарушение минерализации</td>
+              <td>DXA может быть нормальным, но материал свойства кости нарушены</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout warning">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 14H1L8 1z" stroke="#f57f17" stroke-width="1.5" fill="none"/><path d="M8 6v3M8 11h.005" stroke="#f57f17" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Ограничения DXA при ХБП
+        </div>
+        <p>При продвинутой ХБП может наблюдаться увеличение трабекулярного объёма кости с потерей кортикальной, но отчасти это связано с отложением <strong>незрелых (woven) коллагеновых фибрилл</strong> вместо зрелых (lamellar). Таким образом, <strong>прочность кости страдает</strong> несмотря на кажущийся прирост массы, выявляемый DXA. Остеопороз при ХБП наблюдается и при высокой, и при низкой оборачиваемости.</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 9 ===== -->
+      <h2 id="cvd">9. Сердечно-сосудистая патология: EndMT и кальцификация</h2>
+
+      <p>
+        ХБП-МКН — вкладывающий фактор в <strong>ригидность сосудов</strong> и <strong>кальцификацию</strong>, увеличивающие систолическое АД, скорость пульсовой волны и массу левого желудочка — все суррогаты кардиоваскулярного риска.
+      </p>
+
+      <h3>Дедифференциация сосудистых миоцитов</h3>
+      <p>
+        В моделях с мягкой почечной недостаточностью (эквивалент стадии 2 ХБП) экспрессия белков <strong>сократительного аппарата</strong> аортальных миоцитов снижена, отражая <strong>дедифференцированное состояние</strong> сосудов. Дедифференцированные миоциты подвержены <strong>остеобластной трансформации</strong>, которая вносит вклад в кальцификацию как атеросклеротических бляшек, так и tunica media.
+      </p>
+
+      <h3>EndMT — эндотелиально-мезенхимальная трансформация</h3>
+      <p>
+        <strong>EndMT</strong> — физиологический процесс развития, вовлечённый в формирование сердечных клапанов, межжелудочковой перегородки и корня аорты. При ХБП Dkk1-опосредованное торможение Wnt7b в аорте стимулирует <strong>Smad-опосредованную EndMT</strong> → мезенхимальные клетки приобретают фенотип, способный к минерализации.
+      </p>
+
+      <div class="callout info">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#1565c0" stroke-width="1.5"/><path d="M8 5v4M8 11h.005" stroke="#1565c0" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Клиническое последствие
+        </div>
+        <p>Кальцификация сосудов — распространённое явление в стареющей популяции, но при ХБП она <strong>ускоряется до максимума</strong>, наблюдаемого в клинической медицине. Кальцификация进一步 усиливает ригидность сосудов → развитие ГЛЖ → всё вместе вносит вклад в кардиоваскулярный риск и избыточную сердечную смертность.</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 10 ===== -->
+      <h2 id="future">10. Перспективы: терапевтические мишени</h2>
+
+      <p>
+        Новые данные демонстрируют, что <strong>циркулирующие факторы почечного ремонта</strong> являются каузальными для ХБП-МКН и ассоциированных кардиоваскулярных заболеваний, и идентифицируют <strong>ActRIIA-сигналинг</strong> как терапевтическую мишень, связывающую прогрессию почечной и сосудистой болезни.
+      </p>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Мишень</th>
+              <th>Терапевтический подход</th>
+              <th>Статус</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Dkk1</strong></td>
+              <td>Моноклональное антитело (нейтрализация)</td>
+              <td>Доклинический:逆转а остеодистрофии и кальцификации в моделях ХБП</td>
+            </tr>
+            <tr>
+              <td><strong>ActRIIA</strong></td>
+              <td>ActRIIA-Fc лиганд-ловушка</td>
+              <td>Доклинический: блок остеобластной трансформации, фиброза, потеря Wnt-ингибиторов</td>
+            </tr>
+            <tr>
+              <td><strong>FGF23</strong></td>
+              <td>Антитела к FGF23 / восстановление клофо</td>
+              <td>Ранние стадии; фокус на предотвращении ГЛЖ</td>
+            </tr>
+            <tr>
+              <td><strong>Клофо</strong></td>
+              <td>Замещение / генная терапия</td>
+              <td>Экспериментальный</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout info">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#1565c0" stroke-width="1.5"/><path d="M8 5v4M8 11h.005" stroke="#1565c0" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Будущие направления
+        </div>
+        <p>Необходимы исследования, выясняющие, достаточно ли <strong>неполного восстановления после ОПН</strong> для стимуляции этих нарушений в оси «почка–скелет–сердечно-сосудистая система». Это определит <strong>раннюю ХБП-МКН</strong> как важную терапевтическую мишень для улучшения долгосрочных исходов при ХБП.</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== REFERENCES ===== -->
+      <h2 id="references">11. Литература</h2>
+      <ol class="ref-list">
+        <li>Hruska KA, Seifert M, Sugatani T. <em>Pathophysiology of the Chronic Kidney Disease – Mineral Bone Disorder (CKD-MBD).</em> Curr Opin Nephrol Hypertens. 2015;24(4):324–330. PMID: <strong>26050115</strong>. DOI: <a href="https://doi.org/10.1097/MNH.0000000000000132" target="_blank" rel="noopener">10.1097/MNH.0000000000000132</a></li>
+        <li>Faul C, et al. <em>Fibroblast Growth Factor 23 and Parathyroid Hormone Volume Regulation in CKD.</em> J Clin Invest. 2008;118(6):2262–2270. PMID: <strong>18451995</strong></li>
+        <li>Andrukhova O, et al. <em>FGF23 regulates renal sodium handling via the thiazide-sensitive NaCl cotransporter.</em> Nat Med. 2014;20(7):804–810. PMID: <strong>24952651</strong></li>
+        <li>Humalda JK, et al. <em>Fibroblast Growth Factor 23 and the Antiproteinuric Response to Dietary Sodium Restriction and ACE Inhibition.</em> Am J Nephrol. 2019;50(3):198–207. PMID: <strong>31390591</strong></li>
+        <li>Isakova T, et al. <em>FGF-23 and Early CKD: An Early Biomarker of CKD-MBD.</em> J Am Soc Nephrol. 2011;22(7):1307–1314. PMID: <strong>21659457</strong></li>
+        <li>Gutierrez OM, et al. <em>Fibroblast Growth Factor 23 and Mortality Among Patients Undergoing Hemodialysis.</em> N Engl J Med. 2008;359(6):584–592. PMID: <strong>18687639</strong></li>
+        <li>Choe C, et al. <em>Klotho: A Central Regulator of Phosphate and Calcium Metabolism.</em> Nat Rev Nephrol. 2018;14(12):739–752. PMID: <strong>30333583</strong></li>
+        <li>Block GA, et al. <em>Mineral Metabolism, Mortality, and Morbidity in Maintenance Hemodialysis.</em> J Am Soc Nephrol. 2004;15(8):2208–2218. PMID: <strong>15284296</strong></li>
+        <li>Hruska KA, et al. <em>Kidney-Bone-CV Axis in CKD-MBD.</em> Curr Opin Nephrol Hypertens. 2015;24(4):324–330. PMID: <strong>26050115</strong></li>
+      </ol>
+
+      <hr class="article-section-divider" />
+
+      <div class="article-disclaimer">
+        <strong>Внимание:</strong> Данная статья носит исключительно ознакомительный характер и не является медицинской консультацией, постановкой диагноза или руководством к лечению. Всегда обращайтесь к квалифицированному нефрологу или эндокринологу. BudMed &amp; MedCore™ не несёт ответственности за решения, принятые на основе размещённой информации. Источник: PubMed, PMID <strong>26050115</strong>, DOI: <a href="https://doi.org/10.1097/MNH.0000000000000132" target="_blank" rel="noopener">10.1097/MNH.0000000000000132</a>.
+      </div>
+
+      <p style="text-align:center; margin-top: var(--space-2xl); font-size: 0.8125rem; color: var(--outline);">
+        Published by BudMed News · Clinical Guidelines · <time datetime="2026-08-25">25 авг 2026</time>
+      </p>
+
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 BudMed &amp; MedCore&trade;. Все права защищены.</p>
+        <p class="footer-disclaimer">Информация на данном сайте носит исключительно ознакомительный характер и не является медицинской консультацией. Всегда обращайтесь к квалифицированному медицинскому специалисту.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Scroll to top">
+    <svg viewBox="0 0 20 20" fill="none"><path d="M10 15V5M5 10l5-5 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script>
+    const scrollBtn = document.querySelector('.scroll-top');
+    window.addEventListener('scroll', () => {
+      scrollBtn.classList.toggle('visible', window.scrollY > 400);
+    });
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

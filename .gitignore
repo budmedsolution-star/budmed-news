@@ -1,7 +1,27 @@
 # Ignore everything
 *
 
-# Except web essentials
+# Except budmed-news (GitHub repo root)
+!budmed-news/
+budmed-news/**
+
+# Whitelist specific contents inside budmed-news
+!budmed-news/index.html
+!budmed-news/css/
+!budmed-news/css/**
+!budmed-news/js/
+!budmed-news/js/**
+!budmed-news/assets/
+!budmed-news/assets/**
+!budmed-news/articles/
+!budmed-news/articles/**
+!budmed-news/admin/
+!budmed-news/admin/**
+!budmed-news/_data/
+!budmed-news/_data/**
+!budmed-news/README.md
+
+# Also whitelist root-level web essentials (in case repo moves)
 !index.html
 !css/
 !css/**

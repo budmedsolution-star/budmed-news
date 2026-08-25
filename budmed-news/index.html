@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BudMed News — AI-здравоохранение простым языком</title>
+  <meta name="description" content="BudMed News — популярный медицинский портал об AI в здравоохранении, фармакологии и здоровье." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="BudMed &amp; MedCore" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BudMed News — AI-здравоохранение простым языком" />
+  <meta property="og:description" content="Популярный медицинский портал об AI в здравоохранении, фармакологии и здоровье." />
+  <meta property="og:url" content="https://budmed.github.io/budmed-news/" />
+  <meta property="og:site_name" content="BudMed News" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BudMed News — AI-здравоохранение простым языком" />
+  <meta name="twitter:description" content="Популярный медицинский портал об AI в здравоохранении." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsMediaOrganization",
+    "name": "BudMed News",
+    "url": "https://budmed.github.io/budmed-news/",
+    "description": "Популярный медицинский портал об AI в здравоохранении.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "BudMed & MedCore",
+      "logo": {"@type": "ImageObject", "url": "https://budmed.github.io/budmed-news/assets/logo.svg"}
+    },
+    "inLanguage": ["ru", "en"]
+  }
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="#" class="site-logo" aria-label="BudMed News Home">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="28" height="28" rx="8" fill="#006d3e"/>
+          <path d="M7 14h4l2-4 3 8 2-4h3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>BudMed News</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="#ai-health" data-ru="AI в медицине" data-en="AI in Medicine">AI в медицине</a>
+        <a href="#health" data-ru="Здоровье" data-en="Health">Здоровье</a>
+        <a href="#guidelines" data-ru="Гайдлайны" data-en="Guidelines">Гайдлайны</a>
+        <a href="#ecosystem" data-ru="Об экосистеме" data-en="About Ecosystem">Об экосистеме</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div class="lang-toggle" role="group" aria-label="Language selector">
+          <button class="lang-btn active" data-lang="ru" aria-label="Русский">RU</button>
+          <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="#ai-health" data-ru="AI в медицине" data-en="AI in Medicine">AI в медицине</a>
+      <a href="#health" data-ru="Здоровье" data-en="Health">Здоровье</a>
+      <a href="#guidelines" data-ru="Гайдлайны" data-en="Guidelines">Гайдлайны</a>
+      <a href="#ecosystem" data-ru="Об экосистеме" data-en="About Ecosystem">Об экосистеме</a>
+      <a href="#subscribe" data-ru="Подписка" data-en="Subscribe">Подписка</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="container hero-content">
+      <h1 data-ru="AI-здравоохранение простым языком" data-en="AI Healthcare Made Simple">AI-здравоохранение простым языком</h1>
+      <p class="hero-subtitle" data-ru="BudMed News — популярный медицинский портал о том, как искусственный интеллект меняет мир здоровья. Без терминов, с заботой и научной точностью." data-en="BudMed News — a popular medical portal about how AI is changing health. Without jargon, with care and scientific accuracy.">BudMed News — популярный медицинский портал о том, как искусственный интеллект меняет мир здоровья. Без терминов, с заботой и научной точностью.</p>
+      <a href="#ai-health" class="hero-cta">
+        <span data-ru="Читать последний выпуск" data-en="Read the Latest Issue">Читать последний выпуск</span>
+        <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <main>
+
+  <!-- SECTION 1: AI & HEALTH -->
+  <section class="news-section" id="ai-health">
+    <div class="container">
+      <div class="section-header">
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+          <h2 class="section-title" data-ru="AI &amp; Здоровье" data-en="AI &amp; Health">AI &amp; Здоровье</h2>
+          <span class="section-badge badge-ai">AI</span>
+        </div>
+        <a href="#" class="body-sm" style="font-weight:500;" data-ru="Все статьи →" data-en="All articles →">Все статьи →</a>
+      </div>
+      <div class="articles-grid">
+
+        <!-- Article 1 (Featured) -->
+        <article class="news-card featured" data-category="ai-health">
+          <div class="card-thumbnail">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI medical scan">
+              <rect width="800" height="450" fill="#e8f5e9"/>
+              <circle cx="400" cy="200" r="120" fill="#86efac" opacity="0.5"/>
+              <circle cx="400" cy="200" r="80" fill="#006d3e" opacity="0.3"/>
+              <path d="M350 200 L380 170 L420 230 L450 190" stroke="#006d3e" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <text x="400" y="350" text-anchor="middle" fill="#006d3e" font-size="24" font-weight="600">AI + Medicine</text>
+            </svg>
+            <span class="badge badge-ai">AI</span>
+            <span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span data-ru="7 мин" data-en="7 min">7 мин</span></span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="#" data-ru="Как AI помогает врачам видеть то, что скрыто от глаза" data-en="How AI Helps Doctors See What the Eye Cannot">Как AI помогает врачам видеть то, что скрыто от глаза</a></h3>
+            <p class="card-excerpt" data-ru="Искусственный интеллект обучается распознавать патологии на медицинских снимках с точностью, превышающей человеческую. Как нейросети помогают врачам ставить диагнозы раньше." data-en="AI is trained to recognize pathologies on medical images with accuracy exceeding human capability. How neural networks help doctors diagnose earlier.">Искусственный интеллект обучается распознавать патологии на медицинских снимках с точностью, превышающей человеческую. Как нейросети помогают врачам ставить диагнозы раньше.</p>
+            <div class="card-meta"><time datetime="2026-08-20"><span data-ru="20 авг 2026" data-en="Aug 20, 2026">20 авг 2026</span></time><span class="category">AI</span></div>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="news-card" data-category="ai-health">
+          <div class="card-thumbnail">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Neural networks">
+              <rect width="800" height="450" fill="#f3e8ff"/>
+              <circle cx="250" cy="200" r="60" fill="#a78bfa" opacity="0.3"/>
+              <circle cx="400" cy="180" r="90" fill="#a78bfa" opacity="0.2"/>
+              <circle cx="550" cy="220" r="50" fill="#a78bfa" opacity="0.3"/>
+              <line x1="250" y1="200" x2="400" y2="180" stroke="#7c3aed" stroke-width="1.5" opacity="0.4"/>
+              <line x1="400" y1="180" x2="550" y2="220" stroke="#7c3aed" stroke-width="1.5" opacity="0.4"/>
+              <text x="400" y="370" text-anchor="middle" fill="#7c3aed" font-size="20" font-weight="600">Neural Networks</text>
+            </svg>
+            <span class="badge badge-ai">AI</span>
+            <span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span data-ru="5 мин" data-en="5 min">5 мин</span></span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="#" data-ru="Нейросети учатся диагностировать рак по снимкам" data-en="Neural Networks Learn to Diagnose Cancer from Scans">Нейросети учатся диагностировать рак по снимкам</a></h3>
+            <p class="card-excerpt" data-ru="Новые исследования показывают, что AI-модели могут обнаруживать ранние признаки опухолей на маммограммах и КТ-снимках." data-en="New studies show AI models can detect early signs of tumors on mammograms and CT scans.">Новые исследования показывают, что AI-модели могут обнаруживать ранние признаки опухолей на маммограммах и КТ-снимках.</p>
+            <div class="card-meta"><time datetime="2026-08-18"><span data-ru="18 авг 2026" data-en="Aug 18, 2026">18 авг 2026</span></time><span class="category">AI</span></div>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="news-card" data-category="ai-health">
+          <div class="card-thumbnail">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wearables">
+              <rect width="800" height="450" fill="#e0f2fe"/>
+              <rect x="300" y="100" width="200" height="250" rx="100" fill="#7dd3fc" opacity="0.3" stroke="#0284c7" stroke-width="2"/>
+              <circle cx="400" cy="200" r="40" fill="#0ea5e9" opacity="0.4"/>
+              <path d="M370 200 h15 l5-10 5 20 5-15 5 10 h15" stroke="#0284c7" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <text x="400" y="400" text-anchor="middle" fill="#0284c7" font-size="20" font-weight="600">Wearables &amp; Health</text>
+            </svg>
+            <span class="badge badge-ai">AI</span>
+            <span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span data-ru="6 мин" data-en="6 min">6 мин</span></span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="#" data-ru="Wearables и здоровье: что реально умеют фитнес-браслеты" data-en="Wearables &amp; Health: What Fitness Trackers Can Really Do">Wearables и здоровье: что реально умеют фитнес-браслеты</a></h3>
+            <p class="card-excerpt" data-ru="Фитнес-браслеты и умные часы замеряют пульс, сон и активность. Но на что действительно способны эти данные?" data-en="Fitness bands measure pulse, sleep, and activity. But what can this data really do?">Фитнес-браслеты и умные часы замеряют пульс, сон и активность. Но на что действительно способны эти данные?</p>
+            <div class="card-meta"><time datetime="2026-08-15"><span data-ru="15 авг 2026" data-en="Aug 15, 2026">15 авг 2026</span></time><span class="category">AI</span></div>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="news-card" data-category="ai-health">
+          <div class="card-thumbnail">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MedGemma">
+              <rect width="800" height="450" fill="#ecfdf5"/>
+              <rect x="280" y="80" width="240" height="290" rx="16" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+              <circle cx="400" cy="180" r="50" fill="#10b981" opacity="0.3"/>
+              <text x="400" y="190" text-anchor="middle" fill="#059669" font-size="28" font-weight="700">G</text>
+              <text x="400" y="400" text-anchor="middle" fill="#059669" font-size="20" font-weight="600">MedGemma</text>
+            </svg>
+            <span class="badge badge-ai">AI</span>
+            <span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span data-ru="5 мин" data-en="5 min">5 мин</span></span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="#" data-ru="MedGemma: как Google создал медицинский AI-модель" data-en="MedGemma: How Google Built a Medical AI Model">MedGemma: как Google создал медицинский AI-модель</a></h3>
+            <p class="card-excerpt" data-ru="Google представила MedGemma — семейство AI-моделей, обученных на медицинских данных." data-en="Google presented MedGemma — AI models trained on medical data.">Google представила MedGemma — семейство AI-моделей, обученных на медицинских данных.</p>
+            <div class="card-meta"><time datetime="2026-08-12"><span data-ru="12 авг 2026" data-en="Aug 12, 2026">12 авг 2026</span></time><span class="category">AI</span></div>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="news-card" data-category="ai-health">
+          <div class="card-thumbnail">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI assistant">
+              <rect width="800" height="450" fill="#fef3c7"/>
+              <rect x="300" y="60" width="200" height="300" rx="12" fill="#fde68a" stroke="#d97706" stroke-width="2"/>
+              <circle cx="400" cy="200" r="35" fill="#f59e0b" opacity="0.3"/>
+              <path d="M385 200 h10 v-15 h10 v15 h10 v10 h-10 v15 h-10 v-15 h-10 z" fill="#d97706" opacity="0.5"/>
+              <text x="400" y="400" text-anchor="middle" fill="#d97706" font-size="20" font-weight="600">Future: AI Assistant</text>
+            </svg>
+            <span class="badge badge-ai">AI</span>
+            <span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span data-ru="4 мин" data-en="4 min">4 мин</span></span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="#" data-ru="Будущее: AI-ассистент в вашей аптечке" data-en="The Future: An AI Assistant in Your Medicine Cabinet">Будущее: AI-ассистент в вашей аптечке</a></h3>
+            <p class="card-excerpt" data-ru="Представьте: вы сканируете упаковку лекарства телефоном — и AI сразу предупреждает о взаимодействиях." data-en="Imagine scanning a medication box — and AI warns about drug interactions.">Представьте: вы сканируете упаковку лекарства телефоном — и AI сразу предупреждает о взаимодействиях.</p>
+            <div class="card-meta"><time datetime="2026-08-10"><span data-ru="10 авг 2026" data-en="Aug 10, 2026">10 авг 2026</span></time><span class="category">AI</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- SECTION 2: HEALTH & PHARMACOLOGY -->
+  <section class="news-section" id="health">
+    <div class="container">
+      <div class="section-header">
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+          <h2 class="section-title" data-ru="Здоровье &amp; Фармакология" data-en="Health &amp; Pharmacology">Здоровье &amp; Фармакология</h2>
+          <span class="section-badge badge-health">Здоровье</span>
+        </div>
+      </div>
+      <div class="articles-grid">
+
+        <!-- Article 6 -->
+        <article class="news-card" data-category="health">
+          <div class="card-thumbnail">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Drug interactions">
+              <rect width="800" height="450" fill="#fce4ec"/>
+              <circle cx="300" cy="200" r="60" fill="#f48fb1" opacity="0.3" stroke="#e91e63" stroke-width="2"/>
+              <circle cx="500" cy="200" r="60" fill="#f48fb1" opacity="0.3" stroke="#e91e63" stroke-width="2"/>
+              <line x1="360" y1="200" x2="440" y2="200" stroke="#c62828" stroke-width="3" stroke-dasharray="8 4"/>
+              <text x="400" y="200" text-anchor="middle" fill="#c62828" font-size="20" font-weight="700">✕</text>
+              <text x="400" y="380" text-anchor="middle" fill="#c62828" font-size="18" font-weight="600">Drug Interactions</text>
+            </svg>
+            <span class="badge badge-health">Здоровье</span>
+            <span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span data-ru="5 мин" data-en="5 min">5 мин</span></span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="#" data-ru="Почему нельзя пить ибупрофен с аспирином" data-en="Why You Shouldn't Take Ibuprofen with Aspirin">Почему нельзя пить ибупрофен с аспирином</a></h3>
+            <p class="card-excerpt" data-ru="Ибупрофен и аспирин — два самых популярных обезболивающих. Но их совместный приём может быть опасен." data-en="Ibuprofen and aspirin are popular painkillers. But combining them can be dangerous.">Ибупрофен и аспирин — два самых популярных обезболивающих. Но их совместный приём может быть опасен.</p>
+            <div class="card-meta"><time datetime="2026-08-17"><span data-ru="17 авг 2026" data-en="Aug 17, 2026">17 авг 2026</span></time><span class="category" data-ru="Фармакология" data-en="Pharmacology">Фармакология</span></div>
+          </div>
+        </article>
+
+        <!-- Article 7 -->
+        <article class="news-card" data-category="health">
+          <div class="card-thumbnail">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Antibiotics">
+              <rect width="800" height="450" fill="#e8f5e9"/>
+              <rect x="330" y="80" width="140" height="280" rx="20" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+              <rect x="360" y="120" width="80" height="40" rx="8" fill="#4caf50" opacity="0.5"/>
+              <text x="400" y="390" text-anchor="middle" fill="#2e7d32" font-size="18" font-weight="600">Antibiotics</text>
+            </svg>
+            <span class="badge badge-health">Здоровье</span>
+            <span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span data-ru="6 мин" data-en="6 min">6 мин</span></span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="#" data-ru="Антибиотики: когда помогают, а когда вредят" data-en="Antibiotics: When They Help and When They Harm">Антибиотики: когда помогают, а когда вредят</a></h3>
+            <p class="card-excerpt" data-ru="Антибиотики — одно из величайших изобретений медицины. Но бесконтрольный приём приводит к резистентности." data-en="Antibiotics are one of medicine's greatest inventions. But uncontrolled use leads to resistance.">Антибиотики — одно из величайших изобретений медицины. Но бесконтрольный приём приводит к резистентности.</p>
+            <div class="card-meta"><time datetime="2026-08-14"><span data-ru="14 авг 2026" data-en="Aug 14, 2026">14 авг 2026</span></time><span class="category" data-ru="Фармакология" data-en="Pharmacology">Фармакология</span></div>
+          </div>
+        </article>
+
+        <!-- Article 8 -->
+        <article class="news-card" data-category="health">
+          <div class="card-thumbnail">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cold season">
+              <rect width="800" height="450" fill="#e3f2fd"/>
+              <circle cx="400" cy="180" r="80" fill="#bbdefb" opacity="0.4"/>
+              <path d="M380 160 Q400 120 420 160 Q440 200 400 220 Q360 200 380 160Z" fill="#90caf9" opacity="0.5"/>
+              <text x="400" y="370" text-anchor="middle" fill="#1565c0" font-size="18" font-weight="600">Cold Season</text>
+            </svg>
+            <span class="badge badge-health">Здоровье</span>
+            <span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span data-ru="4 мин" data-en="4 min">4 мин</span></span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="#" data-ru="Сезон простуд: что действительно работает" data-en="Cold Season: What Actually Works">Сезон простуд: что действительно работает</a></h3>
+            <p class="card-excerpt" data-ru="Витамин C, чеснок, мед с лимоном — что из народных средств действительно помогает при простуде?" data-en="Vitamin C, garlic, honey with lemon — which folk remedies actually help with colds?">Витамин C, чеснок, мед с лимоном — что из народных средств действительно помогает при простуде?</p>
+            <div class="card-meta"><time datetime="2026-08-11"><span data-ru="11 авг 2026" data-en="Aug 11, 2026">11 авг 2026</span></time><span class="category" data-ru="Здоровье" data-en="Health">Здоровье</span></div>
+          </div>
+        </article>
+
+        <!-- Article 9 -->
+        <article class="news-card" data-category="health">
+          <div class="card-thumbnail">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Medication labels">
+              <rect width="800" height="450" fill="#fff3e0"/>
+              <rect x="280" y="70" width="240" height="310" rx="8" fill="#ffe0b2" stroke="#e65100" stroke-width="2"/>
+              <rect x="310" y="100" width="180" height="12" rx="4" fill="#e65100" opacity="0.3"/>
+              <rect x="310" y="130" width="180" height="8" rx="3" fill="#e65100" opacity="0.15"/>
+              <rect x="310" y="200" width="180" height="20" rx="6" fill="#ff9800" opacity="0.3"/>
+              <text x="400" y="410" text-anchor="middle" fill="#e65100" font-size="18" font-weight="600">Medication Labels</text>
+            </svg>
+            <span class="badge badge-health">Здоровье</span>
+            <span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span data-ru="3 мин" data-en="3 min">3 мин</span></span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="#" data-ru="Как читать инструкцию к лекарству за 2 минуты" data-en="How to Read a Medication Label in 2 Minutes">Как читать инструкцию к лекарству за 2 минуты</a></h3>
+            <p class="card-excerpt" data-ru="Инструкция к лекарству — это не руководство на 20 страниц. Есть 5 ключевых пунктов, которые нужно знать каждому." data-en="A medication instruction isn't 20 pages. There are 5 key points everyone needs to know.">Инструкция к лекарству — это не руководство на 20 страниц. Есть 5 ключевых пунктов, которые нужно знать каждому.</p>
+            <div class="card-meta"><time datetime="2026-08-08"><span data-ru="8 авг 2026" data-en="Aug 8, 2026">8 авг 2026</span></time><span class="category" data-ru="Фармакология" data-en="Pharmacology">Фармакология</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- SECTION 3: CLINICAL GUIDELINES -->
+  <section class="news-section" id="guidelines">
+    <div class="container">
+      <div class="section-header">
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+          <h2 class="section-title" data-ru="Клинические гайдлайны" data-en="Clinical Guidelines">Клинические гайдлайны</h2>
+          <span class="section-badge badge-guidelines">Гайдлайны</span>
+        </div>
+      </div>
+      <div class="articles-grid">
+
+        <!-- Article 10 (CKD-MBD / Osteoporosis — Free, full article) -->
+        <article class="news-card" data-category="guidelines">
+          <div class="card-thumbnail">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CKD-MBD and osteoporosis">
+              <rect width="800" height="450" fill="#e8eaf6"/>
+              <!-- Bone cross-section -->
+              <rect x="300" y="120" width="200" height="180" rx="12" fill="#fff" stroke="#3949ab" stroke-width="2"/>
+              <circle cx="400" cy="180" r="35" fill="#c5cae9" stroke="#3949ab" stroke-width="1.5"/>
+              <circle cx="370" cy="220" r="20" fill="#e8eaf6" stroke="#7986cb" stroke-width="1"/>
+              <circle cx="430" cy="230" r="25" fill="#e8eaf6" stroke="#7986cb" stroke-width="1"/>
+              <circle cx="390" cy="250" r="15" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5"/>
+              <!-- DEXA label -->
+              <text x="400" y="100" text-anchor="middle" fill="#1a237e" font-size="18" font-weight="700">CKD-MBD</text>
+              <!-- Fracture line -->
+              <line x1="395" y1="245" x2="405" y2="265" stroke="#c62828" stroke-width="2.5" stroke-dasharray="4,3"/>
+              <text x="400" y="340" text-anchor="middle" fill="#c62828" font-size="14" font-weight="600">Osteoporosis + Dialysis</text>
+              <text x="400" y="370" text-anchor="middle" fill="#3949ab" font-size="12">Pharmacotherapy &amp; Exercise</text>
+              <text x="400" y="420" text-anchor="middle" fill="#5c6bc0" font-size="11" font-weight="500">BudMed OsteoGuard Protocol</text>
+            </svg>
+            <span class="badge badge-guidelines">Гайдлайны</span>
+            <span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span data-ru="12 мин" data-en="12 min">12 мин</span></span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="articles/ckd-mbd-osteoporosis.html" data-ru="Остеопороз при гемодиализе: полный протокол ведения" data-en="Osteoporosis in Hemodialysis: Full Management Protocol">Остеопороз при гемодиализе: полный протокол ведения</a></h3>
+            <p class="card-excerpt" data-ru="ХБП-МКН и остеопороз: анатомия, патофизиология, фармакотерапия (деносумаб, кальцитонин), ЛФК-протокол, безопасность корсета и MCDA-матрица выбора стратегии." data-en="CKD-MBD and osteoporosis: anatomy, pathophysiology, pharmacotherapy (denosumab, calcitonin), exercise protocol, corset safety and MCDA strategy matrix.">ХБП-МКН и остеопороз: анатомия, патофизиология, фармакотерапия (деносумаб, кальцитонин), ЛФК-протокол, безопасность корсета и MCDA-матрица выбора стратегии.</p>
+            <div class="card-meta"><time datetime="2026-08-25"><span data-ru="25 авг 2026" data-en="Aug 25, 2026">25 авг 2026</span></time><span class="category" data-ru="Гайдлайны" data-en="Guidelines">Гайдлайны</span></div>
+          </div>
+        </article>
+
+        <!-- Article 11 (Free) — Prescriptions & Monitoring -->
+        <article class="news-card" data-category="guidelines">
+          <div class="card-thumbnail">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Prescriptions and monitoring protocol">
+              <rect width="800" height="450" fill="#e8f5e9"/>
+              <rect x="240" y="50" width="320" height="340" rx="16" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+              <rect x="270" y="80" width="260" height="12" rx="4" fill="#2e7d32" opacity="0.35"/>
+              <rect x="270" y="110" width="200" height="10" rx="4" fill="#2e7d32" opacity="0.2"/>
+              <line x1="270" y1="150" x2="530" y2="150" stroke="#81c784" stroke-width="1"/>
+              <rect x="270" y="170" width="120" height="36" rx="8" fill="#43a047" opacity="0.18"/>
+              <text x="330" y="193" text-anchor="middle" fill="#1b5e20" font-size="12" font-weight="600">DEXA</text>
+              <rect x="410" y="170" width="120" height="36" rx="8" fill="#e53935" opacity="0.15"/>
+              <text x="470" y="193" text-anchor="middle" fill="#b71c1c" font-size="12" font-weight="600">Ca²⁺ 1.33</text>
+              <rect x="270" y="225" width="120" height="36" rx="8" fill="#1565c0" opacity="0.12"/>
+              <text x="330" y="248" text-anchor="middle" fill="#0d47a1" font-size="12" font-weight="600">ПТГ</text>
+              <rect x="410" y="225" width="120" height="36" rx="8" fill="#f57f17" opacity="0.15"/>
+              <text x="470" y="248" text-anchor="middle" fill="#e65100" font-size="12" font-weight="600">CTX</text>
+              <rect x="300" y="285" width="200" height="30" rx="8" fill="#2e7d32" opacity="0.25"/>
+              <text x="400" y="305" text-anchor="middle" fill="#1b5e20" font-size="13" font-weight="600">Рисостин + Вістакеа</text>
+              <text x="400" y="380" text-anchor="middle" fill="#2e7d32" font-size="16" font-weight="600">Prescriptions &amp; Monitoring</text>
+              <text x="400" y="410" text-anchor="middle" fill="#388e3c" font-size="12">BudMed OsteoGuard · 30.07.2026</text>
+            </svg>
+            <span class="badge badge-guidelines">Гайдлайны</span>
+            <span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span data-ru="18 мин" data-en="18 min">18 мин</span></span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="articles/prescriptions_and_monitoring.html" data-ru="Назначения и мониторинг: разбор рисков схемы M15.0 / M81.00" data-en="Prescriptions & Monitoring: Risk Review for M15.0 / M81.00">Назначения и мониторинг: разбор рисков схемы M15.0 / M81.00</a></h3>
+            <p class="card-excerpt" data-ru="Фактические назначения ревматолога, направления ЕСОЗ, динамика DEXA 2025→2026, лаборатория 01.07.2026, красные флаги схемы, альтернативы и юридическая заявка на коррекцию." data-en="Actual rheumatologist prescriptions, e-OSZ referrals, DEXA dynamics 2025→2026, lab results 01.07.2026, scheme red flags, alternatives and legal request for correction.">Фактические назначения ревматолога, направления ЕСОЗ, динамика DEXA 2025→2026, лаборатория 01.07.2026, красные флаги схемы, альтернативы и юридическая заявка на коррекцию.</p>
+            <div class="card-meta"><time datetime="2026-07-30"><span data-ru="30 июл 2026" data-en="Jul 30, 2026">30 июл 2026</span></time><span class="category" data-ru="Гайдлайны" data-en="Guidelines">Гайдлайны</span></div>
+          </div>
+        </article>
+
+        <!-- Article 10 (Free) -->
+        <article class="news-card" data-category="guidelines">
+          <div class="card-thumbnail">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flu guidelines 2026">
+              <rect width="800" height="450" fill="#e8eaf6"/>
+              <rect x="280" y="60" width="240" height="320" rx="12" fill="#c5cae9" stroke="#3949ab" stroke-width="2"/>
+              <rect x="310" y="90" width="180" height="14" rx="4" fill="#3949ab" opacity="0.4"/>
+              <rect x="310" y="300" width="180" height="30" rx="8" fill="#5c6bc0" opacity="0.3"/>
+              <text x="400" y="410" text-anchor="middle" fill="#3949ab" font-size="18" font-weight="600">Guidelines 2026</text>
+            </svg>
+            <span class="badge badge-guidelines">Гайдлайны</span>
+            <span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span data-ru="7 мин" data-en="7 min">7 мин</span></span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="#" data-ru="Новые правила лечения гриппа 2026: что изменилось" data-en="New Flu Treatment Guidelines 2026: What Changed">Новые правила лечения гриппа 2026: что изменилось</a></h3>
+            <p class="card-excerpt" data-ru="В 2026 году обновились рекомендации по лечению гриппа: новые противовирусные, изменённые сроки приёма." data-en="In 2026, flu treatment recommendations were updated: new antivirals, changed intake schedules.">В 2026 году обновились рекомендации по лечению гриппа: новые противовирусные, изменённые сроки приёма.</p>
+            <div class="card-meta"><time datetime="2026-08-19"><span data-ru="19 авг 2026" data-en="Aug 19, 2026">19 авг 2026</span></time><span class="category" data-ru="Гайдлайны" data-en="Guidelines">Гайдлайны</span></div>
+          </div>
+        </article>
+
+        <!-- Article 11 (PREMIUM) -->
+        <article class="news-card premium-locked" data-category="guidelines">
+          <div class="card-thumbnail">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hypertension">
+              <rect width="800" height="450" fill="#fce4ec"/>
+              <path d="M200 250 L280 200 L360 230 L440 160 L520 190 L600 150" stroke="#c62828" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <circle cx="440" cy="160" r="6" fill="#c62828"/>
+              <text x="400" y="380" text-anchor="middle" fill="#c62828" font-size="18" font-weight="600">Blood Pressure</text>
+            </svg>
+            <span class="badge badge-guidelines">Гайдлайны</span>
+            <span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span data-ru="8 мин" data-en="8 min">8 мин</span></span>
+            <div class="premium-overlay">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <span data-ru="С подпиской" data-en="With subscription">С подпиской</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="#" data-ru="Гайдлайны по гипертонии: просто о сложном" data-en="Hypertension Guidelines: Simply Explained">Гайдлайны по гипертонии: просто о сложном</a></h3>
+            <p class="card-excerpt" data-ru="Артериальная гипертония — тихий убийца. Новые гайдлайны меняют пороги и цели лечения." data-en="Arterial hypertension is a silent killer. New guidelines change thresholds and treatment goals.">Артериальная гипертония — тихий убийца. Новые гайдлайны меняют пороги и цели лечения.</p>
+            <div class="premium-blur">
+              <div class="premium-blur-content">
+                <p class="body-sm" style="color:var(--on-surface-variant);margin-bottom:8px;" data-ru="Гипертония поражает каждого третьего взрослого во всём мире." data-en="Hypertension affects one in three adults worldwide.">Гипертония поражает каждого третьего взрослого во всём мире.</p>
+                <p class="body-sm" style="color:var(--on-surface-variant);margin-bottom:8px;" data-ru="В 2026 году обновили пороги: 130/80 вместо прежних 140/90." data-en="In 2026, thresholds were updated: 130/80 instead of 140/90.">В 2026 году обновили пороги: 130/80 вместо прежних 140/90.</p>
+              </div>
+              <a href="#subscribe" class="premium-cta">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span data-ru="Читать далее — с подпиской" data-en="Read more — with subscription">Читать далее — с подпиской</span>
+              </a>
+            </div>
+            <div class="card-meta"><time datetime="2026-08-16"><span data-ru="16 авг 2026" data-en="Aug 16, 2026">16 авг 2026</span></time><span class="category" data-ru="Гайдлайны" data-en="Guidelines">Гайдлайны</span></div>
+          </div>
+        </article>
+
+        <!-- Article 12 (PREMIUM) -->
+        <article class="news-card premium-locked" data-category="guidelines">
+          <div class="card-thumbnail">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Antibiotic resistance">
+              <rect width="800" height="450" fill="#fff8e1"/>
+              <circle cx="400" cy="200" r="100" fill="#ffecb3" opacity="0.5" stroke="#f57f17" stroke-width="2"/>
+              <text x="400" y="210" text-anchor="middle" fill="#f57f17" font-size="48" font-weight="700">!</text>
+              <text x="400" y="380" text-anchor="middle" fill="#f57f17" font-size="18" font-weight="600">Antibiotic Resistance</text>
+            </svg>
+            <span class="badge badge-guidelines">Гайдлайны</span>
+            <span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span data-ru="10 мин" data-en="10 min">10 мин</span></span>
+            <div class="premium-overlay">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <span data-ru="С подпиской" data-en="With subscription">С подпиской</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="#" data-ru="Антибиотикорезистентность: глобальная угроза" data-en="Antibiotic Resistance: A Global Threat">Антибиотикорезистентность: глобальная угроза</a></h3>
+            <p class="card-excerpt" data-ru="К 2050 году устойчивость к антибиотикам может убивать 10 млн человек в год. Что делает мировое сообщество?" data-en="By 2050, antibiotic resistance could kill 10 million people per year. What is the global community doing?">К 2050 году устойчивость к антибиотикам может убивать 10 млн человек в год. Что делает мировое сообщество?</p>
+            <div class="premium-blur">
+              <div class="premium-blur-content">
+                <p class="body-sm" style="color:var(--on-surface-variant);margin-bottom:8px;" data-ru="Антибиотикорезистентность — одна из главных угроз глобальному здравоохранению." data-en="Antibiotic resistance is one of the biggest threats to global health.">Антибиотикорезистентность — одна из главных угроз глобальному здравоохранению.</p>
+              </div>
+              <a href="#subscribe" class="premium-cta">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span data-ru="Читать далее — с подпиской" data-en="Read more — with subscription">Читать далее — с подпиской</span>
+              </a>
+            </div>
+            <div class="card-meta"><time datetime="2026-08-13"><span data-ru="13 авг 2026" data-en="Aug 13, 2026">13 авг 2026</span></time><span class="category" data-ru="Гайдлайны" data-en="Guidelines">Гайдлайны</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- SECTION 4: ABOUT ECOSYSTEM -->
+  <section class="news-section" id="ecosystem">
+    <div class="container">
+      <div class="section-header">
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+          <h2 class="section-title" data-ru="Об экосистеме BudMed" data-en="About BudMed Ecosystem">Об экосистеме BudMed</h2>
+          <span class="section-badge badge-ecosystem">BudMed</span>
+        </div>
+      </div>
+      <div class="articles-grid">
+
+        <!-- Article 13 -->
+        <article class="news-card" data-category="ecosystem">
+          <div class="card-thumbnail">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BudMed ecosystem">
+              <rect width="800" height="450" fill="#e8f5e9"/>
+              <circle cx="400" cy="200" r="140" fill="#86efac" opacity="0.2" stroke="#006d3e" stroke-width="2"/>
+              <circle cx="400" cy="120" r="25" fill="#006d3e" opacity="0.6"/>
+              <circle cx="300" cy="240" r="25" fill="#006d3e" opacity="0.4"/>
+              <circle cx="500" cy="240" r="25" fill="#006d3e" opacity="0.4"/>
+              <circle cx="340" cy="300" r="20" fill="#006a61" opacity="0.3"/>
+              <circle cx="460" cy="300" r="20" fill="#006a61" opacity="0.3"/>
+              <text x="400" y="380" text-anchor="middle" fill="#006d3e" font-size="20" font-weight="600">13 AI Agents</text>
+            </svg>
+            <span class="badge badge-ecosystem">BudMed</span>
+            <span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span data-ru="8 мин" data-en="8 min">8 мин</span></span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="#" data-ru="Что такое BudMed: 13 AI-агентов для вашего здоровья" data-en="What is BudMed: 13 AI Agents for Your Health">Что такое BudMed: 13 AI-агентов для вашего здоровья</a></h3>
+            <p class="card-excerpt" data-ru="BudMed — это не просто приложение. Это экосистема из 13 AI-агентов, каждый из которых отвечает за свою область: от распознавания лекарств до проверки взаимодействий." data-en="BudMed is not just an app. It's an ecosystem of 13 AI agents, each responsible for its own domain: from medication recognition to interaction checking.">BudMed — это не просто приложение. Это экосистема из 13 AI-агентов, каждый из которых отвечает за свою область: от распознавания лекарств до проверки взаимодействий.</p>
+            <div class="card-meta"><time datetime="2026-08-09"><span data-ru="9 авг 2026" data-en="Aug 9, 2026">9 авг 2026</span></time><span class="category">BudMed</span></div>
+          </div>
+        </article>
+
+        <!-- Article 14 (PREMIUM) -->
+        <article class="news-card premium-locked" data-category="ecosystem">
+          <div class="card-thumbnail">
+            <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Roadmap">
+              <rect width="800" height="450" fill="#e8f5e9"/>
+              <line x1="100" y1="225" x2="700" y2="225" stroke="#006d3e" stroke-width="3"/>
+              <circle cx="200" cy="225" r="16" fill="#006d3e"/>
+              <circle cx="320" cy="225" r="16" fill="#006d3e" opacity="0.7"/>
+              <circle cx="440" cy="225" r="16" fill="#006d3e" opacity="0.5"/>
+              <circle cx="560" cy="225" r="16" fill="#006d3e" opacity="0.3"/>
+              <circle cx="680" cy="225" r="16" fill="#006d3e" opacity="0.15"/>
+              <text x="200" y="180" text-anchor="middle" fill="#006d3e" font-size="12" font-weight="600">Foundation</text>
+              <text x="320" y="180" text-anchor="middle" fill="#006d3e" font-size="12" font-weight="600">Validation</text>
+              <text x="440" y="180" text-anchor="middle" fill="#006d3e" font-size="12" font-weight="600">MVP</text>
+              <text x="560" y="180" text-anchor="middle" fill="#006d3e" font-size="12" font-weight="600">Growth</text>
+              <text x="680" y="180" text-anchor="middle" fill="#006d3e" font-size="12" font-weight="600">Platform</text>
+              <text x="400" y="380" text-anchor="middle" fill="#006d3e" font-size="18" font-weight="600">BudMed Roadmap</text>
+            </svg>
+            <span class="badge badge-ecosystem">BudMed</span>
+            <span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span data-ru="6 мин" data-en="6 min">6 мин</span></span>
+            <div class="premium-overlay">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <span data-ru="С подпиской" data-en="With subscription">С подпиской</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="#" data-ru="Roadmap: от аптечки к клинической платформе" data-en="Roadmap: From Medicine Cabinet to Clinical Platform">Roadmap: от аптечки к клинической платформе</a></h3>
+            <p class="card-excerpt" data-ru="Путешествие BudMed: от идеи «умной аптечки» к полноценной клинической платформе с 13 AI-агентами." data-en="BudMed's journey: from a 'smart medicine cabinet' idea to a full clinical platform with 13 AI agents.">Путешествие BudMed: от идеи «умной аптечки» к полноценной клинической платформе с 13 AI-агентами.</p>
+            <div class="premium-blur">
+              <div class="premium-blur-content">
+                <p class="body-sm" style="color:var(--on-surface-variant);margin-bottom:8px;" data-ru="BudMed проходит 6 этапов развития — от фундамента до глобальной платформы." data-en="BudMed goes through 6 development stages — from foundation to global platform.">BudMed проходит 6 этапов развития — от фундамента до глобальной платформы.</p>
+              </div>
+              <a href="#subscribe" class="premium-cta">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span data-ru="Читать далее — с подпиской" data-en="Read more — with subscription">Читать далее — с подпиской</span>
+              </a>
+            </div>
+            <div class="card-meta"><time datetime="2026-08-07"><span data-ru="7 авг 2026" data-en="Aug 7, 2026">7 авг 2026</span></time><span class="category">BudMed</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- SUBSCRIBE SECTION -->
+  <section class="subscribe-section" id="subscribe">
+    <div class="container">
+      <h2 data-ru="BudMed News Premium" data-en="BudMed News Premium">BudMed News Premium</h2>
+      <p data-ru="Экспертные обзоры клинических гайдлайнов каждую неделю. Будьте в курсе последних изменений в стандартах лечения." data-en="Expert clinical guideline reviews every week. Stay updated on the latest changes in treatment standards.">Экспертные обзоры клинических гайдлайнов каждую неделю. Будьте в курсе последних изменений в стандартах лечения.</p>
+      <form class="subscribe-form" onsubmit="return false;">
+        <input type="email" required data-ru-placeholder="ваш@email.com" data-en-placeholder="your@email.com" placeholder="ваш@email.com" />
+        <button type="submit" data-ru="Подписаться" data-en="Subscribe">Подписаться</button>
+      </form>
+      <p class="subscribe-note" data-ru="Мы не spam-им. Отписка в один клик." data-en="No spam. Unsubscribe in one click.">Мы не spam-им. Отписка в один клик.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-ru="О проекте" data-en="About">О проекте</h4>
+          <p data-ru="BudMed News — популярный медицинский портал экосистемы BudMed &amp; MedCore™. Мы объясняем AI-здравоохранение простым языком — без терминов, с заботой и научной точностью." data-en="BudMed News — the popular medical portal of the BudMed &amp; MedCore™ ecosystem. We explain AI healthcare in simple terms — without jargon, with care and scientific accuracy.">BudMed News — популярный медицинский портал экосистемы BudMed &amp; MedCore™. Мы объясняем AI-здравоохранение простым языком — без терминов, с заботой и научной точностью.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-ru="Разделы" data-en="Sections">Разделы</h4>
+          <ul>
+            <li><a href="#ai-health" data-ru="AI &amp; Здоровье" data-en="AI &amp; Health">AI &amp; Здоровье</a></li>
+            <li><a href="#health" data-ru="Здоровье &amp; Фармакология" data-en="Health &amp; Pharmacology">Здоровье &amp; Фармакология</a></li>
+            <li><a href="#guidelines" data-ru="Клинические гайдлайны" data-en="Clinical Guidelines">Клинические гайдлайны</a></li>
+            <li><a href="#ecosystem" data-ru="Об экосистеме" data-en="About Ecosystem">Об экосистеме</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-ru="Контакты" data-en="Contacts">Контакты</h4>
+          <ul>
+            <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="mailto:news@budmed.io">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 BudMed &amp; MedCore™. <span data-ru="Все права защищены." data-en="All rights reserved.">Все права защищены.</span></p>
+        <p class="footer-disclaimer" data-ru="Внимание: Информация на данном сайте носит исключительно ознакомительный характер и не является медицинской консультацией, постановкой диагноза или руководством к лечению. Всегда обращайтесь к квалифицированному медицинскому специалисту. BudMed &amp; MedCore™ не несёт ответственности за решения, принятые на основе размещённой информации." data-en="Disclaimer: The information on this website is for informational purposes only and does not constitute medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional. BudMed &amp; MedCore™ is not responsible for decisions made based on the information provided.">Внимание: Информация на данном сайте носит исключительно ознакомительный характер и не является медицинской консультацией, постановкой диагноза или руководством к лечению. Всегда обращайтесь к квалифицированному медицинскому специалисту. BudMed &amp; MedCore™ не несёт ответственности за решения, принятые на основе размещённой информации.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" aria-label="Scroll to top">
+    <svg viewBox="0 0 20 20" fill="none"><path d="M10 15V5M5 10l5-5 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

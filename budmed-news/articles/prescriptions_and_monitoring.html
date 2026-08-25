@@ -1,0 +1,1146 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Назначенная терапия и мониторинг — ревматолог 30.07.2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* BudMedSolution OsteoGuard · Кісткова Охорона */
+    --primary:#0D5C57;
+    --ink:#0A2523;
+    --sage:#86EFAC;
+    --surface:#F7FAF9;
+    --line:#DCE8E5;
+    --critical:#BE123C;      --critical-bg:#FCEEF2;  --critical-line:#F2CBD6;
+    --warning:#C2410C;       --warning-bg:#FCF1EA;   --warning-line:#F0D4BE;
+    --safe:#0F766E;          --safe-bg:#EBF6F4;      --safe-line:#C5E4DD;
+    --info:#475569;          --info-bg:#F1F4F7;      --info-line:#DEE5EC;
+    /* легаси-алиасы существующей разметки */
+    --teal:#0D5C57; --muted:#475569; --bg:#F7FAF9;
+    --danger:#BE123C; --danger-bg:#FCEEF2; --danger-line:#F2CBD6;
+    --warn:#C2410C;   --warn-bg:#FCF1EA;   --warn-line:#F0D4BE;
+    --safe-bg:#EBF6F4; --safe-line:#C5E4DD;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter',system-ui,sans-serif;font-size:15px;line-height:1.55;color:var(--ink);background:#fff;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 32px;}
+  a{color:inherit;}
+  h1,h2,h3,h4{font-family:'Inter Tight','Inter',sans-serif;letter-spacing:-0.02em;}
+  h2{font-weight:600;}
+  h3,h4{font-weight:500;}
+  table{border-collapse:collapse;width:100%;}
+  .mono,.ftable td .mono{font-family:'JetBrains Mono',monospace;font-size:13px;}
+  .caption{font-size:12px;color:var(--info);}
+  :focus-visible{outline:2px solid var(--primary);outline-offset:2px;border-radius:4px;}
+
+  /* ---- masthead ---- */
+  .masthead{background:linear-gradient(160deg,var(--primary),var(--ink));color:#fff;padding:48px 0 40px;}
+  .mark{width:44px;height:44px;border-radius:13px;background:rgba(134,239,172,.14);border:1px solid rgba(134,239,172,.3);
+    display:flex;align-items:center;justify-content:center;margin-bottom:22px;}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:3px;color:var(--sage);margin-bottom:14px;}
+  .masthead h1{font-size:clamp(25px,3.6vw,30px);font-weight:800;line-height:1.18;max-width:760px;margin-bottom:10px;}
+  .masthead p.sub{color:#C9E5DC;font-size:15px;max-width:660px;margin-bottom:26px;}
+  .profile-row{display:flex;flex-wrap:wrap;gap:10px;}
+  .badge{font-family:'JetBrains Mono',monospace;font-size:12.5px;padding:0 14px;height:32px;border-radius:9px;
+    display:inline-flex;align-items:center;}
+  .badge .dot{width:7px;height:7px;border-radius:50%;margin-right:8px;flex-shrink:0;}
+  .badge-danger{background:rgba(190,18,60,.24);color:#FDA4AF;}
+  .badge-danger .dot{background:#FB7185;}
+  .badge-warn{background:rgba(194,65,12,.26);color:#FDBA74;}
+  .badge-warn .dot{background:#FB923C;}
+  .badge-info{background:rgba(134,239,172,.16);color:#BBF7D0;}
+  .badge-info .dot{background:var(--sage);}
+
+  /* ---- toc ---- */
+.toc{background:var(--surface);border-bottom:1px solid var(--line);padding:16px 0;position:sticky;top:0;z-index:800;box-shadow:0 2px 12px rgba(10,37,35,.07);}
+.toc .wrap{display:flex;flex-wrap:wrap;gap:20px;font-size:12.5px;}
+.toc a{color:var(--primary);font-weight:600;text-decoration:none;}
+.toc a:hover{text-decoration:underline;}
+.section,[id]{scroll-margin-top:64px;}
+/* ---- back to top ---- */
+.totop{position:fixed;right:18px;bottom:18px;z-index:850;width:46px;height:46px;border:none;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--ink));color:#fff;cursor:pointer;box-shadow:0 6px 16px rgba(10,37,35,.28);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;}
+.totop.show{opacity:1;visibility:visible;transform:translateY(0);}
+.totop:hover{transform:translateY(-3px);}
+.totop:focus-visible{outline:2px solid var(--primary);outline-offset:3px;}
+.totop svg{width:20px;height:20px;}
+
+  /* ---- sections ---- */
+  .section{padding:56px 0;border-bottom:1px solid var(--line);}
+  .section:last-of-type{border-bottom:none;}
+  .kicker{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2.2px;color:var(--primary);margin-bottom:10px;}
+  .section h2{font-size:22px;margin-bottom:8px;}
+  .section > .wrap > p.lede{color:var(--info);font-size:15px;max-width:720px;margin-bottom:28px;}
+
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px;}
+
+  /* ---- stat band ---- */
+  .statband{background:var(--ink);border-radius:16px;padding:34px 30px;display:flex;flex-wrap:wrap;gap:24px;}
+  .stat{flex:1;min-width:150px;text-align:center;}
+  .stat .n{font-family:'Inter Tight','Inter',sans-serif;font-weight:800;font-size:32px;color:#fff;}
+  .stat .n span{color:var(--sage);}
+  .stat .l{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:1px;color:#9CC8BE;margin-top:6px;}
+
+  /* ---- tables: зебра + sticky header + цветная «Оценка» ---- */
+  .ftable{border:1px solid var(--line);border-radius:14px;margin-bottom:18px;}
+  .ftable table{font-size:13px;border-collapse:separate;border-spacing:0;}
+  .ftable th{position:sticky;top:0;z-index:5;background:var(--surface);text-align:left;padding:12px 16px;
+    font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.6px;color:var(--info);
+    box-shadow:inset 0 -1px 0 var(--line);}
+  .ftable th:first-child{border-top-left-radius:13px;}
+  .ftable th:last-child{border-top-right-radius:13px;}
+  .ftable td{padding:11px 16px;border-top:1px solid var(--line);vertical-align:top;background:#fff;}
+  .ftable tbody :where(tr:nth-child(even)) td{background:#F4F9F7;}
+  .ftable tr td.no{background:var(--critical-bg);color:#9F1239;}
+  .ftable tr td.yes{background:var(--safe-bg);color:#115E59;}
+  .ftable tr td.warn{background:var(--warning-bg);color:#9A3412;}
+  .ftable tr:last-child td:first-child{border-bottom-left-radius:13px;}
+  .ftable tr:last-child td:last-child{border-bottom-right-radius:13px;}
+  .ftable b.drug{font-size:13.5px;}
+
+  /* ---- status boxes: иконка через CSS-маску, цвет = статус ---- */
+  .box{position:relative;border-radius:14px;padding:14px 16px 14px 46px;font-size:13.5px;line-height:1.55;border:1px solid;margin-bottom:10px;}
+  .box::before{content:'';position:absolute;left:15px;top:15px;width:19px;height:19px;
+    background-color:currentColor;-webkit-mask:center/contain no-repeat;mask:center/contain no-repeat;}
+  .box strong{display:block;margin-bottom:3px;font-weight:600;}
+  .box-danger{background:var(--critical-bg);border-color:var(--critical-line);color:var(--ink);}
+  .box-danger::before{-webkit-mask-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 16v-4'/><path d='M12 8h.01'/><path d='M15.521 2.366 21.634 8.479a2 2 0 0 1 0 2.828l-6.113 6.114a2 2 0 0 1-2.829 0L6.579 11.308a2 2 0 0 1 0-2.828l6.114-6.114a2 2 0 0 1 2.828 0Z'/></svg>");mask-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 16v-4'/><path d='M12 8h.01'/><path d='M15.521 2.366 21.634 8.479a2 2 0 0 1 0 2.828l-6.113 6.114a2 2 0 0 1-2.829 0L6.579 11.308a2 2 0 0 1 0-2.828l6.114-6.114a2 2 0 0 1 2.828 0Z'/></svg>");
+    background-color:var(--critical);}
+  .box-danger strong{color:#9F1239;}
+  .box-warn{background:var(--warning-bg);border-color:var(--warning-line);color:var(--ink);}
+  .box-warn::before{-webkit-mask-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3'/><path d='M12 9v4'/><path d='M12 17h.01'/></svg>");mask-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3'/><path d='M12 9v4'/><path d='M12 17h.01'/></svg>");
+    background-color:var(--warning);}
+  .box-warn strong{color:#9A3412;}
+  .box-safe{background:var(--safe-bg);border-color:var(--safe-line);color:var(--ink);}
+  .box-safe::before{-webkit-mask-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1 1 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z'/><path d='m9 12 2 2 4-4'/></svg>");mask-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1 1 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z'/><path d='m9 12 2 2 4-4'/></svg>");
+    background-color:var(--safe);}
+  .box-safe strong{color:#115E59;}
+  .box-info{background:var(--info-bg);border-color:var(--info-line);color:var(--ink);}
+  .box-info::before{-webkit-mask-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><path d='M12 16v-4'/><path d='M12 8h.01'/></svg>");mask-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><path d='M12 16v-4'/><path d='M12 8h.01'/></svg>");
+    background-color:var(--info);}
+  .box-info strong{color:#334155;}
+
+  /* ---- action summary «Что сделать сейчас» ---- */
+  .actsum{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px 28px;
+    display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:28px;}
+  .actsum h2{font-size:22px;line-height:1.25;margin-bottom:8px;}
+  .actlist{list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .actlist li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);
+    border-radius:12px;padding:12px 14px;font-size:13.5px;}
+  .actlist .num-badge{width:30px;height:30px;border-radius:9px;background:var(--warning-bg);color:var(--warning);
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;margin:0;flex-shrink:0;}
+  .actlist li.crit{border-color:var(--critical-line);background:var(--critical-bg);}
+  .actlist li.crit .num-badge{background:#fff;color:var(--critical);}
+
+  /* ---- chart ---- */
+  .chartcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:18px;}
+  .chartcard h3{font-size:16px;margin-bottom:14px;}
+  .legend{display:flex;gap:16px;margin-top:14px;font-size:12px;color:var(--info);flex-wrap:wrap;}
+  .legend span{display:flex;align-items:center;}
+  .legend i{width:9px;height:9px;border-radius:2px;margin-right:6px;display:inline-block;}
+
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+  /* ---- checklist (печать с чекбоксами) ---- */
+  .checklist{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .cbox{display:flex;align-items:flex-start;gap:11px;padding:12px 14px;background:#fff;border:1px solid var(--line);
+    border-radius:12px;font-size:13.5px;}
+  .cbox .sq{width:18px;height:18px;border:2px solid var(--primary);border-radius:4px;flex-shrink:0;margin-top:1px;}
+
+  /* ---- download button (OsteoGuard action) ---- */
+  .btnrow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:16px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;height:38px;padding:0 18px;border-radius:12px;
+    border:1px solid rgba(255,255,255,.28);outline:1px solid rgba(13,92,87,.35);
+    background:linear-gradient(180deg,#12655E,var(--primary));color:#fff;cursor:pointer;
+    font-family:'Inter',system-ui,sans-serif;font-size:13.5px;font-weight:600;
+    box-shadow:0 8px 20px rgba(10,37,35,.18);
+    transition:transform .18s ease,box-shadow .18s ease,background .18s ease;}
+  .btn:hover{transform:translateY(-2px);background:linear-gradient(180deg,#146A62,#0D5C57);
+    box-shadow:0 12px 26px rgba(10,37,35,.24);}
+  .btn:focus-visible{outline:2px solid var(--primary);outline-offset:3px;}
+  .btn svg{flex-shrink:0;}
+
+  .note{font-size:12px;color:var(--info);}
+
+  footer{background:var(--ink);color:#9CC8BE;padding:36px 0;}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:12px;}
+  footer strong{color:#fff;font-weight:600;}
+
+  /* ---- колонтитул печати (T-score + дата) ---- */
+  .print-meta{display:none;}
+
+  @media (max-width:760px){
+    .twocol{grid-template-columns:1fr;}
+    .checklist{grid-template-columns:1fr;}
+    .zayava-tip{display:none;}
+    .actsum{grid-template-columns:1fr;padding:20px;}
+  }
+  @page{size:A4;margin:16mm 12mm 18mm;}
+  @media print{
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    html{font-size:14px;}
+    .toc{display:none;}
+    .totop{display:none!important;}
+    .zayava-wrap{display:none;}
+    .section{break-inside:avoid;padding:24px 0;border-bottom:1px solid var(--line);}
+    .actsum{break-inside:avoid;}
+    .print-meta{display:flex;position:fixed;top:0;left:0;right:0;z-index:99;
+      justify-content:space-between;padding:5px 2px;margin-bottom:8px;
+      border-bottom:1px solid var(--line);
+      font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--info);}
+  }
+
+  /* ---- fixed zayava button: парящая плашка, отступ от края ---- */
+  .zayava-wrap{position:fixed;right:14px;top:45%;transform:translateY(-50%);z-index:900;
+    display:flex;align-items:center;}
+  .zayava-btn{writing-mode:vertical-rl;transform:rotate(180deg);
+    background:linear-gradient(180deg,#11564F,var(--primary));color:#fff;cursor:pointer;
+    padding:22px 12px;border-radius:14px;border:1px solid rgba(255,255,255,.35);
+    outline:1px solid rgba(13,92,87,.25);
+    font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:2.5px;text-transform:uppercase;
+    box-shadow:0 14px 30px rgba(10,37,35,.28),0 4px 10px rgba(10,37,35,.16);
+    transition:transform .2s ease,box-shadow .2s ease,background .2s ease;}
+  .zayava-btn:hover{transform:rotate(180deg) translateY(3px);
+    background:linear-gradient(180deg,#146A62,#0D5C57);
+    box-shadow:0 20px 40px rgba(10,37,35,.32),0 6px 14px rgba(10,37,35,.2);}
+  .zayava-btn:focus-visible{outline:2px solid #fff;outline-offset:3px;}
+  .zayava-tip{position:absolute;right:calc(100% + 14px);top:50%;transform:translateY(-50%);
+    width:280px;background:var(--ink);color:#D8EFE7;padding:13px 15px;border-radius:14px;
+    font-size:12px;line-height:1.55;border:1px solid rgba(134,239,172,.28);
+    box-shadow:0 16px 34px rgba(10,37,35,.35);opacity:0;visibility:hidden;transition:.2s ease;}
+  .zayava-tip::after{content:'';position:absolute;left:100%;top:50%;transform:translateY(-50%);
+    border:7px solid transparent;border-left-color:var(--ink);}
+  .zayava-wrap:hover .zayava-tip,.zayava-wrap:focus-within .zayava-tip{opacity:1;visibility:visible;}
+  .zayava-tip b{display:block;color:var(--sage);margin-bottom:4px;}
+
+  /* ---- media section: audio + video + downloads ---- */
+  .media-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:18px;}
+  .media-card h3{font-size:16px;margin-bottom:12px;font-weight:600;}
+  .media-card .media-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--primary);margin-bottom:8px;}
+  .media-card p{font-size:13.5px;color:var(--info);line-height:1.55;}
+  .audio-player{margin:14px 0;}
+  .audio-player audio{width:100%;height:42px;border-radius:10px;}
+  .video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin:14px 0;}
+  .video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:12px;}
+  .dl-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;}
+  .dl-card{display:flex;align-items:flex-start;gap:12px;padding:16px;background:#fff;border:1px solid var(--line);border-radius:12px;text-decoration:none;transition:box-shadow .18s ease,transform .18s ease;}
+  .dl-card:hover{box-shadow:0 6px 16px rgba(10,37,35,.1);transform:translateY(-2px);}
+  .dl-card .dl-icon{width:38px;height:38px;border-radius:10px;background:var(--safe-bg);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--safe);}
+  .dl-card .dl-icon svg{width:20px;height:20px;}
+  .dl-card .dl-text{font-size:13.5px;line-height:1.45;}
+  .dl-card .dl-text strong{display:block;font-weight:600;margin-bottom:2px;}
+  .dl-card .dl-text span{color:var(--info);font-size:12px;}
+  @media (max-width:760px){.dl-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="print-meta" aria-hidden="true"><span>BudMedSolution OsteoGuard · Назначения и мониторинг · 30.07.2026</span><span>T = −2.5 (L1–L4, 2026) · T = −2.8 (шейка бедра) · Ca²⁺ 1.33 ммоль/л</span></div>
+
+<div class="masthead">
+  <div class="wrap">
+    <div class="mark"><svg width="22" height="22" viewBox="0 0 64 64" aria-hidden="true"><rect x="27" y="14" width="10" height="38" rx="4" fill="#fff"/><rect x="20" y="27" width="24" height="10" rx="4" fill="#fff"/><circle cx="48" cy="14" r="7" fill="#86EFAC"/></svg></div>
+    <div class="eyebrow">НАЗНАЧЕННАЯ ТЕРАПИЯ · КОНСУЛЬТАЦИЯ РЕВМАТОЛОГА · 30.07.2026</div>
+    <h1>Назначения, направления и мониторинг по случаю M15.0 / M81.00</h1>
+    <p class="sub">Фиксация фактически назначенной схемы лечения, электронных направлений ЕСОЗ, динамики денситометрии 2025→2026 и лабораторных данных от 01.07.2026 — с разбором рисков текущей схемы.</p>
+    <div class="profile-row">
+      <div class="badge badge-danger"><span class="dot"></span>L1–L4: T = −3.1 (2025) → −2.5 (2026)</div>
+      <div class="badge badge-danger"><span class="dot"></span>Шейка бедра: T = −2.8</div>
+      <div class="badge badge-warn"><span class="dot"></span>Ca²⁺ иониз. 1.33 — верхняя граница</div>
+      <div class="badge badge-info"><span class="dot"></span>Витамин D 36 нг/мл — норма</div>
+    </div>
+  </div>
+</div>
+
+<div class="toc">
+  <div class="wrap">
+    <a href="#episode">1. Эпизод и диагнозы</a>
+    <a href="#therapy">2. Назначенная терапия</a>
+    <a href="#referrals">3. Направления ЕСОЗ</a>
+    <a href="#dexa">4. Динамика DEXA</a>
+    <a href="#labs">5. Лаборатория 01.07.2026</a>
+    <a href="#flags">6. Красные флаги схемы</a>
+    <a href="#altview">7. Альтернативное мнение</a>
+    <a href="#questions">8. Вопросы врачу</a>
+    <a href="#alt">9. Альтернативы и нутриенты</a>
+    <a href="#media">10. Медиа и материалы</a>
+  </div>
+</div>
+
+<!-- ACTION SUMMARY -->
+<section class="section" id="actsum" style="border-bottom:1px solid var(--line);padding-top:40px;">
+  <div class="wrap">
+    <div class="actsum">
+      <div>
+        <div class="kicker">ACTION SUMMARY</div>
+        <h2>Что сделать сейчас</h2>
+        <p class="caption">Порядок действий до начала любой новой терапии. Пункт 1 — при любом совпадении признаков, немедленно.</p>
+      </div>
+      <ol class="actlist">
+        <li class="crit"><span class="num-badge" aria-hidden="true">1</span><span><strong>Красные флаги перелома — срочная очная оценка:</strong> новая сильная боль в спине, снижение роста, невозможность опереться на ногу, падение. Не ждать планового визита.</span></li>
+        <li><span class="num-badge" aria-hidden="true">2</span><span><strong>Приостановить БАД с кальцием и витамин D 2000 МЕ</strong> до исключения гиперпаратиреоза: ионизированный Ca²⁺ уже 1.33 ммоль/л (верхняя граница), а суммарная доза вит. D достигает ≈4000 МЕ/сут.</span></li>
+        <li><span class="num-badge" aria-hidden="true">3</span><span><strong>Не начинать Ризостин до двух уточнений:</strong> характер реакции на ибандронат (гриппоподобный синдром ≠ эзофагит) и результаты ПТГ / креатинина / суточной экскреции кальция.</span></li>
+        <li><span class="num-badge" aria-hidden="true">4</span><span><strong>Сдать лабораторный минимум по направлениям ЕСОЗ</strong> (раздел 3): ПТГ, креатинин с расчётом СКФ, суточная экскреция кальция — до визита для коррекции схемы.</span></li>
+        <li><span class="num-badge" aria-hidden="true">5</span><span><strong>Если будущая схема — деносумаб:</strong> жёсткий календарь уколов q6 мес с напоминаниями и письменно зафиксированный план отмены (мост бисфосфонатом) — до первого введения.</span></li>
+        <li><span class="num-badge" aria-hidden="true">6</span><span><strong>Юридический трек:</strong> скачать «Заяву» (плавающая кнопка справа), распечатать в двух экземплярах, подать через регистратуру и получить отметку о вручении.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- EXEC -->
+<section class="section">
+  <div class="wrap">
+    <div class="kicker">РЕЗЮМЕ</div>
+    <h2>Что назначено и что требует внимания</h2>
+    <p class="lede">Консультация ревматолога 30.07.2026 зафиксировала замену ибандроната на пероральный ризедронат (Ризостин), симптоматическую терапию артроза и нутритивную поддержку — без расчёта FRAX и без учёта верхней границы ионизированного кальция.</p>
+    <div class="statband">
+      <div class="stat"><div class="n"><span>T&nbsp;−4.1 → −3.7</span></div><div class="l">L1–L2: ДИНАМИКА ЗА ГОД</div></div>
+      <div class="stat"><div class="n">35 мг</div><div class="l">РИЗОСТИН 1×/НЕД, 1 ГОД</div></div>
+      <div class="stat"><div class="n"><span>≈4000 МЕ</span></div><div class="l">СУММАРНЫЙ ВИТ. D В СУТКИ</div></div>
+      <div class="stat"><div class="n">210 мг</div><div class="l">ЭЛЕМЕНТ. Ca ИЗ КОМПЛЕКСА (ПРИ НОРМЕ 1200)</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 1 EPISODE -->
+<section class="section" id="episode">
+  <div class="wrap">
+    <div class="kicker">РАЗДЕЛ 1</div>
+    <h2>Эпизод данных и диагнозы</h2>
+    <p class="lede">Данные консультативного заключения из электронной системы здравоохранения (ЕСОЗ) от 30.07.2026.</p>
+    <div class="ftable">
+      <table>
+        <tbody>
+          <tr><td style="width:34%;"><b>Дата обследования</b></td><td>30.07.2026</td></tr>
+          <tr><td><b>Класс / тип помощи</b></td><td>Амбулаторная медицинская помощь · взаимодействие в учреждении здравоохранения · плановая</td></tr>
+          <tr><td><b>Период эпизода</b></td><td>Начало: 15.04.2025 11:25 · Лечение</td></tr>
+          <tr><td><b>Основной диагноз</b></td><td><span class="mono">M15.0</span> Первичный генерализованный (остео)артроз</td></tr>
+          <tr><td><b>Сопутствующий диагноз</b></td><td><span class="mono">M81.00</span> Остеопороз при постменопаузе, множественные локализации</td></tr>
+          <tr><td><b>Код услуги</b></td><td><span class="mono">L67003</span> Консультация ревматолога</td></tr>
+          <tr><td><b>Рекомендованные обследования</b></td><td>Ревмопробы · мочевая кислота · рентгеновская денситометрия 1 раз в год</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="box box-warn"><strong>Акцент диагнозов</strong>Артроз (M15.0) вынесен как основной, тяжёлый остеопороз с множественными локализациями — лишь сопутствующим, при том что минимальный T-критерий в позвонках достигал −4.1.</div>
+  </div>
+</section>
+
+<!-- 2 THERAPY -->
+<section class="section" id="therapy">
+  <div class="wrap">
+    <div class="kicker">РАЗДЕЛ 2</div>
+    <h2>Назначенная терапия</h2>
+    <p class="lede">Полная схема назначений из заключения — базовая, симптоматическая терапия, витамины и БАДы.</p>
+
+    <div class="ftable">
+      <table>
+        <thead><tr><th>Препарат</th><th>Режим (дословно из бланка)</th><th>Цель</th><th>Примечания</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b class="drug">Ризостин</b><br><span class="note mono">ризедроновая к-та</span></td>
+            <td>35 мг — 1 раз в неделю, утром, натощак, запивать стаканом воды, в течение 1 года (не ложиться после приема)</td>
+            <td>Базовая антирезорбтивная терапия остеопороза</td>
+            <td class="warn">Тот же класс, что отменённый ибандронат — пероральный бисфосфонат. Те же риски для пищевода и желудка при непереносимости ЖКТ.</td>
+          </tr>
+          <tr>
+            <td><b class="drug">Ибупрофен</b></td>
+            <td>400 мг — 2 раза в сутки после еды, при болях в суставах</td>
+            <td>Симптоматическая терапия артроза</td>
+            <td class="warn">НПВС дополнительно раздражают ЖКТ — суммируется с бисфосфонатом; осторожно при гастрите.</td>
+          </tr>
+          <tr>
+            <td><b class="drug">Вистакеа Остеостронг</b><br><span class="note mono">Ca цитрат + D3 + K2</span></td>
+            <td>1 таблетка — 2 раза в сутки во время еды</td>
+            <td>Нутритивная поддержка костной ткани</td>
+            <td class="warn">2 таблетки дают лишь ~210 мг элементарного кальция (норма 1200 мг/сут в 66 лет) и ~2000 МЕ вит. D3 сверх отдельного назначения.</td>
+          </tr>
+          <tr>
+            <td><b class="drug">Витамин D</b></td>
+            <td>2000 МЕ во время завтрака</td>
+            <td>Коррекция дефицита, поддержка минерализации</td>
+            <td class="no">Суммарно с комплексом ≈ 4000 МЕ/сут вслепую — при уровне 25(OH)D 36 нг/мл (уже норма) и без контрольного анализа на момент старта схемы.</td>
+          </tr>
+          <tr>
+            <td><b class="drug">Вистабон глюкозамин</b></td>
+            <td>1 раз в сутки во время еды, курсами 2–3 раза в год</td>
+            <td>Симптоматическая терапия артроза</td>
+            <td class="yes">Не влияет на костную плотность — работает только по суставному хрящу.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 3 REFERRALS -->
+<section class="section" id="referrals">
+  <div class="wrap">
+    <div class="kicker">РАЗДЕЛ 3</div>
+    <h2>Выданные электронные направления</h2>
+    <p class="lede">Шесть направлений созданы в ЕСОЗ. Все действуют до 30.07.2027 — то есть целый год, без указания сдать «сейчас».</p>
+    <div class="ftable">
+      <table>
+        <thead><tr><th>№</th><th>Код</th><th>Исследование</th><th>Действительно до</th><th>Статус сдачи</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td class="mono">T34031</td><td>Анализ — витамин D</td><td class="mono">30.07.2027</td><td class="warn">Уже сдан 01.07.2026: 36 нг/мл</td></tr>
+          <tr><td>2</td><td class="mono">L67003</td><td>Консультация ревматолога (повторная)</td><td class="mono">30.07.2027</td><td>—</td></tr>
+          <tr><td>3</td><td class="mono">A34024</td><td>Анализ — фосфат кальция</td><td class="mono">30.07.2027</td><td>—</td></tr>
+          <tr><td>4</td><td class="mono">A34005</td><td>Анализ — С-реактивный белок</td><td class="mono">30.07.2027</td><td class="yes">Уже сдан 01.07.2026: 1.19 мг/л (норма)</td></tr>
+          <tr><td>5</td><td class="mono">U34004</td><td>Анализ — урат / мочевая кислота</td><td class="mono">30.07.2027</td><td class="yes">Уже сдан 01.07.2026: 248 мкмоль/л (норма)</td></tr>
+          <tr><td>6</td><td class="mono">B34005</td><td>Анализ — кровь / тромбоциты</td><td class="mono">30.07.2027</td><td class="yes">Уже сдан 01.07.2026 (ОАК в норме)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="box box-danger"><strong>Чего не хватает в списке направлений</strong>Нет ключевых исследований для исключения вторичного остеопороза: паратгормон (ПТГ), креатинин/СКФ, суточная экскреция кальция с мочой, маркеры костного обмена (P1NP, β-CTX).</div>
+  </div>
+</section>
+
+<!-- 4 DEXA -->
+<section class="section" id="dexa">
+  <div class="wrap">
+    <div class="kicker">РАЗДЕЛ 4</div>
+    <h2>Динамика денситометрии 2025 → 2026</h2>
+    <p class="lede">Формальное улучшение среднего T-критерия L1–L4 (−3.1 → −2.5) маскирует сохраняющиеся критические значения в верхних поясничных позвонках и бедре.</p>
+
+    <h3 style="font-size:15px;margin-bottom:10px;">Сводная мастер-таблица: МПК и лабораторные данные</h3>
+    <div class="ftable" style="margin-bottom:10px;">
+      <table>
+        <thead><tr><th>Зона / показатель</th><th>Дата</th><th>МПК, г/см²</th><th>T-score</th><th>Z-score</th><th>МКТ (BMC), г</th><th>Клинический статус</th></tr></thead>
+        <tbody>
+          <tr><td>Позвонок L1</td><td class="mono">23.06.2026</td><td class="mono">0.690</td><td class="mono no">−3.7</td><td class="mono">−2.1</td><td class="mono">9.03</td><td class="no" title="Потеря минерализации верхней поясничной зоны — зона максимального риска компрессионного перелома">Критический провал</td></tr>
+          <tr><td>Позвонок L2</td><td class="mono">23.06.2026</td><td class="mono">0.755</td><td class="mono no">−3.7</td><td class="mono">−2.0</td><td class="mono">8.75</td><td class="no" title="Потеря минерализации верхней поясничной зоны — зона максимального риска компрессионного перелома">Критический провал</td></tr>
+          <tr><td>Позвоночник L1–L4 (суммарно)</td><td class="mono">23.06.2026</td><td class="mono">0.879</td><td class="mono warn">−2.5</td><td class="mono">−0.9</td><td class="mono">47.39</td><td class="warn" title="Средний T-score ровно на пороге −2.5 — диагноз остеопороза, но среднее маскирует провал L1–L2">Остеопороз (граница)</td></tr>
+          <tr><td>Шейка бедра (Hüfte)</td><td class="mono">23.06.2026</td><td class="mono">0.646</td><td class="mono no">−2.8</td><td class="mono">−1.3</td><td class="mono">2.69</td><td class="no" title="Перелом шейки бедра — самая тяжёлая точка приложения терапии">Высокий риск перелома</td></tr>
+          <tr><td>Вертел бедра (Trochanter)</td><td class="mono">23.06.2026</td><td class="mono">0.580</td><td class="mono no">−3.2</td><td class="mono">−2.7</td><td class="mono">7.65</td><td class="no" title="Зона прямого удара при боковом падении — обоснование протекторов бедра">Выраженный остеопороз</td></tr>
+          <tr><td>Лучевая кость 33% (Radius)</td><td class="mono">23.06.2026</td><td class="mono">0.557</td><td class="mono no">−2.7</td><td class="mono">−0.8</td><td class="mono">1.34</td><td class="no" title="Кортикальная потеря предплечья — риск перелома луча при падении на выпрямленную руку">Потеря кортикального слоя</td></tr>
+          <tr><td>Ионизированный кальций (кровь)</td><td class="mono">01.07.2026</td><td colspan="3" class="mono" style="text-align:center;">1.33 ммоль/л · реф. 1.15–1.33</td><td>—</td><td class="warn" title="Значение на самом верхнем крае референса — до любых препаратов кальция исключить гиперпаратиреоз (ПТГ)">Внимание: максимум референса</td></tr>
+          <tr><td>Витамин D3 (25-OH)</td><td class="mono">01.07.2026</td><td colspan="3" class="mono" style="text-align:center;">36 нг/мл · реф. ≥ 30.0</td><td>—</td><td class="yes" title="Адекватный уровень для стартовой безопасности терапии">Адекватный уровень</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption" style="margin-bottom:24px;">Даты денситометрии — по протоколу исследования (23.06.2026); консультация ревматолога — 30.07.2026, лаборатория — 01.07.2026. Маркировка: красный — критическое отклонение · оранжевый — пограничное внимание · зелёный — норма. Наведите курсор на статус для пояснения.</p>
+
+      <div class="chartcard">
+        <h3>Т-критерий: сравнение исследований · шкала WHO</h3>
+        <svg viewBox="0 0 480 320" width="100%" height="300" role="img" aria-label="Динамика T-score 2025–2026: L1–L4 улучшилось с минус 3,1 до минус 2,5; минимальная зона L1–L2 — с минус 4,1 до минус 3,7; шейка бедра минус 2,8; вертел минус 3,2. Все значения остаются в зоне остеопороза">
+          <!-- зоны WHO -->
+          <rect x="64" y="14" width="406" height="60.4" fill="rgba(134,239,172,.14)"/>
+          <rect x="64" y="74.4" width="406" height="81.1" fill="rgba(194,65,12,.055)"/>
+          <rect x="64" y="155.6" width="406" height="130.4" fill="rgba(190,18,60,.06)"/>
+          <!-- сетка -->
+          <line x1="64" y1="14" x2="470" y2="14" stroke="#DCE8E5"/>
+          <line x1="64" y1="74" x2="470" y2="74" stroke="#C2410C" stroke-width="1.4" stroke-dasharray="5,4" opacity=".55"/>
+          <line x1="64" y1="135" x2="470" y2="135" stroke="#DCE8E5"/>
+          <line x1="64" y1="156" x2="470" y2="156" stroke="#BE123C" stroke-width="1.4" stroke-dasharray="5,4" opacity=".6"/>
+          <line x1="64" y1="195" x2="470" y2="195" stroke="#DCE8E5"/>
+          <line x1="64" y1="256" x2="470" y2="256" stroke="#DCE8E5"/>
+          <line x1="64" y1="286" x2="470" y2="286" stroke="#94A3B8"/>
+          <!-- подписи оси -->
+          <text x="56" y="18" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#475569">0</text>
+          <text x="56" y="78" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#C2410C">−1.0</text>
+          <text x="56" y="139" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#475569">−2.0</text>
+          <text x="56" y="160" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#BE123C">−2.5</text>
+          <text x="56" y="199" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#475569">−3.0</text>
+          <text x="56" y="260" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#475569">−4.0</text>
+          <!-- названия зон -->
+          <text x="464" y="48" text-anchor="end" font-family="JetBrains Mono" font-size="9" letter-spacing="1.5" fill="#4D7C0F">НОРМА</text>
+          <text x="464" y="119" text-anchor="end" font-family="JetBrains Mono" font-size="9" letter-spacing="1.5" fill="#B45309">ОСТЕОПЕНИЯ</text>
+          <text x="464" y="224" text-anchor="end" font-family="JetBrains Mono" font-size="9" letter-spacing="1.5" fill="#9F1239">ОСТЕОПОРОЗ</text>
+          <!-- пары столбцов: 2025 (info) / 2026 (critical) -->
+          <rect x="78" y="99" width="28" height="187" rx="5" fill="#475569"/>
+          <rect x="112" y="135" width="28" height="151" rx="5" fill="#BE123C"/>
+          <rect x="188" y="38" width="28" height="248" rx="5" fill="#475569"/>
+          <rect x="222" y="62" width="28" height="224" rx="5" fill="#BE123C"/>
+          <rect x="313" y="117" width="28" height="169" rx="5" fill="#BE123C"/>
+          <rect x="423" y="93" width="28" height="193" rx="5" fill="#BE123C"/>
+          <!-- значения -->
+          <text x="92" y="91" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#475569">−3.1</text>
+          <text x="126" y="127" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#9F1239">−2.5</text>
+          <text x="202" y="30" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#475569">−4.1</text>
+          <text x="236" y="54" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#9F1239">−3.7</text>
+          <text x="327" y="109" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#9F1239">−2.8</text>
+          <text x="437" y="85" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#9F1239">−3.2</text>
+          <!-- категории -->
+          <text x="107" y="306" text-anchor="middle" font-family="Inter" font-size="11" fill="#0A2523">L1–L4</text>
+          <text x="217" y="306" text-anchor="middle" font-family="Inter" font-size="11" fill="#0A2523">L1–L2 (мин.)</text>
+          <text x="327" y="306" text-anchor="middle" font-family="Inter" font-size="11" fill="#0A2523">Шея бедра</text>
+          <text x="437" y="306" text-anchor="middle" font-family="Inter" font-size="11" fill="#0A2523">Вертел</text>
+        </svg>
+        <div class="legend">
+          <span><i style="background:#475569"></i>02.05.2025 (позвоночник)</span>
+          <span><i style="background:#BE123C"></i>23.06.2026 (позвоночник + бедро)</span>
+          <span><i style="width:16px;height:0;border-top:2px dashed #C2410C;border-radius:0;background:none"></i>Граница остеопении T = −1.0</span>
+          <span><i style="width:16px;height:0;border-top:2px dashed #BE123C;border-radius:0;background:none"></i>Граница остеопороза T = −2.5</span>
+        </div>
+      </div>
+
+    <div class="twocol">
+      <div>
+        <h3 style="font-size:14px;margin-bottom:10px;">Позвоночник · 02.05.2025</h3>
+        <div class="ftable">
+          <table>
+            <thead><tr><th>Область</th><th>МПК</th><th>T</th><th>Z</th></tr></thead>
+            <tbody>
+              <tr><td class="no">L1</td><td>0.610</td><td class="no">−4.1</td><td>−2.8 (65%)</td></tr>
+              <tr><td class="no">L2</td><td>0.669</td><td class="no">−4.1</td><td>−2.8 (67%)</td></tr>
+              <tr><td class="warn">L3</td><td>0.902</td><td class="warn">−2.5 (75%)</td><td>−0.8 (90%)</td></tr>
+              <tr><td>L4</td><td>1.033</td><td>−1.4 (86%)</td><td>0.2 (102%)</td></tr>
+              <tr><td>L1–L2</td><td>0.638</td><td>−4.1</td><td>−2.8 (66%)</td></tr>
+              <tr><td>L1–L3</td><td>0.725</td><td>−3.7 (62%)</td><td>−2.0 (75%)</td></tr>
+              <tr><td class="no"><b>L1–L4 (итог)</b></td><td><b>0.810</b></td><td class="no"><b>−3.1 (69%)</b></td><td>−1.5 (82%)</td></tr>
+              <tr><td>L2–L3</td><td>0.788</td><td>−3.4 (66%)</td><td>−1.8 (79%)</td></tr>
+              <tr><td>L2–L4</td><td>0.878</td><td>−2.7 (73%)</td><td>−1.0 (88%)</td></tr>
+              <tr><td>L3–L4</td><td>0.972</td><td>−1.9 (81%)</td><td>−0.3 (96%)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:14px;margin-bottom:10px;">Позвоночник · 23.06.2026</h3>
+        <div class="ftable">
+          <table>
+            <thead><tr><th>Область</th><th>МПК</th><th>T</th><th>Z</th></tr></thead>
+            <tbody>
+              <tr><td class="no">L1</td><td>0.690</td><td class="no">−3.7</td><td>−2.1 (73%)</td></tr>
+              <tr><td class="no">L2</td><td>0.755</td><td class="no">−3.7</td><td>−2.0 (75%)</td></tr>
+              <tr><td class="warn">L3</td><td>0.937</td><td class="warn">−2.2 (78%)</td><td>−0.5 (94%)</td></tr>
+              <tr><td>L4</td><td>1.086</td><td>−1.0 (90%)</td><td>0.6 (108%)</td></tr>
+              <tr><td>L1–L2</td><td>0.720</td><td>−3.7</td><td>−2.1 (74%)</td></tr>
+              <tr><td>L1–L3</td><td>0.799</td><td>−3.1 (68%)</td><td>−1.4 (83%)</td></tr>
+              <tr><td class="no"><b>L1–L4 (итог)</b></td><td><b>0.879</b></td><td class="no"><b>−2.5 (75%)</b></td><td>−0.9 (89%)</td></tr>
+              <tr><td>L2–L3</td><td>0.855</td><td>−2.9 (71%)</td><td>−1.2 (86%)</td></tr>
+              <tr><td>L2–L4</td><td>0.940</td><td>−2.2 (78%)</td><td>−0.5 (94%)</td></tr>
+              <tr><td>L3–L4</td><td>1.014</td><td>−1.6 (84%)</td><td>0.0 (101%)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size:14px;margin:18px 0 10px;">Бедро (проксимальный отдел) · 23.06.2026</h3>
+    <div class="ftable">
+      <table>
+        <thead><tr><th>Область</th><th>МПК (г/см²)</th><th>T</th><th>Z</th><th>МКТ (г)</th><th>Площадь (см²)</th></tr></thead>
+        <tbody>
+          <tr><td class="no">Шея</td><td>0.646</td><td class="no">−2.8 (66%)</td><td>−1.3 (80%)</td><td>2.69</td><td>4.16</td></tr>
+          <tr><td class="no">Зона Варда</td><td>0.496</td><td class="no">−3.2 (55%)</td><td>−1.1 (77%)</td><td>2.81</td><td>5.65</td></tr>
+          <tr><td class="no">Вертел</td><td>0.580</td><td class="no">−3.2 (62%)</td><td>−2.7 (66%)</td><td>7.65</td><td>13.19</td></tr>
+          <tr><td>Тело бедренной кости</td><td>0.785</td><td>—</td><td>—</td><td>11.24</td><td>14.69</td></tr>
+          <tr><td><b>Сумма</b></td><td><b>0.674</b></td><td class="no"><b>−2.7 (67%)</b></td><td>−1.5 (79%)</td><td>21.61</td><td>32.05</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-size:14px;margin:18px 0 10px;">Предплечье · 23.06.2026</h3>
+    <div class="ftable">
+      <table>
+        <thead><tr><th>Область</th><th>МПК (г/см²)</th><th>T</th><th>Z</th><th>МКТ (г)</th><th>Площадь (см²)</th></tr></thead>
+        <tbody>
+          <tr><td class="warn">Лучевая UD</td><td>0.300</td><td class="warn">−1.9 (82%)</td><td>−0.4 (95%)</td><td>1.08</td><td>3.49</td></tr>
+          <tr><td>Локтевая UD</td><td>0.167</td><td>—</td><td>—</td><td>0.34</td><td>2.02</td></tr>
+          <tr><td class="warn">Лучевая 33%</td><td>0.557</td><td class="warn">−2.2 (76%)</td><td>−0.8 (91%)</td><td>1.34</td><td>2.40</td></tr>
+          <tr><td>Локтевая 33%</td><td>0.592</td><td>—</td><td>—</td><td>1.24</td><td>2.09</td></tr>
+          <tr><td>Обе UD</td><td>0.257</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>Обе 33%</td><td>0.574</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td class="no">Лучевая результ.</td><td>0.410</td><td class="no">−2.7 (75%)</td><td>−1.3 (86%)</td><td>2.42</td><td>5.89</td></tr>
+          <tr><td>Локтевая результ.</td><td>0.383</td><td>—</td><td>—</td><td>1.58</td><td>4.11</td></tr>
+          <tr><td>Совместный результат</td><td>0.399</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="twocol">
+      <div class="box box-warn"><strong>Что показало «улучшение» за год</strong>Итог L1–L4: −3.1 → −2.5; минимумы L1/L2: −4.1 → −3.7; Z-score L1–L2 всё ещё ≈ −2.1 (ниже возрастной нормы). Возможный вклад погрешности укладки/аппарата — до 5–10%.</div>
+      <div class="box box-danger"><strong>Что осталось критическим</strong>Шея бедра T = −2.8, зона Варда и вертел −3.2, вертельный Z = −2.7. Риск перелома шейки бедра и компрессионных переломов L1–L2 остаётся очень высоким.</div>
+    </div>
+
+    <h3 style="font-size:15px;margin:24px 0 6px;">Валидация динамики по протоколу ISCD — независимая проверка</h3>
+    <p class="note" style="margin-bottom:14px;">Эталон того, как грамотный денситометрист обязан верифицировать прирост, прежде чем записать «улучшение» в карту.</p>
+
+    <div class="twocol" style="margin-bottom:12px;">
+      <div class="card">
+        <h3 style="font-size:14px;margin-bottom:8px;">1. LSC — порог достоверности изменения</h3>
+        <p style="font-size:12.5px;color:var(--muted);margin-bottom:8px;">Разница между двумя сканами признаётся реальной только если превышает погрешность метода конкретного центра:</p>
+        <p class="mono" style="font-size:14px;color:var(--teal);font-weight:700;">LSC = 2.77 × ошибка точности</p>
+        <p style="font-size:12.5px;color:var(--muted);margin-top:8px;">Прирост BMD L1–L4 за год: <b style="color:var(--ink);">+8.5%</b> (0.810 → 0.879 г/см²). Это может превышать типичный LSC (~2.8–5.5%), но вывод правомерен только при LSC именно этого аппарата, одинаковой укладке и сравнении абсолютной BMD, а не T-score (T зависит от референсной базы).</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:14px;margin-bottom:8px;">2. Дегенеративные артефакты поясницы</h3>
+        <p style="font-size:12.5px;color:var(--muted);">Остеофиты и субхондральный склероз завышают поясничную BMD до ~14%, чаще всего в L3–L4 — там же, где у пациентки лучшие значения. L4 — самый крупный позвонок (площадь 15.12 см²) с лучшим T = −1.0, поэтому вносит наибольший вес в среднее и тянет итог вверх. Спондилёз <b style="color:var(--ink);">маскирует остеопороз</b>, а не ухудшает его: итог −2.5 может недооценивать реальную тяжесть L1–L2.</p>
+      </div>
+    </div>
+
+    <div class="twocol" style="margin-bottom:20px;">
+      <div class="box box-safe"><strong>Решающий факт уже напечатан на бланке</strong>Официальная строка L1–L3 (без L4) есть в самом отчёте: 2025 — 0.725 г/см² (T −3.7); 2026 — 0.799 г/см² (T −3.1). Средневзвешенное по BMC/площади подтверждается: (0.690×13.09 + 0.755×11.59 + 0.937×14.10) / 38.78 = 0.799. Даже полностью исключив L4, позвоночник остаётся в зоне тяжёлого остеопороза — диагноз не меняется.</div>
+      <div class="box box-warn"><strong>Правило ISCD о пригодности L4</strong>Позвонок исключают только при структурной патологии или артефакте; разница T-score с соседом &gt;1.0 SD — лишь повод проверить снимок, а не команда «вычеркнуть». Здесь L4 − L3 = 1.2 SD → запросить изображение и официальный перерасчёт. Для диагноза нужно ≥2 пригодных позвонка; зона Варда диагностическим участком не считается — для бедра значимы шейка и total hip.</div>
+    </div>
+
+    <h3 style="font-size:14px;margin:0 0 10px;">Вопросы к центру DEXA (готовый протокольный список)</h3>
+    <div class="checklist">
+      <div class="cbox"><span class="sq"></span>Каков LSC центра для L1–L4, шейки бедра и total hip? Превышает ли изменение 2025→2026 этот порог?</div>
+      <div class="cbox"><span class="sq"></span>Оба скана выполнены на одном аппарате, по одной референсной базе и версии ПО?</div>
+      <div class="cbox"><span class="sq"></span>Есть ли на снимке остеофиты, склероз, сколиоз, кальцификация аорты, деформации?</div>
+      <div class="cbox"><span class="sq"></span>Признан ли L4 пригодным? Возможен ли официальный пересчёт без него?</div>
+      <div class="cbox"><span class="sq"></span>Совпадают ли площади позвонков между сканами 2025 и 2026 (разметка границ)?</div>
+      <div class="cbox"><span class="sq"></span>Показана ли VFA/рентгенография для исключения скрытых компрессионных переломов?</div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 LABS -->
+<section class="section" id="labs">
+  <div class="wrap">
+    <div class="kicker">РАЗДЕЛ 5</div>
+    <h2>Лабораторные данные · 01.07.2026</h2>
+    <p class="lede">Анализы сданы за месяц до консультации — врач видел их при назначении схемы от 30.07.2026.</p>
+
+    <h3 style="font-size:14px;margin-bottom:10px;">Биохимия и иммунохимия</h3>
+    <div class="ftable">
+      <table>
+        <thead><tr><th>Показатель</th><th>Результат</th><th>Ед.</th><th>Референтный интервал</th><th>Оценка</th></tr></thead>
+        <tbody>
+          <tr><td>Мочевая кислота</td><td class="mono">248</td><td>мкмоль/л</td><td>Женщины: 142.8 – 339.2</td><td class="yes">Норма</td></tr>
+          <tr><td>С-реактивный белок (СРБ)</td><td class="mono">1.19</td><td>мг/л</td><td>Взрослые: &lt; 5.0</td><td class="yes">Норма, воспаления нет</td></tr>
+          <tr><td><b>Кальций ионизированный</b></td><td class="mono"><b>1.33</b></td><td>ммоль/л</td><td>1.15 – 1.33</td><td class="no">Верхняя граница нормы</td></tr>
+          <tr><td><b>Витамин D (25-OH)</b></td><td class="mono">36</td><td>нг/мл</td><td>Достаточный: ≥ 30.0 – 50.0</td><td class="warn">Норма, но не верхняя треть целевого диапазона</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-size:14px;margin-bottom:10px;">Общий анализ крови (развернутый)</h3>
+    <div class="ftable">
+      <table>
+        <thead><tr><th>Показатель</th><th>Результат</th><th>Ед.</th><th>Референс (женщины &gt;50 лет)</th><th>Оценка</th></tr></thead>
+        <tbody>
+          <tr><td>СОЭ (ESR)</td><td class="mono">6</td><td>мм/час</td><td>до 30.0</td><td class="yes">Норма</td></tr>
+          <tr><td>Лейкоциты (WBC)</td><td class="mono">6.42</td><td>10⁹/л</td><td>4.0 – 9.0</td><td class="yes">Норма</td></tr>
+          <tr><td>Эритроциты (RBC)</td><td class="mono">4.6</td><td>10¹²/л</td><td>3.7 – 4.7</td><td class="yes">Норма</td></tr>
+          <tr><td>Гемоглобин (HGB)</td><td class="mono">132</td><td>г/л</td><td>120.0 – 140.0</td><td class="yes">Норма</td></tr>
+          <tr><td>Гематокрит (HCT)</td><td class="mono">41.3</td><td>%</td><td>35.0 – 54.0</td><td class="yes">Норма</td></tr>
+          <tr><td>MCV</td><td class="mono">89.8</td><td>фл</td><td>76.0 – 96.0</td><td class="yes">Норма</td></tr>
+          <tr><td>MCH</td><td class="mono">28.7</td><td>пг</td><td>27.0 – 33.0</td><td class="yes">Норма</td></tr>
+          <tr><td>MCHC</td><td class="mono">32</td><td>г/дл</td><td>32.0 – 36.0</td><td class="yes">Норма</td></tr>
+          <tr><td>Тромбоциты (PLT)</td><td class="mono">231</td><td>10⁹/л</td><td>180.0 – 360.0</td><td class="yes">Норма</td></tr>
+          <tr><td>RDW-SD</td><td class="mono">42.7</td><td>фл</td><td>35.0 – 46.0</td><td class="yes">Норма</td></tr>
+          <tr><td>RDW-CV</td><td class="mono">13.1</td><td>%</td><td>12.0 – 15.0</td><td class="yes">Норма</td></tr>
+          <tr><td>PDW</td><td class="mono">12.5</td><td>фл</td><td>10.0 – 20.0</td><td class="yes">Норма</td></tr>
+          <tr><td>MPV</td><td class="mono">10.9</td><td>фл</td><td>6.0 – 13.0</td><td class="yes">Норма</td></tr>
+          <tr><td>Тромбокрит (PCT)</td><td class="mono">0.25</td><td>%</td><td>0.1 – 0.5</td><td class="yes">Норма</td></tr>
+          <tr><td>Нейтрофилы % / абс.</td><td class="mono">57 / 3.66</td><td>% / 10⁹/л</td><td>47–72 / 1.56–6.13</td><td class="yes">Норма</td></tr>
+          <tr><td>Лимфоциты % / абс.</td><td class="mono">29.4 / 1.89</td><td>% / 10⁹/л</td><td>19–37 / 1.18–3.74</td><td class="yes">Норма</td></tr>
+          <tr><td>Моноциты % / абс.</td><td class="mono">10.9 / 0.71</td><td>% / 10⁹/л</td><td>3–10 / 0.24–0.82</td><td class="warn">% чуть выше нормы, абсолютное значение в норме</td></tr>
+          <tr><td>Эозинофилы % / абс.</td><td class="mono">1.9 / 0.12</td><td>% / 10⁹/л</td><td>0.5–5 / 0.04–0.36</td><td class="yes">Норма</td></tr>
+          <tr><td>Базофилы % / абс.</td><td class="mono">0.6 / 0.04</td><td>% / 10⁹/л</td><td>0–1 / 0.01–0.08</td><td class="yes">Норма</td></tr>
+          <tr><td>Незрелые гранулоциты % / абс.</td><td class="mono">0.2 / 0.01</td><td>% / 10⁹/л</td><td>&gt;60 лет: ≤1.1 / ≤0.06</td><td class="yes">Норма</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-danger"><strong>Ключевой конфликт анализов и назначений</strong>Ионизированный кальций 1.33 ммоль/л — на самой верхней границе. При разрушении костной ткани кальций вымывается в кровь. Назначение препаратов кальция (Вистакеа) до исключения первичного гиперпаратиреоза (анализ ПТГ) клинически рискованно: возможна гиперкальциемия и нагрузка на почки.</div>
+    <div class="box box-safe" style="margin-top:10px;"><strong>Как интерпретирует протокол (сдержанная версия)</strong>Одно значение Ca²⁺ на верхней границе — <b>не диагноз</b> гиперкальциемии или гиперпаратиреоза. Корректный путь верификации: повторный ионизированный кальций + общий кальций с альбумином, ПТГ, фосфор, креатинин/СКФ, щелочная фосфатаза, ТТГ; при показаниях — суточная экскреция кальция с мочой. Добавки кальция при этом не «запрещаются автоматически», а индивидуализируются: сначала оценивают, сколько элементарного кальция поступает с пищей, затем добирают добавкой с учётом функции почек. ОАК, СРБ и СОЭ вторичные причины остеопороза не исключают.</div>
+  </div>
+</section>
+
+<!-- 6 FLAGS -->
+<section class="section" id="flags">
+  <div class="wrap">
+    <div class="kicker">РАЗДЕЛ 6</div>
+    <h2>Красные флаги текущей схемы</h2>
+    <p class="lede">Расхождения между клинической картиной и фактически выданными назначениями.</p>
+    <div class="card">
+      <div class="box box-danger" style="margin-bottom:12px;"><strong>1. Замена «таблетка на таблетку»</strong>Ибандронат отменён из-за непереносимости со стороны ЖКТ — вместо внутривенных форм назначен Ризостин (ризедронат): тот же класс пероральных бисфосфонатов с теми же эзофагеальными и гастральными рисками.</div>
+      <div class="box box-danger" style="margin-bottom:12px;"><strong>2. Суммарно ≈ 4000 МЕ витамина D в сутки (сверить этикетку!)</strong>2000 МЕ отдельным препаратом + комплекс, в котором по разным данным документа содержится 2000 МЕ (на 2 таб) — или до 4000 МЕ, если считать 2000 МЕ на таблетку по первой формулировке инструкции. В любом случае — при исходном уровне 25(OH)D = 36 нг/мл (уже норма) без плана контрольного анализа. Фактическую дозу определяет только этикетка препарата.</div>
+      <div class="box box-danger" style="margin-bottom:12px;"><strong>3. Препараты кальция при Ca²⁺ на верхней границе</strong>Ионизированный кальций 1.33 ммоль/л требует сначала исключить гиперпаратиреоз (ПТГ), прежде чем добавлять кальций извне.</div>
+      <div class="box box-warn" style="margin-bottom:12px;"><strong>4. Недостаточное элементарного кальция</strong>Комплекс даёт ~210 мг элементарного Ca/сут при потребности 1200 мг для женщины 66 лет. Основную часть должна обеспечивать диета + раздельные добавки (500–600 мг в 2 приёма).</div>
+      <div class="box box-warn" style="margin-bottom:12px;"><strong>5. Нет расчёта FRAX и маркеров ответа</strong>10-летний риск переломов не посчитан; P1NP / β-CTX для контроля эффективности терапии через 3–6 мес не назначены.</div>
+      <div class="box box-warn" style="margin-bottom:0;"><strong>6. Сроки направлений «на год вперёд»</strong>Все направления действительны до 30.07.2027 без ориентира «сдать сейчас и пересмотреть схему» — хотя часть анализов уже была сдана до консультации.</div>
+    </div>
+    <div class="box box-safe" style="margin-top:14px;"><strong>Историческая справка: почему ушёл ибандронат</strong>Ибандроновая кислота 150 мг/мес вызывала гриппоподобный синдром (ломота, слабость 1–3 дня). Кроме того, её доказательная база по снижению переломов именно шейки бедра слабее, чем у других бисфосфонатов, — критично при T = −2.8 в шейке. Переход на в/в золедроновую кислоту или деносумаб решает обе проблемы.</div>
+
+    <h3 style="font-size:15px;margin:26px 0 10px;">Анализ скрытых манипуляций врача</h3>
+    <p class="lede" style="margin-bottom:12px;">Три тактических приёма, которые видны при сопоставлении документов между собой: формально каждый шаг «в рамках протокола», суммарно — смещение приоритета с жизнеопасной проблемы.</p>
+    <div class="card">
+      <div class="box box-danger" style="margin-bottom:12px;"><strong>1. Артроз вынесен на первое место, тяжёлый остеопороз спрятан в сопутствующие</strong>В заключении основной диагноз — M15.0 (полиостеоартроз), тогда как M81.00 (тяжёлый остеопороз, подтверждённый DEXA с T до −4.1) числится сопутствующим. Кодировка определяет маршрут помощи: «главная» болезнь получает внимание и ресурсы визита, а состояние с реальным риском компрессионного перелома остаётся на бумаге вторым номером.</div>
+      <div class="box box-danger" style="margin-bottom:12px;"><strong>2. Ризостин выписан «для галочки» по стандартному протоколу</strong>Замена выполнена по типовой схеме «пероральный → пероральный» без учёта двух обстоятельств: при T-критерии до −4.1 стандартные таблетки не соответствуют тяжести (показаны инъекционные антирезорбенты или анаболики), а предыдущий пероральный препарат уже вызвал непереносимость того же типа. Форма соблюдена — клиническое содержание проигнорировано.</div>
+      <div class="box box-danger" style="margin-bottom:0;"><strong>3. Направления со сроком действия до июля 2027 — годовой пассивный мониторинг</strong>Все шесть направлений ЕСОЗ действуют до 30.07.2027 без пометки «сдать сейчас и пересмотреть схему», хотя часть анализов уже сдана до консультации. При такой динамике потери кости год ожидания без контрольных точек — это перенос ответственности за коррекцию лечения на следующий цикл вместо решения вопроса немедленно.</div>
+    </div>
+    <div class="box box-info" style="margin-top:14px;"><strong>Как использовать этот разбор</strong>Это интерпретация тактики по документам, а не утверждение об умысле: каждый пункт сверяем с заключением ЕСОЗ и направлениями и переводим в вопросы раздела 8 — с требованием письменной фиксации ответа в карте.</div>
+  </div>
+</section>
+
+<!-- 7 ALT VIEW -->
+<section class="section" id="altview">
+  <div class="wrap">
+    <div class="kicker">РАЗДЕЛ 7 · АЛЬТЕРНАТИВНОЕ МНЕНИЕ</div>
+    <h2>Как должен действовать считающий себя специалистом врач</h2>
+    <p class="lede">Независимая сверка схемы с международной практикой (ISCD · NOGG · FDA-предписания). Это не обвинение конкретному врачу, а эталон процесса: по этим шагам можно проверять любые назначения при тяжёлом остеопорозе.</p>
+
+    <div class="cardgrid" style="margin-bottom:20px;">
+      <div class="card">
+        <div class="num-badge">1</div>
+        <h3>Верифицировать измерение</h3>
+        <p>Оригиналы обоих DEXA, LSC центра, один аппарат, пригодность позвонков (особенно L4 при разнице с L3 &gt;1.0 SD), VFA/рентген при потере роста или боли. Только после этого — разговор об «улучшении».</p>
+      </div>
+      <div class="card">
+        <div class="num-badge">2</div>
+        <h3>Исключить вторичные причины</h3>
+        <p>ПТГ, повторный кальций (общий с альбумином + ионизированный), фосфор, креатинин/СКФ, щелочная фосфатаза, ТТГ, суточный кальций мочи; целиакия и глюкокортикоиды — по анамнезу. ОАК и СРБ этого не заменяют.</p>
+      </div>
+      <div class="card">
+        <div class="num-badge">3</div>
+        <h3>Количественно оценить риск</h3>
+        <p>FRAX с данными страны, но не вместо клинического решения: при T ≤ −2.5 и тем более ≤ −3.5 FRAX лишь дополняет картину. Фиксируются рост, кифоз, низкоэнергетические переломы, падения.</p>
+      </div>
+      <div class="card">
+        <div class="num-badge" style="background:var(--safe-bg);color:var(--safe);">4</div>
+        <h3>Подобрать терапию и контроль</h3>
+        <p>Препарат — под переносимость, почки и доминирующую зону (бедро!). План контроля маркеров через 3–6 мес, а не «встретимся через год». При деносумабе — заранее прописанный план перехода.</p>
+      </div>
+    </div>
+
+    <h3 style="font-size:15px;margin-bottom:10px;">Протокольная матрица выбора (взвешенный взгляд на текущую схему)</h3>
+    <div class="ftable" style="margin-bottom:20px;">
+      <table>
+        <thead><tr><th>Клиническая ситуация</th><th>Что говорит протокол</th></tr></thead>
+        <tbody>
+          <tr><td>Пациентка переносит таблетки, функция почек сохранна</td><td class="yes">Ризедронат — <b>легитимный first-line</b>: признанный препарат с доказанным снижением переломов. Назначать его «ошибочным по умолчанию» нельзя — это рабочая гипотеза, требующая контроля переносимости.</td></tr>
+          <tr><td>Реакция на ибандронат была гриппоподобной, а не эзофагитом</td><td class="warn">Сначала уточнить характер реакции: гриппоподобный синдром не обязательно повторится на ризедронате; изжога/дисфагия — риск повторения высокий.</td></tr>
+          <tr><td>Подтверждена непереносимость пероральных бисфосфонатов</td><td class="warn">Золедроновая кислота в/в 1×/год — минует ЖКТ и защищает бедро; или деносумаб после проверки Ca и СКФ.</td></tr>
+          <tr><td>Очень высокий риск: T ≤ −3.5, переломы, прогрессия</td><td class="no">Анаболическая терапия (терипаратид/ромосумаб) первой линией → обязательный переход на антирезорбент. Но: ромосумаб — скрининг ИМ/инсульта за 12 мес; терипаратид — контроль гиперкальциемии (актуально при Ca²⁺ 1.33).</td></tr>
+          <tr><td>Выбран деносумаб</td><td class="warn">Обязательства врача: восполнение Ca и витамина D до укола, контроль Ca+креатинина перед каждым введением, жёсткий график q6 мес, письменно зафиксированный план перехода на бисфосфонат при отмене (риск ребаунда с множественными переломами позвонков). Доказательность по FREEDOM (n=7868): −68% позвоночных и −40% переломов бедра за 3 года; но частота позвоночных переломов после пропуска дозы 1.2→7.1 на 100 п-лет.</td></tr>
+          <tr><td>Ибандронат как вариант</td><td class="no">Данные по профилактике переломов шейки бедра непоследовательны — при T = −2.8 в шейке это аргумент против, независимо от переносимости.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-size:15px;margin-bottom:10px;">Прогноз по сценариям, 1–3 года</h3>
+    <div class="ftable" style="margin-bottom:20px;">
+      <table>
+        <thead><tr><th>Сценарий</th><th>1 год</th><th>2 года</th><th>3 года</th></tr></thead>
+        <tbody>
+          <tr><td><b>Только БАДы + контроль раз в год</b></td><td class="no">Возможная иллюзия стабильности DEXA; риск не снижен</td><td class="no">Высокая вероятность перелома при падении; потерянное время</td><td class="no">Функциональные ограничения после перелома</td></tr>
+          <tr><td><b>Пероральный бисфосфонат при хорошей приверженности</b></td><td class="yes">Стабилизация BMD, снижение риска позвоночных переломов</td><td class="yes">Поддержание эффекта; оценка ответа и переносимости</td><td>Пересмотр длительности, иногда «лекарственные каникулы»</td></tr>
+          <tr><td><b>Золедроновая кислота в/в</b></td><td class="yes">Удобство при проблемах с ЖКТ; возможна острая реакция 1–3 дня</td><td class="yes">Стабильный антирезорбтивный эффект</td><td>Решение о продолжении по риску</td></tr>
+          <tr><td><b>Деносумаб по графику</b></td><td class="yes">Сильное подавление резорбции</td><td class="warn">Эффект сохраняется только при введении q6 мес</td><td class="warn">Отмена без перехода = ребаунд; план обязателен</td></tr>
+          <tr><td><b>Анаболик → антирезорбент</b></td><td class="yes">Наибыстрейший прирост BMD у подходящих пациенток</td><td class="yes">Закрепление результата антирезорбентом</td><td class="yes">Поддержание достигнутого при наблюдении</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-warn"><strong>Ответственность за процесс — вместо поиска виноватого</strong>По документу нельзя обоснованно утверждать об умышленном вреде. Объективно проверяемо другое: лечащий врач обязан объяснить риск перелома и альтернативы; назначающий деносумаб — обеспечить контроль кальция и план отмены; при отсутствии оценки вторичных причин и чёткого плана при T до −4.1 разумно требовать второе мнение (эндокринолог / специалист по остеопорозу). Красные флаги: новая сильная боль в спине, снижение роста, невозможность опереться на ногу, падение — срочная очная оценка на перелом.</div>
+  </div>
+</section>
+
+<!-- 8 QUESTIONS -->
+<section class="section" id="questions">
+  <div class="wrap">
+    <div class="kicker">РАЗДЕЛ 8</div>
+    <h2>Вопросы врачу — чек-лист для следующего визита</h2>
+    <p class="lede">Для печати. Цель — получить фиксацию ответов в амбулаторной карте.</p>
+    <div class="btnrow">
+      <button class="btn" type="button" onclick="downloadChecklist()" aria-label="Завантажити друкований чек-ліст питань лікарю українською мовою">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Завантажити чек-ліст (друк)
+      </button>
+      <span class="note">Самодостатній HTML-файл українською · формат A4 · квадрат-чекбокси та рядки «Відповідь лікаря» під кожним пунктом</span>
+    </div>
+    <div class="checklist">
+      <div class="cbox"><span class="sq"></span>Посчитан ли индивидуальный 10-летний риск переломов по FRAX? Каков он в процентах?</div>
+      <div class="cbox"><span class="sq"></span>Если пероральные бисфосфонаты не переносятся — почему не рассматриваются золедроновая кислота в/в (1×/год) или деносумаб п/к (1×/6 мес)?</div>
+      <div class="cbox"><span class="sq"></span>Есть ли противопоказания к анаболической терапии (терипаратид / ромосумаб) при T ниже −3.5? Зафиксировать в карте.</div>
+      <div class="cbox"><span class="sq"></span>Направления на ПТГ, фосфор, ионизированный кальций, креатинин/СКФ, суточную экскрецию кальция с мочой?</div>
+      <div class="cbox"><span class="sq"></span>Какие маркеры костного обмена (P1NP или β-CTX) выберем для контроля эффективности через 3–6 месяцев?</div>
+      <div class="cbox"><span class="sq"></span>Как скорректировать суммарную дозу витамина D (с учётом состава комплекса — сверить этикетку) при уровне 36 нг/мл?</div>
+      <div class="cbox"><span class="sq"></span>План действий при непереносимости Ризостина со стороны ЖКТ (учитывая реакцию на ибандронат)?</div>
+      <div class="cbox"><span class="sq"></span>Нужно ли исключить скрытые компрессионные микропереломы (рентген/МРТ грудного и поясничного отделов)?</div>
+      <div class="cbox"><span class="sq"></span>Каков LSC нашего центра и превышает ли динамика BMD 2025→2026 (+8.5%) этот порог?</div>
+      <div class="cbox"><span class="sq"></span>Оба DEXA — на одном аппарате? Пригоден ли L4 (разница с L3 = 1.2 SD)? Нужен пересчёт L1–L3?</div>
+      <div class="cbox"><span class="sq"></span>Если когда-либо будет выбран деносумаб — какой письменно зафиксированный план перехода при его отмене?</div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 ALTERNATIVES -->
+<section class="section" id="alt">
+  <div class="wrap">
+    <div class="kicker">РАЗДЕЛ 9</div>
+    <h2>Альтернативные линии терапии и нутриенты</h2>
+    <p class="lede">Варианты для обсуждения со специалистом (эндокринолог / ревматолог центра костно-минерального обмена).</p>
+
+    <h3 style="font-size:15px;margin-bottom:10px;">A. Рецептурные варианты</h3>
+    <div class="ftable">
+      <table>
+        <thead><tr><th>Препарат</th><th>Схема</th><th>Доказанная эффективность</th><th>Ключевые предосторожности</th></tr></thead>
+        <tbody>
+          <tr><td><b>Деносумаб (Пролиа)</b></td><td>п/к 60 мг 1 раз в 6 мес</td><td>FREEDOM (7800+ участниц): −68% переломов позвоночника, −40% шейки бедра</td><td class="warn">Boxed Warning FDA 2024 — гипокальциемия при тяжёлой ХБП; перед уколом проверить кальций и функцию почек; при отмене — ребаунд, обязателен переход на бисфосфонат</td></tr>
+          <tr><td><b>Золедроновая кислота</b></td><td>в/в инфузия 5 мг 1 раз в год</td><td>До −70% переломов; защищает шейку бедра</td><td class="warn">Гриппоподобная реакция 1–3 дня после первой инфузии (профилактика парацетамолом); обходят желудок</td></tr>
+          <tr><td><b>Ромосумаб (Эвенити)</b></td><td>п/к 210 мг ежемесячно, 12 мес</td><td>FRAME/ARCH (14000+ пациентов): анаболик + антирезорбтивный эффект двойного действия</td><td class="no">Boxed Warning — противопоказан при инфаркте/инсульте в течение последнего года; гиперкальциемия</td></tr>
+          <tr><td><b>Терипаратид (Форстео)</b></td><td>п/к 20 мкг ежедневно, до 24 мес</td><td>Стимуляция образования новой кости; затем обязательный переход на антирезорбент</td><td class="warn">Противопоказан при гиперкальциемии — актуально при текущем Ca²⁺ 1.33</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-size:15px;margin-bottom:10px;">Деносумаб: доказательная сводка по первоисточникам</h3>
+    <p class="note" style="margin-bottom:10px;">Проверено по оригинальным публикациям программы FREEDOM и последующим анализам — без пересказа «с чужих слов».</p>
+    <div class="ftable" style="margin-bottom:14px;">
+      <table>
+        <thead><tr><th style="width:26%;">Источник</th><th>Ключевой результат</th><th style="width:30%;">Что это значит для данной пациентки</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>FREEDOM, RCT</b><br><span class="note">NEJM 2009;361:756–65 · n=7868 · 60 мг п/к q6мес · 3 года</span></td>
+            <td>Новые позвоночные переломы: 2.3% vs 7.2% (<b>RR 0.32 → −68%</b>); шейка бедра: 0.7% vs 1.2% (<b>HR 0.60 → −40%</b>); внепозвоночные: <b>−20%</b>. Множественных позвоночных переломов меньше на 61%. Роста риска онко, инфекций, ССЗ, гипокальциемии нет; <b>ни одного случая остеонекроза челюсти</b> за 3 года.</td>
+            <td class="yes">Единственный класс с доказанным снижением переломов <b>именно шейки бедра</b> (−40%) — критично при T = −2.8 в шейке, где ибандронат слаб.</td>
+          </tr>
+          <tr>
+            <td><b>Прочность кости (FEA/QCT)</b><br><span class="note">Keaveny et al., JBMR 2014;29:158–65 · виртуальные модели FREEDOM</span></td>
+            <td>За 36 мес прочность <b>тела позвонка +18.2%</b>, <b>проксимального отдела бедра +8.6%</b> (разница с плацебо: +22.4% и +14.3%). Улучшение в <b>обоих</b> компартментах — трабекулярном и кортикальном; плацебо-группа теряла прочность (бедро −5.6%).</td>
+            <td class="yes">Прирост прочности опережает прирост МПК: эффект не только «на бумаге» денситометра — реальная устойчивость к нагрузке и падению растёт.</td>
+          </tr>
+          <tr>
+            <td><b>10 лет терапии</b><br><span class="note">Bone et al., Lancet Diabetes Endocrinol 2017 · FREEDOM Extension</span></td>
+            <td>BMD от исходной: поясница <b>+21.7%</b>, total hip <b>+9.2%</b>, шейка +9.0% — <b>без плато</b>. Годовая частота новых позвоночных переломов держалась 0.9–1.86%. ОНЧ за 10 лет: суммарно ~13 случаев на обе группы; атипичные переломы бедра — единичные (≈1/10 000 п-лет).</td>
+            <td class="warn">Терапия может продолжаться годами под контролем; но это же означает пожизненную зависимость от графика уколов — см. строку об отмене ниже.</td>
+          </tr>
+          <tr>
+            <td><b>FRAX / virtual twins</b><br><span class="note">Постхок анализ 10-летних завершивших FREEDOM</span></td>
+            <td>Наблюдаемые переломы major osteoporotic за 10 лет: <b>10.75%</b> против предсказанных FRAX <b>16.42%</b>; бедро: <b>1.17%</b> против <b>6.14%</b>. Против виртуального плацебо: RR 0.49.</td>
+            <td class="yes">Реальный результат вдвое лучше прогноза риска — аргумент при разговоре о доступности препарата.</td>
+          </tr>
+          <tr>
+            <td><b>Отмена — ребаунд</b><br><span class="note">Cummings et al., JBMR 2018;33:190–8 · постхок FREEDOM+Extension, n=1001</span></td>
+            <td>После пропуска дозы маркеры резорбции выше исходных уже к ~6 мес, BMD возвращается к исходной к ~12 мес. Частота позвоночных переломов: <b>1.2 → 7.1 на 100 п-лет</b> (рост почти в 6 раз). Из перенёсших перелом после отмены <b>60.7% имели множественные</b>; главный предиктор — перелом позвонка в анамнезе (OR 3.9). В серии из 24 клинических случаев — в среднем 4.7 перелома через ~5 мес после пропущенного укола.</td>
+            <td class="no">Для пациентки с T до −4.1 и Z −2.1 в L1–L2 пропуск даже одной инъекции — прямой путь к каскадному компрессионному коллапсу. Укол «по расписанию» или немедленный мост бисфосфонатом — обязательное условие старта.</td>
+          </tr>
+          <tr>
+            <td><b>Реальная практика</b><br><span class="note">Обзор CMAJ 2018; проспективное наблюдение США</span></td>
+            <td>Из 617 пациенток, начавших деносумаб, <b>64.3% прекратили</b> терапию вне протокола — главная реальная опасность препарата не побочки, а забытый/просроченный укол.</td>
+            <td class="warn">Перед стартом: календарь-напоминание, контрольный звонок клиники за 2 недели до срока, письменный план действий при отмене.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-size:15px;margin:26px 0 8px;">Деносумаб: механизм действия и стратегия выхода</h3>
+    <p class="note" style="margin-bottom:12px;">Почему препарат работает и почему его нельзя просто «бросить». По данным FREEDOM / FREEDOM Extension, когортных наблюдений и позиций ECTS · Endocrine Society · Osteoporosis Canada (актуально на 2025–2026).</p>
+
+    <div class="twocol" style="margin-bottom:12px;">
+      <div class="card">
+        <h4 style="font-size:14px;margin-bottom:10px;">Как работает препарат</h4>
+        <ol style="margin-left:18px;font-size:13px;display:flex;flex-direction:column;gap:8px;">
+          <li><b>RANKL</b> — основной сигнал, который вырабатывают остеобласты; он активирует рецептор <b>RANK</b> на остеокластах и их предшественниках → дифференцировка, активация и выживание клеток, разрушающих кость.</li>
+          <li>Деносумаб (Пролиа/Xgeva) — полностью человеческое моноклональное антитело <b>IgG2</b>: высокоспецифично связывает RANKL и <b>блокирует</b> его контакт с RANK.</li>
+          <li>Результат: новые остеокласты почти не образуются, существующие теряют функцию и ускоренно гибнут (апоптоз).</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h4 style="font-size:14px;margin-bottom:10px;">Что происходит в кости</h4>
+        <div class="box box-safe"><strong>Эффект терапии</strong>Резорбция снижается, баланс смещается к формированию; растут МПК и прочность; снижается риск переломов позвоночника, шейки бедра и внепозвоночных. Сам по себе препарат не анаболик.</div>
+        <div class="box box-info" style="margin-bottom:0;"><strong>Важные особенности</strong>Действует только на RANKL-зависимый путь (высокая селективность), напрямую на остеобласты не влияет. Схема при остеопорозе: 60 мг п/к 1 раз в 6 мес. Эффект полностью обратим — в кости не накапливается.</div>
+      </div>
+    </div>
+
+    <div class="box box-danger" style="margin-bottom:16px;"><strong>Эффект отмены (rebound / синдром рикошета)</strong>Как только концентрация препарата падает (≈ через 6 месяцев после последней инъекции), блокада RANKL снимается и возникает быстрый всплеск активности остеокластов. Это не «возврат к исходному состоянию», а временный гиперрезорбтивный эпизод: за годы лечения накапливается пул предшественников остеокластов, который при освобождении RANKL массово дифференцируется и начинает резорбировать кость.</div>
+
+    <h4 style="font-size:14px;margin:0 0 10px;">Хронология после последней инъекции</h4>
+    <div class="ftable" style="margin-bottom:16px;">
+      <table>
+        <thead><tr><th style="width:17%;">Окно</th><th>Маркеры костного обмена</th><th>МПК</th><th style="width:27%;">Риск переломов</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">0–3 мес</td><td>CTX и P1NP быстро возвращаются к исходному уровню</td><td>—</td><td>—</td></tr>
+          <tr><td class="mono">3–6 мес</td><td class="warn">Overshoot: CTX на 60–70% выше исходного, пик ≈ 6 мес</td><td>Начало быстрой потери</td><td>—</td></tr>
+          <tr><td class="mono">7–20 мес<br><span class="note">пик 6–15 мес</span></td><td class="warn">Гиперрезорбция на пике</td><td class="warn">За первый год после &gt;5 лет терапии: −9% поясница, −11–13% бедро; возможен провал ниже исходного уровня</td><td class="no">Основное окно переломов, медиана ≈ 11–13 мес; частота множественных вертебральных ×2.5–3 vs продолжающих терапию</td></tr>
+          <tr><td class="mono">до 18–24 мес</td><td>Медленная нормализация маркеров</td><td>Стабилизация на новом уровне</td><td>Риск ≈ нелеченые пациенты (~7%/год); среди перенёсших перелом множественные у ≈60% (плацебо ≈39%)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 style="font-size:14px;margin:0 0 10px;">Кому грозят множественные переломы (MVF)</h4>
+    <p style="font-size:13.5px;margin-bottom:10px;">Главные факторы риска rebound-переломов:</p>
+    <ul style="margin:0 0 16px 20px;font-size:13.5px;display:flex;flex-direction:column;gap:5px;">
+      <li>длительность лечения <b>&gt; 2–3 лет</b> (особенно &gt; 5 лет);</li>
+      <li>предшествующие переломы позвонков;</li>
+      <li>отсутствие последующей антирезорбтивной терапии;</li>
+      <li>большой прирост МПК на фоне деносумаба.</li>
+    </ul>
+
+    <h4 style="font-size:14px;margin:0 0 10px;">Как минимизировать риск — позиции ECTS · Endocrine Society · Osteoporosis Canada</h4>
+    <ol class="actlist" style="margin-bottom:14px;">
+      <li><span class="num-badge" aria-hidden="true">1</span><span><strong>Никогда не отменять деносумаб «в никуда».</strong> Последующая антирезорбтивная терапия обязательна во всех случаях — достижение цели, непереносимость или финансовые причины не отменяют это правило.</span></li>
+      <li><span class="num-badge" aria-hidden="true">2</span><span><strong>Лучший мост — золедроновая кислота 5 мг в/в</strong>, ориентировочно через 6 месяцев после последней инъекции деносумаба.</span></li>
+      <li><span class="num-badge" aria-hidden="true">3</span><span><strong>Альтернатива — алендронат перорально</strong>, можно начинать раньше (≈ через 4 месяца).</span></li>
+      <li><span class="num-badge" aria-hidden="true">4</span><span><strong>При длительной терапии (&gt; 2.5–3 лет)</strong> часто требуется повторное введение золедроната — под контролем CTX.</span></li>
+      <li><span class="num-badge" aria-hidden="true">5</span><span><strong>Целевой CTX после перехода</strong> — ниже верхней границы нормы для пременопаузальных женщин (ориентировочно &lt; 280–400 нг/л; в ряде работ предлагают более строгий порог ≈ 212 нг/л).</span></li>
+      <li><span class="num-badge" aria-hidden="true">6</span><span><strong>Мониторинг плана выхода:</strong> CTX (или P1NP) + денситометрия по графику, без «контроля раз в год на глаз».</span></li>
+    </ol>
+
+    <div class="box box-warn"><strong>Практический вывод</strong>Деносумаб — очень эффективный препарат, требующий заранее спланированной «стратегии выхода». Если прекращение терапии обсуждается, переход на бисфосфонат организуется заблаговременно: без него риск множественных компрессионных переломов позвоночника существенно возрастает. Для данной пациентки с T до −4.1 это условие стартового согласия, а не опция на будущее.</div>
+
+    <h3 style="font-size:15px;margin:18px 0 10px;">B. Раздельная нутритивная поддержка (вместо комплекса «все в одном»)</h3>
+    <div class="ftable">
+      <table>
+        <thead><tr><th>Нутриент</th><th>Целевая доза</th><th>Форма</th><th>Комментарий</th></tr></thead>
+        <tbody>
+          <tr><td><b>Кальций</b></td><td>1200 мг/сут всего, добавками 500–600 мг (2 приёма, ≤500 мг за раз)</td><td>Цитрат или хелат (бисглицинат)</td><td>Считать только элементарный кальций; остальное — из диеты (молочные продукты, кунжут, зелень)</td></tr>
+          <tr><td><b>Витамин D3</b></td><td>По анализу 25(OH)D; цель крови 30–50 нг/мл (75–125 нмоль/л)</td><td>Холекальциферол в каплях/капсулах</td><td>Без анализа поддерживающая доза ≤2000 МЕ/сут</td></tr>
+          <tr><td><b>Витамин K2</b></td><td>90–120 мкг/сут</td><td>МК-7 (менахинон-7)</td><td>Участвует в карбоксилировании костных белков; принимается с жирной пищей. Важно: доказательная база как терапии остеопороза и защиты сосудов ограничена — не заменяет специфическое лечение</td></tr>
+          <tr><td><b>Магний</b></td><td>Поддерживающая доза по переносимости, при доказанном дефиците</td><td>Глицинат / цитрат / малат / L-треонат</td><td>Оксид и карбонат магния имеют низкую биодоступность и слабительный эффект (точные проценты в литературе разнятся — цифра «~4%» условна). Назначается по показаниям, не всем автоматически</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-warn"><strong>Последовательность перед стартом любой серьёзной терапии</strong>Сначала — ПТГ, ионизированный кальций, фосфор, креатинин/СКФ и 25(OH)D; восполнение дефицитов; затем старт специфического препарата под контролем маркеров костного обмена через 3–6 месяцев.</div>
+  </div>
+</section>
+
+<!-- SECTION 10 — МЕДИА И МАТЕРИАЛЫ -->
+<section class="section" id="media" style="border-bottom:1px solid var(--line);padding-top:44px;">
+  <div class="wrap">
+
+    <div class="media-card">
+      <div class="media-label">Аудио · подкаст</div>
+      <h3>Как лечение остеопороза создаёт новые болезни</h3>
+      <p>Разбор скрытых рисков длительной антирезорбтивной терапии: гиперкальциемия, атипичные переломы, остеонекроз челюсти. Практические рекомендации по мониторингу.</p>
+      <div class="audio-player">
+        <audio controls preload="metadata">
+          <source src="../assets/Как_лечение_остеопороза_создает_новые_болезни.m4a" type="audio/mp4">
+          Ваш браузер не підтримує аудіо. Завантажте файл вручну.
+        </audio>
+      </div>
+    </div>
+
+    <div class="media-card">
+      <div class="media-label">Видео · лекция</div>
+      <h3>Скрытые риски остеопороза — разбор клинических случаев</h3>
+      <p>Видеолекция с разбором DEXA-снимков, лабораторных профилей и тактики ведения пациентов с тяжёлым постменопаузальным остеопорозом.</p>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/Fo0yhVxps4I" title="Скрытые риски остеопороза" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div class="media-card">
+      <div class="media-label">Скачать · документы</div>
+      <h3>Материалы для пациента</h3>
+      <p>Два вспомогательных документа для ежедневного использования: дневник приёма и календарь контрольных анализов.</p>
+      <div class="dl-grid">
+        <a href="../assets/self_monitoring_diary.md" class="dl-card" download>
+          <div class="dl-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="dl-text">
+            <strong>Дневник самоконтроля</strong>
+            <span>Таблетки · инъекции · побочные эффекты · самочувствие</span>
+          </div>
+        </a>
+        <a href="../assets/monitoring_calendar_v2.md" class="dl-card" download>
+          <div class="dl-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="dl-text">
+            <strong>Календарь мониторинга</strong>
+            <span>DEXA · ПТГ · Ca²⁺ · CTX · витамин D — сроки и напоминания</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong>BudMed Clinical Hybrid Platform</strong><br>Modern Apothecary Design System • Human &amp; Veterinary Bone Navigator</div>
+    <div class="mono">© 2026 BudMed Health Tech. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- fixed right-rail button -->
+<div class="zayava-wrap">
+  <div class="zayava-tip">
+    <b>Юридический инструмент</b>
+    Официальный текст заявления, составленный строго по медицинским протоколам Украины. Документ переводит общение в юридическое поле и обязывает врача отреагировать.
+  </div>
+  <button class="zayava-btn" type="button" onclick="downloadZayava()" aria-label="Завантажити заяву щодо корекції лікування (файл для друку)">Завантажити заяву</button>
+</div>
+
+<script>
+function downloadZayava(){
+  const html = `<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Заява щодо корекції тактики лікування</title>
+<style>
+  @page{size:A4;margin:20mm 18mm;}
+  body{font-family:'Times New Roman',Georgia,serif;font-size:14pt;line-height:1.55;color:#111;
+    max-width:174mm;margin:0 auto;padding:10mm 6mm;}
+  h1{text-align:center;font-size:17pt;margin:0 0 4pt;text-transform:uppercase;letter-spacing:.5px;}
+  h1 small{display:block;font-size:13pt;text-transform:none;font-weight:normal;margin-top:6pt;}
+  p{margin:8pt 0;text-align:justify;}
+  ol{margin:6pt 0 6pt 22pt;padding:0;}
+  li{margin:5pt 0;text-align:justify;}
+  ul{margin:4pt 0 4pt 20pt;padding:0;}
+  .req{font-weight:bold;}
+  .signrow{display:flex;justify-content:space-between;margin-top:26pt;font-size:14pt;}
+  .ps{margin-top:30pt;border:1.5px dashed #777;border-radius:6px;padding:12pt 14pt;font-size:11.5pt;color:#333;background:#fafafa;}
+  .ps b{font-size:12pt;color:#111;}
+  hr{border:none;border-top:1px solid #999;margin:18pt 0 0;}
+  .noprint-note{font-size:10pt;color:#666;text-align:center;margin-bottom:14pt;font-style:italic;}
+</style>
+</head>
+<body>
+
+<p class="noprint-note">— Сторінка для друку (Ctrl+P). Роздрукуйте у двох примірниках — другий залишиться у вас із відміткою про вручення —</p>
+
+<h1>Заява<small>щодо корекції тактики лікування та призначення додаткового обстеження</small></h1>
+
+<p>Я, (ПІБ пацієнтки), 1960 року народження (66 років), перебуваю на амбулаторному лікуванні з діагнозом:<br>
+Основний: <b>M15.0 Первинний генералізований (остео)артроз.</b><br>
+Супутній: <b>M81.00 Остеопороз у постменопаузі, множинні локалізації.</b></p>
+
+<p>За результатами консультативного висновку ревматолога від 30.07.2026 р. мені було рекомендовано:</p>
+<ol>
+  <li>Прийом перорального бісфосфонату (Ризостин 35 мг 1 р/тиждень).</li>
+  <li>Прийом комплексного препарату кальцію (Вістакеа остеостронг 2 р/добу).</li>
+  <li>Прийом вітаміну D (2000 МО/добу).</li>
+</ol>
+
+<p>Змушена звернутися з вимогою про терміновий перегляд даної схеми лікування у зв&rsquo;язку з високими клінічними ризиками та невідповідністю призначень поточним результатам моїх лабораторних аналізів від 01.07.2026 р.:</p>
+
+<ol>
+  <li><b>Загроза розвитку гіперкальціємії.</b> Згідно з аналізом від 01.07.2026 р., рівень кальцію іонізованого в сироватці становить 1.33 ммоль/л, що є найвищою межею референтного інтервалу (1.15–1.33). Призначення додаткового прийому кальцію у формі БАД (Вістакеа) у такій точці без виключення патології паращитоподібних залоз є прямим ризиком розвитку медикаментозної гіперкальціємії, кальцифікації судин та нефролітіазу.</li>
+  <li><b>Ризик передозування вітаміну D.</b> Мій поточний рівень 25-(OH)D становить 36 нг/мл (достатній рівень). Одночасне призначення чистого вітаміну D (2000 МО) та комплексу Вістакеа (який уже містить 2000 МО у добовій дозі) сумарно становить 4000 МО на добу. Це є невиправдано високою дозою для підтримуючої терапії при нормальному вихідному рівні та максимальному кальції сироватки.</li>
+  <li><b>Обтяжений анамнез щодо пероральних бісфосфонатів.</b> Попередній досвід прийому ібандронату супроводжувався вираженими побочними ефектами з боку шлунково-кишкового тракту (ШКТ). Призначення іншого перорального бісфосфонату (Ризостин) має аналогічні ризики ураження слизової оболонки стравоходу та шлунка. Протоколи лікування важкого остеопорозу (Т-критерій до −4.1) за наявності гастроінтестинальної непереносимості вимагають розгляду парентеральних форм (золедронова кислота в/в) або таргетної терапії (деносумаб п/к).</li>
+</ol>
+
+<p class="req">Спираючись на вищевикладене та діючі Клінічні настанови з ведення пацієнтів із постменопаузальним остеопорозом, ПРОШУ:</p>
+
+<ol>
+  <li>Скасувати або відтермінувати прийом препарату &laquo;Ризостин&raquo; та комплексу &laquo;Вістакеа остеостронг&raquo; до завершення повного диференційного діагнозу.</li>
+  <li>Видати електронні направлення для виключення вторинного остеопорозу та гіперпаратиреозу, а саме на:
+    <ul>
+      <li>Паратгормон (ПТГ);</li>
+      <li>Креатинін крові (для розрахунку швидкості клубочкової фільтрації перед призначенням будь-якої системної терапії остеопорозу);</li>
+      <li>Добову екскрецію кальцію з сечею.</li>
+    </ul>
+  </li>
+  <li>Направити мене на консультацію до вузькопрофільного спеціаліста — ендокринолога (експерта з метаболічних захворювань кісток) для підбору безпечної парентеральної або анаболічної терапії.</li>
+  <li>У разі відмови у перегляді терапії та відмови у видачі направлень на зазначені специфічні аналізи, прошу надати мені письмову відмову із обґрунтуванням безпеки призначення 1000 мг кальцію при поточному рівні іонізованого кальцію 1.33 ммоль/л для внесення відповідних записів до моєї медичної карти та подальшого звернення на гарячу лінію НСЗУ.</li>
+</ol>
+
+<div class="signrow"><span>Дата: ____________________</span><span>Підпис: ____________________</span></div>
+
+<hr>
+
+<div class="ps">
+  <b>P.S. Як правильно подати цей документ (для себе, лікарю не передавати):</b>
+  <ol>
+    <li>Роздрукуйте або напишіть від руки у двох примірниках.</li>
+    <li>Віддайте один лікарю (або в реєстратуру/секретарю головного лікаря на реєстрацію), а на другому примірнику вони зобов&rsquo;язані поставити відмітку про вручення (дата, підпис, вхідний номер) — цей примірник ви залишаєте собі.</li>
+  </ol>
+  <p>Як тільки лікар побачить фразу про &laquo;письмову відмову при кальції 1.33&raquo; та &laquo;гарячу лінію НСЗУ&raquo;, тональність розмови миттєво зміниться, а потрібні направлення з&rsquo;являться в системі.</p>
+</div>
+
+</body>
+</html>`;
+  const blob = new Blob([html], {type:'text/html;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'Заява_щодо_корекції_лікування.html';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1500);
+}
+
+function downloadChecklist(){
+  const qs = [
+    'Чи розраховано індивідуальний 10-річний ризик переломів за FRAX? Який він у відсотках?',
+    'Якщо пероральні бісфосфонати не переносяться — чому не розглядаються золедронова кислота в/в (1×/рік) або деносумаб п/к (1×/6 міс)?',
+    'Чи є протипоказання до анаболічної терапії (терипаратид / ромосумаб) при T нижче −3.5? Зафіксувати відповідь у карті.',
+    'Направлення на ПТГ, фосфор, іонізований кальцій, креатинін/ШКФ, добову екскрецію кальцію із сечею?',
+    'Які маркери кісткового обміну (P1NP або β-CTX) обиратимемо для контролю ефективності через 3–6 місяців?',
+    'Як скоригувати сумарну дозу вітаміну D (з урахуванням складу комплексу — звірити етикетку) при рівні 36 нг/мл?',
+    'План дій при непереносимості Ризостину з боку ШКТ (враховуючи реакцію на ібандронат)?',
+    'Чи потрібно виключити приховані компресійні мікропереломи (рентген/МРТ грудного та поперекового відділів)?',
+    'Який LSC нашого центру та чи перевищує динаміка BMD 2025→2026 (+8.5%) цей поріг?',
+    'Обидві DEXA — на одному апараті? Чи придатний L4 (різниця з L3 = 1.2 SD)? Потрібен перерахунок L1–L3?',
+    'Якщо будь-коли буде обрано деносумаб — який письмово зафіксований план переходу при його скасуванні?'
+  ];
+  const items = qs.map((q,i)=>{
+    const n = String(i+1).padStart(2,'0');
+    return '<div class="q"><div class="qn">'+n+'</div><div class="qb"><span class="sq"></span><div class="qwrap"><p>'+q+'</p><div class="ans"><span>Відповідь лікаря:</span><i></i><i></i></div></div></div></div>';
+  }).join('\n');
+  const html = `<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Чек-ліст: питання лікарю</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  @page{size:A4;margin:15mm 13mm 17mm;}
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  body{font-family:'Inter',system-ui,sans-serif;font-size:10.5pt;line-height:1.5;color:#0A2523;
+    max-width:184mm;margin:0 auto;padding:6mm 2mm;}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:7.5pt;letter-spacing:2.5px;color:#0D5C57;margin-bottom:6mm;}
+  h1{font-family:'Inter Tight','Inter',sans-serif;font-weight:800;font-size:16pt;line-height:1.2;margin-bottom:2mm;}
+  .sub{font-size:9.5pt;color:#475569;margin-bottom:6mm;}
+  .ctx{font-family:'JetBrains Mono',monospace;font-size:8pt;line-height:1.6;color:#0A2523;
+    background:#F7FAF9;border:1px solid #DCE8E5;border-radius:8px;padding:8px 12px;margin-bottom:7mm;}
+  .ctx b{color:#BE123C;}
+  .q{display:flex;gap:10px;padding:9px 0 11px;border-top:1px solid #DCE8E5;}
+  .qn{font-family:'JetBrains Mono',monospace;font-size:8.5pt;font-weight:700;color:#0D5C57;padding-top:2px;width:22px;}
+  .sq{display:block;width:18px;height:18px;border:2px solid #0D5C57;border-radius:4px;flex-shrink:0;}
+  .qwrap{flex:1;}
+  .q p{font-size:10.5pt;margin-bottom:6px;}
+  .ans span{display:block;font-size:7.5pt;letter-spacing:1px;text-transform:uppercase;color:#475569;margin-bottom:2px;}
+  .ans i{display:block;border-bottom:1px dashed #94A3B8;height:20px;}
+  .foot{margin-top:7mm;border-top:2px solid #0A2523;padding-top:4mm;font-size:8.5pt;color:#475569;}
+  .foot b{color:#0A2523;}
+  .hint{margin-bottom:6mm;font-size:8.5pt;color:#94A3B8;text-align:center;font-style:italic;}
+</style>
+</head>
+<body>
+<p class="hint">— сторінка для друку (Ctrl+P). Роздрукуйте та візьміть на прийом —</p>
+<div class="eyebrow">BUDMEDSOLUTION OSTEOGUARD · КІСТКОВА ОХОРОНА</div>
+<h1>Питання лікарю — чек-ліст візиту</h1>
+<p class="sub">Мета — письмова фіксація відповідей для амбулаторної карти. Дата консультації: ____________</p>
+<div class="ctx">M15.0 / M81.00 · <b>T = −2.5</b> (L1–L4, 23.06.2026) · <b>T = −2.8</b> (шия стегна) · <b>Ca²⁺ 1.33 ммоль/л</b> (верхня межа) · віт. D 36 нг/мл · ревматолог 30.07.2026</div>
+
+` + items + `
+
+<div class="foot"><b>Як користуватися.</b> Позначайте квадрат лише після письмової відповіді лікаря. Якщо питання проігноровано — попросіть зафіксувати відмову з поясненням в медичній карті. Усні відповіді не фіксуються ніде, тому юридичного значення не мають.<br><br>Перелік узгоджений з клінічними протоколами ведення постменопаузального остеопорозу та правилами ISCD щодо оцінки денситометрії.</div>
+</body>
+</html>`;
+  const blob = new Blob([html], {type:'text/html;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'Чек-ліст_питання_лікарю.html';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1500);
+}
+</script>
+
+<button class="totop" type="button" aria-label="Вернуться к началу страницы" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+</button>
+<script>
+(function(){
+  var b=document.querySelector('.totop');
+  if(!b)return;
+  var t=function(){b.classList.toggle('show',window.scrollY>400)};
+  window.addEventListener('scroll',t,{passive:true});
+  t();
+})();
+</script>
+
+</body>
+</html>

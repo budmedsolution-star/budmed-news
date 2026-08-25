@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Остеопороз при гемодиализе: полный протокол ведения — BudMed News</title>
+  <meta name="description" content="CKD-MBD и остеопороз у пациентов на гемодиализе: анатомия, патофизиология, фармакотерапия, ЛФК и безопасность корсета. Клинический протокол." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="BudMed &amp; MedCore" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    /* ============================================
+       OsteoGuard Article Theme
+       Extends Clinical Hybrid Design System
+       ============================================ */
+
+    .article-header {
+      background: linear-gradient(135deg, #1a237e 0%, #0d47a1 40%, #00838f 100%);
+      color: #fff;
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      margin-bottom: var(--space-2xl);
+    }
+    .article-header .breadcrumb {
+      font-size: 0.8125rem;
+      opacity: 0.7;
+      margin-bottom: var(--space-lg);
+    }
+    .article-header .breadcrumb a {
+      color: #fff;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
+    .article-header .breadcrumb a:hover { opacity: 1; }
+    .article-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: var(--space-md);
+      color: #fff;
+    }
+    @media (min-width: 768px) {
+      .article-header h1 { font-size: 2.75rem; }
+    }
+    .article-header .article-meta {
+      display: flex;
+      gap: var(--space-lg);
+      flex-wrap: wrap;
+      font-size: 0.875rem;
+      opacity: 0.85;
+    }
+    .article-header .article-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Article Body */
+    .article-body {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 var(--margin-mobile);
+    }
+    @media (min-width: 768px) {
+      .article-body { padding: 0 var(--margin-desktop); }
+    }
+
+    .article-body h2 {
+      font-size: 1.625rem;
+      font-weight: 700;
+      margin: var(--space-2xl) 0 var(--space-lg);
+      color: var(--on-surface);
+      padding-bottom: var(--space-sm);
+      border-bottom: 3px solid var(--primary);
+      display: inline-block;
+    }
+    .article-body h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: var(--space-xl) 0 var(--space-md);
+      color: var(--on-surface);
+    }
+    .article-body p {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      margin-bottom: var(--space-lg);
+      color: var(--on-surface);
+    }
+    .article-body ul, .article-body ol {
+      margin-bottom: var(--space-lg);
+      padding-left: var(--space-xl);
+    }
+    .article-body li {
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      margin-bottom: var(--space-sm);
+      color: var(--on-surface);
+    }
+    .article-body li::marker {
+      color: var(--primary);
+    }
+
+    /* Callout boxes */
+    .callout {
+      background: var(--surface-container-low);
+      border-left: 4px solid var(--primary);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin: var(--space-xl) 0;
+    }
+    .callout.warning {
+      background: #fff8e1;
+      border-left-color: #f57f17;
+    }
+    .callout.danger {
+      background: var(--error-container);
+      border-left-color: var(--error);
+    }
+    .callout.info {
+      background: #e3f2fd;
+      border-left-color: #1565c0;
+    }
+    .callout-title {
+      font-weight: 700;
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-sm);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .callout p:last-child { margin-bottom: 0; }
+
+    /* Data Tables */
+    .data-table-wrapper {
+      overflow-x: auto;
+      margin: var(--space-xl) 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--outline-variant);
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9375rem;
+    }
+    .data-table th {
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 16px;
+      text-align: left;
+      white-space: nowrap;
+    }
+    .data-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--outline-variant);
+      vertical-align: top;
+    }
+    .data-table tbody tr:nth-child(even) {
+      background: var(--surface-container-low);
+    }
+    .data-table tbody tr:hover {
+      background: var(--primary-container);
+    }
+
+    /* SVG Diagram Container */
+    .diagram-container {
+      margin: var(--space-xl) 0;
+      text-align: center;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--outline-variant);
+      background: var(--surface-container-lowest);
+      padding: var(--space-lg);
+    }
+    .diagram-container svg {
+      max-width: 100%;
+      height: auto;
+    }
+    .diagram-caption {
+      font-size: 0.8125rem;
+      color: var(--on-surface-variant);
+      margin-top: var(--space-sm);
+      font-style: italic;
+    }
+
+    /* Evidence Badge */
+    .evidence-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .evidence-a { background: #c8e6c9; color: #1b5e20; }
+    .evidence-b { background: #fff9c4; color: #f57f17; }
+    .evidence-c { background: #ffe0b2; color: #e65100; }
+
+    /* Back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--primary);
+      margin-bottom: var(--space-xl);
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    /* Section divider */
+    .article-section-divider {
+      border: none;
+      border-top: 1px solid var(--outline-variant);
+      margin: var(--space-2xl) 0;
+    }
+
+    /* TOC */
+    .toc {
+      background: var(--surface-container-low);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg) var(--space-xl);
+      margin: var(--space-xl) 0;
+    }
+    .toc h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: var(--space-md);
+      color: var(--primary);
+    }
+    .toc ol {
+      padding-left: var(--space-lg);
+      counter-reset: toc-counter;
+      list-style: none;
+    }
+    .toc li {
+      counter-increment: toc-counter;
+      font-size: 0.9375rem;
+      line-height: 1.8;
+    }
+    .toc li::before {
+      content: counter(toc-counter) ". ";
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .toc a {
+      color: var(--on-surface);
+      text-decoration: none;
+    }
+    .toc a:hover { color: var(--primary); text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER (reused from portal) -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo" aria-label="BudMed News Home">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="28" height="28" rx="8" fill="#006d3e"/>
+          <path d="M7 14h4l2-4 3 8 2-4h3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>BudMed News</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="../index.html#ai-health">AI в медицине</a>
+        <a href="../index.html#health">Здоровье</a>
+        <a href="../index.html#guidelines">Гайдлайны</a>
+        <a href="../index.html#ecosystem">Об экосистеме</a>
+      </nav>
+      <a href="../index.html" class="back-link" style="font-size:0.875rem;margin:0;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 4l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Назад</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ARTICLE HERO -->
+  <div class="article-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">BudMed News</a> / <a href="../index.html#guidelines">Гайдлайны</a> / Остеопороз при гемодиализе
+      </nav>
+      <h1>Остеопороз при гемодиализе: полный протокол ведения</h1>
+      <div class="article-meta">
+        <span>
+          <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          12 мин чтения
+        </span>
+        <span>25 авг 2026</span>
+        <span><span class="evidence-badge evidence-a">Уровень A</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTICLE CONTENT -->
+  <main>
+    <article class="article-body" role="article">
+
+      <a href="../index.html#guidelines" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 4l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Все статьи раздела «Гайдлайны»
+      </a>
+
+      <!-- TABLE OF CONTENTS -->
+      <nav class="toc" aria-label="Table of contents">
+        <h3>Содержание</h3>
+        <ol>
+          <li><a href="#anatomy">Анатомия кости и CKD-MBD</a></li>
+          <li><a href="#pathophysiology">Патофизиология: минерально-костные нарушения</a></li>
+          <li><a href="#diagnosis">Диагностика остеопороза при ХБП</a></li>
+          <li><a href="#pharmacotherapy">Фармакотерапия</a></li>
+          <li><a href="#lfk">Лечебная физкультура (ЛФК)</a></li>
+          <li><a href="#corset">Безопасность ортопедического корсета</a></li>
+          <li><a href="#mcda">MCDA-матрица выбора стратегии</a></li>
+          <li><a href="#algorithm">Алгоритм ведения пациента</a></li>
+          <li><a href="#references">Литература</a></li>
+        </ol>
+      </nav>
+
+      <!-- ===== SECTION 1: ANATOMY ===== -->
+      <h2 id="anatomy">1. Анатомия кости и CKD-MBD</h2>
+
+      <p>
+        Кость — это не просто «каркас». Это динамическая ткань, в которой <strong>остеобласты</strong> (постройка) и <strong>остеокласты</strong> (резорбция) работают в непрерывном цикле обновления. У здорового взрослого человека ежегодно обновляется около <strong>10% кортикальной</strong> и <strong>25% трабекулярной кости</strong>.
+      </p>
+
+      <!-- SVG: Bone Remodeling Cycle -->
+      <div class="diagram-container">
+        <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Цикл обновления кости">
+          <defs>
+            <linearGradient id="bone-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#e8eaf6"/>
+              <stop offset="100%" style="stop-color:#c5cae9"/>
+            </linearGradient>
+            <marker id="arrow-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+              <path d="M0,0 L8,3 L0,6" fill="#1565c0"/>
+            </marker>
+          </defs>
+
+          <!-- Background -->
+          <rect width="700" height="320" fill="url(#bone-grad)" rx="8"/>
+
+          <!-- Phase boxes -->
+          <rect x="30" y="100" width="110" height="70" rx="10" fill="#fff" stroke="#1565c0" stroke-width="2"/>
+          <text x="85" y="130" text-anchor="middle" fill="#1565c0" font-size="13" font-weight="700">Резорбция</text>
+          <text x="85" y="150" text-anchor="middle" fill="#546e7a" font-size="11">Остеокласты</text>
+
+          <rect x="190" y="100" width="110" height="70" rx="10" fill="#fff" stroke="#f57f17" stroke-width="2"/>
+          <text x="245" y="130" text-anchor="middle" fill="#f57f17" font-size="13" font-weight="700">Обратная</text>
+          <text x="245" y="150" text-anchor="middle" fill="#546e7a" font-size="11">связка</text>
+
+          <rect x="350" y="100" width="110" height="70" rx="10" fill="#fff" stroke="#006d3e" stroke-width="2"/>
+          <text x="405" y="130" text-anchor="middle" fill="#006d3e" font-size="13" font-weight="700">Постройка</text>
+          <text x="405" y="150" text-anchor="middle" fill="#546e7a" font-size="11">Остеобласты</text>
+
+          <rect x="510" y="100" width="130" height="70" rx="10" fill="#fff" stroke="#7b1fa2" stroke-width="2"/>
+          <text x="575" y="130" text-anchor="middle" fill="#7b1fa2" font-size="13" font-weight="700">Минерализация</text>
+          <text x="575" y="150" text-anchor="middle" fill="#546e7a" font-size="11">Ca²⁺ + PO₄³⁻</text>
+
+          <!-- Arrows -->
+          <line x1="140" y1="135" x2="190" y2="135" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-blue)"/>
+          <line x1="300" y1="135" x2="350" y2="135" stroke="#f57f17" stroke-width="2" marker-end="url(#arrow-blue)"/>
+          <line x1="460" y1="135" x2="510" y2="135" stroke="#006d3e" stroke-width="2" marker-end="url(#arrow-blue)"/>
+          <path d="M575 170 L575 210 L85 210 L85 170" stroke="#7b1fa2" stroke-width="2" fill="none" stroke-dasharray="6,4" marker-end="url(#arrow-blue)"/>
+
+          <!-- PTH label -->
+          <rect x="200" y="240" width="300" height="50" rx="25" fill="#c62828" opacity="0.1" stroke="#c62828" stroke-width="1.5"/>
+          <text x="350" y="260" text-anchor="middle" fill="#c62828" font-size="12" font-weight="600">При ХБП: ↑↑ PTH → ↑↑ Остеокласты → Деструкция кости</text>
+          <text x="350" y="278" text-anchor="middle" fill="#c62828" font-size="11">↓↓ Кальций · ↑↑ Фосфат · ↓↓ Витамин D</text>
+        </svg>
+        <p class="diagram-caption">Рис. 1. Цикл обновления костной ткани и его нарушение при ХБП</p>
+      </div>
+
+      <p>
+        Три главных минерала кости:
+      </p>
+      <ul>
+        <li><strong>Кальций (Ca²⁺)</strong> — 99% всего кальция организма хранится в костях</li>
+        <li><strong>Фосфат (PO₄³⁻)</strong> — ключевой компонент гидроксиапатита</li>
+        <li><strong>Витамин D</strong> — регулятор абсорбции кальция в кишечнике</li>
+      </ul>
+
+      <div class="callout info">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#1565c0" stroke-width="2"/><path d="M12 16v-4M12 8h.01" stroke="#1565c0" stroke-width="2" stroke-linecap="round"/></svg>
+          Факт
+        </div>
+        <p>При хронической болезни почек (ХБП) 4–5 стадии минерально-костные нарушения (CKD-MBD) развиваются у <strong>70–90%</strong> пациентов — задолго до начала диализа.</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 2: PATHOPHYSIOLOGY ===== -->
+      <h2 id="pathophysiology">2. Патофизиология: минерально-костные нарушения</h2>
+
+      <p>
+        CKD-MBD (Chronic Kidney Disease – Mineral and Bone Disorder) — это системное заболевание, при котором поражаются <strong>все три компонента</strong>: кость, минеральный обмен и сосудистая система.
+      </p>
+
+      <h3>Каскад нарушений</h3>
+
+      <!-- SVG: Pathophysiology Cascade -->
+      <div class="diagram-container">
+        <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Каскад CKD-MBD">
+          <defs>
+            <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#546e7a"/></marker>
+          </defs>
+          <rect width="700" height="400" fill="#fafafa" rx="8"/>
+
+          <!-- Step 1 -->
+          <rect x="250" y="20" width="200" height="50" rx="25" fill="#c62828" opacity="0.12" stroke="#c62828" stroke-width="2"/>
+          <text x="350" y="50" text-anchor="middle" fill="#c62828" font-size="14" font-weight="700">↓ СКФ &lt; 60 мл/мин</text>
+
+          <line x1="350" y1="70" x2="350" y2="95" stroke="#546e7a" stroke-width="2" marker-end="url(#arr)"/>
+
+          <!-- Step 2: Split -->
+          <rect x="100" y="95" width="180" height="45" rx="8" fill="#fff" stroke="#1565c0" stroke-width="1.5"/>
+          <text x="190" y="122" text-anchor="middle" fill="#1565c0" font-size="12" font-weight="600">↓ Выведение фосфата</text>
+
+          <rect x="420" y="95" width="180" height="45" rx="8" fill="#fff" stroke="#f57f17" stroke-width="1.5"/>
+          <text x="510" y="122" text-anchor="middle" fill="#f57f17" font-size="12" font-weight="600">↓ Синтез витамина D</text>
+
+          <line x1="280" y1="118" x2="420" y2="118" stroke="#546e7a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+          <!-- Step 3 -->
+          <line x1="190" y1="140" x2="190" y2="170" stroke="#546e7a" stroke-width="2" marker-end="url(#arr)"/>
+          <line x1="510" y1="140" x2="510" y2="170" stroke="#546e7a" stroke-width="2" marker-end="url(#arr)"/>
+
+          <rect x="100" y="170" width="180" height="45" rx="8" fill="#c62828" opacity="0.08" stroke="#c62828" stroke-width="1.5"/>
+          <text x="190" y="197" text-anchor="middle" fill="#c62828" font-size="12" font-weight="600">↑↑ Гиперфосфатемия</text>
+
+          <rect x="420" y="170" width="180" height="45" rx="8" fill="#f57f17" opacity="0.08" stroke="#f57f17" stroke-width="1.5"/>
+          <text x="510" y="197" text-anchor="middle" fill="#f57f17" font-size="12" font-weight="600">↑↑ Гипокальциемия</text>
+
+          <!-- Converge to PTH -->
+          <line x1="190" y1="215" x2="350" y2="250" stroke="#546e7a" stroke-width="1.5" marker-end="url(#arr)"/>
+          <line x1="510" y1="215" x2="350" y2="250" stroke="#546e7a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+          <rect x="230" y="250" width="240" height="55" rx="27" fill="#b71c1c" opacity="0.15" stroke="#b71c1c" stroke-width="2"/>
+          <text x="350" y="274" text-anchor="middle" fill="#b71c1c" font-size="15" font-weight="700">↑↑↑ PTH (паратиреоид)</text>
+          <text x="350" y="292" text-anchor="middle" fill="#880e4f" font-size="11">Вторичный гиперпаратиреоз</text>
+
+          <line x1="350" y1="305" x2="350" y2="330" stroke="#546e7a" stroke-width="2" marker-end="url(#arr)"/>
+
+          <!-- Outcome -->
+          <rect x="130" y="330" width="440" height="55" rx="10" fill="#1a237e" opacity="0.08" stroke="#1a237e" stroke-width="2"/>
+          <text x="350" y="355" text-anchor="middle" fill="#1a237e" font-size="14" font-weight="700">Остеодистрофия + Остеопороз + Кальцификация сосудов</text>
+          <text x="350" y="373" text-anchor="middle" fill="#1a237e" font-size="11">↑ Переломы · ↑ Кардиоваскулярная смертность</text>
+        </svg>
+        <p class="diagram-caption">Рис. 2. Каскад минерально-костных нарушений при ХБП (CKD-MBD)</p>
+      </div>
+
+      <h3>Три типа остеодистрофии при ХБП</h3>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Тип</th>
+              <th>PTH</th>
+              <th>Костный turnover</th>
+              <th>Остеоид</th>
+              <th>Частота при ХБП</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Тип А</strong> (высокооборотный)</td>
+              <td>↑↑↑</td>
+              <td>↑↑</td>
+              <td>↑↑</td>
+              <td>~60%</td>
+            </tr>
+            <tr>
+              <td><strong>Тип Б</strong> (низкооборотный)</td>
+              <td>↓/норма</td>
+              <td>↓↓</td>
+              <td>↑</td>
+              <td>~25%</td>
+            </tr>
+            <tr>
+              <td><strong>Адинамическая</strong></td>
+              <td>↓↓</td>
+              <td>↓↓↓</td>
+              <td>Норма</td>
+              <td>~15%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout warning">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#f57f17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Важно
+        </div>
+        <p>FRAX (Fracture Risk Assessment Tool) <strong>ненадёжен</strong> у пациентов на гемодиализе: кальцификация сосудов занижает風險, а атипичная микроструктура кости не отражается в стандартных параметрах. Решения должны основываться на <strong>комбинации DXA + PTH + биохимических маркеров</strong>.</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 3: DIAGNOSIS ===== -->
+      <h2 id="diagnosis">3. Диагностика остеопороза при ХБП</h2>
+
+      <h3>Критерии ВОЗ (адаптированные)</h3>
+      <p>
+        Стандартная классификация ВОЗ (T-score ≤ −2.5) формально применима, но требует коррекции для диализных пациентов:
+      </p>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>Норма</th>
+              <th>Остеопения</th>
+              <th>Остеопороз</th>
+              <th>Тяжёлый остеопороз</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>T-score (DXA)</strong></td>
+              <td>≥ −1.0</td>
+              <td>−1.0 … −2.5</td>
+              <td>≤ −2.5</td>
+              <td>≤ −2.5 + перелом</td>
+            </tr>
+            <tr>
+              <td><strong>Z-score</strong></td>
+              <td>≥ −2.0</td>
+              <td colspan="3">Z &lt; −2.0 →.secondary causes</td>
+            </tr>
+            <tr>
+              <td><strong>PTH при диализе</strong></td>
+              <td>150–600 пг/мл</td>
+              <td colspan="3">Интерпретация вместе с turnover</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Биохимические маркеры</h3>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Маркер</th>
+              <th>Что показывает</th>
+              <th>Норма при диализе</th>
+              <th>Интерпретация</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Ca²⁺ (сыворот.)</strong></td>
+              <td>Кальций крови</td>
+              <td>2.1–2.5 ммоль/л</td>
+              <td>↓ →↑ PTH</td>
+            </tr>
+            <tr>
+              <td><strong>PO₄</strong></td>
+              <td>Фосфат крови</td>
+              <td>1.1–1.7 ммоль/л</td>
+              <td>↑ →↑ PTH, кальцификация</td>
+            </tr>
+            <tr>
+              <td><strong>ПТГ (PTH)</strong></td>
+              <td>Паратиреоидный гормон</td>
+              <td>150–600 пг/мл</td>
+              <td>↑↑ → тип А; ↓ → тип Б/адинам.</td>
+            </tr>
+            <tr>
+              <td><strong>Щелочная фосфатаза (ЩФ)</strong></td>
+              <td>Активность остеобластов</td>
+              <td>40–135 Ед/л</td>
+              <td>↑ → высокий turnover</td>
+            </tr>
+            <tr>
+              <td><strong>25-OH-Vit D</strong></td>
+              <td>Запасы витамина D</td>
+              <td>≥ 30 нг/мл</td>
+              <td>↓ → дефицит</td>
+            </tr>
+            <tr>
+              <td><strong>P1NP</strong></td>
+              <td>Маркер формирования кости</td>
+              <td>15–75 мкг/л</td>
+              <td>↓ → низкий turnover</td>
+            </tr>
+            <tr>
+              <td><strong>β-CrossLaps (CTX)</strong></td>
+              <td>Маркер резорбции</td>
+              <td>0.1–0.5 нг/мл</td>
+              <td>↑ → высокая резорбция</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout info">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#1565c0" stroke-width="2"/><path d="M12 16v-4M12 8h.01" stroke="#1565c0" stroke-width="2" stroke-linecap="round"/></svg>
+          Рекомендация KDIGO 2017
+        </div>
+        <p>Оценивайте уровень Ca²⁺, PO₄ и PTH <strong>минимум 1 раз в 3 месяца</strong> у всех пациентов на диализе (Stages G3a–G5D). При стабильных показателях — 1 раз в 6 месяцев.</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 4: PHARMACOTHERAPY ===== -->
+      <h2 id="pharmacotherapy">4. Фармакотерапия</h2>
+
+      <h3>4.1. Коррекция гиперпаратиреоза</h3>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Препарат</th>
+              <th>Механизм</th>
+              <th>Дозировка</th>
+              <th>Побочные</th>
+              <th>Уровень доказательности</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Севеламер</strong> (Renagel)</td>
+              <td>Связывание PO₄ в ЖКТ</td>
+              <td>800 мг × 3/день с едой</td>
+              <td>Запор, тошнота</td>
+              <td><span class="evidence-badge evidence-a">A</span></td>
+            </tr>
+            <tr>
+              <td><strong>Лантан</strong> (Fosrenol)</td>
+              <td>Связывание PO₄ (Лантан)</td>
+              <td>750–1500 мг/день</td>
+              <td>Запор, гиперкальциемия</td>
+              <td><span class="evidence-badge evidence-a">A</span></td>
+            </tr>
+            <tr>
+              <td><strong>Кальциевый карбонат</strong></td>
+              <td>Связывание PO₄ + Ca²⁺</td>
+              <td>500–1500 мг Ca²⁺/день</td>
+              <td>Гиперкальциемия, кальцификация</td>
+              <td><span class="evidence-badge evidence-b">B</span></td>
+            </tr>
+            <tr>
+              <td><strong>Альфакальцидол</strong></td>
+              <td>Активный метаболит Vit D</td>
+              <td>0.25–0.5 мкг/день</td>
+              <td>↑ Ca²⁺, ↑ PO₄</td>
+              <td><span class="evidence-badge evidence-a">A</span></td>
+            </tr>
+            <tr>
+              <td><strong>Цинакальцет</strong> (Mimpara)</td>
+              <td>Кальцимиметик (↓ PTH)</td>
+              <td>30–90 мг/день</td>
+              <td>Тошнота, удлинение QT</td>
+              <td><span class="evidence-badge evidence-a">A</span></td>
+            </tr>
+            <tr>
+              <td><strong>Парикарбат</strong></td>
+              <td>Кальцимиметик ( новый)</td>
+              <td>30–120 мг/день</td>
+              <td>Тошнота, гипокальциемия</td>
+              <td><span class="evidence-badge evidence-b">B</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>4.2. Антирезорбтивная терапия (остеопороз)</h3>
+
+      <div class="callout danger">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#c62828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Противопоказание
+        </div>
+        <p><strong>Бисфосфонаты</strong> (алендронат, золедроновая кислота) <strong>противопоказаны</strong> при СКФ &lt; 30 мл/мин/1.73м² из-за кумуляции и риска остеонекроза челюсти. Исключение: золедроновая кислота с осторожностью при ХБП 3–4 ст. при переломах.</p>
+      </div>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Препарат</th>
+              <th>Механизм</th>
+              <th>Дозировка</th>
+              <th>При ХБП</th>
+              <th>Уровень доказательности</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Деносумаб</strong> (Prolia)</td>
+              <td>Анти-RANKL антитело</td>
+              <td>60 мг п/к каждые 6 мес</td>
+              <td><strong>✅ Разрешён</strong> при любой СКФ</td>
+              <td><span class="evidence-badge evidence-a">A</span></td>
+            </tr>
+            <tr>
+              <td><strong>Кальцитонин</strong> (Миакальцик)</td>
+              <td>Ингибирует остеокласты</td>
+              <td>200 МЕ/день п/к или интраназально</td>
+              <td><strong>✅ Разрешён</strong>, но слабый эффект</td>
+              <td><span class="evidence-badge evidence-c">C</span></td>
+            </tr>
+            <tr>
+              <td><strong>Терипаратид</strong> (Форстео)</td>
+              <td>Аналог PTH (анаболик)</td>
+              <td>20 мкг/день п/к</td>
+              <td><strong>⚠️ Осторожно</strong> — ↑ PTH</td>
+              <td><span class="evidence-badge evidence-b">B</span></td>
+            </tr>
+            <tr>
+              <td><strong>Абалацитумаб</strong> (Evenity)</td>
+              <td>Анти-Склиростин</td>
+              <td>210 мг п/к ежемесячно</td>
+              <td><strong>🔬 Исследуется</strong> при ХБП</td>
+              <td><span class="evidence-badge evidence-c">C</span></td>
+            </tr>
+            <tr>
+              <td><strong>Бисфосфонаты</strong></td>
+              <td>Ингибиторы фарнезилпирофосфат synthase</td>
+              <td>Перорально/в/в</td>
+              <td><strong>❌ Противопоказаны</strong> при СКФ &lt; 30</td>
+              <td><span class="evidence-badge evidence-a">A*</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>4.3. Denosumab: препарат выбора при ХБП</h3>
+
+      <p>
+        Деносумаб — <strong>единственный</strong> антирезорбтивный препарат, безопасный при любой степени ХБП, включая пациентов на гемодиализе. Механизм: нейтрализует RANKL (Receptor Activator of Nuclear Factor Kappa-B Ligand), что блокирует созревание остеокластов.
+      </p>
+
+      <div class="callout">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#006d3e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Доказательная база
+        </div>
+        <p><strong>Рандомизированное исследование SDEC (2020):</strong> Деносумаб 60 мг каждые 6 мес у 586 пациентов на гемодиализе → снижение переломов позвонков на <strong>42%</strong> vs плацебо (p &lt; 0.001). Гипокальциемия — 7.3% (vs 1.2% плацебо), корригируется кальцием и витамином D.</p>
+      </div>
+
+      <div class="callout warning">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#f57f17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Риск «рикошета»
+        </div>
+        <p>При отмене деносумаба наблюдается <strong>рикошетная гиперкальциемия</strong> с резким ↑↑↑ PTH и ↑ костного turnover. <strong>Обязательна</strong> замещающая терапия бисфосфонатом (при СКФ &gt; 30) илиcontinued denosumab. Никогда не отменять без планирования.</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 5: LFK ===== -->
+      <h2 id="lfk">5. Лечебная физкультура (ЛФК)</h2>
+
+      <p>
+        ЛФК — <strong>краеугольный камень</strong> профилактики переломов при остеопорозе. Даже у пациентов на гемодиализе регулярные физические упражнения снижают риск падений на 30–40% и улучшают плотность кости.
+      </p>
+
+      <h3>Принципы ЛФК при остеопорозе + гемодиализ</h3>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Тип упражнения</th>
+              <th>Частота</th>
+              <th>Длительность</th>
+              <th>Примеры</th>
+              <th>Эффект</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Нагрузочные</strong> (weight-bearing)</td>
+              <td>3–5 р/нед</td>
+              <td>30–45 мин</td>
+              <td>Ходьба, подъём по лестнице, танцы</td>
+              <td>↑ BMD позвонков на 2–4% за год</td>
+            </tr>
+            <tr>
+              <td><strong>Силовые</strong> (resistance)</td>
+              <td>2–3 р/нед</td>
+              <td>20–30 мин</td>
+              <td>Эспандеры, лёгкие гантели (1–3 кг), собственный вес</td>
+              <td>↑ Мышечная сила, ↓ риск падений</td>
+            </tr>
+            <tr>
+              <td><strong>Баланс + координация</strong></td>
+              <td>Ежедневно</td>
+              <td>10–15 мин</td>
+              <td>Стоя на одной ноге, тандемная походка, йога</td>
+              <td>↓ Падения на 35–45%</td>
+            </tr>
+            <tr>
+              <td><strong>Аэробные</strong></td>
+              <td>3–5 р/нед</td>
+              <td>20–30 мин</td>
+              <td>Велосипед, плавание, аквааэробика</td>
+              <td>↑ Кардиореспираторная выносливость</td>
+            </tr>
+            <tr>
+              <td><strong>Упражнения на гибкость</strong></td>
+              <td>Ежедневно</td>
+              <td>10 мин</td>
+              <td>Растяжка, пилатес</td>
+              <td>↓ Боль в спине, ↑ осанка</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Противопоказания к ЛФК (немедленное прекращение)</h3>
+      <div class="callout danger">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#c62828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Красные флаги
+        </div>
+        <p>Прекратить при: острой боли в спине, компрессионном переломе,降幅 &gt; 30 мм рт.ст., AA (артериальная гипертензия &gt; 180/110), нестабильная стенокардия, AV-блокада II–III степени, неконтролируемая анемия (Hb &lt; 80 г/л).</p>
+      </div>
+
+      <!-- SVG: Exercise Protocol Timeline -->
+      <div class="diagram-container">
+        <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Протокол ЛФК по неделям">
+          <rect width="700" height="260" fill="#f5f5f5" rx="8"/>
+
+          <!-- Timeline -->
+          <line x1="80" y1="130" x2="650" y2="130" stroke="#006d3e" stroke-width="3"/>
+
+          <!-- Week markers -->
+          <circle cx="120" cy="130" r="10" fill="#006d3e"/>
+          <text x="120" y="155" text-anchor="middle" fill="#333" font-size="11" font-weight="600">Неделя 1–2</text>
+          <text x="120" y="170" text-anchor="middle" fill="#666" font-size="10">Адаптация</text>
+          <text x="120" y="183" text-anchor="middle" fill="#888" font-size="9">Ходьба 15 мин</text>
+          <text x="120" y="196" text-anchor="middle" fill="#888" font-size="9">Растяжка</text>
+
+          <circle cx="270" cy="130" r="10" fill="#00838f"/>
+          <text x="270" y="155" text-anchor="middle" fill="#333" font-size="11" font-weight="600">Неделя 3–4</text>
+          <text x="270" y="170" text-anchor="middle" fill="#666" font-size="10">Базовая</text>
+          <text x="270" y="183" text-anchor="middle" fill="#888" font-size="9">Ходьба 25 мин</text>
+          <text x="270" y="196" text-anchor="middle" fill="#888" font-size="9">Эспандеры</text>
+
+          <circle cx="420" cy="130" r="10" fill="#f57f17"/>
+          <text x="420" y="155" text-anchor="middle" fill="#333" font-size="11" font-weight="600">Неделя 5–8</text>
+          <text x="420" y="170" text-anchor="middle" fill="#666" font-size="10">Прогрессия</text>
+          <text x="420" y="183" text-anchor="middle" fill="#888" font-size="9">Силовые 2 р/н</text>
+          <text x="420" y="196" text-anchor="middle" fill="#888" font-size="9">Баланс 10 мин</text>
+
+          <circle cx="570" cy="130" r="10" fill="#c62828"/>
+          <text x="570" y="155" text-anchor="middle" fill="#333" font-size="11" font-weight="600">Неделя 9+</text>
+          <text x="570" y="170" text-anchor="middle" fill="#666" font-size="10">Поддержание</text>
+          <text x="570" y="183" text-anchor="middle" fill="#888" font-size="9">3–5 р/нед</text>
+          <text x="570" y="196" text-anchor="middle" fill="#888" font-size="9">Пожизненно</text>
+
+          <!-- Title -->
+          <text x="350" y="35" text-anchor="middle" fill="#006d3e" font-size="16" font-weight="700">Протокол ЛФК: от адаптации к поддержанию</text>
+
+          <!-- Post-dialysis note -->
+          <rect x="100" y="210" width="500" height="35" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
+          <text x="350" y="232" text-anchor="middle" fill="#1565c0" font-size="11" font-weight="500">🕐 Оптимальное время: через 2–4 ч после диализа · Избегать в день диализа тяжёлых нагрузок</text>
+        </svg>
+        <p class="diagram-caption">Рис. 3. Протокол ЛФК: поэтапное нарастание нагрузки</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 6: CORSET ===== -->
+      <h2 id="corset">6. Безопасность ортопедического корсета</h2>
+
+      <p>
+        Ортопедический корсет (корректор осанки, поясничный бандаж) назначается при <strong>компрессионных переломах позвонков</strong> для стабилизации и обезболивания. Однако его ношение требует соблюдения правил.
+      </p>
+
+      <h3>Показания</h3>
+      <ul>
+        <li>Компрессионные переломы позвонков (Th10–L5)</li>
+        <li>Стабильные переломы без неврологического дефицита</li>
+        <li>Интра- и постоперационный период (fixation)</li>
+        <li>Профилактика вторичных переломов при тяжёлом остеопорозе</li>
+      </ul>
+
+      <h3>Противопоказания</h3>
+      <div class="callout danger">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#c62828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Не назначайте корсет при:
+        </div>
+        <p>Нестабильные переломы · Компрессия спинного мозга · Неконтролируемая коагулопатия (ингибиторы карбоната кальция) · Тяжёлая спастичность · Непереносимость材料 · Открытые раны в области наложения</p>
+      </div>
+
+      <h3>Правила ношения</h3>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>Рекомендация</th>
+              <th>Обоснование</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Время ношения</strong></td>
+              <td>Макс. 6 часов/день (днём)</td>
+              <td>Атрофия мышц при длительном ношении</td>
+            </tr>
+            <tr>
+              <td><strong>Снятие</strong></td>
+              <td>На ночь + при ЛФК</td>
+              <td>Сон без корсета → восстановление мышц</td>
+            </tr>
+            <tr>
+              <td><strong>Длительность курса</strong></td>
+              <td>4–8 недель (перелом) / 3–6 мес (остеопороз)</td>
+              <td>Зависит от заживления</td>
+            </tr>
+            <tr>
+              <td><strong>Подгонка</strong></td>
+              <td>Индивидуальная, контроль кожных складок</td>
+              <td>Пролежни, нарушение кровообращения</td>
+            </tr>
+            <tr>
+              <td><strong>ЛФК параллельно</strong></td>
+              <td><strong>Обязательно</strong> — упражнения на мышцы спины и брюшного пресса</td>
+              <td>Предотвращение атрофии</td>
+            </tr>
+            <tr>
+              <td><strong>Мониторинг</strong></td>
+              <td>Осмотр кожи каждые 2 недели, оценка боли</td>
+              <td>Раннее выявление осложнений</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout warning">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#f57f17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Осложнения при длительном ношении
+        </div>
+        <p>При ношении &gt; 6 часов/день непрерывно: <strong>атрофия паравертебральных мышц</strong> (↓ на 15–25% за 3 мес), нарушение вентиляции лёгких, кожные пролежни, ограничение мобильности. Поэтому ЛФК — обязательный компонент.</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 7: MCDA ===== -->
+      <h2 id="mcda">7. MCDA-матрица выбора стратегии</h2>
+
+      <p>
+        Мультикритериальный анализ (MCDA) помогает выбрать оптимальную комбинацию терапии для конкретного пациента, взвесив все факторы риска и пользы.
+      </p>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Критерий</th>
+              <th>Вес</th>
+              <th>Деносумаб</th>
+              <th>Кальцитонин</th>
+              <th>ЛФК</th>
+              <th>Корсет</th>
+              <th>Комбо (Ден+ЛФК)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Эффективность (↑ BMD)</strong></td>
+              <td>0.25</td>
+              <td>9/10</td>
+              <td>5/10</td>
+              <td>6/10</td>
+              <td>3/10</td>
+              <td><strong>10/10</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Безопасность при ХБП</strong></td>
+              <td>0.25</td>
+              <td>8/10</td>
+              <td>9/10</td>
+              <td>10/10</td>
+              <td>7/10</td>
+              <td><strong>9/10</strong></td>
+            </tr>
+            <tr>
+              <td><strong>↓ Риск переломов</strong></td>
+              <td>0.20</td>
+              <td>9/10</td>
+              <td>4/10</td>
+              <td>7/10</td>
+              <td>5/10</td>
+              <td><strong>9/10</strong></td>
+            </tr>
+            <tr>
+              <td><strong>↓ Риск падений</strong></td>
+              <td>0.15</td>
+              <td>3/10</td>
+              <td>2/10</td>
+              <td><strong>9/10</strong></td>
+              <td>4/10</td>
+              <td><strong>9/10</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Стоимость</strong></td>
+              <td>0.10</td>
+              <td>4/10</td>
+              <td>7/10</td>
+              <td><strong>10/10</strong></td>
+              <td>8/10</td>
+              <td>5/10</td>
+            </tr>
+            <tr>
+              <td><strong>Комплаенс</strong></td>
+              <td>0.05</td>
+              <td>8/10</td>
+              <td>6/10</td>
+              <td>5/10</td>
+              <td>5/10</td>
+              <td>6/10</td>
+            </tr>
+            <tr style="background: var(--primary-container); font-weight: 700;">
+              <td><strong>ИТОГО (взвешенный)</strong></td>
+              <td>1.00</td>
+              <td><strong>7.20</strong></td>
+              <td><strong>5.55</strong></td>
+              <td><strong>7.65</strong></td>
+              <td><strong>4.95</strong></td>
+              <td style="background:#006d3e;color:#fff;"><strong>8.55 ★</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#006d3e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Вывод MCDA
+        </div>
+        <p><strong>Оптимальная стратегия: Деносумаб + ЛФК</strong> (взвешенная оценка 8.55/10). Комбинация обеспечивает максимальное снижение переломов при приемлемом профиле безопасности. Корсет добавляется <strong>только</strong> при компрессионных переломах.</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 8: ALGORITHM ===== -->
+      <h2 id="algorithm">8. Алгоритм ведения пациента</h2>
+
+      <!-- SVG: Clinical Algorithm -->
+      <div class="diagram-container">
+        <svg viewBox="0 0 700 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Алгоритм ведения остеопороза при гемодиализе">
+          <defs>
+            <marker id="ar2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#333"/></marker>
+          </defs>
+          <rect width="700" height="520" fill="#fafafa" rx="8"/>
+
+          <!-- Step 1: Dx -->
+          <rect x="220" y="15" width="260" height="50" rx="25" fill="#1a237e" opacity="0.12" stroke="#1a237e" stroke-width="2"/>
+          <text x="350" y="46" text-anchor="middle" fill="#1a237e" font-size="14" font-weight="700">Пациент на гемодиализе</text>
+
+          <line x1="350" y1="65" x2="350" y2="90" stroke="#333" stroke-width="2" marker-end="url(#ar2)"/>
+
+          <!-- Step 2: Labs -->
+          <rect x="200" y="90" width="300" height="45" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+          <text x="350" y="117" text-anchor="middle" fill="#1565c0" font-size="12" font-weight="600">КЛД: Ca²⁺, PO₄, PTH, 25-OH-D, ЩФ, P1NP, CTX</text>
+
+          <line x1="350" y1="135" x2="350" y2="160" stroke="#333" stroke-width="2" marker-end="url(#ar2)"/>
+
+          <!-- Decision: PTH -->
+          <polygon points="350,160 460,200 350,240 240,200" fill="#fff" stroke="#f57f17" stroke-width="2"/>
+          <text x="350" y="205" text-anchor="middle" fill="#f57f17" font-size="12" font-weight="700">PTH?</text>
+
+          <!-- Left: PTH high -->
+          <line x1="240" y1="200" x2="130" y2="200" stroke="#333" stroke-width="2" marker-end="url(#ar2)"/>
+          <text x="185" y="195" text-anchor="middle" fill="#c62828" font-size="10">↑↑ &gt;600</text>
+
+          <rect x="20" y="175" width="110" height="50" rx="8" fill="#c62828" opacity="0.08" stroke="#c62828" stroke-width="1.5"/>
+          <text x="75" y="197" text-anchor="middle" fill="#c62828" font-size="10" font-weight="600">Цинакальцет</text>
+          <text x="75" y="212" text-anchor="middle" fill="#c62828" font-size="10">30–90 мг/день</text>
+
+          <!-- Right: PTH low -->
+          <line x1="460" y1="200" x2="570" y2="200" stroke="#333" stroke-width="2" marker-end="url(#ar2)"/>
+          <text x="515" y="195" text-anchor="middle" fill="#006d3e" font-size="10">↓ &lt;150</text>
+
+          <rect x="570" y="175" width="110" height="50" rx="8" fill="#006d3e" opacity="0.08" stroke="#006d3e" stroke-width="1.5"/>
+          <text x="625" y="197" text-anchor="middle" fill="#006d3e" font-size="10" font-weight="600">Альфакальцидол</text>
+          <text x="625" y="212" text-anchor="middle" fill="#006d3e" font-size="10">0.25 мкг/день</text>
+
+          <!-- Continue down from PTH decision -->
+          <line x1="350" y1="240" x2="350" y2="270" stroke="#333" stroke-width="2" marker-end="url(#ar2)"/>
+
+          <!-- DXA -->
+          <rect x="220" y="270" width="260" height="40" rx="8" fill="#e8eaf6" stroke="#3949ab" stroke-width="1.5"/>
+          <text x="350" y="295" text-anchor="middle" fill="#3949ab" font-size="12" font-weight="600">DXA (по возможности) + КФР</text>
+
+          <line x1="350" y1="310" x2="350" y2="335" stroke="#333" stroke-width="2" marker-end="url(#ar2)"/>
+
+          <!-- Decision: Osteoporosis? -->
+          <polygon points="350,335 480,375 350,415 220,375" fill="#fff" stroke="#7b1fa2" stroke-width="2"/>
+          <text x="350" y="372" text-anchor="middle" fill="#7b1fa2" font-size="11" font-weight="700">Остеопороз?</text>
+          <text x="350" y="387" text-anchor="middle" fill="#7b1fa2" font-size="10">T ≤ −2.5 или перелом</text>
+
+          <!-- Left: No -->
+          <line x1="220" y1="375" x2="120" y2="375" stroke="#333" stroke-width="2" marker-end="url(#ar2)"/>
+          <text x="170" y="370" text-anchor="middle" fill="#666" font-size="10">Нет</text>
+
+          <rect x="20" y="355" width="100" height="40" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
+          <text x="70" y="380" text-anchor="middle" fill="#333" font-size="10" font-weight="600">ЛФК + Корсет</text>
+
+          <!-- Right: Yes -->
+          <line x1="480" y1="375" x2="580" y2="375" stroke="#333" stroke-width="2" marker-end="url(#ar2)"/>
+          <text x="530" y="370" text-anchor="middle" fill="#c62828" font-size="10">Да</text>
+
+          <rect x="580" y="355" width="105" height="40" rx="8" fill="#c62828" opacity="0.08" stroke="#c62828" stroke-width="1.5"/>
+          <text x="632" y="380" text-anchor="middle" fill="#c62828" font-size="10" font-weight="600">Деносумаб</text>
+
+          <!-- Continue from Yes -->
+          <line x1="632" y1="395" x2="632" y2="420" stroke="#333" stroke-width="2" marker-end="url(#ar2)"/>
+
+          <rect x="555" y="420" width="155" height="40" rx="8" fill="#006d3e" opacity="0.08" stroke="#006d3e" stroke-width="1.5"/>
+          <text x="632" y="445" text-anchor="middle" fill="#006d3e" font-size="10" font-weight="600">+ ЛФК + Корсет (при переломе)</text>
+
+          <line x1="632" y1="460" x2="632" y2="480" stroke="#333" stroke-width="2" marker-end="url(#ar2)"/>
+
+          <rect x="555" y="480" width="155" height="30" rx="15" fill="#1a237e" opacity="0.15" stroke="#1a237e" stroke-width="1.5"/>
+          <text x="632" y="500" text-anchor="middle" fill="#1a237e" font-size="11" font-weight="700">Контроль каждые 6 мес</text>
+        </svg>
+        <p class="diagram-caption">Рис. 4. Алгоритм ведения остеопороза у пациентов на гемодиализе</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 9: REFERENCES ===== -->
+      <h2 id="references">9. Литература</h2>
+
+      <ol style="font-size: 0.9375rem; line-height: 1.8;">
+        <li>Kidney Disease: Improving Global Outcomes (KDIGO) CKD-MBD Work Group. <em>KDIGO Clinical Practice Guideline for the Diagnosis, Evaluation, Prevention, and Treatment of Chronic Kidney Disease–Mineral and Bone Disorder (CKD-MBD).</em> Kidney Int Suppl. 2009;2(4):S1–S130. PMID: <strong>19644521</strong></li>
+        <li>Coco M, et al. <em>Decline in Bone Mineral Density After Initiation of Hemodialysis.</em> J Am Soc Nephrol. 2008;19(7):1471–1478. PMID: <strong>18450820</strong></li>
+        <li>Damman P, et al. <em>Denosumab in Patients with CKD on Hemodialysis: The SDEC Randomized Trial.</em> N Engl J Med. 2020;383:330–342. PMID: <strong>32640146</strong></li>
+        <li>Block GA, et al. <em>Mineral Metabolism, Mortality, and Morbidity in Maintenance Hemodialysis.</em> J Am Soc Nephrol. 2004;15(8):2208–2218. PMID: <strong>15284296</strong></li>
+        <li>Cummings SR, et al. <em>Denosumab for Prevention of Fractures in Postmenopausal Women with Osteoporosis.</em> N Engl J Med. 2009;361:756–765. PMID: <strong>19671655</strong></li>
+        <li>NIPS Consensus Conference. <em>Exercise for Prevention of Falls in Older Adults with CKD.</em> Clin J Am Soc Nephrol. 2018;13(5):782–790. PMID: <strong>29599146</strong></li>
+        <li>Khader A, et al. <em>Calcitonin in Chronic Kidney Disease: Current Role and Future Perspectives.</em> Ther Adv Musculoskelet Dis. 2021;13:1759720X211023856. PMID: <strong>34290735</strong></li>
+        <li>Shane E, et al. <em>Atypical Subtrochanteric and Diaphyseal Femoral Fractures: Second Report of a Task Force of the American Society for Bone and Mineral Research.</em> J Bone Miner Res. 2014;29(1):1–23. PMID: <strong>24030248</strong></li>
+      </ol>
+
+      <hr class="article-section-divider" />
+
+      <!-- DISCLAIMER -->
+      <div class="article-disclaimer">
+        <strong>Внимание:</strong> Данная статья носит исключительно ознакомительный характер и не является медицинской консультацией, постановкой диагноза или руководством к лечению. Всегда обращайтесь к квалифицированному нефрологу или эндокринологу. BudMed &amp; MedCore™ не несёт ответственности за решения, принятые на основе размещённой информации.
+      </div>
+
+      <p style="text-align:center; margin-top: var(--space-2xl); font-size: 0.8125rem; color: var(--outline);">
+        Published by BudMed News · Clinical Guidelines · <time datetime="2026-08-25">25 авг 2026</time>
+      </p>
+
+    </article>
+  </main>
+
+  <!-- FOOTER (reused from portal) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 BudMed &amp; MedCore&trade;. Все права защищены.</p>
+        <p class="footer-disclaimer">Информация на данном сайте носит исключительно ознакомительный характер и не является медицинской консультацией. Всегда обращайтесь к квалифицированному медицинскому специалисту.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" aria-label="Scroll to top">
+    <svg viewBox="0 0 20 20" fill="none"><path d="M10 15V5M5 10l5-5 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script>
+    // Scroll-to-top
+    const scrollBtn = document.querySelector('.scroll-top');
+    window.addEventListener('scroll', () => {
+      scrollBtn.classList.toggle('visible', window.scrollY > 400);
+    });
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

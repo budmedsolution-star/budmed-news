@@ -1,0 +1,28 @@
+# Ignore everything
+*
+
+# Except web essentials
+!index.html
+!css/
+!css/**
+!js/
+!js/**
+!assets/
+!assets/**
+!articles/
+!articles/**
+!README.md
+!.gitignore
+
+# Ignore OS/IDE files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ignore logs
+*.log

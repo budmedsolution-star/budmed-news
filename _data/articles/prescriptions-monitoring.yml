@@ -1,13 +1,13 @@
 title:
-  ru: "Назначения и мониторинг: разбор рисков схемы M15.0 / M81.00"
-  en: "Prescriptions & Monitoring: Risk Review for M15.0 / M81.00"
+  ru: 'Назначения и мониторинг: разбор рисков схемы M15.0 / M81.00'
+  en: 'Prescriptions & Monitoring: Risk Review for M15.0 / M81.00'
 excerpt:
-  ru: "Фактические назначения ревматолога, направления ЕСОЗ, динамика DEXA 2025→2026, лаборатория 01.07.2026, красные флаги схемы, альтернативы и юридическая заявка на коррекцию."
-  en: "Actual rheumatologist prescriptions, e-OSZ referrals, DEXA dynamics 2025→2026, lab results 01.07.2026, scheme red flags, alternatives and legal request for correction."
-category: "guidelines"
-date: "2026-07-30"
+  ru: Фактические назначения ревматолога, направления ЕСОЗ, динамика DEXA 2025→2026, лаборатория 01.07.2026, красные флаги схемы, альтернативы и юридическая заявка на коррекцию.
+  en: Actual rheumatologist prescriptions, e-OSZ referrals, DEXA dynamics 2025→2026, lab results 01.07.2026, scheme red flags, alternatives and legal request for correction.
+category: guidelines
+date: 2026-07-30
 read_time: 18
-premium: false
+premium: true
 manual_html: true
-file: "articles/prescriptions_and_monitoring.html"
+file: articles/prescriptions_and_monitoring.html
 order: 3

@@ -8,8 +8,8 @@
 
   // ─── Config ───
   // TODO: Replace with your Supabase project values
-  var SUPABASE_URL = 'YOUR_SUPABASE_URL';
-  var SUPABASE_ANON = 'YOUR_SUPABASE_ANON_KEY';
+  var SUPABASE_URL = 'https://bbxxgruemnovbbitcaet.supabase.co';
+  var SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJieHhncnVlbW5vdmJiaXRjYWV0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3MzQ3MzYsImV4cCI6MjEwMzMxMDczNn0.HUeX_K5h1hIzMdmzrcSC--8evy-z3F46PqgiiclaYrg';
   var API_URL = SUPABASE_URL + '/functions/v1/premium-access';
 
   // Static invite codes (always valid, no backend needed)

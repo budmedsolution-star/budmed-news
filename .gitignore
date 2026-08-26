@@ -18,6 +18,8 @@
 !README.md
 !.gitignore
 !.nojekyll
+!supabase/
+!supabase/**
 
 # Ignore OS/IDE files
 .DS_Store

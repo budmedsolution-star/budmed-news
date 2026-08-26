@@ -1229,6 +1229,33 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-1px);
 }
 
+/* ─── Resend Button ─── */
+.subscribe-resend-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: 1.5px solid rgba(201, 160, 80, 0.25);
+  color: #e8c878;
+  font-family: var(--font-family);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border-radius: var(--radius-md, 12px);
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: var(--space-md);
+}
+
+.subscribe-resend-btn:hover:not(:disabled) {
+  background: rgba(201, 160, 80, 0.1);
+  border-color: rgba(201, 160, 80, 0.4);
+}
+
+.subscribe-resend-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 /* ─── Divider ─── */
 .subscribe-divider {
   display: flex;

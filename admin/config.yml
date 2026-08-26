@@ -106,14 +106,13 @@ collections:
 
   - name: "invite-codes"
     label: "Invite Codes"
-    file: "_data/invite-codes.yml"
+    folder: "_data/invite-codes"
+    create: true
     extension: "yml"
     format: "yaml"
+    slug: "{{slug}}"
+    summary: "{{code}} — {{label}}"
     fields:
-      - label: "Codes"
-        name: "codes"
-        widget: "list"
-        fields:
-          - { label: "Code", name: "code", widget: "string", required: true }
-          - { label: "Label", name: "label", widget: "string" }
-          - { label: "Max Uses", name: "max_uses", widget: "number", value_type: "int", default: 100 }
+      - { label: "Code", name: "code", widget: "string", required: true }
+      - { label: "Label", name: "label", widget: "string" }
+      - { label: "Max Uses", name: "max_uses", widget: "number", value_type: "int", default: 100 }

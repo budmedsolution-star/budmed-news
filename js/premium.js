@@ -13,6 +13,12 @@
   };
 
   // ─── Paywall Helpers ───
+  function getRegistered() {
+    try { return JSON.parse(localStorage.getItem('budmed-premium-registered') || 'null'); }
+    catch (e) { return null; }
+  }
+  function isRegistered() { return !!getRegistered(); }
+
   function getUnlocked() {
     try { return JSON.parse(localStorage.getItem('budmed-premium-unlocked') || '[]'); }
     catch (e) { return []; }
@@ -21,6 +27,7 @@
     localStorage.setItem('budmed-premium-unlocked', JSON.stringify(arr));
   }
   function isUnlocked(slug) {
+    if (isRegistered()) return true;
     return getUnlocked().indexOf(slug) !== -1;
   }
   function unlockSlug(slug) {
@@ -125,6 +132,30 @@
       ? 'Access granted! Premium articles unlocked.'
       : '\u0414\u043e\u0441\u0442\u0443\u043f \u043e\u0442\u043a\u0440\u044b\u0442! \u041f\u0440\u0435\u043c\u0438\u0443\u043c-\u0441\u0442\u0430\u0442\u044c\u0438 \u0440\u0430\u0437\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043d\u044b.';
     landingMsg.className = 'subscribe-invite-msg success';
+    setTimeout(function () {
+      if (typeof window.__renderCards === 'function') window.__renderCards();
+    }, 800);
+  });
+
+  // ─── Landing Registration Form ───
+  var regForm = document.getElementById('subscribe-register-form');
+  if (regForm) regForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var formData = new FormData(regForm);
+    var name = (formData.get('name') || '').trim();
+    var email = (formData.get('email') || '').trim();
+    if (!name || !email) return;
+
+    // Store registration locally
+    localStorage.setItem('budmed-premium-registered', JSON.stringify({ name: name, email: email, date: new Date().toISOString() }));
+    // Auto-unlock premium
+    unlockAll();
+    if (landingMsg) {
+      landingMsg.textContent = getLang() === 'en'
+        ? 'Registered! Premium articles unlocked.'
+        : '\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f \u043f\u0440\u0438\u043d\u044f\u0442\u0430! \u041f\u0440\u0435\u043c\u0438\u0443\u043c-\u0441\u0442\u0430\u0442\u044c\u0438 \u0440\u0430\u0437\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043d\u044b.';
+      landingMsg.className = 'subscribe-invite-msg success';
+    }
     setTimeout(function () {
       if (typeof window.__renderCards === 'function') window.__renderCards();
     }, 800);

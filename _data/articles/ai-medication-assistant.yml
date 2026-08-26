@@ -1,0 +1,13 @@
+title:
+  ru: "Будущее: AI-ассистент в вашей аптечке"
+  en: "The Future: An AI Assistant in Your Medicine Cabinet"
+excerpt:
+  ru: "AI помогает обнаруживать лекарственные взаимодействия и снижать количество лекарственных ошибок. Но готовы ли мы доверять машине рекомендации?"
+  en: "AI helps detect drug interactions and reduce medication errors. But are we ready to trust machine recommendations?"
+category: "ai-health"
+date: "2026-08-26"
+read_time: 5
+premium: false
+manual_html: true
+file: "articles/ai-medication-assistant.html"
+order: 10

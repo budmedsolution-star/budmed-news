@@ -1,0 +1,13 @@
+title:
+  ru: "MedGemma: как Google создал медицинский AI-модель"
+  en: "MedGemma: How Google Built a Medical AI Model"
+excerpt:
+  ru: "MedGemma — семейство open-source моделей от Google для медицинского AI. 4B и 27B параметров, MedQA 87.7%, Apache 2.0 лицензия."
+  en: "MedGemma — Google's open-source medical AI family. 4B and 27B parameters, MedQA 87.7%, Apache 2.0 license."
+category: "ai-health"
+date: "2026-08-26"
+read_time: 5
+premium: false
+manual_html: true
+file: "articles/medgemma.html"
+order: 9

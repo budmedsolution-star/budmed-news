@@ -1,0 +1,13 @@
+title:
+  ru: "Нейросети учатся диагностировать рак по снимкам"
+  en: "Neural Networks Learn to Diagnose Cancer from Scans"
+excerpt:
+  ru: "AI обнаруживает рак молочной железы, лёгких и других органов с точностью, превышающей радиологов. Данные MASAI-trial и мета-анализов."
+  en: "AI detects breast, lung and other cancers with accuracy surpassing radiologists. Data from MASAI-trial and meta-analyses."
+category: "ai-health"
+date: "2026-08-26"
+read_time: 6
+premium: false
+manual_html: true
+file: "articles/ai-cancer-detection.html"
+order: 7

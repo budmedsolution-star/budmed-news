@@ -647,11 +647,22 @@
     }
 
     function loadArticles() {
-      fetch('_data/articles.yml?t=' + Date.now())
+      var t = Date.now();
+      fetch('_data/articles/index.yml?t=' + t)
         .then(function(r){ return r.text(); })
-        .then(function(yaml){
-          var articles = jsyaml.load(yaml);
-          if (!articles || !articles.length) return;
+        .then(function(indexYaml){
+          var files = jsyaml.load(indexYaml);
+          if (!files || !files.length) return;
+          return Promise.all(files.map(function(f){
+            return fetch('_data/articles/' + f + '?t=' + t)
+              .then(function(r){ return r.text(); })
+              .then(function(yaml){ return jsyaml.load(yaml); })
+              .catch(function(){ return null; });
+          }));
+        })
+        .then(function(results){
+          var articles = results.filter(function(a){ return a && a.title; });
+          if (!articles.length) return;
           document.querySelectorAll('.articles-grid[data-category]').forEach(function(grid){
             var cat = grid.getAttribute('data-category');
             var filtered = articles.filter(function(a){ return a.category === cat; });

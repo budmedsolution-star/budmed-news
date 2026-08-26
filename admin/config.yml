@@ -9,16 +9,13 @@ public_folder: "/assets/uploads"
 collections:
   - name: "articles"
     label: "Статьи / Articles"
-    file: "_data/articles.yml"
+    folder: "_data/articles"
+    create: true
     extension: "yml"
     format: "yaml"
+    slug: "{{slug}}"
     summary: "{{title.ru}}"
     fields:
-      - label: "Slug"
-        name: "slug"
-        widget: "string"
-        pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Lowercase Latin slug, e.g. my-article-name"]
-
       - label: "Title"
         name: "title"
         widget: "object"

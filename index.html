@@ -588,25 +588,43 @@
         <div class="subscribe-right">
           <div class="subscribe-card">
             <h3 data-ru="Получить Premium" data-en="Get Premium">Получить Premium</h3>
-            <p class="subscribe-card-desc" data-ru="Зарегистрируйтесь или войдите с Invite Code" data-en="Register or sign in with an Invite Code">Зарегистрируйтесь или войдите с Invite Code</p>
+            <p class="subscribe-card-desc" data-ru="Введите email — получите код доступа" data-en="Enter email — receive an access code">Введите email — получите код доступа</p>
+
+            <div class="subscribe-steps">
+              <div class="subscribe-step active">
+                <div class="subscribe-step-num">1</div>
+                <span data-ru="Email" data-en="Email">Email</span>
+              </div>
+              <div class="subscribe-step-arrow">&rarr;</div>
+              <div class="subscribe-step">
+                <div class="subscribe-step-num">2</div>
+                <span data-ru="Код" data-en="Code">Код</span>
+              </div>
+              <div class="subscribe-step-arrow">&rarr;</div>
+              <div class="subscribe-step">
+                <div class="subscribe-step-num">3</div>
+                <span data-ru="Доступ" data-en="Access">Доступ</span>
+              </div>
+            </div>
 
             <form class="subscribe-register-form" id="subscribe-register-form">
               <input type="text" name="name" required data-ru-placeholder="Ваше имя" data-en-placeholder="Your name" placeholder="Ваше имя" />
               <input type="email" name="email" required data-ru-placeholder="ваш@email.com" data-en-placeholder="your@email.com" placeholder="ваш@email.com" />
-              <button type="submit" data-ru="Зарегистрироваться" data-en="Register">Зарегистрироваться</button>
+              <button type="submit" data-ru="Отправить код" data-en="Send code">Отправить код</button>
             </form>
+            <div class="subscribe-invite-msg" id="subscribe-reg-msg"></div>
 
             <div class="subscribe-divider">
-              <span data-ru="или" data-en="or">или</span>
+              <span data-ru="или введите код вручную" data-en="or enter code manually">или</span>
             </div>
 
             <form class="subscribe-invite-form" id="invite-landing-form">
-              <input type="text" placeholder="Invite Code" maxlength="20" id="invite-landing-input" autocomplete="off" />
-              <button type="submit" data-ru="Войти" data-en="Sign in">Войти</button>
+              <input type="text" placeholder="XXXX-XXXX" maxlength="20" id="invite-landing-input" autocomplete="off" />
+              <button type="submit" data-ru="Активировать" data-en="Activate">Активировать</button>
             </form>
             <div class="subscribe-invite-msg" id="invite-landing-msg"></div>
 
-            <p class="subscribe-legal" data-ru="Нажимая «Зарегистрироваться», вы соглашаетесь с условиями использования. Отписка в один клик." data-en="By clicking Register, you agree to the terms of use. Unsubscribe in one click.">Нажимая «Зарегистрироваться», вы соглашаетесь с условиями использования. Отписка в один клик.</p>
+            <p class="subscribe-legal" data-ru="Нажимая «Отправить код», вы соглашаетесь с условиями использования. Отписка в один клик." data-en="By clicking Send code, you agree to the terms of use. Unsubscribe in one click.">Нажимая «Отправить код», вы соглашаетесь с условиями использования. Отписка в один клик.</p>
           </div>
         </div>
 
@@ -713,6 +731,9 @@
       var premOverlay = isPremium && !unlocked ? '<div class="premium-overlay" data-premium-overlay><div class="premium-overlay-lock"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><span class="premium-overlay-text">' + (lang==='en'?'Premium content':'\u041f\u0440\u0435\u043c\u0438\u0443\u043c \u043a\u043e\u043d\u0442\u0435\u043d\u0442') + '</span><button class="premium-overlay-cta" data-premium-unlock type="button"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>' + (lang==='en'?'Enter Invite Code':'\u0412\u0432\u0435\u0434\u0438\u0442\u0435 Invite Code') + '</span></button></div>' : '';
       var premBlur = isPremium && !unlocked ? '<div class="premium-blur"><div class="premium-blur-content"><p class="body-sm" style="color:var(--on-surface-variant);margin-bottom:8px;">' + (lang==='en'?'Read more \u2014 with subscription':'\u0427\u0438\u0442\u0430\u0442\u044c \u0434\u0430\u043b\u0435\u0435 \u2014 \u0441 \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u043e\u0439') + '</p></div></div>' : '';
       var dateFormatted = a.date ? new Date(a.date + 'T00:00:00').toLocaleDateString(lang === 'en' ? 'en-US' : 'ru-RU', {day:'numeric',month:'short',year:'numeric'}) : '';
+      var titleHtml = (isPremium && !unlocked)
+        ? '<h3 class="card-title" data-premium-unlock style="cursor:pointer;">' + t + '</h3>'
+        : '<h3 class="card-title"><a href="' + href + '">' + t + '</a></h3>';
       return '<article class="' + cardCls + '" data-category="' + cat + '"' + (isPremium && slug ? ' data-premium="' + slug + '"' : '') + '>'
         + premBadge
         + '<div class="card-thumbnail">'
@@ -722,7 +743,7 @@
         + premOverlay
         + '</div>'
         + '<div class="card-body">'
-        + '<h3 class="card-title"><a href="' + href + '">' + t + '</a></h3>'
+        + titleHtml
         + '<p class="card-excerpt">' + ex + '</p>'
         + premBlur
         + '<div class="card-meta"><time datetime="' + a.date + '"><span>' + dateFormatted + '</span></time><span class="category">' + badge + '</span></div>'

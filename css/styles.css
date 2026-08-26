@@ -1100,6 +1100,60 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+/* ─── Step Indicator ─── */
+.subscribe-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.subscribe-step {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: rgba(245, 230, 204, 0.4);
+}
+
+.subscribe-step.active {
+  color: #e8c878;
+}
+
+.subscribe-step.done {
+  color: #86efac;
+}
+
+.subscribe-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(201, 160, 80, 0.3);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.subscribe-step.active .subscribe-step-num {
+  background: rgba(201, 160, 80, 0.2);
+  border-color: #e8c878;
+  color: #e8c878;
+}
+
+.subscribe-step.done .subscribe-step-num {
+  background: rgba(134, 239, 172, 0.2);
+  border-color: #86efac;
+  color: #86efac;
+}
+
+.subscribe-step-arrow {
+  color: rgba(245, 230, 204, 0.25);
+  font-size: 0.875rem;
+}
+
 /* ─── Right: Registration Card ─── */
 .subscribe-right {
   display: flex;

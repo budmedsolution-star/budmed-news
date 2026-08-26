@@ -8,15 +8,17 @@ public_folder: "/assets/uploads"
 
 collections:
   - name: "articles"
-    label: "Articles"
-    folder: "_data"
-    create: true
+    label: "Статьи / Articles"
+    file: "_data/articles.yml"
     extension: "yml"
     format: "yaml"
-    slug: "{{slug}}"
-    path: "{{slug}}"
     summary: "{{title.ru}}"
     fields:
+      - label: "Slug"
+        name: "slug"
+        widget: "string"
+        pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Lowercase Latin slug, e.g. my-article-name"]
+
       - label: "Title"
         name: "title"
         widget: "object"
@@ -78,7 +80,7 @@ collections:
         hint: "Lower numbers appear first within their section"
 
   - name: "settings"
-    label: "Site Settings"
+    label: "Настройки сайта / Site Settings"
     files:
       - name: "hero"
         label: "Hero Section"

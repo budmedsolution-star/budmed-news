@@ -1,4 +1,5 @@
-- title:
+- slug: "ai-medical-imaging"
+  title:
     ru: "Как AI помогает врачам видеть то, что скрыто от глаза"
     en: "How AI Helps Doctors See What the Eye Cannot"
   excerpt:
@@ -12,7 +13,8 @@
   file: "articles/ai-medical-imaging.html"
   order: 6
 
-- title:
+- slug: "ai-cancer-detection"
+  title:
     ru: "Нейросети учатся диагностировать рак по снимкам"
     en: "Neural Networks Learn to Diagnose Cancer from Scans"
   excerpt:
@@ -26,7 +28,8 @@
   file: "articles/ai-cancer-detection.html"
   order: 7
 
-- title:
+- slug: "wearables-health"
+  title:
     ru: "Wearables и здоровье: что реально умеют фитнес-браслеты"
     en: "Wearables & Health: What Fitness Trackers Can Really Do"
   excerpt:
@@ -40,7 +43,8 @@
   file: "articles/wearables-health.html"
   order: 8
 
-- title:
+- slug: "medgemma"
+  title:
     ru: "MedGemma: как Google создал медицинский AI-модель"
     en: "MedGemma: How Google Built a Medical AI Model"
   excerpt:
@@ -54,7 +58,8 @@
   file: "articles/medgemma.html"
   order: 9
 
-- title:
+- slug: "ai-medication-assistant"
+  title:
     ru: "Будущее: AI-ассистент в вашей аптечке"
     en: "The Future: An AI Assistant in Your Medicine Cabinet"
   excerpt:
@@ -68,7 +73,8 @@
   file: "articles/ai-medication-assistant.html"
   order: 10
 
-- title:
+- slug: "ibuprofen-aspirin"
+  title:
     ru: "Почему нельзя пить ибупрофен с аспирином"
     en: "Why You Shouldn't Take Ibuprofen with Aspirin"
   excerpt:
@@ -82,7 +88,8 @@
   file: "articles/ibuprofen-aspirin.html"
   order: 5
 
-- title:
+- slug: "antibiotics-stewardship"
+  title:
     ru: "Антибиотики: когда помогают, а когда вредят"
     en: "Antibiotics: When They Help and When They Harm"
   excerpt:
@@ -96,7 +103,8 @@
   file: "articles/antibiotics-stewardship.html"
   order: 6
 
-- title:
+- slug: "cold-season"
+  title:
     ru: "Сезон простуд: что действительно работает"
     en: "Cold Season: What Actually Works"
   excerpt:
@@ -110,7 +118,8 @@
   file: "articles/cold-season.html"
   order: 7
 
-- title:
+- slug: "medication-labels"
+  title:
     ru: "Как читать инструкцию к лекарству за 2 минуты"
     en: "How to Read a Medication Label in 2 Minutes"
   excerpt:
@@ -124,7 +133,8 @@
   file: "articles/medication-labels.html"
   order: 8
 
-- title:
+- slug: "ckd-mbd-pathophysiology"
+  title:
     ru: "Патофизиология ХБП-МКН: Wnt, активин, FGF23 и сердечно-сосудистый риск"
     en: "CKD-MBD Pathophysiology: Wnt, Activin, FGF23 and Cardiovascular Risk"
   excerpt:
@@ -138,7 +148,8 @@
   file: "articles/ckd-mbd-pathophysiology.html"
   order: 1
 
-- title:
+- slug: "ckd-mbd-osteoporosis"
+  title:
     ru: "Остеопороз при гемодиализе: полный протокол ведения"
     en: "Osteoporosis in Hemodialysis: Full Management Protocol"
   excerpt:
@@ -152,7 +163,8 @@
   file: "articles/ckd-mbd-osteoporosis.html"
   order: 2
 
-- title:
+- slug: "prescriptions-monitoring"
+  title:
     ru: "Назначения и мониторинг: разбор рисков схемы M15.0 / M81.00"
     en: "Prescriptions & Monitoring: Risk Review for M15.0 / M81.00"
   excerpt:
@@ -166,7 +178,8 @@
   file: "articles/prescriptions_and_monitoring.html"
   order: 3
 
-- title:
+- slug: "flu-treatment-2026"
+  title:
     ru: "Новые правила лечения гриппа 2026: что изменилось"
     en: "New Flu Treatment Guidelines 2026: What Changed"
   excerpt:
@@ -180,7 +193,8 @@
   file: "articles/flu-treatment-2026.html"
   order: 4
 
-- title:
+- slug: "hypertension-guidelines"
+  title:
     ru: "Гайдлайны по гипертонии: ACC/AHA 2025 vs ESC 2024"
     en: "Hypertension Guidelines: ACC/AHA 2025 vs ESC 2024"
   excerpt:
@@ -194,7 +208,8 @@
   file: "articles/hypertension-guidelines.html"
   order: 5
 
-- title:
+- slug: "antibiotic-resistance"
+  title:
     ru: "Антибиотикорезистентность: глобальная угроза"
     en: "Antibiotic Resistance: A Global Threat"
   excerpt:
@@ -208,7 +223,8 @@
   file: "articles/antibiotic-resistance.html"
   order: 6
 
-- title:
+- slug: "budmed-13-agents"
+  title:
     ru: "Что такое BudMed: 13 AI-агентов для вашего здоровья"
     en: "What is BudMed: 13 AI Agents for Your Health"
   excerpt:
@@ -221,7 +237,8 @@
   manual_html: false
   order: 1
 
-- title:
+- slug: "budmed-roadmap"
+  title:
     ru: "Roadmap: от аптечки к клинической платформе"
     en: "Roadmap: From Medicine Cabinet to Clinical Platform"
   excerpt:

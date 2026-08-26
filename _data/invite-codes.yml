@@ -1,0 +1,16 @@
+# Invite codes for BudMed News Premium
+# Format: code -> { label, max_uses }
+# managed via Sveltia CMS or manual edit
+
+codes:
+  - code: "BUDMED2026"
+    label: "Early Adopter"
+    max_uses: 100
+
+  - code: "PREVIEW"
+    label: "Preview Access"
+    max_uses: 50
+
+  - code: "ALPHA"
+    label: "Alpha Tester"
+    max_uses: 25

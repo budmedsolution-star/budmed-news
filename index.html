@@ -499,7 +499,11 @@
         </article>
 
         <!-- Article 14 (PREMIUM) -->
-        <article class="news-card premium-locked" data-category="ecosystem">
+        <article class="news-card premium-locked" data-category="ecosystem" data-premium="budmed-roadmap">
+          <div class="premium-badge">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2.5"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+            Premium
+          </div>
           <div class="card-thumbnail">
             <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Roadmap">
               <rect width="800" height="450" fill="#e8f5e9"/>
@@ -518,9 +522,15 @@
             </svg>
             <span class="badge badge-ecosystem">BudMed</span>
             <span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span data-ru="6 мин" data-en="6 min">6 мин</span></span>
-            <div class="premium-overlay">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span data-ru="С подпиской" data-en="With subscription">С подпиской</span>
+            <div class="premium-overlay" data-premium-overlay>
+              <div class="premium-overlay-lock">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <span class="premium-overlay-text" data-ru="Премиум контент" data-en="Premium content">Премиум контент</span>
+              <button class="premium-overlay-cta" data-premium-unlock type="button">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span data-ru="Введите Invite Code" data-en="Enter Invite Code">Введите Invite Code</span>
+              </button>
             </div>
           </div>
           <div class="card-body">
@@ -530,10 +540,6 @@
               <div class="premium-blur-content">
                 <p class="body-sm" style="color:var(--on-surface-variant);margin-bottom:8px;" data-ru="BudMed проходит 6 этапов развития — от фундамента до глобальной платформы." data-en="BudMed goes through 6 development stages — from foundation to global platform.">BudMed проходит 6 этапов развития — от фундамента до глобальной платформы.</p>
               </div>
-              <a href="#subscribe" class="premium-cta">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                <span data-ru="Читать далее — с подпиской" data-en="Read more — with subscription">Читать далее — с подпиской</span>
-              </a>
             </div>
             <div class="card-meta"><time datetime="2026-08-07"><span data-ru="7 авг 2026" data-en="Aug 7, 2026">7 авг 2026</span></time><span class="category">BudMed</span></div>
           </div>
@@ -548,13 +554,41 @@
   <!-- SUBSCRIBE SECTION -->
   <section class="subscribe-section" id="subscribe">
     <div class="container">
-      <h2 data-ru="BudMed News Premium" data-en="BudMed News Premium">BudMed News Premium</h2>
-      <p data-ru="Экспертные обзоры клинических гайдлайнов каждую неделю. Будьте в курсе последних изменений в стандартах лечения." data-en="Expert clinical guideline reviews every week. Stay updated on the latest changes in treatment standards.">Экспертные обзоры клинических гайдлайнов каждую неделю. Будьте в курсе последних изменений в стандартах лечения.</p>
-      <form class="subscribe-form" onsubmit="return false;">
-        <input type="email" required data-ru-placeholder="ваш@email.com" data-en-placeholder="your@email.com" placeholder="ваш@email.com" />
-        <button type="submit" data-ru="Подписаться" data-en="Subscribe">Подписаться</button>
-      </form>
-      <p class="subscribe-note" data-ru="Мы не spam-им. Отписка в один клик." data-en="No spam. Unsubscribe in one click.">Мы не spam-им. Отписка в один клик.</p>
+      <h2><span data-ru="BudMed News" data-en="BudMed News">BudMed News</span> <span class="premium-word" data-ru="Premium" data-en="Premium">Premium</span></h2>
+      <p class="subscribe-subtitle" data-ru="Экспертные обзоры клинических гайдлайнов, эксклюзивные материалы и приоритетный доступ к новостям экосистемы BudMed." data-en="Expert clinical guideline reviews, exclusive materials, and priority access to BudMed ecosystem news.">Экспертные обзоры клинических гайдлайнов, эксклюзивные материалы и приоритетный доступ к новостям экосистемы BudMed.</p>
+
+      <div class="subscribe-features">
+        <div class="subscribe-feature">
+          <div class="subscribe-feature-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v10l9 5 9-5V7l-9-5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 22V12" stroke="currentColor" stroke-width="2"/><path d="M3 7l9 5 9-5" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h4 data-ru="Глубокие обзоры" data-en="Deep dives">Глубокие обзоры</h4>
+          <p data-ru="Детальный разбор гайдлайнов с источниками" data-en="Detailed guideline analysis with sources">Детальный разбор гайдлайнов с источниками</p>
+        </div>
+        <div class="subscribe-feature">
+          <div class="subscribe-feature-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 110 20 10 10 0 010-20z" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h4 data-ru="Ранний доступ" data-en="Early access">Ранний доступ</h4>
+          <p data-ru="Новости до публикации в открытом доступе" data-en="News before public release">Новости до публикации в открытом доступе</p>
+        </div>
+        <div class="subscribe-feature">
+          <div class="subscribe-feature-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h4 data-ru="Invite Code" data-en="Invite Code">Invite Code</h4>
+          <p data-ru="Введите код для доступа к премиум-статьям" data-en="Enter a code to access premium articles">Введите код для доступа к премиум-статьям</p>
+        </div>
+      </div>
+
+      <div class="subscribe-invite">
+        <p class="subscribe-invite-label" data-ru="У вас есть Invite Code?" data-en="Have an Invite Code?">У вас есть Invite Code?</p>
+        <form class="subscribe-invite-form" id="invite-landing-form">
+          <input type="text" placeholder="XXXX-XXXX" maxlength="20" id="invite-landing-input" autocomplete="off" />
+          <button type="submit" data-ru="Активировать" data-en="Activate">Активировать</button>
+        </form>
+        <div class="subscribe-invite-msg" id="invite-landing-msg"></div>
+      </div>
     </div>
   </section>
 
@@ -589,6 +623,28 @@
       </div>
     </div>
   </footer>
+
+  <!-- Premium Invite Code Modal -->
+  <div class="premium-modal-backdrop" id="premium-modal">
+    <div class="premium-modal">
+      <button class="premium-modal-close" id="premium-modal-close" type="button" aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="premium-modal-icon">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <h3 data-ru="Премиум доступ" data-en="Premium Access">Премиум доступ</h3>
+      <p data-ru="Введите Invite Code для доступа к премиум-статьям экосистемы BudMed." data-en="Enter an Invite Code to access BudMed ecosystem premium articles.">Введите Invite Code для доступа к премиум-статьям экосистемы BudMed.</p>
+      <div class="premium-modal-input">
+        <input type="text" id="premium-code-input" placeholder="XXXX-XXXX" maxlength="20" autocomplete="off" />
+        <button id="premium-code-submit" type="button" data-ru="Войти" data-en="Unlock">Войти</button>
+      </div>
+      <div class="premium-modal-msg" id="premium-code-msg"></div>
+      <div class="premium-modal-footer">
+        <a href="#subscribe" id="premium-modal-get-code" data-ru="Нет кода? Получить Invite Code" data-en="Don't have a code? Get an Invite Code">Нет кода? Получить Invite Code</a>
+      </div>
+    </div>
+  </div>
 
   <!-- Scroll to top -->
   <button class="scroll-top" aria-label="Scroll to top">
@@ -627,21 +683,26 @@
       var badgeCls = BADGE_CLASS[cat] || '';
       var svg = SVG_MAP[cat] || SVG_MAP['ai-health'];
       var href = a.file ? a.file : '#';
-      var premium = a.premium ? ' premium-locked' : '';
-      var premiumOverlay = a.premium ? '<div class="premium-overlay"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span data-ru="\u0421 \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u043e\u0439" data-en="With subscription">\u0421 \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u043e\u0439</span></div>' : '';
-      var premiumBlur = a.premium ? '<div class="premium-blur"><div class="premium-blur-content"><p class="body-sm" style="color:var(--on-surface-variant);margin-bottom:8px;" data-ru="\u0427\u0438\u0442\u0430\u0442\u044c \u0434\u0430\u043b\u0435\u0435 \u2014 \u0441 \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u043e\u0439" data-en="Read more \u2014 with subscription">\u0427\u0438\u0442\u0430\u0442\u044c \u0434\u0430\u043b\u0435\u0435 \u2014 \u0441 \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u043e\u0439</p></div><a href="#subscribe" class="premium-cta"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span data-ru="\u0427\u0438\u0442\u0430\u0442\u044c \u0434\u0430\u043b\u0435\u0435 \u2014 \u0441 \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u043e\u0439" data-en="Read more \u2014 with subscription">\u0427\u0438\u0442\u0430\u0442\u044c \u0434\u0430\u043b\u0435\u0435 \u2014 \u0441 \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u043e\u0439</span></a></div>' : '';
+      var slug = a.slug || '';
+      var isPremium = !!a.premium;
+      var unlocked = isPremium && slug && typeof window.__isUnlocked === 'function' && window.__isUnlocked(slug);
+      var cardCls = 'news-card' + (isPremium && !unlocked ? ' premium-locked' : '') + (unlocked ? ' premium-locked is-unlocked' : '');
+      var premBadge = isPremium && !unlocked ? '<div class="premium-badge"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2.5"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>Premium</div>' : '';
+      var premOverlay = isPremium && !unlocked ? '<div class="premium-overlay" data-premium-overlay><div class="premium-overlay-lock"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><span class="premium-overlay-text">' + (lang==='en'?'Premium content':'\u041f\u0440\u0435\u043c\u0438\u0443\u043c \u043a\u043e\u043d\u0442\u0435\u043d\u0442') + '</span><button class="premium-overlay-cta" data-premium-unlock type="button"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>' + (lang==='en'?'Enter Invite Code':'\u0412\u0432\u0435\u0434\u0438\u0442\u0435 Invite Code') + '</span></button></div>' : '';
+      var premBlur = isPremium && !unlocked ? '<div class="premium-blur"><div class="premium-blur-content"><p class="body-sm" style="color:var(--on-surface-variant);margin-bottom:8px;">' + (lang==='en'?'Read more \u2014 with subscription':'\u0427\u0438\u0442\u0430\u0442\u044c \u0434\u0430\u043b\u0435\u0435 \u2014 \u0441 \u043f\u043e\u0434\u043f\u0438\u0441\u043a\u043e\u0439') + '</p></div></div>' : '';
       var dateFormatted = a.date ? new Date(a.date + 'T00:00:00').toLocaleDateString(lang === 'en' ? 'en-US' : 'ru-RU', {day:'numeric',month:'short',year:'numeric'}) : '';
-      return '<article class="news-card' + premium + '" data-category="' + cat + '">'
+      return '<article class="' + cardCls + '" data-category="' + cat + '"' + (isPremium && slug ? ' data-premium="' + slug + '"' : '') + '>'
+        + premBadge
         + '<div class="card-thumbnail">'
         + svg
         + '<span class="badge ' + badgeCls + '">' + badge + '</span>'
         + '<span class="read-time"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <span>' + a.read_time + ' ' + (lang==='en'?'min':'\u043c\u0438\u043d') + '</span></span>'
-        + premiumOverlay
+        + premOverlay
         + '</div>'
         + '<div class="card-body">'
         + '<h3 class="card-title"><a href="' + href + '">' + t + '</a></h3>'
         + '<p class="card-excerpt">' + ex + '</p>'
-        + premiumBlur
+        + premBlur
         + '<div class="card-meta"><time datetime="' + a.date + '"><span>' + dateFormatted + '</span></time><span class="category">' + badge + '</span></div>'
         + '</div></article>';
     }
@@ -672,8 +733,9 @@
             }
           });
           if (typeof window.__reapplyAnimations === 'function') window.__reapplyAnimations();
+          if (typeof window.__initPremiumCards === 'function') window.__initPremiumCards();
         })
-        .catch(function(e){ console.warn('CMS: YAML load failed, using static cards', e); });
+        .catch(function(e){ console.warn('CMS: YAML load failed, using static cards', e); if (typeof window.__initPremiumCards === 'function') window.__initPremiumCards(); });
     }
 
     window.__renderCards = loadArticles;
@@ -703,6 +765,7 @@
     }
   })();
   </script>
+  <script src="js/premium.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

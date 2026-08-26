@@ -103,3 +103,17 @@ collections:
             fields:
               - { label: "Русский", name: "ru", widget: "string" }
               - { label: "English", name: "en", widget: "string" }
+
+  - name: "invite-codes"
+    label: "Invite Codes"
+    file: "_data/invite-codes.yml"
+    extension: "yml"
+    format: "yaml"
+    fields:
+      - label: "Codes"
+        name: "codes"
+        widget: "list"
+        fields:
+          - { label: "Code", name: "code", widget: "string", required: true }
+          - { label: "Label", name: "label", widget: "string" }
+          - { label: "Max Uses", name: "max_uses", widget: "number", value_type: "int", default: 100 }

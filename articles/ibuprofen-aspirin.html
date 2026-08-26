@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Почему нельзя пить ибупрофен с аспирином — BudMed News</title>
+  <meta name="description" content="Ибупрофен блокирует кардиопротекторный эффект аспирина. Механизм, данные PRECISION, альтернативы и правило двух часов." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="BudMed &amp; MedCore" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    .article-header {
+      background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 40%, #00695c 100%);
+      color: #fff;
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      margin-bottom: var(--space-2xl);
+    }
+    .article-header .breadcrumb {
+      font-size: 0.8125rem;
+      opacity: 0.7;
+      margin-bottom: var(--space-lg);
+    }
+    .article-header .breadcrumb a {
+      color: #fff;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
+    .article-header .breadcrumb a:hover { opacity: 1; }
+    .article-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: var(--space-md);
+      color: #fff;
+    }
+    @media (min-width: 768px) {
+      .article-header h1 { font-size: 2.5rem; }
+    }
+    .article-header .article-meta {
+      display: flex;
+      gap: var(--space-lg);
+      flex-wrap: wrap;
+      font-size: 0.875rem;
+      opacity: 0.85;
+    }
+    .article-header .article-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .article-body {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 var(--margin-mobile);
+    }
+    @media (min-width: 768px) {
+      .article-body { padding: 0 var(--margin-desktop); }
+    }
+
+    .article-body h2 {
+      font-size: 1.625rem;
+      font-weight: 700;
+      margin: var(--space-2xl) 0 var(--space-lg);
+      color: var(--on-surface);
+      padding-bottom: var(--space-sm);
+      border-bottom: 3px solid var(--primary);
+      display: inline-block;
+    }
+    .article-body h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: var(--space-xl) 0 var(--space-md);
+      color: var(--on-surface);
+    }
+    .article-body p {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      margin-bottom: var(--space-lg);
+      color: var(--on-surface);
+    }
+    .article-body ul, .article-body ol {
+      margin-bottom: var(--space-lg);
+      padding-left: var(--space-xl);
+    }
+    .article-body li {
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      margin-bottom: var(--space-sm);
+      color: var(--on-surface);
+    }
+    .article-body li::marker { color: var(--primary); }
+
+    .callout {
+      background: var(--surface-container-low);
+      border-left: 4px solid var(--primary);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin: var(--space-xl) 0;
+    }
+    .callout.warning {
+      background: #fff8e1;
+      border-left-color: #f57f17;
+    }
+    .callout.danger {
+      background: var(--error-container);
+      border-left-color: var(--error);
+    }
+    .callout.info {
+      background: #e3f2fd;
+      border-left-color: #1565c0;
+    }
+    .callout-title {
+      font-weight: 700;
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-sm);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .callout p:last-child { margin-bottom: 0; }
+
+    .data-table-wrapper {
+      overflow-x: auto;
+      margin: var(--space-xl) 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--outline-variant);
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9375rem;
+    }
+    .data-table th {
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 16px;
+      text-align: left;
+      white-space: nowrap;
+    }
+    .data-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--outline-variant);
+      vertical-align: top;
+    }
+    .data-table tbody tr:nth-child(even) {
+      background: var(--surface-container-low);
+    }
+    .data-table tbody tr:hover {
+      background: var(--primary-container);
+    }
+
+    .diagram-container {
+      margin: var(--space-xl) 0;
+      text-align: center;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--outline-variant);
+      background: var(--surface-container-lowest);
+      padding: var(--space-lg);
+    }
+    .diagram-container svg {
+      max-width: 100%;
+      height: auto;
+    }
+    .diagram-caption {
+      font-size: 0.8125rem;
+      color: var(--on-surface-variant);
+      margin-top: var(--space-sm);
+      font-style: italic;
+    }
+
+    .evidence-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .evidence-a { background: #c8e6c9; color: #1b5e20; }
+    .evidence-b { background: #fff9c4; color: #f57f17; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--primary);
+      margin-bottom: var(--space-xl);
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .article-section-divider {
+      border: none;
+      border-top: 1px solid var(--outline-variant);
+      margin: var(--space-2xl) 0;
+    }
+
+    .toc {
+      background: var(--surface-container-low);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg) var(--space-xl);
+      margin: var(--space-xl) 0;
+    }
+    .toc h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: var(--space-md);
+      color: var(--primary);
+    }
+    .toc ol {
+      padding-left: var(--space-lg);
+      counter-reset: toc-counter;
+      list-style: none;
+    }
+    .toc li {
+      counter-increment: toc-counter;
+      font-size: 0.9375rem;
+      line-height: 1.8;
+    }
+    .toc li::before {
+      content: counter(toc-counter) ". ";
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .toc a {
+      color: var(--on-surface);
+      text-decoration: none;
+    }
+    .toc a:hover { color: var(--primary); text-decoration: underline; }
+
+    .article-disclaimer {
+      background: var(--surface-container-low);
+      border-left: 4px solid var(--error);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin: var(--space-2xl) 0;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    .ref-list {
+      font-size: 0.875rem;
+      line-height: 1.65;
+    }
+    .ref-list li {
+      margin-bottom: var(--space-sm);
+      font-size: 0.875rem;
+      line-height: 1.65;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo" aria-label="BudMed News Home">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="28" height="28" rx="8" fill="#006d3e"/>
+          <path d="M7 14h4l2-4 3 8 2-4h3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>BudMed News</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="../index.html#ai-health">AI в медицине</a>
+        <a href="../index.html#health">Здоровье</a>
+        <a href="../index.html#guidelines">Гайдлайны</a>
+        <a href="../index.html#ecosystem">Об экосистеме</a>
+      </nav>
+      <a href="../index.html" class="back-link" style="font-size:0.875rem;margin:0;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 4l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Назад</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="article-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">BudMed News</a> / <a href="../index.html#health">Здоровье</a> / Ибупрофен + аспирин: опасная комбинация
+      </nav>
+      <h1>Почему нельзя пить ибупрофен с аспирином</h1>
+      <div class="article-meta">
+        <span>
+          <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          5 мин чтения
+        </span>
+        <span>26 авг 2026</span>
+        <span><span class="evidence-badge evidence-a">Уровень A</span></span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <article class="article-body" role="article">
+
+      <a href="../index.html#health" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 4l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Все статьи раздела «Здоровье»
+      </a>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h3>Содержание</h3>
+        <ol>
+          <li><a href="#why">Почему это важно</a></li>
+          <li><a href="#mechanism">Механизм: COX-1 и конкуренция</a></li>
+          <li><a href="#evidence">Что говорит наука</a></li>
+          <li><a href="#danger">Когда ибупрофен особенно опасен</a></li>
+          <li><a href="#alternatives">Альтернативы</a></li>
+          <li><a href="#two-hours">Правило двух часов</a></li>
+          <li><a href="#checklist">Чек-лист для пациента</a></li>
+          <li><a href="#references">Литература</a></li>
+        </ol>
+      </nav>
+
+      <!-- ===== SECTION 1 ===== -->
+      <h2 id="why">1. Почему это важно</h2>
+
+      <p>
+        Миллионы людей по всему миру ежедневно принимают низкие дозы аспирина (75–100 мг) для профилактики сердечно-сосудистых заболеваний. Аспирин — единственный НПВП, который <strong>необратимо</strong> инактивирует фермент COX-1 в тромбоцитах, предотвращая образование тромбов.
+      </p>
+
+      <p>
+        Одновременно ибупрофен — один из самых популярных безрецептурных обезболивающих — ежедневно принимают миллионы человек от головной боли, зубной боли, менструальных спазмов и воспалений. Проблема в том, что эти два препарата <strong>фармакологически несовместимы</strong>.
+      </p>
+
+      <div class="callout info">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#1565c0" stroke-width="1.5"/><path d="M8 5v4M8 11h.005" stroke="#1565c0" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Ключевая идея
+        </div>
+        <p>Ибупрофен <strong>блокирует кардиопротекторный эффект аспирина</strong>. Если вы принимаете аспирин для защиты сердца, совместный приём ибупрофена сводит эту защиту на нет — повышая риск инфаркта и инсульта.</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 2 ===== -->
+      <h2 id="mechanism">2. Механизм: COX-1 и конкуренция</h2>
+
+      <p>
+        Чтобы понять, почему эта комбинация опасна, нужно разобраться в работе двух ферментов: <strong>COX-1</strong> и <strong>COX-2</strong>. Аспирин и ибупрофен оба воздействуют на COX-1, но делают это принципиально по-разному.
+      </p>
+
+      <div class="diagram-container">
+        <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Схема: конкуренция аспирина и ибупрофена за сайт связывания COX-1">
+          <defs>
+            <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#e8f5e9"/>
+              <stop offset="100%" style="stop-color:#c8e6c9"/>
+            </linearGradient>
+            <marker id="arrow-red" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+              <path d="M0,0 L8,3 L0,6" fill="#c62828"/>
+            </marker>
+            <marker id="arrow-green" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+              <path d="M0,0 L8,3 L0,6" fill="#2e7d32"/>
+            </marker>
+          </defs>
+          <rect width="720" height="340" fill="url(#bg-grad)" rx="8"/>
+
+          <!-- COX-1 Enzyme -->
+          <rect x="240" y="40" width="240" height="120" rx="16" fill="#fff" stroke="#1b5e20" stroke-width="2.5"/>
+          <text x="360" y="70" text-anchor="middle" fill="#1b5e20" font-size="14" font-weight="700">Фермент COX-1</text>
+          <text x="360" y="95" text-anchor="middle" fill="#333" font-size="11">Активный сайт: Ser530</text>
+          <text x="360" y="115" text-anchor="middle" fill="#333" font-size="11">Роль: синтез тромбоксана A₂</text>
+          <text x="360" y="135" text-anchor="middle" fill="#1565c0" font-size="11">→ агрегация тромбоцитов</text>
+
+          <!-- Aspirin path (left) -->
+          <rect x="30" y="200" width="200" height="110" rx="12" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+          <text x="130" y="228" text-anchor="middle" fill="#1565c0" font-size="13" font-weight="700">Аспирин</text>
+          <text x="130" y="250" text-anchor="middle" fill="#333" font-size="10">Ацетилирует Ser530</text>
+          <text x="130" y="268" text-anchor="middle" fill="#333" font-size="10">Необратимо (навсегда)</text>
+          <text x="130" y="286" text-anchor="middle" fill="#2e7d32" font-size="10" font-weight="600">COX-1 → заблокирован</text>
+          <text x="130" y="302" text-anchor="middle" fill="#2e7d32" font-size="10">↑ Пожизненный эффект</text>
+
+          <!-- Ibuprofen path (right) -->
+          <rect x="490" y="200" width="200" height="110" rx="12" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+          <text x="590" y="228" text-anchor="middle" fill="#e65100" font-size="13" font-weight="700">Ибупрофен</text>
+          <text x="590" y="250" text-anchor="middle" fill="#333" font-size="10">Обратимо блокирует сайт</text>
+          <text x="590" y="268" text-anchor="middle" fill="#333" font-size="10">Физически загораживает Ser530</text>
+          <text x="590" y="286" text-anchor="middle" fill="#c62828" font-size="10" font-weight="600">Аспирин не может подойти</text>
+          <text x="590" y="302" text-anchor="middle" fill="#c62828" font-size="10">Блок временный (4–6 ч)</text>
+
+          <!-- Arrows -->
+          <line x1="130" y1="200" x2="280" y2="150" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-green)"/>
+          <line x1="590" y1="200" x2="440" y2="150" stroke="#c62828" stroke-width="2" marker-end="url(#arrow-red)"/>
+
+          <!-- Blocking X -->
+          <text x="515" y="175" fill="#c62828" font-size="28" font-weight="700">✕</text>
+
+          <!-- Result box -->
+          <rect x="200" y="165" width="80" height="28" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
+          <text x="240" y="184" text-anchor="middle" fill="#2e7d32" font-size="11" font-weight="600">OK</text>
+          <rect x="440" y="165" width="80" height="28" rx="8" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5"/>
+          <text x="480" y="184" text-anchor="middle" fill="#c62828" font-size="11" font-weight="600">БЛОК</text>
+        </svg>
+        <p class="diagram-caption">Рис. 1. Аспирин необратимо ацетилирует Ser530 на COX-1, обеспечивая пожизненную защиту тромбоцитов. Ибупрофен обратимо связывается с тем же сайтом, физически загораживая доступ аспирина.</p>
+      </div>
+
+      <h3>Ключевое различие</h3>
+      <ul>
+        <li><strong>Аспирин</strong> — необратимо ацетилирует аминокислоту Ser530 в активном сайте COX-1. Поскольку тромбоциты не имеют ядра и не могут синтезировать новые ферменты, эффект аспирина длится <strong>весь срок жизни тромбоцита (7–10 дней)</strong>.</li>
+        <li><strong>Ибупрофен</strong> — обратимо связывается с тем же сайтом COX-1, физически загораживая Ser530. Пока ибупрофен находится в сайте, аспирин <strong>не может подойти</strong>. После выведения ибупрофена (4–6 часов) сайт освобождается.</li>
+      </ul>
+
+      <div class="callout warning">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 14H1L8 1z" stroke="#f57f17" stroke-width="1.5" fill="none"/><path d="M8 6v3M8 11h.005" stroke="#f57f17" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Двойной приём
+        </div>
+        <p>Если вы принимаете аспирин утром, а ибупрофен — через час, ибупрофен «вытеснит» аспирин из COX-1. Когда ибупрофен уйдёт, аспирин уже не сможет ацетилировать Ser530, потому что он уже выведен из организма. Кардиопротекторный эффект <strong>полностью утрачен</strong>.</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 3 ===== -->
+      <h2 id="evidence">3. Что говорит наука</h2>
+
+      <p>
+        Взаимодействие ибупрофена и аспирина подтверждено крупными рандомизированными исследованиями и когортными данными.
+      </p>
+
+      <h3>PRECISION Trial (2018)</h3>
+      <p>
+        Крупнейшее рандомизированное исследование <strong>PRECISION</strong> (Nissen et al., JACC 2018) включало <strong>23 953 пациента</strong> с остеоартрозом или ревматоидным артритом и повышенным сердечно-сосудистым риском. Среди пациентов, одновременно принимавших аспирин:
+      </p>
+      <ul>
+        <li>Ибупрофен + аспирин: <strong>HR 1.27</strong> (95% CI) по сравнению с целекоксибом + аспирин</li>
+        <li>Различие статистически достоверно: <strong>p = 0.01</strong></li>
+        <li>Целекоксиб не показал увеличения кардиоваскулярного риска на фоне аспирина</li>
+      </ul>
+
+      <h3>THIN Cohort (2023)</h3>
+      <p>
+        Когортное исследование Wei et al. (Am J Epidemiol, 2023; PMID: <strong>37073405</strong>) из Великобритании включало пациентов с остеоартрозом, принимающих аспирин. Совместный приём ибупрофена был ассоциирован с повышением риска сердечно-сосудистых событий: <strong>HR 1.35</strong> (95% CI: 1.07–1.70).
+      </p>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Исследование</th>
+              <th>Дизайн</th>
+              <th>n</th>
+              <th>Результат</th>
+              <th>p-value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>PRECISION</strong> (Nissen 2018)</td>
+              <td>Рандомизированное</td>
+              <td>23 953</td>
+              <td>Ибупрофен+аспирин HR 1.27 vs целекоксиб+аспирин</td>
+              <td>0.01</td>
+            </tr>
+            <tr>
+              <td><strong>THIN</strong> (Wei 2023)</td>
+              <td>Когортное</td>
+              <td>Более 100 000</td>
+              <td>Ибупрофен+аспирин HR 1.35 (1.07–1.70)</td>
+              <td>&lt;0.05</td>
+            </tr>
+            <tr>
+              <td><strong>Catella-Lawson</strong> (2001)</td>
+              <td>Перекрёстное</td>
+              <td>40</td>
+              <td>Ибупрофен перед аспирином — снижение антиагрегантного эффекта на 95%</td>
+              <td>&lt;0.01</td>
+            </tr>
+            <tr>
+              <td><strong>Cuker</strong> (2014)</td>
+              <td>In vitro + клиническое</td>
+              <td>58</td>
+              <td>Дифференциальная блокада COX-1: ибупрофен > напроксен > ацетаминофен</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 4 ===== -->
+      <h2 id="danger">4. Когда ибупрофен особенно опасен</h2>
+
+      <div class="callout danger">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#c62828" stroke-width="1.5"/><path d="M8 5v4M8 11h.005" stroke="#c62828" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Опасность для сердечно-сосудистых пациентов
+        </div>
+        <p>Для пациентов, принимающих аспирин с целью кардиопротекции, совместный приём ибупрофена может привести к <strong>инфаркту миокарда, тромбозу стента или ишемическому инсульту</strong>. Это не теоретический риск — он подтверждён масштабными клиническими исследованиями.</p>
+      </div>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Сценарий</th>
+              <th>Риск</th>
+              <th>Рекомендация</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>После инфаркта миокарда</strong></td>
+              <td>Критический: тромбоз коронарной артерии</td>
+              <td>Ибупрофен противопоказан; парацетамол</td>
+            </tr>
+            <tr>
+              <td><strong>После стентирования</strong></td>
+              <td>Критический: тромбоз стента</td>
+              <td>Ибупрофен противопоказан; целекоксиб по согласованию</td>
+            </tr>
+            <tr>
+              <td><strong>Установленная ССЗ</strong></td>
+              <td>Высокий: инсульт, повторный инфаркт</td>
+              <td>Избегать ибупрофена; альтернативы (см. раздел 5)</td>
+            </tr>
+            <tr>
+              <td><strong>Двойная антитромбоцитарная терапия</strong></td>
+              <td>Критический: полная потеря антиагрегантного эффекта</td>
+              <td>Абсолютно противопоказан</td>
+            </tr>
+            <tr>
+              <td><strong>Высокий кардиоваскулярный риск</strong></td>
+              <td>Повышенный: необходимость кардиопротекции</td>
+              <td>Ограничить приём ибупрофена; правило 2 часов</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 5 ===== -->
+      <h2 id="alternatives">5. Альтернативы</h2>
+
+      <p>
+        Если вам нужно обезболивающее и вы принимаете аспирин, есть несколько безопасных вариантов.
+      </p>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Препарат</th>
+              <th>Взаимодействие с аспирином</th>
+              <th>Примечание</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Целекоксиб</strong></td>
+              <td>Безопасен с аспирином (PRECISION: HR 0.96)</td>
+              <td>Селективный ингибитор COX-2. Наиболее безопасный НПВП при приёме аспирина</td>
+            </tr>
+            <tr>
+              <td><strong>Напроксен</strong></td>
+              <td>Менее опасен, чем ибупрофен; минимальная конкуренция за COX-1</td>
+              <td>При необходимости — принимать аспирин минимум за 2 часа до напроксена</td>
+            </tr>
+            <tr>
+              <td><strong>Парацетамол (ацетаминофен)</strong></td>
+              <td>Не влияет на COX-1 тромбоцитов</td>
+              <td>Безопасная альтернатива при болях умеренной интенсивности</td>
+            </tr>
+            <tr>
+              <td><strong>Топические НПВП</strong> (диклофенак гель, кетопрофен пластырь)</td>
+              <td>Минимальная системная абсорбция</td>
+              <td>При локальных болях (суставы, мышцы) — предпочтительный вариант</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 6 ===== -->
+      <h2 id="two-hours">6. Правило двух часов</h2>
+
+      <p>
+        Если приём ибупрофена неизбежен (например, сильная зубная боль), существует способ минимизировать взаимодействие. Этот подход основан на фармакокинетике Catella-Lawson et al.
+      </p>
+
+      <div class="callout info">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#1565c0" stroke-width="1.5"/><path d="M8 5v4M8 11h.005" stroke="#1565c0" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Правило двух часов (Catella-Lawson)
+        </div>
+        <p><strong>Вариант 1:</strong> Примите аспирин <strong>сначала</strong>, подождите минимум <strong>30 минут</strong>, затем примите ибупрофен. Аспирин успеет ацетилировать Ser530 до того, как ибупрофен заблокирует сайт.<br/><br/>
+        <strong>Вариант 2:</strong> Если аспирин уже принят, подождите минимум <strong>2 часа</strong> перед приёмом ибупрофена. К этому времени аспирин уже полностью абсорбировался и ацетилировал COX-1.</p>
+      </div>
+
+      <div class="callout warning">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 14H1L8 1z" stroke="#f57f17" stroke-width="1.5" fill="none"/><path d="M8 6v3M8 11h.005" stroke="#f57f17" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Важно
+        </div>
+        <p>Правило двух часов снижает, но <strong>не устраняет</strong> риск полностью. Ибупрофен по-прежнему связывается с COX-1 после аспирина и может частично «сдвинуть» ацетилированные молекулы. Лучшая стратегия — <strong>полностью избегать ибупрофена</strong> при регулярном приёме аспирина.</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 7 ===== -->
+      <h2 id="checklist">7. Чек-лист для пациента</h2>
+
+      <div class="callout info">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#1565c0" stroke-width="1.5"/><path d="M8 5v4M8 11h.005" stroke="#1565c0" stroke-width="1.5" stroke-linecap="round"/></svg>
+          5 правил безопасности
+        </div>
+        <p><strong>1.</strong> Расскажите врачу, что вы принимаете аспирин — при <strong>любом</strong> назначении обезболивающего.<br/>
+        <strong>2.</strong> Проверяйте состав комбинированных препаратов — ибупрофен может быть в «холодных» и «гриппозных» сборах.<br/>
+        <strong>3.</strong> Не сочетайте ибупрофен с аспирином без явного назначения врача.<br/>
+        <strong>4.</strong> Если нужен НПВП — спросите врача о целекоксибе или напроксене.<br/>
+        <strong>5.</strong> При случайном совместном приёме — не паникуйте, но сообщите кардиологу при следующем визите.</p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== REFERENCES ===== -->
+      <h2 id="references">8. Литература</h2>
+      <ol class="ref-list">
+        <li>Wei et al. <em>Interactions of NSAIDs and Aspirin and Risk of Cardiovascular Disease in Patients With Osteoarthritis.</em> Am J Epidemiol. 2023. PMID: <strong>37073405</strong>.</li>
+        <li>Catella-Lawson F, et al. <em>Impairment of aspirin antiplatelet effects by non-opioid analgesic medication.</em> World J Cardiol. 2015. PMCID: <strong>PMC4513489</strong>.</li>
+        <li>Nissen SE, et al. <em>Cardiovascular safety of celecoxib vs naproxen and ibuprofen in arthritis (PRECISION), modified by aspirin use.</em> J Am Coll Cardiol. 2018. DOI: <a href="https://doi.org/10.1016/j.jacc.2018.02.036" target="_blank" rel="noopener">10.1016/j.jacc.2018.02.036</a></li>
+        <li>Shah NH, et al. <em>No beneficial effects of aspirin on secondary cardiovascular prevention in patients with T2D using NSAIDs.</em> Diabetes Obes Metab. 2019. PMCID: <strong>PMC6767776</strong>.</li>
+        <li>Cuker A, et al. <em>Differential impairment of aspirin-dependent platelet COX acetylation by NSAIDs.</em> Circulation. 2014. PMID: <strong>25385584</strong>.</li>
+      </ol>
+
+      <hr class="article-section-divider" />
+
+      <div class="article-disclaimer">
+        <strong>Внимание:</strong> Данная статья носит исключительно ознакомительный характер и не является медицинской консультацией, постановкой диагноза или руководством к лечению. Всегда обращайтесь к квалифицированному кардиологу или терапевту. BudMed &amp; MedCore™ не несёт ответственности за решения, принятые на основе размещённой информации. Источник: PubMed, PMID <strong>37073405</strong>, DOI: <a href="https://doi.org/10.1016/j.jacc.2018.02.036" target="_blank" rel="noopener">10.1016/j.jacc.2018.02.036</a>.
+      </div>
+
+      <p style="text-align:center; margin-top: var(--space-2xl); font-size: 0.8125rem; color: var(--outline);">
+        Published by BudMed News · Health &amp; Pharmacology · <time datetime="2026-08-26">26 авг 2026</time>
+      </p>
+
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 BudMed &amp; MedCore&trade;. Все права защищены.</p>
+        <p class="footer-disclaimer">Информация на данном сайте носит исключительно ознакомительный характер и не является медицинской консультацией. Всегда обращайтесь к квалифицированному медицинскому специалисту.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Scroll to top">
+    <svg viewBox="0 0 20 20" fill="none"><path d="M10 15V5M5 10l5-5 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script>
+    const scrollBtn = document.querySelector('.scroll-top');
+    window.addEventListener('scroll', () => {
+      scrollBtn.classList.toggle('visible', window.scrollY > 400);
+    });
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

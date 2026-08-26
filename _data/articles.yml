@@ -2,118 +2,127 @@
     ru: "Как AI помогает врачам видеть то, что скрыто от глаза"
     en: "How AI Helps Doctors See What the Eye Cannot"
   excerpt:
-    ru: "Искусственный интеллект обучается распознавать патологии на медицинских снимках с точностью, превышающей человеческую. Как нейросети помогают врачам ставить диагнозы раньше."
-    en: "AI is trained to recognize pathologies on medical images with accuracy exceeding human capability. How neural networks help doctors diagnose earlier."
+    ru: "AI в радиологии и патологии: 96.3% чувствительность, 173 CE-сертифицированных продукта. Как нейросети становятся «вторым глазом» врача."
+    en: "AI in radiology and pathology: 96.3% sensitivity, 173 CE-certified products. How neural networks become the doctor's second eye."
   category: "ai-health"
-  date: "2026-08-20"
+  date: "2026-08-26"
   read_time: 7
   premium: false
-  manual_html: false
-  order: 1
+  manual_html: true
+  file: "articles/ai-medical-imaging.html"
+  order: 6
 
 - title:
     ru: "Нейросети учатся диагностировать рак по снимкам"
     en: "Neural Networks Learn to Diagnose Cancer from Scans"
   excerpt:
-    ru: "Новые исследования показывают, что AI-модели могут обнаруживать ранние признаки опухолей на маммограммах и КТ-снимках."
-    en: "New studies show AI models can detect early signs of tumors on mammograms and CT scans."
+    ru: "AI обнаруживает рак молочной железы, лёгких и других органов с точностью, превышающей радиологов. Данные MASAI-trial и мета-анализов."
+    en: "AI detects breast, lung and other cancers with accuracy surpassing radiologists. Data from MASAI-trial and meta-analyses."
   category: "ai-health"
-  date: "2026-08-18"
-  read_time: 5
+  date: "2026-08-26"
+  read_time: 6
   premium: false
-  manual_html: false
-  order: 2
+  manual_html: true
+  file: "articles/ai-cancer-detection.html"
+  order: 7
 
 - title:
     ru: "Wearables и здоровье: что реально умеют фитнес-браслеты"
     en: "Wearables & Health: What Fitness Trackers Can Really Do"
   excerpt:
-    ru: "Фитнес-браслеты и умные часы замеряют пульс, сон и активность. Но на что действительно способны эти данные?"
-    en: "Fitness bands measure pulse, sleep, and activity. But what can this data really do?"
+    ru: "Фитнес-браслеты измеряют пульс, сон и активность. Но на что действительно способны эти данные? Мета-анализ 430 000 участников."
+    en: "Fitness trackers measure pulse, sleep and activity. But what can this data really do? Meta-analysis of 430,000 participants."
   category: "ai-health"
-  date: "2026-08-15"
+  date: "2026-08-26"
   read_time: 6
   premium: false
-  manual_html: false
-  order: 3
+  manual_html: true
+  file: "articles/wearables-health.html"
+  order: 8
 
 - title:
     ru: "MedGemma: как Google создал медицинский AI-модель"
     en: "MedGemma: How Google Built a Medical AI Model"
   excerpt:
-    ru: "Google представила MedGemma — семейство AI-моделей, обученных на медицинских данных."
-    en: "Google presented MedGemma — AI models trained on medical data."
+    ru: "MedGemma — семейство open-source моделей от Google для медицинского AI. 4B и 27B параметров, MedQA 87.7%, Apache 2.0 лицензия."
+    en: "MedGemma — Google's open-source medical AI family. 4B and 27B parameters, MedQA 87.7%, Apache 2.0 license."
   category: "ai-health"
-  date: "2026-08-12"
+  date: "2026-08-26"
   read_time: 5
   premium: false
-  manual_html: false
-  order: 4
+  manual_html: true
+  file: "articles/medgemma.html"
+  order: 9
 
 - title:
     ru: "Будущее: AI-ассистент в вашей аптечке"
     en: "The Future: An AI Assistant in Your Medicine Cabinet"
   excerpt:
-    ru: "Представьте: вы сканируете упаковку лекарства телефоном — и AI сразу предупреждает о взаимодействиях."
-    en: "Imagine scanning a medication box — and AI warns about drug interactions."
+    ru: "AI помогает обнаруживать лекарственные взаимодействия и снижать количество лекарственных ошибок. Но готовы ли мы доверять машине рекомендации?"
+    en: "AI helps detect drug interactions and reduce medication errors. But are we ready to trust machine recommendations?"
   category: "ai-health"
-  date: "2026-08-10"
-  read_time: 4
+  date: "2026-08-26"
+  read_time: 5
   premium: false
-  manual_html: false
-  order: 5
+  manual_html: true
+  file: "articles/ai-medication-assistant.html"
+  order: 10
 
 - title:
     ru: "Почему нельзя пить ибупрофен с аспирином"
     en: "Why You Shouldn't Take Ibuprofen with Aspirin"
   excerpt:
-    ru: "Ибупрофен и аспирин — два самых популярных обезболивающих. Но их совместный приём может быть опасен."
-    en: "Ibuprofen and aspirin are popular painkillers. But combining them can be dangerous."
+    ru: "Ибупрофен блокирует кардиопротекторный эффект аспирина. Механизм, данные PRECISION, альтернативы и правило двух часов."
+    en: "Ibuprofen blocks the cardioprotective effect of aspirin. Mechanism, PRECISION trial data, alternatives and the two-hour rule."
   category: "health"
-  date: "2026-08-17"
+  date: "2026-08-26"
   read_time: 5
   premium: false
-  manual_html: false
-  order: 1
+  manual_html: true
+  file: "articles/ibuprofen-aspirin.html"
+  order: 5
 
 - title:
     ru: "Антибиотики: когда помогают, а когда вредят"
     en: "Antibiotics: When They Help and When They Harm"
   excerpt:
-    ru: "Антибиотики — одно из величайших изобретений медицины. Но бесконтрольный приём приводит к резистентности."
-    en: "Antibiotics are one of medicine's greatest inventions. But uncontrolled use leads to resistance."
+    ru: "42% рецептов антибиотиков в мире назначаются необоснованно. Когда они работают, когда нет, и почему стюардшипп спасает жизни."
+    en: "42% of antibiotic prescriptions worldwide are inappropriate. When they work, when they don't, and why stewardship saves lives."
   category: "health"
-  date: "2026-08-14"
+  date: "2026-08-26"
   read_time: 6
   premium: false
-  manual_html: false
-  order: 2
+  manual_html: true
+  file: "articles/antibiotics-stewardship.html"
+  order: 6
 
 - title:
     ru: "Сезон простуд: что действительно работает"
     en: "Cold Season: What Actually Works"
   excerpt:
-    ru: "Витамин C, чеснок, мед с лимоном — что из народных средств действительно помогает при простуде?"
-    en: "Vitamin C, garlic, honey with lemon — which folk remedies actually help with colds?"
+    ru: "Цинк, витамин C, мёд от кашля — что из народных средств действительно помогает при простуде? Доказательная база и практические рекомендации."
+    en: "Zinc, vitamin C, honey for cough — which folk remedies actually help with colds? Evidence base and practical recommendations."
   category: "health"
-  date: "2026-08-11"
-  read_time: 4
+  date: "2026-08-26"
+  read_time: 5
   premium: false
-  manual_html: false
-  order: 3
+  manual_html: true
+  file: "articles/cold-season.html"
+  order: 7
 
 - title:
     ru: "Как читать инструкцию к лекарству за 2 минуты"
     en: "How to Read a Medication Label in 2 Minutes"
   excerpt:
-    ru: "Инструкция к лекарству — это не руководство на 20 страниц. Есть 5 ключевых пунктов, которые нужно знать каждому."
-    en: "A medication instruction isn't 20 pages. There are 5 key points everyone needs to know."
+    ru: "5 ключевых пунктов инструкции к лекарству: дозировка, противопоказания, взаимодействия, срок годности, побочные эффекты."
+    en: "5 key points of medication instructions: dosage, contraindications, interactions, shelf life, side effects."
   category: "health"
-  date: "2026-08-08"
-  read_time: 3
+  date: "2026-08-26"
+  read_time: 4
   premium: false
-  manual_html: false
-  order: 4
+  manual_html: true
+  file: "articles/medication-labels.html"
+  order: 8
 
 - title:
     ru: "Патофизиология ХБП-МКН: Wnt, активин, FGF23 и сердечно-сосудистый риск"
@@ -161,39 +170,42 @@
     ru: "Новые правила лечения гриппа 2026: что изменилось"
     en: "New Flu Treatment Guidelines 2026: What Changed"
   excerpt:
-    ru: "В 2026 году обновились рекомендации по лечению гриппа: новые противовирусные, изменённые сроки приёма."
-    en: "In 2026, flu treatment recommendations were updated: new antivirals, changed intake schedules."
+    ru: "Обновлённые рекомендации по лечению гриппа 2025-2026: балоксавир vs озельтамивир, новые данные WHO, практический алгоритм."
+    en: "Updated flu treatment guidelines 2025-2026: baloxavir vs oseltamivir, new WHO data, practical algorithm."
   category: "guidelines"
   date: "2026-08-19"
   read_time: 7
   premium: false
-  manual_html: false
+  manual_html: true
+  file: "articles/flu-treatment-2026.html"
   order: 4
 
 - title:
-    ru: "Гайдлайны по гипертонии: просто о сложном"
-    en: "Hypertension Guidelines: Simply Explained"
+    ru: "Гайдлайны по гипертонии: ACC/AHA 2025 vs ESC 2024"
+    en: "Hypertension Guidelines: ACC/AHA 2025 vs ESC 2024"
   excerpt:
-    ru: "Артериальная гипертония — тихий убийца. Новые гайдлайны меняют пороги и цели лечения."
-    en: "Arterial hypertension is a silent killer. New guidelines change thresholds and treatment goals."
+    ru: "Сравнение главных гайдлайнов по гипертонии: ACC/AHA 2025 и ESC 2024. Пороги, цели, PREVENT-калькулятор, индивидуальный подход."
+    en: "Comparison of major hypertension guidelines: ACC/AHA 2025 and ESC 2024. Thresholds, targets, PREVENT calculator, individualized approach."
   category: "guidelines"
-  date: "2026-08-16"
+  date: "2026-08-26"
   read_time: 8
-  premium: true
-  manual_html: false
+  premium: false
+  manual_html: true
+  file: "articles/hypertension-guidelines.html"
   order: 5
 
 - title:
     ru: "Антибиотикорезистентность: глобальная угроза"
     en: "Antibiotic Resistance: A Global Threat"
   excerpt:
-    ru: "К 2050 году устойчивость к антибиотикам может убивать 10 млн человек в год. Что делает мировое сообщество?"
-    en: "By 2050, antibiotic resistance could kill 10 million people per year. What is the global community doing?"
+    ru: "GBD 2021: 1.14 млн смертей от антимикробной резистентности. Прогноз до 2050 года. Что делает WHO и что можете вы."
+    en: "GBD 2021: 1.14 million deaths from antimicrobial resistance. Forecast to 2050. What WHO is doing and what you can do."
   category: "guidelines"
-  date: "2026-08-13"
+  date: "2026-08-26"
   read_time: 10
-  premium: true
-  manual_html: false
+  premium: false
+  manual_html: true
+  file: "articles/antibiotic-resistance.html"
   order: 6
 
 - title:

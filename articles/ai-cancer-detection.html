@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Нейросети учатся диагностировать рак по снимкам — BudMed News</title>
+  <meta name="description" content="AI обнаруживает рак молочной железы, лёгких и других органов с точностью, превышающей радиологов. Данные MASAI-trial и мета-анализов." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="BudMed &amp; MedCore" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    .article-header {
+      background: linear-gradient(135deg, #283593 0%, #3949ab 40%, #5c6bc0 100%);
+      color: #fff;
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      margin-bottom: var(--space-2xl);
+    }
+    .article-header .breadcrumb {
+      font-size: 0.8125rem;
+      opacity: 0.7;
+      margin-bottom: var(--space-lg);
+    }
+    .article-header .breadcrumb a {
+      color: #fff;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
+    .article-header .breadcrumb a:hover { opacity: 1; }
+    .article-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: var(--space-md);
+      color: #fff;
+    }
+    @media (min-width: 768px) {
+      .article-header h1 { font-size: 2.5rem; }
+    }
+    .article-header .article-meta {
+      display: flex;
+      gap: var(--space-lg);
+      flex-wrap: wrap;
+      font-size: 0.875rem;
+      opacity: 0.85;
+    }
+    .article-header .article-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .article-body {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 var(--margin-mobile);
+    }
+    @media (min-width: 768px) {
+      .article-body { padding: 0 var(--margin-desktop); }
+    }
+
+    .article-body h2 {
+      font-size: 1.625rem;
+      font-weight: 700;
+      margin: var(--space-2xl) 0 var(--space-lg);
+      color: var(--on-surface);
+      padding-bottom: var(--space-sm);
+      border-bottom: 3px solid var(--primary);
+      display: inline-block;
+    }
+    .article-body h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: var(--space-xl) 0 var(--space-md);
+      color: var(--on-surface);
+    }
+    .article-body p {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      margin-bottom: var(--space-lg);
+      color: var(--on-surface);
+    }
+    .article-body ul, .article-body ol {
+      margin-bottom: var(--space-lg);
+      padding-left: var(--space-xl);
+    }
+    .article-body li {
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      margin-bottom: var(--space-sm);
+      color: var(--on-surface);
+    }
+    .article-body li::marker { color: var(--primary); }
+
+    .callout {
+      background: var(--surface-container-low);
+      border-left: 4px solid var(--primary);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin: var(--space-xl) 0;
+    }
+    .callout.warning {
+      background: #fff8e1;
+      border-left-color: #f57f17;
+    }
+    .callout.danger {
+      background: var(--error-container);
+      border-left-color: var(--error);
+    }
+    .callout.info {
+      background: #e3f2fd;
+      border-left-color: #1565c0;
+    }
+    .callout-title {
+      font-weight: 700;
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-sm);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .callout p:last-child { margin-bottom: 0; }
+
+    .data-table-wrapper {
+      overflow-x: auto;
+      margin: var(--space-xl) 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--outline-variant);
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9375rem;
+    }
+    .data-table th {
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 16px;
+      text-align: left;
+      white-space: nowrap;
+    }
+    .data-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--outline-variant);
+      vertical-align: top;
+    }
+    .data-table tbody tr:nth-child(even) {
+      background: var(--surface-container-low);
+    }
+    .data-table tbody tr:hover {
+      background: var(--primary-container);
+    }
+
+    .diagram-container {
+      margin: var(--space-xl) 0;
+      text-align: center;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--outline-variant);
+      background: var(--surface-container-lowest);
+      padding: var(--space-lg);
+    }
+    .diagram-container svg {
+      max-width: 100%;
+      height: auto;
+    }
+    .diagram-caption {
+      font-size: 0.8125rem;
+      color: var(--on-surface-variant);
+      margin-top: var(--space-sm);
+      font-style: italic;
+    }
+
+    .evidence-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .evidence-a { background: #c8e6c9; color: #1b5e20; }
+    .evidence-b { background: #fff9c4; color: #f57f17; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--primary);
+      margin-bottom: var(--space-xl);
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .article-section-divider {
+      border: none;
+      border-top: 1px solid var(--outline-variant);
+      margin: var(--space-2xl) 0;
+    }
+
+    .toc {
+      background: var(--surface-container-low);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg) var(--space-xl);
+      margin: var(--space-xl) 0;
+    }
+    .toc h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: var(--space-md);
+      color: var(--primary);
+    }
+    .toc ol {
+      padding-left: var(--space-lg);
+      counter-reset: toc-counter;
+      list-style: none;
+    }
+    .toc li {
+      counter-increment: toc-counter;
+      font-size: 0.9375rem;
+      line-height: 1.8;
+    }
+    .toc li::before {
+      content: counter(toc-counter) ". ";
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .toc a {
+      color: var(--on-surface);
+      text-decoration: none;
+    }
+    .toc a:hover { color: var(--primary); text-decoration: underline; }
+
+    .article-disclaimer {
+      background: var(--surface-container-low);
+      border-left: 4px solid var(--error);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin: var(--space-2xl) 0;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    .ref-list {
+      font-size: 0.875rem;
+      line-height: 1.65;
+    }
+    .ref-list li {
+      margin-bottom: var(--space-sm);
+      font-size: 0.875rem;
+      line-height: 1.65;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo" aria-label="BudMed News Home">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="28" height="28" rx="8" fill="#006d3e"/>
+          <path d="M7 14h4l2-4 3 8 2-4h3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>BudMed News</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="../index.html#ai-health">AI в медицине</a>
+        <a href="../index.html#health">Здоровье</a>
+        <a href="../index.html#guidelines">Гайдлайны</a>
+        <a href="../index.html#ecosystem">Об экосистеме</a>
+      </nav>
+      <a href="../index.html" class="back-link" style="font-size:0.875rem;margin:0;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 4l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Назад</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="article-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">BudMed News</a> / <a href="../index.html#ai-health">AI в медицине</a> / AI-диагностика рака
+      </nav>
+      <h1>Нейросети учатся диагностировать рак по снимкам</h1>
+      <div class="article-meta">
+        <span>
+          <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          6 мин чтения
+        </span>
+        <span>26 авг 2026</span>
+        <span><span class="evidence-badge evidence-a">Уровень A</span></span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <article class="article-body" role="article">
+
+      <a href="../index.html#ai-health" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 4l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Все статьи раздела «AI в медицине»
+      </a>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h3>Содержание</h3>
+        <ol>
+          <li><a href="#oncology">AI и онкология</a></li>
+          <li><a href="#mammography">Маммография + AI</a></li>
+          <li><a href="#masai">MASAI-trial: прорыв</a></li>
+          <li><a href="#lung">Лёгкие, лёгкие узлы, КТ</a></li>
+          <li><a href="#when-ai-better">Когда AI лучше человека</a></li>
+          <li><a href="#risks">Риски ложных результатов</a></li>
+          <li><a href="#references">Литература</a></li>
+        </ol>
+      </nav>
+
+      <!-- ===== SECTION 1 ===== -->
+      <h2 id="oncology">1. AI и онкология</h2>
+
+      <p>
+        Диагностика онкологических заболеваний — самая продвинутая область применения AI в медицине. Раннее обнаружение опухоли напрямую связано с выживаемостью: при раке молочной железы 5-летняя выживаемость при I стадии превышает <strong>99%</strong>, тогда как при IV стадии — менее <strong>30%</strong>.
+      </p>
+
+      <p>
+        Проблема в том, что ранние формы рака — тонкие, плохо контрастирующие,容易 скрываемые тканью —常常 ускользают от глаз даже опытного радиолога. Именно здесь нейросети показывают свою ценность: они анализируют каждый пиксель изображения с одинаковой тщательностью, не устают и не отвлекаются.
+      </p>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 2 ===== -->
+      <h2 id="mammography">2. Маммография + AI</h2>
+
+      <p>
+        Маммография — наиболее изученная область AI в онкологии. Мета-анализ глубокого обучения для диагностики рака молочной железы по МРТ (40 исследований) продемонстрировал:
+      </p>
+
+      <div class="callout info">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#1565c0" stroke-width="1.5"/><path d="M8 5v4M8 11h.005" stroke="#1565c0" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Цифры маммографии + AI
+        </div>
+        <p><strong>AUC 0.90</strong>, чувствительность 88%, специфичность 90% для глубокого обучения в маммографии (40 исследований). При.population скрининге AI как «второй читатель» снижает нагрузку на радиолога на <strong>40–90%</strong> при сохранении неинферiorного обнаружения рака.</p>
+      </div>
+
+      <p>
+        Суть подхода «AI как второй читатель»: все маммограммы сначала проходят через нейросеть, которая присваивает каждому снимку вероятность наличия опухоли. Снимки с высокой вероятностью направляются двум радиологам, а с низкой — одному (вместо стандартных двух). Это позволяет <strong>сократить количество повторных чтений на 40–90%</strong> без потери качества.
+      </p>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 3 ===== -->
+      <h2 id="masai">3. MASAI-trial: прорыв</h2>
+
+      <div class="callout info">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#1565c0" stroke-width="1.5"/><path d="M8 5v4M8 11h.005" stroke="#1565c0" stroke-width="1.5" stroke-linecap="round"/></svg>
+          MASAI-trial: первый крупный RCT
+        </div>
+        <p>MASAI — первое крупное рандомизированное контролируемое исследование, доказавшее, что AI улучшает исходы скрининга рака молочной железы. В группе с AI-поддержкой обнаружено <strong>6.4 случая рака на 1000</strong> против <strong>5.0 на 1000</strong> в контрольной группе (p=0.0021). Это 28%相对ное увеличение выявления рака.</p>
+      </div>
+
+      <p>
+        Что это значит для скрининговых программ? Миллионы женщин проходят маммографию ежегодно. Даже небольшое увеличение чувствительности означает тысячи дополнительных обнаруженных случаев — и спасённых жизней. MASAI-trial подтвердил, что AI не просто «работает в лаборатории», а реально улучшает исходы в популяции.
+      </p>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 4 ===== -->
+      <h2 id="lung">4. Лёгкие, лёгочные узлы, КТ</h2>
+
+      <p>
+        Скрининг рака лёгких с использованием низкодозовой КТ — ещё одно перспективное направление. AI помогает обнаружить мелкие узлы, которые容易 пропускаются при рутинном просмотре.
+      </p>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>Значение</th>
+              <th>Комментарий</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Чувствительность AI</strong></td>
+              <td>&gt;84%</td>
+              <td>Высокая для обнаружения узлов &gt;6 мм</td>
+            </tr>
+            <tr>
+              <td><strong>Специфичность AI</strong></td>
+              <td>65–80%</td>
+              <td>Ложноположительные результаты — основная проблема</td>
+            </tr>
+            <tr>
+              <td><strong>Снижение нагрузки</strong></td>
+              <td>30–50%</td>
+              <td>При использовании AI для приоритизации</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        Исследование CUP-RAD показало, что AI может сократить количество ложноположительных результатов в скрининге рака лёгких на 20–30%, снижая ненужные биопсии и связанный с ними стресс пациентов.
+      </p>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 5 ===== -->
+      <h2 id="when-ai-better">5. Когда AI лучше человека</h2>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Сценарий</th>
+              <th>Преимущество AI</th>
+              <th>Преимущество человека</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Высоконагруженный скрининг</strong></td>
+              <td>Не устаёт, одинаковая точность на 1-м и 1000-м снимке</td>
+              <td>Контекст клинической картины</td>
+            </tr>
+            <tr>
+              <td><strong>Редкие находки</strong></td>
+              <td>Обучен на миллионах снимков,见过 больше патологий</td>
+              <td>Интуиция и клинический опыт</td>
+            </tr>
+            <tr>
+              <td><strong>Тонкие микрокальцинаты</strong></td>
+              <td>Высокое разрешение анализа пикселей</td>
+              <td>Интерпретация в контексте</td>
+            </tr>
+            <tr>
+              <td><strong>Сложные случаи</strong></td>
+              <td>—</td>
+              <td><strong>Клинический контекст, анамнез, сопутствующие заболевания</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Амбивалентные находки</strong></td>
+              <td>—</td>
+              <td><strong>Многопрофильная дискуссия (MDT)</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 6 ===== -->
+      <h2 id="risks">6. Риски ложных результатов</h2>
+
+      <div class="callout danger">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#c62828" stroke-width="1.5"/><path d="M8 5v4M8 11h.005" stroke="#c62828" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Осторожно: ложноположительные результаты
+        </div>
+        <p>Ложноположительные результаты AI скрининга вызывают <strong>тревогу у пациентов</strong> и ведут к ненужным биопсиям. При маммографии ложноположительная Rate может достигать 10–12%. Каждая биопсия — это стресс, осложнения и financial затраты. Кроме того, существует проблема <strong>передиагностики (overdiagnosis)</strong> — обнаружения медленно растущих опухолей, которые никогда не стали бы клинически значимыми.</p>
+      </div>
+
+      <h3>Interval cancers</h3>
+      <p>
+        Особенно тревожны <strong>interval cancers</strong> — случаи рака, выявленные между плановыми скринингами. Они могут возникать как при скрининге без AI (пропуск на снимке), так и при использовании AI (если опухоль развилась слишком быстро). Проспективные безопасности-данные необходимы для оценки реального impact.
+      </p>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== REFERENCES ===== -->
+      <h2 id="references">7. Литература</h2>
+      <ol class="ref-list">
+        <li>Deep learning-based breast cancer diagnosis in breast MRI: systematic review and meta-analysis. <em>European Radiology.</em> 2025. PMID: <strong>40018777</strong></li>
+        <li>Performance of artificial intelligence in breast cancer screening programmes: a systematic review. <em>BMJ.</em> 2025. PMID: <strong>41475802</strong></li>
+        <li>Diagnostic accuracy of AI-assisted radiology assessment of cancer: a systematic review. <em>British Journal of Radiology: AI.</em> 2025. PMID: <strong>42064000</strong></li>
+        <li>Artificial intelligence in mammography: a systematic review of the external validation. <em>European Radiology.</em> 2024. PMID: <strong>39380589</strong></li>
+        <li>Song et al. Effectiveness of AI-Assisted Examination for Cancer Detection in Medical Imaging: A Systematic Review and Meta-Analysis. <em>J Am Coll Radiol.</em> 2026. DOI: <a href="https://doi.org/10.1016/j.jacr.2025.11.003" target="_blank" rel="noopener">10.1016/j.jacr.2025.11.003</a></li>
+      </ol>
+
+      <hr class="article-section-divider" />
+
+      <div class="article-disclaimer">
+        <strong>Внимание:</strong> Данная статья носит исключительно ознакомительный характер и не является медицинской консультацией, постановкой диагноза или руководством к лечению. Всегда обращайтесь к квалифицированному специалисту. BudMed &amp; MedCore™ не несёт ответственности за решения, принятые на основе размещённой информации.
+      </div>
+
+      <p style="text-align:center; margin-top: var(--space-2xl); font-size: 0.8125rem; color: var(--outline);">
+        Published by BudMed News · AI &amp; Здоровье · <time datetime="2026-08-26">26 авг 2026</time>
+      </p>
+
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 BudMed &amp; MedCore&trade;. Все права защищены.</p>
+        <p class="footer-disclaimer">Информация на данном сайте носит исключительно ознакомительный характер и не является медицинской консультацией. Всегда обращайтесь к квалифицированному медицинскому специалисту.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Scroll to top">
+    <svg viewBox="0 0 20 20" fill="none"><path d="M10 15V5M5 10l5-5 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script>
+    const scrollBtn = document.querySelector('.scroll-top');
+    window.addEventListener('scroll', () => {
+      scrollBtn.classList.toggle('visible', window.scrollY > 400);
+    });
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

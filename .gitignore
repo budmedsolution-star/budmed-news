@@ -17,6 +17,7 @@
 !_data/**
 !README.md
 !.gitignore
+!.nojekyll
 
 # Ignore OS/IDE files
 .DS_Store

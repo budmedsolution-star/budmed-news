@@ -116,6 +116,20 @@
   order: 4
 
 - title:
+    ru: "Патофизиология ХБП-МКН: Wnt, активин, FGF23 и сердечно-сосудистый риск"
+    en: "CKD-MBD Pathophysiology: Wnt, Activin, FGF23 and Cardiovascular Risk"
+  excerpt:
+    ru: "Обзор ключевых механизмов ХБП-МКН: ингибиторы Wnt (Dkk1) как сигналы почечного ремонта, активин A, потеря клофо, гиперфосфатемия и кардиоваскулярная патология. По Hruska et al., 2015."
+    en: "Review of key CKD-MBD mechanisms: Wnt inhibitors (Dkk1) as renal repair signals, activin A, klotho loss, hyperphosphatemia and cardiovascular pathology. After Hruska et al., 2015."
+  category: "guidelines"
+  date: "2026-08-25"
+  read_time: 14
+  premium: false
+  manual_html: true
+  file: "articles/ckd-mbd-pathophysiology.html"
+  order: 1
+
+- title:
     ru: "Остеопороз при гемодиализе: полный протокол ведения"
     en: "Osteoporosis in Hemodialysis: Full Management Protocol"
   excerpt:
@@ -127,7 +141,7 @@
   premium: false
   manual_html: true
   file: "articles/ckd-mbd-osteoporosis.html"
-  order: 1
+  order: 2
 
 - title:
     ru: "Назначения и мониторинг: разбор рисков схемы M15.0 / M81.00"
@@ -141,7 +155,7 @@
   premium: false
   manual_html: true
   file: "articles/prescriptions_and_monitoring.html"
-  order: 2
+  order: 3
 
 - title:
     ru: "Новые правила лечения гриппа 2026: что изменилось"
@@ -154,7 +168,7 @@
   read_time: 7
   premium: false
   manual_html: false
-  order: 3
+  order: 4
 
 - title:
     ru: "Гайдлайны по гипертонии: просто о сложном"
@@ -167,7 +181,7 @@
   read_time: 8
   premium: true
   manual_html: false
-  order: 4
+  order: 5
 
 - title:
     ru: "Антибиотикорезистентность: глобальная угроза"
@@ -180,7 +194,7 @@
   read_time: 10
   premium: true
   manual_html: false
-  order: 5
+  order: 6
 
 - title:
     ru: "Что такое BudMed: 13 AI-агентов для вашего здоровья"

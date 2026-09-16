@@ -519,6 +519,38 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--on-primary-container);
 }
 
+.badge-veterinary {
+  background: #0d4d3a;
+  color: #fff;
+}
+
+/* Media players (articles) */
+.media-block {
+  margin: var(--space-xl) 0;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--outline-variant);
+  background: var(--surface-container-low);
+  overflow: hidden;
+}
+.media-block .media-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: var(--space-md) var(--space-lg);
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+.media-block video,
+.media-block audio {
+  display: block;
+  width: 100%;
+}
+.media-block video {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 /* ============================================
    SECTIONS
    ============================================ */

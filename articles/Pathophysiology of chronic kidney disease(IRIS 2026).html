@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Патофизиология ХБП у мелких домашних животных (IRIS 2026) — BudMed News</title>
+  <meta name="description" content="Системный патогенез хронической болезни почек у кошек и собак: анатомические ограничения, диагностика СКФ, уремический каскад, CKD-MBD, внутриклубочковая гипертензия и концепция эволюционного несоответствия (IRIS 2026)." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="BudMed &amp; MedCore — Rex Veterinary Module" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    /* ============================================
+       Rex Veterinary Article Theme
+       (dark-green Clinical Hybrid extension)
+       ============================================ */
+
+    .article-header {
+      background: linear-gradient(135deg, #173f2e 0%, #0d4d3a 45%, #0b6e5a 100%);
+      color: #fff;
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      margin-bottom: var(--space-2xl);
+      position: relative;
+      overflow: hidden;
+    }
+    .article-header::after {
+      content: "";
+      position: absolute;
+      right: -60px;
+      top: -60px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.08);
+    }
+    .article-header::before {
+      content: "";
+      position: absolute;
+      right: 40px;
+      bottom: -90px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.06);
+    }
+    .article-header .container { position: relative; z-index: 1; }
+    .article-header .breadcrumb {
+      font-size: 0.8125rem;
+      opacity: 0.7;
+      margin-bottom: var(--space-lg);
+    }
+    .article-header .breadcrumb a {
+      color: #fff;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
+    .article-header .breadcrumb a:hover { opacity: 1; }
+    .article-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: var(--space-md);
+      color: #fff;
+    }
+    @media (min-width: 768px) {
+      .article-header h1 { font-size: 2.6rem; }
+    }
+    .article-header .article-meta {
+      display: flex;
+      gap: var(--space-lg);
+      flex-wrap: wrap;
+      font-size: 0.875rem;
+      opacity: 0.9;
+    }
+    .article-header .article-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .vet-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.28);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-left: var(--space-md);
+    }
+
+    /* Article Body */
+    .article-body {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 var(--margin-mobile);
+    }
+    @media (min-width: 768px) {
+      .article-body { padding: 0 var(--margin-desktop); }
+    }
+
+    .article-body h2 {
+      font-size: 1.625rem;
+      font-weight: 700;
+      margin: var(--space-2xl) 0 var(--space-lg);
+      color: var(--on-surface);
+      padding-bottom: var(--space-sm);
+      border-bottom: 3px solid #0d4d3a;
+      display: inline-block;
+    }
+    .article-body h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: var(--space-xl) 0 var(--space-md);
+      color: var(--on-surface);
+    }
+    .article-body h4 {
+      font-size: 1.0625rem;
+      font-weight: 600;
+      margin: var(--space-lg) 0 var(--space-sm);
+      color: var(--on-surface);
+    }
+    .article-body p {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      margin-bottom: var(--space-lg);
+      color: var(--on-surface);
+    }
+    .article-body ul, .article-body ol {
+      margin-bottom: var(--space-lg);
+      padding-left: var(--space-xl);
+    }
+    .article-body li {
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      margin-bottom: var(--space-sm);
+      color: var(--on-surface);
+    }
+    .article-body li::marker { color: #0d4d3a; }
+    .article-body strong { color: #0d4d3a; }
+
+    /* Callout boxes */
+    .callout {
+      background: var(--surface-container-low);
+      border-left: 4px solid #0d4d3a;
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin: var(--space-xl) 0;
+    }
+    .callout.warning {
+      background: #fff8e1;
+      border-left-color: #f57f17;
+    }
+    .callout.danger {
+      background: var(--error-container);
+      border-left-color: var(--error);
+    }
+    .callout.info {
+      background: #e0f2f1;
+      border-left-color: #00695c;
+    }
+    .callout-title {
+      font-weight: 700;
+      font-size: 0.9375rem;
+      margin-bottom: var(--space-sm);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .callout p:last-child { margin-bottom: 0; }
+
+    /* Data Tables */
+    .data-table-wrapper {
+      overflow-x: auto;
+      margin: var(--space-xl) 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--outline-variant);
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9375rem;
+    }
+    .data-table th {
+      background: #0d4d3a;
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 16px;
+      text-align: left;
+      white-space: nowrap;
+    }
+    .data-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--outline-variant);
+      vertical-align: top;
+    }
+    .data-table tbody tr:nth-child(even) {
+      background: var(--surface-container-low);
+    }
+    .data-table tbody tr:hover {
+      background: #d7efe8;
+    }
+
+    /* SVG Diagram Container */
+    .diagram-container {
+      margin: var(--space-xl) 0;
+      text-align: center;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--outline-variant);
+      background: var(--surface-container-lowest);
+      padding: var(--space-lg);
+    }
+    .diagram-container svg {
+      max-width: 100%;
+      height: auto;
+    }
+    .diagram-caption {
+      font-size: 0.8125rem;
+      color: var(--on-surface-variant);
+      margin-top: var(--space-sm);
+      font-style: italic;
+    }
+
+    /* Media (reference: prescriptions_and_monitoring.html) */
+    .media-card {
+      background: var(--surface-container-low);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin: 0 0 var(--space-lg);
+    }
+    .media-card .media-label {
+      font-family: 'JetBrains Mono', 'Cascadia Code', 'Cascadia Mono', monospace;
+      font-size: 0.65625rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #0d4d3a;
+      margin-bottom: 8px;
+    }
+    .media-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--on-surface);
+    }
+    .media-card p {
+      font-size: 0.84375rem;
+      line-height: 1.55;
+      color: var(--on-surface-variant);
+      margin-bottom: 12px;
+    }
+    .audio-player audio {
+      display: block;
+      width: 100%;
+      height: 42px;
+      border-radius: 10px;
+    }
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--outline-variant);
+      background: #071f18;
+    }
+    .video-wrapper video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #071f18;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: #0d4d3a;
+      margin-bottom: var(--space-xl);
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .article-section-divider {
+      border: none;
+      border-top: 1px solid var(--outline-variant);
+      margin: var(--space-2xl) 0;
+    }
+
+    /* Sticky TOC (reference: prescriptions_and_monitoring.html) */
+    .toc {
+      position: sticky;
+      top: 64px;
+      z-index: 90;
+      background: var(--surface-container-low);
+      border-bottom: 1px solid var(--outline-variant);
+      box-shadow: 0 2px 12px rgba(13, 77, 58, 0.08);
+      border-radius: 0;
+      padding: var(--space-sm) var(--space-md);
+      margin: 0 0 var(--space-xl);
+    }
+    .toc h3 {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #0d4d3a;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .toc ol {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 4px 22px;
+      padding: 0;
+      margin: 0;
+      counter-reset: toc-counter;
+      list-style: none;
+    }
+    .toc li {
+      counter-increment: toc-counter;
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+    .toc li::before {
+      content: counter(toc-counter) ".";
+      font-weight: 600;
+      color: #0d4d3a;
+      margin-right: 4px;
+    }
+    .toc a {
+      color: var(--on-surface);
+      text-decoration: none;
+    }
+    .toc a:hover { color: #0d4d3a; text-decoration: underline; }
+    [id] { scroll-margin-top: 160px; }
+
+    .article-disclaimer {
+      background: var(--surface-container-low);
+      border-left: 4px solid var(--error);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin: var(--space-2xl) 0;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    .ref-list {
+      font-size: 0.875rem;
+      line-height: 1.65;
+    }
+    .ref-list li {
+      margin-bottom: var(--space-sm);
+      font-size: 0.875rem;
+      line-height: 1.65;
+    }
+
+    .abstract-box {
+      background: #e0f2f1;
+      border-radius: var(--radius-md);
+      padding: var(--space-xl);
+      margin: var(--space-xl) 0;
+      border-left: 4px solid #0d4d3a;
+    }
+    .abstract-box .abstract-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #0d4d3a;
+      margin-bottom: var(--space-md);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo" aria-label="BudMed News Home">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="28" height="28" rx="8" fill="#006d3e"/>
+          <path d="M7 14h4l2-4 3 8 2-4h3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>BudMed News</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="../index.html#ai-health">AI в медицине</a>
+        <a href="../index.html#health">Здоровье</a>
+        <a href="../index.html#guidelines">Гайдлайны</a>
+        <a href="../index.html#veterinary">Ветеринария</a>
+      </nav>
+      <div class="header-actions">
+        <a href="../index.html" class="back-link" style="font-size:0.875rem;margin:0;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 4l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-ru="Назад" data-en="Back">Назад</span>
+        </a>
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="ru" data-ru="RU" data-en="RU">RU</button>
+          <button type="button" class="lang-btn" data-lang="en" data-ru="EN" data-en="EN">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="article-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">BudMed News</a> / <a href="../index.html#veterinary">Ветеринария</a> / ХБП
+      </nav>
+      <h1>
+        <span data-ru="Патофизиология хронической болезни почек у мелких домашних животных" data-en="Pathophysiology of Chronic Kidney Disease in Small Animals">Патофизиология хронической болезни почек у мелких домашних животных</span>
+        <span class="vet-badge">IRIS 2026</span>
+      </h1>
+      <div class="article-meta">
+        <span>
+          <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M6 3v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span data-ru="22 мин чтения" data-en="22 min read">22 мин чтения</span>
+        </span>
+        <span>15 сен 2026</span>
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 20v-6h4v6M5 20h14M5 4h14v7a7 7 0 01-14 0V4z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-ru="Кошки и собаки" data-en="Cats &amp; Dogs">Кошки и собаки</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <article class="article-body" role="article">
+
+      <a href="../index.html#veterinary" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 4l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-ru="Все статьи раздела «Ветеринария»" data-en="All Veterinary articles">Все статьи раздела «Ветеринария»</span>
+      </a>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h3 data-ru="Содержание" data-en="Table of contents">Содержание</h3>
+        <ol>
+          <li><a href="#intro" data-ru="Введение: системный характер ХБП" data-en="Introduction: the systemic nature of CKD">Введение: системный характер ХБП</a></li>
+          <li><a href="#limits" data-ru="Анатомо-физиологические ограничения и терминология" data-en="Anatomical limits and terminology">Анатомо-физиологические ограничения и терминология</a></li>
+          <li><a href="#gfr" data-ru="Диагностика СКФ: ограничения и стандарты" data-en="GFR diagnostics: limits and standards">Диагностика СКФ: ограничения и стандарты</a></li>
+          <li><a href="#uremic" data-ru="Уремический каскад и органные дисфункции" data-en="Uremic cascade and organ dysfunction">Уремический каскад и органные дисфункции</a></li>
+          <li><a href="#ckdmbd" data-ru="CKD-MBD и вторичный гиперпаратиреоз" data-en="CKD-MBD and secondary hyperparathyroidism">CKD-MBD и вторичный гиперпаратиреоз</a></li>
+          <li><a href="#acidbase" data-ru="Кислотно-щелочной баланс и электролиты" data-en="Acid-base balance and electrolytes">Кислотно-щелочной баланс и электролиты</a></li>
+          <li><a href="#hemodynamics" data-ru="Внутриклубочковая гемодинамика" data-en="Intrarenal hemodynamics">Внутриклубочковая гемодинамика</a></li>
+          <li><a href="#treatment" data-ru="Принципы патогенетической коррекции" data-en="Pathogenetic treatment principles">Принципы патогенетической коррекции</a></li>
+          <li><a href="#mismatch" data-ru="Заключение: эволюционное несоответствие" data-en="Conclusion: evolutionary mismatch">Заключение: эволюционное несоответствие</a></li>
+          <li><a href="#media" data-ru="Медиа" data-en="Media">Медиа</a></li>
+          <li><a href="#references" data-ru="Литература" data-en="References">Литература</a></li>
+        </ol>
+      </nav>
+
+      <div class="abstract-box">
+        <div class="abstract-title" data-ru="Аннотация" data-en="Abstract">Аннотация</div>
+        <p style="margin:0;">
+          <span data-ru="Хроническая болезнь почек (ХБП) у кошек и собак — необратимый патологический процесс, характеризующийся прогрессирующей гибелью функциональной паренхимы органа и генерализованным сбоем гомеостатических систем. Эволюционно сформированные адаптационные механизмы — активация ренин-ангиотензин-альдостероновой системы, гиперпаратиреоз, внутриклубочковая гиперфильтрация, системный катаболизм протеинов — в условиях хронического дефицита нефронов превращаются в ключевые драйверы аутоагрессии и полиорганной недостаточности." data-en="Chronic kidney disease (CKD) in cats and dogs is an irreversible pathological process characterized by progressive loss of functional renal parenchyma and generalized homeostatic failure. Evolutionarily formed adaptation mechanisms — activation of the renin-angiotensin-aldosterone system, hyperparathyroidism, glomerular hyperfiltration, systemic protein catabolism — become key drivers of auto-aggression and multi-organ failure under chronic nephron loss.">Хроническая болезнь почек (ХБП) у кошек и собак — необратимый патологический процесс, характеризующийся прогрессирующей гибелью функциональной паренхимы органа и генерализованным сбоем гомеостатических систем. Эволюционно сформированные адаптационные механизмы в условиях хронического дефицита нефронов превращаются в ключевые драйверы аутоагрессии и полиорганной недостаточности.</span>
+        </p>
+      </div>
+
+      <!-- ===== SECTION 1 ===== -->
+      <h2 id="intro"><span data-ru="1. Введение" data-en="1. Introduction">1. Введение</span></h2>
+
+      <p>
+        <span data-ru="Хроническая болезнь почек (ХБП) занимает одно из ведущих мест в структуре заболеваемости и смертности кошек и собак гериатрического возраста. Согласно современным руководствам Международного общества по изучению заболеваний почек у животных (International Renal Interest Society — IRIS), ХБП следует рассматривать не как локальное поражение почечной паренхимы, а как <strong>системное патологическое состояние</strong>, затрагивающее все уровни организации живой материи — от внутриклеточного энергетического метаболизма до системной гемодинамики и регуляции кислотно-щелочного равновесия." data-en="Chronic kidney disease (CKD) is one of the leading causes of morbidity and mortality in geriatric cats and dogs. According to current guidelines of the International Renal Interest Society (IRIS), CKD should be viewed not as a local lesion of the renal parenchyma but as a <strong>systemic pathological condition</strong> affecting all levels of biological organization — from intracellular energy metabolism to systemic hemodynamics and acid-base regulation.">Хроническая болезнь почек (ХБП) занимает одно из ведущих мест в структуре заболеваемости и смертности кошек и собак гериатрического возраста. Согласно современным руководствам IRIS, ХБП следует рассматривать не как локальное поражение почечной паренхимы, а как системное патологическое состояние, затрагивающее все уровни организации живой материи.</span>
+      </p>
+
+      <p>
+        <span data-ru="Традиционный клинический подход, ориентированный на изолированное купирование симптомов (азотемии, полиурии или анорексии), часто упускает фундаментальный патофизиологический феномен: большинство деструктивных проявлений ХБП на поздних стадиях обусловлено не первичным этиологическим агентом, а <strong>непрерывной гиперактивацией компенсаторных систем</strong> организма. В условиях хронической гибели нефронов гомеостатические контуры задействуют протоколы экстренного реагирования, однако их долгосрочная мобилизация приводит к системному метаболическому истощению, автокаталитическому фиброзу и гибели оставшихся функциональных единиц почки." data-en="The traditional clinical approach, focused on isolated symptom management (azotemia, polyuria or anorexia), often misses a fundamental pathophysiological phenomenon: most destructive manifestations of late-stage CKD are driven not by the primary etiological agent but by <strong>continuous hyperactivation of compensatory systems</strong>. Under chronic nephron loss, homeostatic circuits engage emergency protocols, yet their long-term mobilization leads to systemic metabolic exhaustion, autocatalytic fibrosis and death of the remaining functional renal units.">Традиционный клинический подход часто упускает фундаментальный феномен: большинство деструктивных проявлений ХБП на поздних стадиях обусловлено не первичным этиологическим агентом, а непрерывной гиперактивацией компенсаторных систем организма.</span>
+      </p>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 2 ===== -->
+      <h2 id="limits"><span data-ru="2. Анатомо-физиологические ограничения и терминологическая систематизация" data-en="2. Anatomical limits and terminology">2. Анатомо-физиологические ограничения и терминологическая систематизация</span></h2>
+
+      <h3><span data-ru="2.1. Анатомический лимит нефрогенеза" data-en="2.1. The anatomical limit of nephrogenesis">2.1. Анатомический лимит нефрогенеза</span></h3>
+
+      <p>
+        <span data-ru="Фундаментальным фактором патогенеза нефропатий у млекопитающих является <strong>отсутствие способности нефронов к постнатальной регенерации</strong>. Процесс нефрогенеза у собак и кошек завершается в раннем неонатальном периоде (приблизительно к 30-му дню после рождения). Зрелые нефроциты и подоциты не обладают митотической активностью, способной восстановить утраченные клубочки. Следовательно, каждый индивид обладает строго фиксированным структурным резервом нефронов. Любое повреждение ишемического, токсического, воспалительного или инволюционного характера приводит к необратимому сокращению данного резерва." data-en="A fundamental factor in the pathogenesis of nephropathies in mammals is the <strong>absence of postnatal nephron regeneration</strong>. Nephrogenesis in dogs and cats is completed in the early neonatal period (around day 30 after birth). Mature nephrocytes and podocytes lack the mitotic activity needed to restore lost glomeruli. Consequently, every individual has a strictly fixed structural nephron reserve. Any ischemic, toxic, inflammatory or involutional injury leads to an irreversible reduction of this reserve.">Фундаментальным фактором патогенеза нефропатий у млекопитающих является отсутствие способности нефронов к постнатальной регенерации. Процесс нефрогенеза завершается к 30-му дню после рождения, и каждый индивид обладает строго фиксированным структурным резервом нефронов.</span>
+      </p>
+
+      <h3><span data-ru="2.2. Терминологический дифференциал: Азотемия и Уремия" data-en="2.2. Terminology: Azotemia vs. Uremia">2.2. Терминологический дифференциал: Азотемия и Уремия</span></h3>
+
+      <p>
+        <span data-ru="В клинической практике принципиально важно разграничивать понятия, характеризующие степень и характер поражения выделительной системы:" data-en="In clinical practice it is essential to distinguish terms describing the degree and nature of excretory system involvement:">В клинической практике принципиально важно разграничивать понятия, характеризующие степень и характер поражения выделительной системы:</span>
+      </p>
+
+      <ul>
+        <li>
+          <strong data-ru="Азотемия" data-en="Azotemia">Азотемия</strong> —
+          <span data-ru="лабораторный показатель, отражающий накопление в сыворотке азотистых продуктов метаболизма (мочевины, креатинина). Классифицируется по этиологическому принципу:" data-en="a laboratory finding reflecting the accumulation of nitrogenous metabolic products (urea, creatinine) in serum. Classified by etiology:">лабораторный показатель, отражающий накопление в сыворотке азотистых продуктов метаболизма. Классифицируется по этиологическому принципу:</span>
+          <ul>
+            <li><strong data-ru="Преренальная" data-en="Pre-renal">Преренальная</strong> — <span data-ru="падение эффективного циркулирующего объёма крови (гиповолемия, дегидратация, застойная СН) при паренхиматозно здоровых почках, либо массивное поступление белка при ЖКТ-кровотечениях." data-en="reduced effective circulating volume (hypovolemia, dehydration, congestive HF) with intact parenchyma, or massive protein intake from GI bleeding.">гиповолемия, дегидратация, застойная сердечная недостаточность при здоровой паренхиме.</span></li>
+            <li><strong data-ru="Ренальная" data-en="Renal">Ренальная</strong> — <span data-ru="непосредственная деструкция почечной паренхимы и падение СКФ." data-en="direct destruction of renal parenchyma and a fall in GFR.">непосредственная деструкция почечной паренхимы и падение СКФ.</span></li>
+            <li><strong data-ru="Постренальная" data-en="Post-renal">Постренальная</strong> — <span data-ru="механическая обструкция мочевыводящих путей или нарушение целостности мочевого пузыря." data-en="mechanical obstruction of the urinary tract or disruption of bladder integrity.">механическая обструкция мочевыводящих путей.</span></li>
+          </ul>
+        </li>
+        <li>
+          <strong data-ru="Уремический синдром" data-en="Uremic syndrome">Уремический синдром</strong> —
+          <span data-ru="полисистемный интоксикационный синдром при критическом снижении СКФ с органной дисфункцией ЖКТ, ЦНС, системы кроветворения и гемостаза под действием уремических токсинов (средних молекул, фенолов, индолов, PTH)." data-en="a multisystem intoxication syndrome at critically low GFR with organ dysfunction of the GI tract, CNS, hematopoiesis and hemostasis driven by uremic toxins (middle molecules, phenols, indoles, PTH).">полисистемный интоксикационный синдром при критическом снижении СКФ с органной дисфункцией ЖКТ, ЦНС, кроветворения и гемостаза.</span>
+        </li>
+      </ul>
+
+      <div class="callout info">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#00695c" stroke-width="1.5"/><path d="M8 5v4M8 11h.005" stroke="#00695c" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span data-ru="Рекомендации IRIS" data-en="IRIS recommendation">Рекомендации IRIS</span>
+        </div>
+        <p><span data-ru="Во избежание диагностических ошибок IRIS рекомендует применять термин «Хроническая болезнь почек» с указанием конкретной стадии и подкатегорий, смещая фокус с изолированных лабораторных колебаний на интегративную оценку состояния пациента." data-en="To avoid diagnostic errors, IRIS recommends using the term 'Chronic kidney disease' with the specific stage and subcategories, shifting the focus from isolated laboratory fluctuations to an integrative patient assessment.">IRIS рекомендует применять термин «Хроническая болезнь почек» с указанием конкретной стадии и подкатегорий, смещая фокус на интегративную оценку пациента.</span></p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 3 ===== -->
+      <h2 id="gfr"><span data-ru="3. Диагностика скорости клубочковой фильтрации: ограничения и стандарты" data-en="3. GFR diagnostics: limits and standards">3. Диагностика скорости клубочковой фильтрации: ограничения и стандарты</span></h2>
+
+      <h3><span data-ru="3.1. Ограничения эндогенного креатинина" data-en="3.1. Limits of endogenous creatinine">3.1. Ограничения эндогенного креатинина</span></h3>
+
+      <p>
+        <span data-ru="Базовое стадирование ХБП по шкале IRIS основано на концентрации сывороточного креатинина — продукта неферментативного распада креатина в скелетных мышцах. Креатинин свободно фильтруется в клубочках и не подвергается существенной канальцевой реабсорбции, что делает его удобным, но фармакокинетически несовершенным маркером:" data-en="IRIS staging is based on serum creatinine — a product of non-enzymatic creatine breakdown in skeletal muscle. Creatinine is freely filtered and undergoes little tubular reabsorption, making it convenient yet pharmacokinetically imperfect:">Базовое стадирование ХБП по шкале IRIS основано на концентрации сывороточного креатинина — удобного, но фармакокинетически несовершенного маркера:</span>
+      </p>
+
+      <ul>
+        <li>
+          <strong data-ru="Ложноотрицательные результаты:" data-en="False negatives:">Ложноотрицательные результаты:</strong>
+          <span data-ru="у истощенных пациентов и гериатрических кошек с саркопенией и кахексией генерация креатинина критически снижена. СКФ может существенно упасть, однако концентрация креатинина остаётся в пределах референсного интервала, маскируя терминальную стадию болезни." data-en="in cachectic patients and geriatric cats with sarcopenia, creatinine generation is critically reduced. GFR may fall substantially while creatinine stays within the reference interval, masking end-stage disease.">у истощенных пациентов с саркопенией генерация креатинина снижена, маскируя терминальную стадию.</span>
+        </li>
+        <li>
+          <strong data-ru="Ложноположительные результаты:" data-en="False positives:">Ложноположительные результаты:</strong>
+          <span data-ru="у атлетических животных с высокой мышечной массой (борзые породы собак) базальный креатинин физиологически превышает пороговые значения IRIS при полностью сохранной фильтрационной функции." data-en="in athletic animals with high muscle mass (e.g., sighthound breeds), baseline creatinine physiologically exceeds IRIS thresholds despite fully preserved filtration.">у высокомышечных животных (борзые) базальный креатинин превышает пороги IRIS при сохранной функции.</span>
+        </li>
+      </ul>
+
+      <div class="diagram-container">
+        <svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Оценка СКФ: эндогенный креатинин vs клиренс йогексола">
+          <defs>
+            <linearGradient id="gfr-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#e0f2f1"/>
+              <stop offset="100%" style="stop-color:#b2dfdb"/>
+            </linearGradient>
+            <marker id="gfr-arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+              <path d="M0,0 L8,3 L0,6" fill="#0d4d3a"/>
+            </marker>
+          </defs>
+          <rect width="760" height="340" fill="url(#gfr-bg)" rx="8"/>
+
+          <rect x="270" y="20" width="220" height="46" rx="10" fill="#0d4d3a"/>
+          <text x="380" y="48" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Оценка СКФ почек</text>
+
+          <line x1="380" y1="66" x2="190" y2="110" stroke="#0d4d3a" stroke-width="2" marker-end="url(#gfr-arrow)"/>
+          <line x1="380" y1="66" x2="570" y2="110" stroke="#0d4d3a" stroke-width="2" marker-end="url(#gfr-arrow)"/>
+
+          <rect x="50" y="110" width="280" height="70" rx="10" fill="#fff" stroke="#0d4d3a" stroke-width="2"/>
+          <text x="190" y="136" text-anchor="middle" fill="#0d4d3a" font-size="12" font-weight="700">Эндогенный креатинин</text>
+          <text x="190" y="155" text-anchor="middle" fill="#0d4d3a" font-size="10">(рутинный маркер)</text>
+
+          <rect x="430" y="110" width="280" height="70" rx="10" fill="#fff" stroke="#0d4d3a" stroke-width="2"/>
+          <text x="570" y="136" text-anchor="middle" fill="#0d4d3a" font-size="12" font-weight="700">Клиренс йогексола</text>
+          <text x="570" y="155" text-anchor="middle" fill="#0d4d3a" font-size="10">(экзогенный маркер)</text>
+
+          <line x1="150" y1="180" x2="150" y2="220" stroke="#0d4d3a" stroke-width="2" marker-end="url(#gfr-arrow)"/>
+          <line x1="230" y1="180" x2="230" y2="220" stroke="#0d4d3a" stroke-width="2" marker-end="url(#gfr-arrow)"/>
+          <line x1="530" y1="180" x2="530" y2="220" stroke="#0d4d3a" stroke-width="2" marker-end="url(#gfr-arrow)"/>
+          <line x1="610" y1="180" x2="610" y2="220" stroke="#0d4d3a" stroke-width="2" marker-end="url(#gfr-arrow)"/>
+
+          <rect x="40" y="220" width="220" height="100" rx="10" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
+          <text x="150" y="246" text-anchor="middle" fill="#1b5e20" font-size="11" font-weight="700">Высокая чувствительность</text>
+          <text x="150" y="264" text-anchor="middle" fill="#1b5e20" font-size="10">пороги IRIS:</text>
+          <text x="150" y="280" text-anchor="middle" fill="#1b5e20" font-size="10">собаки ≥1.4 мг/дл</text>
+          <text x="150" y="296" text-anchor="middle" fill="#1b5e20" font-size="10">кошки ≥1.6 мг/дл</text>
+
+          <rect x="270" y="220" width="220" height="100" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+          <text x="380" y="246" text-anchor="middle" fill="#e65100" font-size="11" font-weight="700">Зависимость от массы</text>
+          <text x="380" y="264" text-anchor="middle" fill="#e65100" font-size="10">саркопения / гипертрофия</text>
+          <text x="380" y="284" text-anchor="middle" fill="#e65100" font-size="10">ложно-± результаты</text>
+
+          <rect x="500" y="220" width="220" height="100" rx="10" fill="#e8f5e9" stroke="#006d3e" stroke-width="1.5"/>
+          <text x="610" y="246" text-anchor="middle" fill="#006d3e" font-size="11" font-weight="700">Золотой стандарт СКФ</text>
+          <text x="610" y="264" text-anchor="middle" fill="#006d3e" font-size="10">AUC, математика</text>
+          <text x="610" y="280" text-anchor="middle" fill="#006d3e" font-size="10">элиминации, T½</text>
+
+          <rect x="40" y="330-110" width="0" height="0" fill="none"/>
+        </svg>
+        <div class="diagram-caption" data-ru="Два подхода к оценке СКФ: рутинный креатинин и эталонный клиренс экзогенных маркеров. Пороги IRIS: собаки ≥1.4 мг/дл, кошки ≥1.6 мг/дл." data-en="Two approaches to GFR estimation: routine creatinine and gold-standard exogenous marker clearance. IRIS thresholds: dogs ≥1.4 mg/dL, cats ≥1.6 mg/dL.">Два подхода к оценке СКФ: рутинный креатинин и эталонный клиренс экзогенных маркеров.</div>
+      </div>
+
+      <h3><span data-ru="3.2. Эталонные методы измерения и диагностический выбор IRIS" data-en="3.2. Reference methods and the IRIS diagnostic choice">3.2. Эталонные методы измерения и диагностический выбор IRIS</span></h3>
+
+      <p>
+        <span data-ru="Золотым стандартом определения СКФ является <strong>клиренс экзогенных маркерных веществ</strong> (в частности, йогексола). Протокол требует болюсного внутривенного введения точно рассчитанной дозы, серийных заборов крови (через 2, 3 и 4 часа) и математического анализа кривой фармакокинетической элиминации на логарифмической шкале с вычислением площади под кривой (AUC)." data-en="The gold standard for GFR is <strong>exogenous marker clearance</strong> (notably iohexol). The protocol requires a bolus IV dose, serial blood draws (at 2, 3 and 4 hours) and mathematical analysis of the pharmacokinetic elimination curve on a logarithmic scale with AUC computation.">Золотым стандартом является клиренс экзогенных маркеров (йогексола): болюсное введение, серийные заборы крови через 2, 3 и 4 часа и расчёт AUC на логарифмической шкале.</span>
+      </p>
+
+      <p>
+        <span data-ru="Из-за высокой трудоёмкости и стоимости клиренсовых тестов эксперты IRIS пошли на осознанный эпидемиологический компромисс: <strong>низкие строгие пороги креатинина</strong> максимизируют чувствительность диагностики на ранних стадиях (Stage 1–2). Снижение специфичности компенсируется обязательным введением подкатегорий — оценки системного артериального давления (АД) и соотношения белок/креатинин в моче (UPC) для выявления протеинурии." data-en="Given the high complexity and cost of clearance tests, IRIS experts made a deliberate epidemiological compromise: <strong>low rigorous creatinine thresholds</strong> maximize diagnostic sensitivity in early stages (Stage 1–2). The loss of specificity is compensated by mandatory subcategories — arterial blood pressure assessment and urinary protein-to-creatinine ratio (UPC) to detect proteinuria.">Из-за высокой стоимости клиренсовых тестов IRIS выбрали осознанный компромисс: низкие строгие пороги креатинина максимизируют чувствительность на ранних стадиях, а снижение специфичности компенсируется подкатегориями (АД и UPC).</span>
+      </p>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 4 ===== -->
+      <h2 id="uremic"><span data-ru="4. Патофизиология уремического каскада и органные дисфункции" data-en="4. Uremic cascade pathophysiology and organ dysfunction">4. Патофизиология уремического каскада и органные дисфункции</span></h2>
+
+      <p>
+        <span data-ru="При снижении СКФ ниже критических значений накопление продуктов азотистого обмена и уремических токсинов индуцирует генерализованное поражение органов." data-en="When GFR falls below critical values, the accumulation of nitrogenous products and uremic toxins induces generalized organ damage.">При снижении СКФ ниже критических значений накопление уремических токсинов индуцирует генерализованное поражение органов.</span>
+      </p>
+
+      <h3><span data-ru="4.1. Гастроинтестинальный синдром" data-en="4.1. Gastrointestinal syndrome">4.1. Гастроинтестинальный синдром</span></h3>
+
+      <ul>
+        <li>
+          <strong data-ru="Центральная уремическая анорексия:" data-en="Central uremic anorexia:">Центральная уремическая анорексия:</strong>
+          <span data-ru="накопление средних молекул и лептина. При сниженном почечном клиренсе гиперлептинемия транслирует в ЦНС перманентный сигнал насыщения, затормаживая пищевое поведение на фоне глубокого катаболического истощения." data-en="accumulation of middle molecules and leptin. With reduced renal clearance, hyperleptinemia sends a permanent satiety signal to the CNS, suppressing feeding behavior amid severe catabolic wasting.">гиперлептинемия транслирует в ЦНС перманентный сигнал насыщения, затормаживая пищевое поведение.</span>
+        </li>
+        <li>
+          <strong data-ru="Уремическая гастропатия и стоматит:" data-en="Uremic gastropathy and stomatitis:">Уремическая гастропатия и стоматит:</strong>
+          <span data-ru="нарушение элиминации гастрина ведёт к устойчивой гипергастринемии, гиперсекреции соляной кислоты и изъязвлению слизистой желудка. В ротовой полости мочевина диффундирует в слюну, где уреазоположительная микрофлора выделяет свободный аммиак, вызывающий некроз и химический ожог слизистой дёсен и языка (уремический стоматит, галитоз)." data-en="impaired gastrin elimination leads to sustained hypergastrinemia, gastric acid hypersecretion and mucosal ulceration. In the oral cavity, urea diffuses into saliva, where urease-positive flora releases free ammonia, causing necrosis and chemical burns of the gingival and lingual mucosa (uremic stomatitis, halitosis).">нарушение элиминации гастрина ведёт к гиперсекреции соляной кислоты и изъязвлению; в слюне мочевина расщепляется до аммиака, вызывая уремический стоматит.</span>
+        </li>
+      </ul>
+
+      <h3><span data-ru="4.2. Гематологические и гемостатические расстройства" data-en="4.2. Hematologic and hemostatic disorders">4.2. Гематологические и гемостатические расстройства</span></h3>
+
+      <ul>
+        <li>
+          <strong data-ru="Нерегенеративная анемия:" data-en="Non-regenerative anemia:">Нерегенеративная анемия:</strong>
+          <span data-ru="гибель перитубулярных капилляров и фиброз интерстиция повреждают клетки, синтезирующие эритропоэтин. Дефицит эритропоэтина блокирует дифференцировку эритроидных предшественников в костном мозге." data-en="loss of peritubular capillaries and interstitial fibrosis damage erythropoietin-producing cells. Erythropoietin deficiency blocks erythroid differentiation in the bone marrow.">гибель перитубулярных капилляров снижает синтез эритропоэтина, блокируя дифференцировку эритроидных предшественников.</span>
+        </li>
+        <li>
+          <strong data-ru="Геморрагический диатез (тромбоцитопатия):" data-en="Hemorrhagic diathesis (thrombocytopathy):">Геморрагический диатез (тромбоцитопатия):</strong>
+          <span data-ru="фенольные уремические токсины модифицируют мембранные гликопротеины тромбоцитов, нарушая связывание с фактором фон Виллебранда (vWF) при нормальном количестве тромбоцитов. Купирующий механизм — <em>десмопрессин</em>: активация рецепторов эндотелия вызывает экспрессию телец Вейбеля — Паладе и выброс vWF в кровоток. Эффект ограничен тахифилаксией по мере истощения эндотелиальных депо." data-en="phenolic uremic toxins modify platelet membrane glycoproteins, impairing binding to von Willebrand factor (vWF) despite normal platelet counts. Ameliorating mechanism — <em>desmopressin</em>: endothelial receptor activation triggers Weibel-Palade body exocytosis and vWF release into the bloodstream. The effect is limited by tachyphylaxis as endothelial stores deplete.">фенольные токсины нарушают связывание тромбоцитов с vWF. Десмопрессин активирует выброс vWF из телец Вейбеля — Паладе; эффект ограничен тахифилаксией.</span>
+        </li>
+      </ul>
+
+      <h3><span data-ru="4.3. Нарушение концентрирующей способности почек" data-en="4.3. Impaired renal concentrating ability">4.3. Нарушение концентрирующей способности почек</span></h3>
+
+      <p>
+        <span data-ru="Прогрессирующий тубулоинтерстициальный фиброз разрушает гиперосмолярный градиент натрия и мочевины в мозговом веществе. Вместе с осмотическим диурезом в оставшихся нефронах это ведёт к утрате реабсорбции воды под действием АДГ и развитию синдрома <strong>полиурии/полидипсии (ПУ/ПД)</strong> с быстрой дегидратацией." data-en="Progressive tubulointerstitial fibrosis destroys the hyperosmolar sodium/urea gradient of the medulla. Combined with osmotic diuresis in surviving nephrons, this abolishes ADH-driven water reabsorption and produces the <strong>polyuria/polydipsia (PU/PD)</strong> syndrome with rapid dehydration.">Тубулоинтерстициальный фиброз разрушает медуллярный градиент, что ведёт к утрате реабсорбции воды и синдрому полиурии/полидипсии.</span>
+      </p>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 5 ===== -->
+      <h2 id="ckdmbd"><span data-ru="5. Минерально-костные расстройства при ХБП (CKD-MBD) и вторичный гиперпаратиреоз" data-en="5. CKD-MBD and secondary hyperparathyroidism">5. Минерально-костные расстройства при ХБП (CKD-MBD) и вторичный гиперпаратиреоз</span></h2>
+
+      <p>
+        <span data-ru="Вторичный почечный гиперпаратиреоз развивается более чем у 84% кошек с ХБП и служит наглядным примером <strong>деструктивного компенсаторного каскада</strong>." data-en="Secondary renal hyperparathyroidism develops in more than 84% of cats with CKD and is a clear example of a <strong>destructive compensatory cascade</strong>.">Вторичный почечный гиперпаратиреоз развивается более чем у 84% кошек с ХБП и служит наглядным примером деструктивного компенсаторного каскада.</span>
+      </p>
+
+      <div class="diagram-container">
+        <svg viewBox="0 0 760 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Каскад CKD-MBD: гиперфосфатемия, кальцитриол, PTH, остеодистрофия">
+          <defs>
+            <linearGradient id="ckd-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#fce4ec"/>
+              <stop offset="100%" style="stop-color:#f8bbd0"/>
+            </linearGradient>
+            <marker id="ckd-arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+              <path d="M0,0 L8,3 L0,6" fill="#ad1457"/>
+            </marker>
+          </defs>
+          <rect width="760" height="460" fill="url(#ckd-bg)" rx="8"/>
+
+          <rect x="300" y="15" width="160" height="40" rx="10" fill="#ad1457"/>
+          <text x="380" y="40" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Падение СКФ</text>
+
+          <line x1="380" y1="55" x2="380" y2="80" stroke="#ad1457" stroke-width="2" marker-end="url(#ckd-arrow)"/>
+
+          <rect x="280" y="80" width="200" height="38" rx="10" fill="#fff" stroke="#ad1457" stroke-width="2"/>
+          <text x="380" y="105" text-anchor="middle" fill="#ad1457" font-size="12" font-weight="700">Задержка фосфора (P)</text>
+
+          <line x1="310" y1="118" x2="250" y2="150" stroke="#ad1457" stroke-width="2" marker-end="url(#ckd-arrow)"/>
+          <line x1="450" y1="118" x2="510" y2="150" stroke="#ad1457" stroke-width="2" marker-end="url(#ckd-arrow)"/>
+
+          <rect x="60" y="150" width="300" height="76" rx="10" fill="#fff" stroke="#ad1457" stroke-width="1.5"/>
+          <text x="210" y="174" text-anchor="middle" fill="#ad1457" font-size="11" font-weight="700">Ингибирование 1α-гидроксилазы</text>
+          <text x="210" y="192" text-anchor="middle" fill="#ad1457" font-size="10">↓ синтез 1,25(OH)₂D₃ (кальцитриола)</text>
+          <text x="210" y="210" text-anchor="middle" fill="#ad1457" font-size="10">↓ кишечная абсорбция Ca²⁺</text>
+
+          <rect x="400" y="150" width="300" height="76" rx="10" fill="#fff" stroke="#ad1457" stroke-width="1.5"/>
+          <text x="550" y="174" text-anchor="middle" fill="#ad1457" font-size="11" font-weight="700">Гипокальциемия</text>
+          <text x="550" y="192" text-anchor="middle" fill="#ad1457" font-size="10">прямое связывание Ca²⁺</text>
+          <text x="550" y="210" text-anchor="middle" fill="#ad1457" font-size="10">снятие ингибиторного контроля</text>
+
+          <line x1="210" y1="226" x2="290" y2="260" stroke="#ad1457" stroke-width="2" marker-end="url(#ckd-arrow)"/>
+          <line x1="550" y1="226" x2="470" y2="260" stroke="#ad1457" stroke-width="2" marker-end="url(#ckd-arrow)"/>
+
+          <rect x="290" y="260" width="180" height="48" rx="10" fill="#ad1457"/>
+          <text x="380" y="280" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">Гиперплазия паращитовидных</text>
+          <text x="380" y="296" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">желез → ↑ ПТГ (PTH)</text>
+
+          <line x1="380" y1="308" x2="380" y2="335" stroke="#ad1457" stroke-width="2" marker-end="url(#ckd-arrow)"/>
+
+          <rect x="60" y="335" width="210" height="110" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+          <text x="165" y="358" text-anchor="middle" fill="#e65100" font-size="11" font-weight="700">Trade-off гипотеза</text>
+          <text x="165" y="378" text-anchor="middle" fill="#e65100" font-size="10">экскреция P нефронами,</text>
+          <text x="165" y="394" text-anchor="middle" fill="#e65100" font-size="10">но ценой системной</text>
+          <text x="165" y="410" text-anchor="middle" fill="#e65100" font-size="10">гиперпаратиреонемии</text>
+
+          <rect x="280" y="335" width="210" height="110" rx="10" fill="#efebe9" stroke="#4e342e" stroke-width="1.5"/>
+          <text x="385" y="358" text-anchor="middle" fill="#4e342e" font-size="11" font-weight="700">Цитотоксичность ПТГ</text>
+          <text x="385" y="378" text-anchor="middle" fill="#4e342e" font-size="10">перегрузка Ca²⁺ митохондрий,</text>
+          <text x="385" y="394" text-anchor="middle" fill="#4e342e" font-size="10">открытие mPTP,</text>
+          <text x="385" y="410" text-anchor="middle" fill="#4e342e" font-size="10">блокада синтеза АТФ</text>
+
+          <rect x="500" y="335" width="210" height="110" rx="10" fill="#e0f2f1" stroke="#00695c" stroke-width="1.5"/>
+          <text x="605" y="358" text-anchor="middle" fill="#00695c" font-size="11" font-weight="700">Остеодистрофия</text>
+          <text x="605" y="378" text-anchor="middle" fill="#00695c" font-size="10">активация остеокластов,</text>
+          <text x="605" y="394" text-anchor="middle" fill="#00695c" font-size="10">резорбция кости,</text>
+          <text x="605" y="410" text-anchor="middle" fill="#00695c" font-size="10">«резиновая челюсть»</text>
+        </svg>
+        <div class="diagram-caption" data-ru="Патогенетический каскад CKD-MBD: от задержки фосфора через дефицит кальцитриола к гиперпаратиреозу, остеодистрофии и системной цитотоксичности ПТГ." data-en="CKD-MBD pathogenetic cascade: from phosphorus retention through calcitriol deficiency to hyperparathyroidism, osteodystrophy and systemic PTH toxicity.">Каскад CKD-MBD: фосфор → кальцитриол → ПТГ → остеодистрофия и цитотоксичность.</div>
+      </div>
+
+      <h3><span data-ru="5.1. Патогенетический каскад CKD-MBD" data-en="5.1. The CKD-MBD pathogenetic cascade">5.1. Патогенетический каскад CKD-MBD</span></h3>
+
+      <ol>
+        <li>
+          <strong data-ru="Задержка фосфатов." data-en="Phosphate retention.">Задержка фосфатов.</strong>
+          <span data-ru="Падение СКФ снижает экскрецию фосфора → гиперфосфатемия." data-en="Falling GFR reduces phosphorus excretion → hyperphosphatemia.">Падение СКФ снижает экскрецию фосфора → гиперфосфатемия.</span>
+        </li>
+        <li>
+          <strong data-ru="Блокада активации витамина D." data-en="Blockade of vitamin D activation.">Блокада активации витамина D.</strong>
+          <span data-ru="Избыток фосфора ингибирует почечную 1α-гидроксилазу, конвертирующую кальцидиол в активный кальцитриол; дефицит кальцитриола снижает кишечную абсорбцию кальция." data-en="Excess phosphorus inhibits renal 1α-hydroxylase, which converts calcidiol into active calcitriol; calcitriol deficiency reduces intestinal calcium absorption.">Избыток фосфора ингибирует 1α-гидроксилазу; дефицит кальцитриола снижает абсорбцию кальция.</span>
+        </li>
+        <li>
+          <strong data-ru="Инициирование гиперпаратиреоза." data-en="Initiation of hyperparathyroidism.">Инициирование гиперпаратиреоза.</strong>
+          <span data-ru="Гипокальциемия в сочетании с дефицитом кальцитриола (в норме подавляющего транскрипцию гена ПТГ) снимает ингибиторный контроль с паращитовидных желез." data-en="Hypocalcemia combined with calcitriol deficiency (which normally suppresses PTH gene transcription) removes inhibitory control over the parathyroid glands.">Гипокальциемия + дефицит кальцитриола снимают ингибиторный контроль с паращитовидных желез.</span>
+        </li>
+        <li>
+          <strong data-ru="Гипотеза компромисса (Trade-off Hypothesis)." data-en="Trade-off Hypothesis.">Гипотеза компромисса (Trade-off Hypothesis).</strong>
+          <span data-ru="По Н. Брикеру, высокий ПТГ снижает реабсорбцию фосфора в проксимальных канальцах оставшихся нефронов, временно нормализуя фосфатемию ценой стойкой системной гиперпаратиреонемии." data-en="Per N. Bricker, high PTH reduces phosphate reabsorption in the proximal tubules of surviving nephrons, temporarily normalizing phosphatemia at the cost of sustained systemic hyperparathyroidism.">По Н. Брикеру, высокий ПТГ снижает реабсорбцию фосфора, временно нормализуя фосфатемию ценой гиперпаратиреонемии.</span>
+        </li>
+      </ol>
+
+      <h3><span data-ru="5.2. Системная цитотоксичность ПТГ и остеодистрофия" data-en="5.2. Systemic PTH toxicity and osteodystrophy">5.2. Системная цитотоксичность ПТГ и остеодистрофия</span></h3>
+
+      <ul>
+        <li>
+          <strong data-ru="Кальциевая перегрузка клеток:" data-en="Cellular calcium overload:">Кальциевая перегрузка клеток:</strong>
+          <span data-ru="ПТГ активирует потенциал-зависимые кальциевые каналы в кардиомиоцитах, нейронах и гладкомышечных клетках сосудов. Цитозольный избыток Ca²⁺ стимулирует поглощение кальция митохондриями, открытие mPTP, падение мембранного потенциала, прекращение синтеза АТФ и апоптоз/некроз клеток." data-en="PTH activates voltage-gated calcium channels in cardiomyocytes, neurons and vascular smooth muscle cells. Cytosolic Ca²⁺ overload drives mitochondrial calcium uptake, mPTP opening, loss of membrane potential, ATP synthesis failure and apoptosis/necrosis.">ПТГ активирует кальциевые каналы; цитозольный избыток Ca²⁺ открывает mPTP, останавливает синтез АТФ и вызывает гибель клеток.</span>
+        </li>
+        <li>
+          <strong data-ru="Фиброзная остеодистрофия:" data-en="Fibrous osteodystrophy:">Фиброзная остеодистрофия:</strong>
+          <span data-ru="под действием ПТГ остеокласты мобилизуют минеральный матрикс скелета. У молодых животных и кошек это приводит к деминерализации костей черепа и нижней челюсти (синдром «резиновой челюсти») с замещением костной ткани фиброзной. Освободившиеся кальций и фосфор образуют нерастворимые комплексы, провоцируя метастатическую кальцификацию мягких тканей и почечной паренхимы." data-en="under PTH, osteoclasts mobilize the skeletal mineral matrix. In young animals and cats, this leads to demineralization of skull and mandibular bones ('rubber jaw' syndrome) with replacement of bone by fibrous tissue. Released calcium and phosphorus form insoluble complexes, triggering metastatic calcification of soft tissues and renal parenchyma.">остеокласты мобилизуют скелет → «резиновая челюсть» у кошек; Ca и P образуют нерастворимые комплексы с метастатической кальцификацией тканей.</span>
+        </li>
+      </ul>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 6 ===== -->
+      <h2 id="acidbase"><span data-ru="6. Кислотно-щелочной баланс и электролитный гомеостаз" data-en="6. Acid-base balance and electrolyte homeostasis">6. Кислотно-щелочной баланс и электролитный гомеостаз</span></h2>
+
+      <h3><span data-ru="6.1. Гипокалиемическая полимиопатия кошек" data-en="6.1. Feline hypokalemic polymyopathy">6.1. Гипокалиемическая полимиопатия кошек</span></h3>
+
+      <p>
+        <span data-ru="У кошек с ХБП полиурия и канальцевая дисфункция приводят к массивной потере калия с мочой. Гипокалиемия изменяет потенциал покоя клеточных мембран, вызывая гиперполяризацию и нарушение нейромышечной проводимости. Клинически это проявляется полимиопатией и <strong>вентрофлексией шеи</strong> (атонией шейных мышц)." data-en="In cats with CKD, polyuria and tubular dysfunction cause massive urinary potassium loss. Hypokalemia alters the resting membrane potential, causing hyperpolarization and impaired neuromuscular conduction. Clinically this presents as polymyopathy and <strong>cervical ventroflexion</strong> (neck muscle atony).">Полиурия и канальцевая дисфункция ведут к потере калия; гипокалиемическая гиперполяризация нарушает нейромышечную проводимость → вентрофлексия шеи.</span>
+      </p>
+
+      <div class="callout danger">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2L1 14h14L8 2z" stroke="#c62828" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 6v4M8 12h.005" stroke="#c62828" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span data-ru="Порочный круг" data-en="Vicious cycle">Порочный круг</span>
+        </div>
+        <p><span data-ru="Гипокалиемия сама по себе индуцирует тубулоинтерстициальное воспаление и фиброз, дополнительно усугубляя падение функции почек — круг замыкается." data-en="Hypokalemia itself induces tubulointerstitial inflammation and fibrosis, further worsening the decline in renal function — the cycle closes.">Гипокалиемия сама по себе индуцирует тубулоинтерстициальный фиброз, усугубляя падение функции почек.</span></p>
+      </div>
+
+      <h3><span data-ru="6.2. Метаболический ацидоз и протеолиз" data-en="6.2. Metabolic acidosis and proteolysis">6.2. Метаболический ацидоз и протеолиз</span></h3>
+
+      <p>
+        <span data-ru="Снижение массы функционирующих нефронов приводит к падению аммониогенеза в проксимальных канальцах и задержке ионов H⁺. Развивающийся метаболический ацидоз активирует утилизацию мышечных белков:" data-en="Loss of functioning nephron mass reduces ammoniagenesis in the proximal tubules and retains H⁺ ions. The ensuing metabolic acidosis activates muscle protein consumption:">Падение аммониогенеза ведёт к задержке H⁺ и метаболическому ацидозу, активирующему утилизацию мышечных белков:</span>
+      </p>
+
+      <ol>
+        <li><span data-ru="Ацидоз стимулирует ubiquitin-proteasome pathway в скелетных мышцах." data-en="Acidosis stimulates the ubiquitin-proteasome pathway in skeletal muscle.">Ацидоз стимулирует ubiquitin-proteasome pathway в скелетных мышцах.</span></li>
+        <li><span data-ru="Аминокислоты с разветвлённой цепью (валин, лейцин, изолейцин) выходят в кровоток и трансаминируются в печени до глутамина." data-en="Branched-chain amino acids (valine, leucine, isoleucine) enter the bloodstream and are transaminated in the liver to glutamine.">Аминокислоты с разветвлённой цепью трансаминируются в печени до глутамина.</span></li>
+        <li><span data-ru="Глутамин направляется в почки как субстрат для связывания и экскреции H⁺ в виде ионов аммония NH₄⁺." data-en="Glutamine is delivered to the kidneys as a substrate for H⁺ binding and excretion as ammonium ions (NH₄⁺).">Глутамин используется почками для экскреции H⁺ в форме NH₄⁺.</span></li>
+      </ol>
+
+      <p>
+        <span data-ru="Данный механизм буферизации объясняет неизбежное развитие <strong>тяжёлой уремической кахексии</strong>, устойчивой к питательной поддержке." data-en="This buffering mechanism explains the inevitable progression of <strong>severe uremic cachexia</strong>, refractory to nutritional support.">Этот механизм объясняет неизбежную уремическую кахексию, устойчивую к питательной поддержке.</span>
+      </p>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 7 ===== -->
+      <h2 id="hemodynamics"><span data-ru="7. Внутриклубочковая гемодинамика и механизмы прогрессирования" data-en="7. Intrarenal hemodynamics and progression mechanisms">7. Внутриклубочковая гемодинамика и механизмы прогрессирования</span></h2>
+
+      <p>
+        <span data-ru="Классические эксперименты с субтотальной нефрэктомией (модели 5/6 и 7/8 нефрэктомии) продемонстрировали, что ХБП неуклонно прогрессирует даже после полного устранения первичного повреждающего фактора. Главным драйвером самоподдерживающегося процесса служит <strong>внутриклубочковая гипертензия и гипертрофия</strong> (гипотеза Бреннера)." data-en="Classic subtotal nephrectomy experiments (5/6 and 7/8 nephrectomy models) demonstrated that CKD relentlessly progresses even after complete removal of the primary insult. The main driver of the self-sustaining process is <strong>glomerular hypertension and hypertrophy</strong> (Brenner's hypothesis).">Эксперименты с субтотальной нефрэктомией показали: ХБП прогрессирует даже после устранения первичного фактора. Драйвер — внутриклубочковая гипертензия (гипотеза Бреннера).</span>
+      </p>
+
+      <div class="diagram-container">
+        <svg viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Петля прогрессирования: гиперфильтрация, протеинурия, фиброз">
+          <defs>
+            <linearGradient id="hem-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#ede7f6"/>
+              <stop offset="100%" style="stop-color:#d1c4e9"/>
+            </linearGradient>
+            <marker id="hem-arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+              <path d="M0,0 L8,3 L0,6" fill="#4527a0"/>
+            </marker>
+          </defs>
+          <rect width="760" height="440" fill="url(#hem-bg)" rx="8"/>
+
+          <rect x="280" y="15" width="200" height="40" rx="10" fill="#4527a0"/>
+          <text x="380" y="40" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Массивная гибель нефронов</text>
+
+          <line x1="380" y1="55" x2="380" y2="82" stroke="#4527a0" stroke-width="2" marker-end="url(#hem-arrow)"/>
+
+          <rect x="245" y="82" width="270" height="38" rx="10" fill="#fff" stroke="#4527a0" stroke-width="2"/>
+          <text x="380" y="106" text-anchor="middle" fill="#4527a0" font-size="12" font-weight="700">Компенсаторная перегрузка нефронов</text>
+
+          <line x1="300" y1="120" x2="230" y2="152" stroke="#4527a0" stroke-width="2" marker-end="url(#hem-arrow)"/>
+          <line x1="460" y1="120" x2="530" y2="152" stroke="#4527a0" stroke-width="2" marker-end="url(#hem-arrow)"/>
+
+          <rect x="60" y="152" width="280" height="76" rx="10" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
+          <text x="200" y="176" text-anchor="middle" fill="#1b5e20" font-size="11" font-weight="700">Дилатация афферентной артериолы</text>
+          <text x="200" y="194" text-anchor="middle" fill="#1b5e20" font-size="10">рост притока крови</text>
+          <text x="200" y="210" text-anchor="middle" fill="#1b5e20" font-size="10">гиперфильтрация</text>
+
+          <rect x="420" y="152" width="280" height="76" rx="10" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5"/>
+          <text x="560" y="176" text-anchor="middle" fill="#b71c1c" font-size="11" font-weight="700">Констрикция эфферентной артериолы</text>
+          <text x="560" y="194" text-anchor="middle" fill="#b71c1c" font-size="10">Ангиотензин II</text>
+          <text x="560" y="210" text-anchor="middle" fill="#b71c1c" font-size="10">рост гидростатического давления</text>
+
+          <line x1="200" y1="228" x2="310" y2="260" stroke="#4527a0" stroke-width="2" marker-end="url(#hem-arrow)"/>
+          <line x1="560" y1="228" x2="450" y2="260" stroke="#4527a0" stroke-width="2" marker-end="url(#hem-arrow)"/>
+
+          <rect x="280" y="260" width="200" height="46" rx="10" fill="#4527a0"/>
+          <text x="380" y="280" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">Внутриклубочковая гипертензия</text>
+          <text x="380" y="296" text-anchor="middle" fill="#fff" font-size="10">растяжение капилляров</text>
+
+          <line x1="380" y1="306" x2="380" y2="330" stroke="#4527a0" stroke-width="2" marker-end="url(#hem-arrow)"/>
+
+          <rect x="220" y="330" width="320" height="40" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+          <text x="380" y="355" text-anchor="middle" fill="#e65100" font-size="11" font-weight="700">Повреждение фильтра → массивная протеинурия</text>
+
+          <line x1="380" y1="370" x2="380" y2="395" stroke="#4527a0" stroke-width="2" marker-end="url(#hem-arrow)"/>
+
+          <rect x="140" y="395" width="480" height="36" rx="10" fill="#efebe9" stroke="#4e342e" stroke-width="1.5"/>
+          <text x="380" y="418" text-anchor="middle" fill="#4e342e" font-size="11" font-weight="700">Тубулоинтерстициальный фиброз → гибель выживших нефронов (Рубец)</text>
+        </svg>
+        <div class="diagram-caption" data-ru="Порочный круг прогрессирования ХБП: гиперфильтрация → протеинурия → фиброз → гибель нефронов." data-en="CKD progression vicious cycle: hyperfiltration → proteinuria → fibrosis → nephron loss.">Порочный круг прогрессирования: гиперфильтрация → протеинурия → фиброз → гибель нефронов.</div>
+      </div>
+
+      <h3><span data-ru="7.1. Механизм внутриклубочковой гиперфильтрации" data-en="7.1. Mechanism of glomerular hyperfiltration">7.1. Механизм внутриклубочковой гиперфильтрации</span></h3>
+
+      <ul>
+        <li><span data-ru="Вазодилатация афферентной (приносящей) артериолы." data-en="Vasodilation of the afferent arteriole.">Вазодилатация афферентной артериолы.</span></li>
+        <li><span data-ru="Вазоконстрикция эфферентной (выносящей) артериолы под действием ангиотензина II." data-en="Vasoconstriction of the efferent arteriole under angiotensin II.">Вазоконстрикция эфферентной артериолы под действием ангиотензина II.</span></li>
+      </ul>
+
+      <p>
+        <span data-ru="Индуцированный рост внутриклубочкового гидростатического давления приводит к механическому растяжению капиллярных петель, гипертрофии клубочка и повреждению щелевых диафрагм подоцитов." data-en="The induced rise in intraglomerular hydrostatic pressure causes mechanical stretching of capillary loops, glomerular hypertrophy and damage to podocyte slit diaphragms.">Рост гидростатического давления растягивает капиллярные петли и повреждает щелевые диафрагмы подоцитов.</span>
+      </p>
+
+      <h3><span data-ru="7.2. Протеинурическая цитотоксичность" data-en="7.2. Proteinuric cytotoxicity">7.2. Протеинурическая цитотоксичность</span></h3>
+
+      <p>
+        <span data-ru="Снижение селективности фильтра ведёт к альбуминурии. Клетки проксимальных канальцев захватывают избыточный альбумин путём эндоцитоза. Перегрузка лизосомального аппарата вызывает перекисное окисление и стимулирует секрецию провоспалительных медиаторов: <strong>MCP-1</strong> (моноцитарного хемотактического протеина) и <strong>эндотелина-1</strong>. Медиаторы привлекают в интерстиций макрофаги, которые выделяют TGF-β, активирующий трансдифференцировку фибробластов и синтез коллагена." data-en="Reduced filter selectivity leads to albuminuria. Proximal tubular cells take up excess albumin via endocytosis. Lysosomal overload triggers lipid peroxidation and stimulates secretion of pro-inflammatory mediators: <strong>MCP-1</strong> (monocyte chemoattractant protein) and <strong>endothelin-1</strong>. These attract macrophages into the interstitium, which release TGF-β, activating fibroblast transdifferentiation and collagen synthesis.">Альбуминурия перегружает лизосомы канальцевого эпителия → секреция MCP-1 и эндотелина-1 → миграция макрофагов → TGF-β → фиброз.</span>
+      </p>
+
+      <h3><span data-ru="7.3. Видовые особенности прогрессирования" data-en="7.3. Species differences in progression">7.3. Видовые особенности прогрессирования</span></h3>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th data-ru="Признак" data-en="Trait">Признак</th>
+              <th data-ru="Собаки" data-en="Dogs">Собаки</th>
+              <th data-ru="Кошки" data-en="Cats">Кошки</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-ru="Преобладающее поражение" data-en="Predominant lesion">Преобладающее поражение</td>
+              <td data-ru="Первичные гломерулопатии" data-en="Primary glomerulopathies">Первичные гломерулопатии</td>
+              <td data-ru="Тубулоинтерстициальный нефрит" data-en="Tubulointerstitial nephritis">Тубулоинтерстициальный нефрит</td>
+            </tr>
+            <tr>
+              <td data-ru="Протеинурия" data-en="Proteinuria">Протеинурия</td>
+              <td data-ru="Выраженная" data-en="Marked">Выраженная</td>
+              <td data-ru="Умеренная" data-en="Mild-moderate">Умеренная</td>
+            </tr>
+            <tr>
+              <td data-ru="Темп прогрессирования" data-en="Progression rate">Темп прогрессирования</td>
+              <td data-ru="Быстрое, агрессивное течение" data-en="Rapid, aggressive course">Быстрое, агрессивное течение</td>
+              <td data-ru="Многолетняя компенсация возможна" data-en="Years of compensation possible">Многолетняя компенсация возможна</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 8 ===== -->
+      <h2 id="treatment"><span data-ru="8. Принципы патогенетической и фармакологической коррекции" data-en="8. Principles of pathogenetic and pharmacological correction">8. Принципы патогенетической и фармакологической коррекции</span></h2>
+
+      <p>
+        <span data-ru="Терапия ХБП базируется на <strong>минимизации функциональной нагрузки</strong> на выжившие нефроны и разрыве патогенетических петель." data-en="CKD therapy is based on <strong>minimizing the functional load</strong> on surviving nephrons and breaking pathogenetic loops.">Терапия ХБП базируется на минимизации нагрузки на выжившие нефроны и разрыве патогенетических петель.</span>
+      </p>
+
+      <h3><span data-ru="8.1. Диетотерапия как доказательный стандарт" data-en="8.1. Diet therapy as the evidence-based standard">8.1. Диетотерапия как доказательный стандарт</span></h3>
+
+      <p>
+        <span data-ru="Клинические исследования подтверждают: специализированные ренальные диеты (со II стадии IRIS) снижают риск уремических кризов до 70% и более чем вдвое увеличивают медиану выживаемости." data-en="Clinical studies confirm: specialized renal diets (from IRIS stage II) reduce the risk of uremic crises by up to 70% and more than double median survival.">Ренальные диеты (со II стадии IRIS) снижают риск уремических кризов до 70% и более чем вдвое увеличивают медиану выживаемости.</span>
+      </p>
+
+      <ul>
+        <li>
+          <strong data-ru="Ограничение фосфора:" data-en="Phosphorus restriction:">Ограничение фосфора:</strong>
+          <span data-ru="главный фактор блокирования вторичного гиперпаратиреоза, восстановления активности 1α-гидроксилазы и предотвращения кальцификации тканей." data-en="the main factor for blocking secondary hyperparathyroidism, restoring 1α-hydroxylase activity and preventing tissue calcification.">ключ к блокированию гиперпаратиреоза и предотвращению кальцификации.</span>
+        </li>
+        <li>
+          <strong data-ru="Омега-3 ПНЖК (ЭПК/ДГК):" data-en="Omega-3 PUFAs (EPA/DHA):">Омега-3 ПНЖК (ЭПК/ДГК):</strong>
+          <span data-ru="замещают арахидоновую кислоту в мембранах, снижая синтез тромбоксана A₂ и лейкотриенов; способствуют вазодилатации эфферентных артериол и снижению внутриклубочкового давления (эффективность доказана для собак)." data-en="replace arachidonic acid in membranes, reducing thromboxane A₂ and leukotriene synthesis; promote efferent arteriolar vasodilation and lower intraglomerular pressure (efficacy proven in dogs).">снижают синтез тромбоксана и внутриклубочковое давление (доказано у собак).</span>
+        </li>
+        <li>
+          <strong data-ru="Дискуссия по ограничению белка:" data-en="The protein restriction debate:">Дискуссия по ограничению белка:</strong>
+          <span data-ru="современные данные опровергают идею, что снижение белка само по себе замедляет фиброз почки у хищников. Однако ограничение белка необходимо для снижения генерации мочевины и уремических токсинов (купирование тошноты, гастрита). Технологически невозможно создать низкофосфорный рацион без параллельного снижения мясных ингредиентов." data-en="current evidence refutes the idea that protein reduction alone slows renal fibrosis in carnivores. Yet protein restriction is needed to lower urea and uremic toxin generation (relieving nausea and gastritis). It is technologically impossible to create a low-phosphorus diet without also reducing meat ingredients.">снижение белка само по себе не замедляет фиброз, но необходимо для уменьшения уремических токсинов; низкий фосфор невозможен без снижения мясных ингредиентов.</span>
+        </li>
+      </ul>
+
+      <h3><span data-ru="8.2. Кишечные фосфат-биндеры" data-en="8.2. Intestinal phosphate binders">8.2. Кишечные фосфат-биндеры</span></h3>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th data-ru="Биндер" data-en="Binder">Биндер</th>
+              <th data-ru="Преимущества" data-en="Advantages">Преимущества</th>
+              <th data-ru="Ограничения" data-en="Limitations">Ограничения</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-ru="Препараты алюминия" data-en="Aluminum preparations">Препараты алюминия</td>
+              <td data-ru="Высокоэффективны у мелких животных; плотные контакты кишечного эпителия блокируют системную абсорбцию" data-en="Highly effective in small animals; tight intestinal epithelial junctions block systemic absorption">Высокоэффективны; плотные контакты эпителия блокируют абсорбцию</td>
+              <td data-ru="Запрещено сочетать с цитратами (цитрат растворяет контакты → алюминиевая нейротоксичность)" data-en="Do not combine with citrates (citrate dissolves junctions → aluminum neurotoxicity)">Не сочетать с цитратами</td>
+            </tr>
+            <tr>
+              <td data-ru="Соли кальция" data-en="Calcium salts">Соли кальция</td>
+              <td data-ru="Доступны, эффективно связывают фосфор" data-en="Readily available, effective phosphorus binding">Доступны</td>
+              <td data-ru="Риск гиперкальциемии и внекостной минерализации" data-en="Risk of hypercalcemia and extraosseous mineralization">Риск гиперкальциемии</td>
+            </tr>
+            <tr>
+              <td data-ru="Полимеры (севеламер)" data-en="Polymers (sevelamer)">Полимеры (севеламер)</td>
+              <td data-ru="Не содержат металлов" data-en="Metal-free">Без металлов</td>
+              <td data-ru="Высокая стоимость; связывает жирорастворимые витамины" data-en="High cost; binds fat-soluble vitamins">Дорого; связывает витамины</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout warning">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2L1 14h14L8 2z" stroke="#f57f17" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 6v4M8 12h.005" stroke="#f57f17" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span data-ru="Правило приёма" data-en="Dosing rule">Правило приёма</span>
+        </div>
+        <p><span data-ru="Все фосфат-биндеры должны задаваться <strong>строго во время кормления</strong>." data-en="All phosphate binders must be administered <strong>strictly with meals</strong>.">Все фосфат-биндеры задаются строго во время кормления.</span></p>
+      </div>
+
+      <h3><span data-ru="8.3. Фармакокинетическая адаптация при уремии" data-en="8.3. Pharmacokinetic adaptation in uremia">8.3. Фармакокинетическая адаптация при уремии</span></h3>
+
+      <p>
+        <span data-ru="Снижение СКФ увеличивает период полувыведения (T½) экскретируемых почками препаратов. Для предотвращения интоксикации рассчитывается коэффициент остаточной функции почек: Kf = Креатинин (норма) / Креатинин (пациент)." data-en="Reduced GFR prolongs the half-life (T½) of renally excreted drugs. To prevent intoxication, a residual renal function factor is computed: Kf = Creatinine (normal) / Creatinine (patient).">Снижение СКФ увеличивает T½ почечно экскретируемых препаратов. Коэффициент остаточной функции: Kf = Креатинин(норма) / Креатинин(пациент).</span>
+      </p>
+
+      <div class="diagram-container">
+        <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Стратегии коррекции дозирования при ХБП">
+          <defs>
+            <linearGradient id="dose-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#e8f5e9"/>
+              <stop offset="100%" style="stop-color:#c8e6c9"/>
+            </linearGradient>
+            <marker id="dose-arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+              <path d="M0,0 L8,3 L0,6" fill="#1b5e20"/>
+            </marker>
+          </defs>
+          <rect width="760" height="300" fill="url(#dose-bg)" rx="8"/>
+
+          <rect x="245" y="15" width="270" height="44" rx="10" fill="#1b5e20"/>
+          <text x="380" y="33" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">Коррекция дозирования при ХБП</text>
+          <text x="380" y="50" text-anchor="middle" fill="#fff" font-size="10">Kf = Креатинин(норма) / Креатинин(пациент)</text>
+
+          <line x1="310" y1="59" x2="210" y2="90" stroke="#1b5e20" stroke-width="2" marker-end="url(#dose-arrow)"/>
+          <line x1="450" y1="59" x2="550" y2="90" stroke="#1b5e20" stroke-width="2" marker-end="url(#dose-arrow)"/>
+
+          <rect x="50" y="90" width="290" height="104" rx="10" fill="#fff" stroke="#1b5e20" stroke-width="2"/>
+          <text x="195" y="115" text-anchor="middle" fill="#1b5e20" font-size="12" font-weight="700">Коррекция интервала</text>
+          <text x="195" y="134" text-anchor="middle" fill="#1b5e20" font-size="11">Интервал / Kf</text>
+          <text x="195" y="162" text-anchor="middle" fill="#2e7d32" font-size="10">+ Сохранение Cmax</text>
+          <text x="195" y="180" text-anchor="middle" fill="#c62828" font-size="10">− Риск субтерапевтических падений</text>
+
+          <rect x="420" y="90" width="290" height="104" rx="10" fill="#fff" stroke="#1b5e20" stroke-width="2"/>
+          <text x="565" y="115" text-anchor="middle" fill="#1b5e20" font-size="12" font-weight="700">Коррекция разовой дозы</text>
+          <text x="565" y="134" text-anchor="middle" fill="#1b5e20" font-size="11">Доза × Kf</text>
+          <text x="565" y="162" text-anchor="middle" fill="#2e7d32" font-size="10">+ Стабильная Css</text>
+          <text x="565" y="180" text-anchor="middle" fill="#c62828" font-size="10">− Риск кумуляции</text>
+
+          <line x1="195" y1="194" x2="195" y2="230" stroke="#1b5e20" stroke-width="2" marker-end="url(#dose-arrow)"/>
+          <line x1="565" y1="194" x2="565" y2="230" stroke="#1b5e20" stroke-width="2" marker-end="url(#dose-arrow)"/>
+
+          <rect x="120" y="230" width="520" height="52" rx="10" fill="#e0f2f1" stroke="#00695c" stroke-width="1.5"/>
+          <text x="380" y="252" text-anchor="middle" fill="#00695c" font-size="11" font-weight="700">Выбор метода — по приоритету: поддержание пика vs стабильности</text>
+          <text x="380" y="270" text-anchor="middle" fill="#00695c" font-size="10">мониторинг концентраций при неточном расчёте</text>
+        </svg>
+        <div class="diagram-caption" data-ru="Две стратегии фармакокинетической коррекции при уремии и их компромиссы." data-en="Two pharmacokinetic correction strategies in uremia and their trade-offs.">Две стратегии фармакокинетической коррекции при уремии.</div>
+      </div>
+
+      <h3><span data-ru="8.4. Риски инфузионной терапии" data-en="8.4. Risks of fluid therapy">8.4. Риски инфузионной терапии</span></h3>
+
+      <ul>
+        <li>
+          <strong data-ru="Гипернатриемия:" data-en="Hypernatremia:">Гипернатриемия:</strong>
+          <span data-ru="назначение изотонических растворов (0.9% NaCl, раствор Рингера) пациентам, теряющим гипотоническую мочу, приводит к накоплению натрия и осмотическим повреждениям ЦНС." data-en="administering isotonic fluids (0.9% NaCl, Ringer's solution) to patients losing hypotonic urine causes sodium accumulation and osmotic CNS injury.">изотонические растворы пациентам с гипотонической мочой → осмотическое повреждение ЦНС.</span>
+        </li>
+        <li>
+          <strong data-ru="Объёмная перегрузка:" data-en="Volume overload:">Объёмная перегрузка:</strong>
+          <span data-ru="у олигурических пациентов экзогенная жидкость повышает системное венозное давление с развитием отёка лёгких и плеврального выпота." data-en="in oliguric patients, exogenous fluid raises systemic venous pressure, leading to pulmonary edema and pleural effusion.">у олигурических пациентов → отёк лёгких и плевральный выпот.</span>
+        </li>
+      </ul>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== SECTION 9 ===== -->
+      <h2 id="mismatch"><span data-ru="9. Заключение: Концепция эволюционного несоответствия" data-en="9. Conclusion: The evolutionary mismatch concept">9. Заключение: Концепция эволюционного несоответствия</span></h2>
+
+      <p>
+        <span data-ru="Патофизиологический анализ ХБП у собак и кошек приводит к выводу о наличии фундаментального <strong>эволюционного несоответствия</strong> (evolutionary mismatch)." data-en="The pathophysiological analysis of CKD in dogs and cats points to a fundamental <strong>evolutionary mismatch</strong>.">Патофизиологический анализ приводит к выводу о наличии фундаментального эволюционного несоответствия.</span>
+      </p>
+
+      <p>
+        <span data-ru="В ходе филогенеза млекопитающих регуляторные системы (РААС, симпато-адреналовая, паратгормоновые каскады, механизмы гиперфильтрации) формировались как инструменты жёсткого преодоления <strong>острых терминальных состояний</strong> — массивной кровопотери, острой интоксикации или травмы. В дикой природе адаптационный алгоритм требует немедленного восстановления давления и минерального баланса любой ценой — даже путём разрушения собственных тканей." data-en="Throughout mammalian phylogeny, regulatory systems (RAAS, sympathoadrenal, parathyroid cascades, hyperfiltration mechanisms) evolved as tools for aggressive overcoming of <strong>acute terminal states</strong> — massive blood loss, acute intoxication or trauma. In the wild, the adaptation algorithm demands immediate restoration of pressure and mineral balance at any cost — even by destroying one's own tissues.">Эволюционно регуляторные системы формировались для преодоления острых терминальных состояний любой ценой — даже путём разрушения собственных тканей.</span>
+      </p>
+
+      <p>
+        <span data-ru="Эти эволюционные программы фатальны при столкновении с хроническими, вялопротекающими заболеваниями гериатрического возраста. Организм применяет протоколы экстренной помощи к десятилетнему процессу:" data-en="These evolutionary programs are fatal when faced with chronic, slow-progressing diseases of the geriatric age. The body applies emergency protocols to a decade-long process:">Данные программы фатальны при хронических заболеваниях. Организм применяет протоколы экстренной помощи к десятилетнему процессу:</span>
+      </p>
+
+      <ul>
+        <li><span data-ru="Ренин-ангиотензиновая система повышает давление в клубочках до их механического разрыва." data-en="The renin-angiotensin system raises glomerular pressure until mechanical rupture.">РААС повышает давление в клубочках до механического разрыва.</span></li>
+        <li><span data-ru="Паратгормон растворяет скелет ради миллимолей кальция в крови, затапливая клетки кальцием и блокируя митохондрии." data-en="Parathyroid hormone dissolves the skeleton for millimoles of blood calcium, flooding cells with calcium and blocking mitochondria.">ПТГ растворяет скелет ради миллимолей кальция, затапливая клетки кальцием.</span></li>
+        <li><span data-ru="Скелетные мышцы подвергаются аутолизу для синтеза аммиака и буферизации кислот." data-en="Skeletal muscle undergoes autolysis to synthesize ammonia and buffer acids.">Мышцы подвергаются аутолизу для синтеза аммиака и буферизации кислот.</span></li>
+      </ul>
+
+      <div class="callout info">
+        <div class="callout-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#00695c" stroke-width="1.5"/><path d="M8 5v4M8 11h.005" stroke="#00695c" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span data-ru="Ключевой вывод" data-en="Key takeaway">Ключевой вывод</span>
+        </div>
+        <p><span data-ru="ХБП — автокаталитический процесс, где главными факторами прогрессирования выступают сами компенсаторные реакции. Задача современной ветеринарной нефрологии — <strong>своевременное фармакологическое и диетическое расторжение эволюционно закрепившихся патологических петель</strong>." data-en="CKD is an autocatalytic process in which the compensatory responses themselves are the main drivers of progression. The task of modern veterinary nephrology is <strong>timely pharmacological and dietary breaking of evolutionarily entrenched pathological loops</strong>.">ХБП — автокаталитический процесс, где главные драйверы прогрессирования — сами компенсаторные реакции. Задача нефрологии — своевременное расторжение этих петель.</span></p>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== MEDIA ===== -->
+      <h2 id="media"><span data-ru="Медиа" data-en="Media">Медиа</span></h2>
+
+      <p>
+        <span data-ru="Сопровождающие материалы по теме: аудиоподкаст и видео-лекция." data-en="Supporting materials on the topic: an audio podcast and a video lecture.">Сопровождающие материалы по теме: аудиоподкаст и видео-лекция.</span>
+      </p>
+
+      <div class="media-card">
+        <div class="media-label" data-ru="Аудио · подкаст" data-en="Audio · podcast">Аудио · подкаст</div>
+        <h3><span data-ru="Почему почки заставляют организм растворять кости" data-en="Why kidneys make the body dissolve bones">Почему почки заставляют организм растворять кости</span></h3>
+        <p>
+          <span data-ru="Разбор минерально-костного каскада CKD-MBD: фосфор, паратиреоидный гормон (PTH) и остеодистрофия у кошек и собак — простым языком." data-en="An explanation of the CKD-MBD mineral-bone cascade: phosphorus, parathyroid hormone (PTH) and osteodystrophy in cats and dogs — in plain language.">Разбор минерально-костного каскада CKD-MBD: фосфор, паратиреоидный гормон (PTH) и остеодистрофия — простым языком.</span>
+        </p>
+        <div class="audio-player">
+          <audio controls preload="metadata">
+            <source src="../assets/Почему_почки_заставляют_организм_растворять_кости.m4a" type="audio/mp4" />
+            <span data-ru="Ваш браузер не поддерживает аудио." data-en="Your browser does not support audio.">Ваш браузер не поддерживает аудио.</span>
+          </audio>
+        </div>
+      </div>
+
+      <div class="media-card">
+        <div class="media-label" data-ru="Видео · лекция" data-en="Video · lecture">Видео · лекция</div>
+        <h3><span data-ru="ХБП — анатомия состояния" data-en="CKD — anatomy of the condition">ХБП — анатомия состояния</span></h3>
+        <p>
+          <span data-ru="Видеообзор ключевых механизмов и органных последствий хронической болезни почек у кошек и собак: от нефрона до системных дисфункций." data-en="A video overview of the key mechanisms and organ consequences of chronic kidney disease in cats and dogs: from the nephron to systemic dysfunctions.">Видеообзор ключевых механизмов и органных последствий ХБП у кошек и собак: от нефрона до системных дисфункций.</span>
+        </p>
+        <div class="video-wrapper">
+          <video controls preload="metadata" poster="">
+            <source src="../assets/ХБП__Анатомия_состояния.mp4" type="video/mp4" />
+            <span data-ru="Ваш браузер не поддерживает видео." data-en="Your browser does not support video.">Ваш браузер не поддерживает видео.</span>
+          </video>
+        </div>
+      </div>
+
+      <hr class="article-section-divider" />
+
+      <!-- ===== REFERENCES ===== -->
+      <h2 id="references"><span data-ru="Литература" data-en="References">Литература</span></h2>
+
+      <ol class="ref-list">
+        <li><span data-ru="IRIS Staging of CKD in Dogs and Cats (Updated 2023). International Renal Interest Society." data-en="IRIS Staging of CKD in Dogs and Cats (Updated 2023). International Renal Interest Society.">IRIS Staging of CKD in Dogs and Cats (Updated 2023). International Renal Interest Society.</span></li>
+        <li><span data-ru="Polzin, D. J. (2011). Chronic kidney disease in small animals. <em>Veterinary Clinics: Small Animal Practice</em>, 41(1), 15-35." data-en="Polzin, D. J. (2011). Chronic kidney disease in small animals. <em>Veterinary Clinics: Small Animal Practice</em>, 41(1), 15-35.">Polzin, D. J. (2011). Chronic kidney disease in small animals. <em>Veterinary Clinics: Small Animal Practice</em>, 41(1), 15-35.</span></li>
+        <li><span data-ru="Brenner, B. M. (1985). Nephron adaptation to renal injury or ablation. <em>American Journal of Physiology-Renal Physiology</em>, 249(3), F324-F337." data-en="Brenner, B. M. (1985). Nephron adaptation to renal injury or ablation. <em>American Journal of Physiology-Renal Physiology</em>, 249(3), F324-F337.">Brenner, B. M. (1985). Nephron adaptation to renal injury or ablation. <em>American Journal of Physiology-Renal Physiology</em>, 249(3), F324-F337.</span></li>
+        <li><span data-ru="Bricker, N. S. (1972). On the pathogenesis of the uremic state: an exposition of the 'trade-off hypothesis'. <em>N Engl J Med</em>, 286(20), 1093-1099." data-en="Bricker, N. S. (1972). On the pathogenesis of the uremic state: an exposition of the 'trade-off hypothesis'. <em>N Engl J Med</em>, 286(20), 1093-1099.">Bricker, N. S. (1972). On the pathogenesis of the uremic state: an exposition of the 'trade-off hypothesis'. <em>N Engl J Med</em>, 286(20), 1093-1099.</span></li>
+        <li><span data-ru="Elliott, J., &amp; Barber, P. J. (1998). Feline chronic renal failure: clinical findings in 80 cases. <em>Journal of Small Animal Practice</em>, 39(2), 78-85." data-en="Elliott, J., &amp; Barber, P. J. (1998). Feline chronic renal failure: clinical findings in 80 cases. <em>Journal of Small Animal Practice</em>, 39(2), 78-85.">Elliott, J., &amp; Barber, P. J. (1998). Feline chronic renal failure: clinical findings in 80 cases. <em>Journal of Small Animal Practice</em>, 39(2), 78-85.</span></li>
+      </ol>
+
+      <div class="article-disclaimer">
+        <strong data-ru="Дисклеймер." data-en="Disclaimer.">Дисклеймер.</strong>
+        <span data-ru="Данный материал носит образовательный характер и не заменяет очную консультацию ветеринарного врача. Любые диагностические и терапевтические решения принимаются лечащим специалистом на основании полного обследования пациента." data-en="This material is educational and does not replace an in-person veterinary consultation. All diagnostic and therapeutic decisions are made by the attending clinician based on a full patient assessment."> Материал носит образовательный характер и не заменяет консультацию ветеринарного врача.</span>
+      </div>
+
+      <a href="../index.html#veterinary" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 4l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-ru="Назад к разделу «Ветеринария»" data-en="Back to Veterinary">Назад к разделу «Ветеринария»</span>
+      </a>
+
+    </article>
+  </main>
+
+  <script>
+  (function () {
+    'use strict';
+    var KEY = 'budmed-news-lang';
+
+    function applyLanguage(lang) {
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+      document.documentElement.setAttribute('lang', lang);
+      document.querySelectorAll('[data-ru][data-en]').forEach(function (el) {
+        var text = el.getAttribute('data-' + lang);
+        if (text) { el.innerHTML = text; }
+      });
+    }
+
+    var saved = localStorage.getItem(KEY) || 'ru';
+    applyLanguage(saved);
+
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var lang = btn.getAttribute('data-lang');
+        applyLanguage(lang);
+        localStorage.setItem(KEY, lang);
+      });
+    });
+  })();
+  </script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

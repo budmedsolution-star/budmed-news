@@ -20,21 +20,45 @@
   };
 
   // ─── Helpers ───
+  // Storage safe helpers: fall back to in-memory Map when localStorage is
+  // unavailable (file:// in strict modes, sandboxed/opaque origins, blocked storage).
+  var memStorage = {};
+
+  function storageGet(key) {
+    try {
+      var v = localStorage.getItem(key);
+      if (v === null) delete memStorage[key]; else memStorage[key] = v;
+      return v;
+    } catch (e) {
+      return Object.prototype.hasOwnProperty.call(memStorage, key) ? memStorage[key] : null;
+    }
+  }
+
+  function storageSet(key, val) {
+    memStorage[key] = val;
+    try { localStorage.setItem(key, val); } catch (e) {}
+  }
+
+  function storageRemove(key) {
+    delete memStorage[key];
+    try { localStorage.removeItem(key); } catch (e) {}
+  }
+
   function getLang() {
-    return localStorage.getItem('budmed-news-lang') || 'ru';
+    return storageGet('budmed-news-lang') || 'ru';
   }
 
   function getSession() {
-    try { return JSON.parse(localStorage.getItem('budmed-premium-session') || 'null'); }
+    try { return JSON.parse(storageGet('budmed-premium-session') || 'null'); }
     catch (e) { return null; }
   }
 
   function setSession(data) {
-    localStorage.setItem('budmed-premium-session', JSON.stringify(data));
+    storageSet('budmed-premium-session', JSON.stringify(data));
   }
 
   function clearSession() {
-    localStorage.removeItem('budmed-premium-session');
+    storageRemove('budmed-premium-session');
   }
 
   function isUnlocked(slug) {
@@ -44,16 +68,16 @@
   }
 
   function getPendingEmail() {
-    try { return JSON.parse(localStorage.getItem('budmed-premium-pending') || 'null'); }
+    try { return JSON.parse(storageGet('budmed-premium-pending') || 'null'); }
     catch (e) { return null; }
   }
 
   function setPendingEmail(email) {
-    localStorage.setItem('budmed-premium-pending', JSON.stringify({ email: email, ts: Date.now() }));
+    storageSet('budmed-premium-pending', JSON.stringify({ email: email, ts: Date.now() }));
   }
 
   function clearPendingEmail() {
-    localStorage.removeItem('budmed-premium-pending');
+    storageRemove('budmed-premium-pending');
   }
 
   // ─── API Call ───
@@ -305,6 +329,8 @@
   // Expose for external use
   window.__initPremiumCards = initPremiumCards;
   window.__isUnlocked = isUnlocked;
+  window.__openPremiumModal = openPremiumModal;
+  window.__closePremiumModal = closePremiumModal;
 
   // Run on DOM ready
   if (document.readyState === 'loading') {

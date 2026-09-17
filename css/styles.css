@@ -1038,6 +1038,119 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================
+   PREMIUM PAGE GATE (article pages)
+   ============================================ */
+.premium-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-container-lowest);
+  padding: var(--space-xl);
+  overflow-y: auto;
+}
+
+.premium-gate.is-open {
+  display: flex;
+}
+
+body.has-premium-gate {
+  overflow: hidden;
+}
+
+.premium-gate-card {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  padding: var(--space-2xl) var(--space-xl);
+  border-radius: var(--radius-xl, 20px);
+  background: var(--surface);
+  border: 1px solid var(--outline-variant);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.06);
+}
+
+.premium-gate-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  background: linear-gradient(135deg, #fdf3e0 0%, #f5e1b8 100%);
+  border-radius: 50%;
+  margin-bottom: var(--space-md);
+}
+
+.premium-gate-icon svg {
+  width: 30px;
+  height: 30px;
+  color: #7a5931;
+}
+
+.premium-gate-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #c9a050 0%, #e8c878 100%);
+  color: #3d2e0f;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+}
+
+.premium-gate h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: var(--space-sm);
+}
+
+.premium-gate p {
+  font-size: 0.9375rem;
+  color: var(--on-surface-variant);
+  line-height: 1.55;
+  margin-bottom: var(--space-lg);
+}
+
+.premium-gate-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #c9a050 0%, #e8c878 100%);
+  color: #3d2e0f;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-md, 12px);
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: var(--space-md);
+}
+
+.premium-gate-cta:hover {
+  box-shadow: 0 4px 16px rgba(201, 160, 80, 0.4);
+}
+
+.premium-gate-alt {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--tertiary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.premium-gate-alt:hover {
+  color: #5a3f1e;
+}
+
+/* ============================================
    PREMIUM LANDING
    ============================================ */
 .subscribe-section {

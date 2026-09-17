@@ -1,13 +1,13 @@
 title:
-  ru: "Патофизиология ХБП у мелких домашних животных (IRIS 2026)"
-  en: "Pathophysiology of CKD in Small Animals (IRIS 2026)"
+  ru: Патофизиология ХБП у мелких домашних животных (IRIS 2026)
+  en: Pathophysiology of CKD in Small Animals (IRIS 2026)
 excerpt:
-  ru: "Системный патогенез ХБП у кошек и собак: анатомические ограничения, уремический каскад, CKD-MBD, внутриклубочковая гемодинамика и концепция эволюционного несоответствия."
-  en: "Systemic CKD pathogenesis in cats and dogs: anatomical limits, uremic cascade, CKD-MBD, intrarenal hemodynamics and the evolutionary mismatch concept."
-category: "veterinary"
-date: "2026-09-15"
+  ru: 'Системный патогенез ХБП у кошек и собак: анатомические ограничения, уремический каскад, CKD-MBD, внутриклубочковая гемодинамика и концепция эволюционного несоответствия.'
+  en: 'Systemic CKD pathogenesis in cats and dogs: anatomical limits, uremic cascade, CKD-MBD, intrarenal hemodynamics and the evolutionary mismatch concept.'
+category: veterinary
+date: 2026-09-15
 read_time: 22
-premium: false
+premium: true
 manual_html: true
-file: "articles/Pathophysiology of chronic kidney disease(IRIS 2026).html"
+file: articles/Pathophysiology of chronic kidney disease(IRIS 2026).html
 order: 1

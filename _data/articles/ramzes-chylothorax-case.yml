@@ -1,13 +1,13 @@
 title:
-  ru: "Клинический анализ кейса: Кане-Корсо, 11 лет с хилёзным плевритом и полиорганной патологией"
-  en: "Clinical Case Analysis: 11-Year-Old Cane Corso with Chylous Pleuritis and Multiorgan Pathology"
+  ru: 'Клинический анализ кейса: Кане-Корсо, 11 лет с хилёзным плевритом и полиорганной патологией'
+  en: 'Clinical Case Analysis: 11-Year-Old Cane Corso with Chylous Pleuritis and Multiorgan Pathology'
 excerpt:
-  ru: "Клинический разбор пациента Рамзеса (Кане-Корсо, 11 лет): хилёзный плевральный выпот неопластического генеза, ХБП Стадия 2 (IRIS), костный болевой синдром, протокол CHOP и стратегия ведения. Включает медиа и материалы для пациента."
-  en: "Clinical case review of Ramzes (Cane Corso, 11 years): neoplastic chylous pleural effusion, CKD Stage 2 (IRIS), bone pain syndrome, CHOP protocol and management strategy. Includes media and patient materials."
-category: "veterinary"
-date: "2026-09-17"
+  ru: 'Клинический разбор пациента Рамзеса (Кане-Корсо, 11 лет): хилёзный плевральный выпот неопластического генеза, ХБП Стадия 2 (IRIS), костный болевой синдром, протокол CHOP и стратегия ведения. Включает медиа и материалы для пациента.'
+  en: 'Clinical case review of Ramzes (Cane Corso, 11 years): neoplastic chylous pleural effusion, CKD Stage 2 (IRIS), bone pain syndrome, CHOP protocol and management strategy. Includes media and patient materials.'
+category: veterinary
+date: 2026-09-17
 read_time: 48
-premium: false
+premium: true
 manual_html: true
-file: "articles/ramzes-chylothorax-case.html"
+file: articles/ramzes-chylothorax-case.html
 order: 2

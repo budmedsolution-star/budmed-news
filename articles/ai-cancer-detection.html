@@ -203,38 +203,102 @@
       margin: var(--space-2xl) 0;
     }
 
+    /* Sticky compact TOC (collapsible dropdown) */
     .toc {
+      position: sticky;
+      top: 64px;
+      z-index: 90;
       background: var(--surface-container-low);
+      border: 1px solid var(--outline-variant);
       border-radius: var(--radius-md);
-      padding: var(--space-lg) var(--space-xl);
-      margin: var(--space-xl) 0;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      margin: 0 0 var(--space-xl);
+      padding: 0;
     }
-    .toc h3 {
-      font-size: 1rem;
+    .toc-toggle {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      padding: 12px 16px;
+      background: transparent;
+      border: 0;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      font: inherit;
+      color: var(--on-surface);
+      text-align: left;
+    }
+    .toc-toggle:hover { background: rgba(0, 0, 0, 0.05); }
+    .toc-toggle:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: -2px;
+    }
+    .toc-toggle-icon { flex: 0 0 auto; display: inline-flex; color: var(--primary); }
+    .toc-toggle-label {
+      font-size: 0.8125rem;
       font-weight: 700;
-      margin-bottom: var(--space-md);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
       color: var(--primary);
     }
-    .toc ol {
-      padding-left: var(--space-lg);
-      counter-reset: toc-counter;
-      list-style: none;
+    .toc-toggle-count {
+      margin-left: auto;
+      font-size: 0.75rem;
+      color: var(--on-surface-variant);
     }
-    .toc li {
+    .toc-toggle-chevron {
+      flex: 0 0 auto;
+      color: var(--primary);
+      transition: transform 0.2s ease;
+    }
+    .toc.is-open .toc-toggle-chevron { transform: rotate(180deg); }
+    .toc-panel {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      max-height: min(65vh, 520px);
+      overflow-y: auto;
+      background: var(--surface);
+      border: 1px solid var(--outline-variant);
+      border-top: 0;
+      border-radius: 0 0 var(--radius-md) var(--radius-md);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.16);
+      padding: 6px 0;
+    }
+    .toc-panel ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      counter-reset: toc-counter;
+    }
+    .toc-panel li {
       counter-increment: toc-counter;
       font-size: 0.9375rem;
-      line-height: 1.8;
+      line-height: 1.6;
     }
-    .toc li::before {
-      content: counter(toc-counter) ". ";
-      font-weight: 600;
-      color: var(--primary);
-    }
-    .toc a {
+    .toc-panel a {
+      display: flex;
+      gap: 8px;
+      padding: 8px 16px;
       color: var(--on-surface);
       text-decoration: none;
     }
-    .toc a:hover { color: var(--primary); text-decoration: underline; }
+    .toc-panel a::before {
+      content: counter(toc-counter) ". ";
+      min-width: 2em;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .toc-panel a:hover {
+      background: rgba(0, 0, 0, 0.05);
+      color: var(--primary);
+    }
+    @media (max-width: 600px) {
+      .toc-toggle-count { display: none; }
+    }
+    [id] { scroll-margin-top: 160px; }
 
     .article-disclaimer {
       background: var(--surface-container-low);
@@ -306,9 +370,17 @@
         Все статьи раздела «AI в медицине»
       </a>
 
-      <nav class="toc" aria-label="Table of contents">
-        <h3>Содержание</h3>
-        <ol>
+      <nav class="toc" aria-label="Содержание">
+        <button type="button" class="toc-toggle" aria-expanded="false" aria-controls="tocPanel">
+          <span class="toc-toggle-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4h14M2 9h14M2 14h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <span class="toc-toggle-label">Содержание</span>
+          <span class="toc-toggle-count"></span>
+          <svg class="toc-toggle-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="toc-panel" id="tocPanel" hidden>
+          <ol>
           <li><a href="#oncology">AI и онкология</a></li>
           <li><a href="#mammography">Маммография + AI</a></li>
           <li><a href="#masai">MASAI-trial: прорыв</a></li>
@@ -317,6 +389,7 @@
           <li><a href="#risks">Риски ложных результатов</a></li>
           <li><a href="#references">Литература</a></li>
         </ol>
+        </div>
       </nav>
 
       <!-- ===== SECTION 1 ===== -->
@@ -511,6 +584,31 @@
   </button>
 
   <script>
+    (function(){
+      var toc = document.querySelector('.toc');
+      if (!toc) return;
+      var toggle = toc.querySelector('.toc-toggle');
+      var panel = toc.querySelector('.toc-panel');
+      if (!toggle || !panel) return;
+      var countEl = toggle.querySelector('.toc-toggle-count');
+      if (countEl && !countEl.getAttribute('data-ru')) {
+        var count = panel.querySelectorAll('li').length;
+        var n10 = count % 10, n100 = count % 100;
+        var word = (n10 === 1 && n100 !== 11) ? 'раздел' : (n10 >= 2 && n10 <= 4 && (n100 < 10 || n100 >= 20)) ? 'раздела' : 'разделов';
+        countEl.textContent = count + ' ' + word;
+      }
+      function setOpen(open){
+        toc.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        panel.hidden = !open;
+      }
+      toggle.addEventListener('click', function(){ setOpen(!toc.classList.contains('is-open')); });
+      panel.addEventListener('click', function(e){ if (e.target.closest('a')) setOpen(false); });
+      document.addEventListener('click', function(e){ if (!toc.contains(e.target)) setOpen(false); });
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && toc.classList.contains('is-open')) { setOpen(false); toggle.focus(); }
+      });
+    })();
     const scrollBtn = document.querySelector('.scroll-top');
     window.addEventListener('scroll', () => {
       scrollBtn.classList.toggle('visible', window.scrollY > 400);

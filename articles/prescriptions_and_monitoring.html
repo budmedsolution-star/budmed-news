@@ -55,11 +55,23 @@
   .badge-info{background:rgba(134,239,172,.16);color:#BBF7D0;}
   .badge-info .dot{background:var(--sage);}
 
-  /* ---- toc ---- */
-.toc{background:var(--surface);border-bottom:1px solid var(--line);padding:16px 0;position:sticky;top:0;z-index:800;box-shadow:0 2px 12px rgba(10,37,35,.07);}
-.toc .wrap{display:flex;flex-wrap:wrap;gap:20px;font-size:12.5px;}
-.toc a{color:var(--primary);font-weight:600;text-decoration:none;}
-.toc a:hover{text-decoration:underline;}
+  /* ---- toc: compact sticky dropdown ---- */
+.toc{background:var(--surface);border:1px solid var(--line);position:sticky;top:0;z-index:800;box-shadow:0 2px 12px rgba(10,37,35,.07);max-width:960px;margin:0 auto;border-radius:8px;}
+.toc-toggle{display:flex;align-items:center;gap:10px;width:100%;padding:12px 16px;background:transparent;border:0;border-radius:8px;cursor:pointer;font:inherit;color:var(--ink);text-align:left;}
+.toc-toggle:hover{background:rgba(0,0,0,.05);}
+.toc-toggle:focus-visible{outline:2px solid var(--primary);outline-offset:-2px;}
+.toc-toggle-icon{flex:0 0 auto;display:inline-flex;color:var(--primary);}
+.toc-toggle-label{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--primary);}
+.toc-toggle-count{margin-left:auto;font-size:11px;color:var(--info);}
+.toc-toggle-chevron{flex:0 0 auto;color:var(--primary);transition:transform .2s ease;}
+.toc.is-open .toc-toggle-chevron{transform:rotate(180deg);}
+.toc-panel{position:absolute;left:0;right:0;top:100%;max-height:min(65vh,520px);overflow-y:auto;background:#fff;border:1px solid var(--line);border-top:0;border-radius:0 0 8px 8px;box-shadow:0 16px 32px rgba(10,37,35,.16);padding:6px 0;}
+.toc-panel ol{list-style:none;margin:0;padding:0;counter-reset:toc-counter;}
+.toc-panel li{counter-increment:toc-counter;font-size:14px;line-height:1.6;}
+.toc-panel a{display:flex;gap:8px;padding:8px 16px;color:var(--ink);text-decoration:none;font-weight:500;}
+.toc-panel a::before{content:counter(toc-counter) ". ";min-width:2em;font-weight:600;color:var(--primary);}
+.toc-panel a:hover{background:rgba(0,0,0,.05);color:var(--primary);}
+@media (max-width:600px){.toc-toggle-count{display:none;}}
 .section,[id]{scroll-margin-top:64px;}
 /* ---- back to top ---- */
 .totop{position:fixed;right:18px;bottom:18px;z-index:850;width:46px;height:46px;border:none;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--ink));color:#fff;cursor:pointer;box-shadow:0 6px 16px rgba(10,37,35,.28);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;}
@@ -255,20 +267,30 @@
   </div>
 </div>
 
-<div class="toc">
-  <div class="wrap">
-    <a href="#episode">1. Эпизод и диагнозы</a>
-    <a href="#therapy">2. Назначенная терапия</a>
-    <a href="#referrals">3. Направления ЕСОЗ</a>
-    <a href="#dexa">4. Динамика DEXA</a>
-    <a href="#labs">5. Лаборатория 01.07.2026</a>
-    <a href="#flags">6. Красные флаги схемы</a>
-    <a href="#altview">7. Альтернативное мнение</a>
-    <a href="#questions">8. Вопросы врачу</a>
-    <a href="#alt">9. Альтернативы и нутриенты</a>
-    <a href="#media">10. Медиа и материалы</a>
+<nav class="toc" aria-label="Содержание">
+  <button type="button" class="toc-toggle" aria-expanded="false" aria-controls="tocPanel">
+    <span class="toc-toggle-icon" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4h14M2 9h14M2 14h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </span>
+    <span class="toc-toggle-label">Содержание</span>
+    <span class="toc-toggle-count"></span>
+    <svg class="toc-toggle-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="toc-panel" id="tocPanel" hidden>
+    <ol>
+      <li><a href="#episode">Эпизод и диагнозы</a></li>
+      <li><a href="#therapy">Назначенная терапия</a></li>
+      <li><a href="#referrals">Направления ЕСОЗ</a></li>
+      <li><a href="#dexa">Динамика DEXA</a></li>
+      <li><a href="#labs">Лаборатория 01.07.2026</a></li>
+      <li><a href="#flags">Красные флаги схемы</a></li>
+      <li><a href="#altview">Альтернативное мнение</a></li>
+      <li><a href="#questions">Вопросы врачу</a></li>
+      <li><a href="#alt">Альтернативы и нутриенты</a></li>
+      <li><a href="#media">Медиа и материалы</a></li>
+    </ol>
   </div>
-</div>
+</nav>
 
 <!-- ACTION SUMMARY -->
 <section class="section" id="actsum" style="border-bottom:1px solid var(--line);padding-top:40px;">
@@ -1133,6 +1155,31 @@ function downloadChecklist(){
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
 </button>
 <script>
+(function(){
+  var toc=document.querySelector('.toc');
+  if(!toc)return;
+  var toggle=toc.querySelector('.toc-toggle');
+  var panel=toc.querySelector('.toc-panel');
+  if(!toggle||!panel)return;
+  var countEl=toggle.querySelector('.toc-toggle-count');
+  if(countEl&&!countEl.getAttribute('data-ru')){
+    var count=panel.querySelectorAll('li').length;
+    var n10=count%10,n100=count%100;
+    var word=(n10===1&&n100!==11)?'раздел':(n10>=2&&n10<=4&&(n100<10||n100>=20))?'раздела':'разделов';
+    countEl.textContent=count+' '+word;
+  }
+  function setOpen(open){
+    toc.classList.toggle('is-open',open);
+    toggle.setAttribute('aria-expanded',open?'true':'false');
+    panel.hidden=!open;
+  }
+  toggle.addEventListener('click',function(){setOpen(!toc.classList.contains('is-open'));});
+  panel.addEventListener('click',function(e){if(e.target.closest('a'))setOpen(false);});
+  document.addEventListener('click',function(e){if(!toc.contains(e.target))setOpen(false);});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&toc.classList.contains('is-open')){setOpen(false);toggle.focus();}
+  });
+})();
 (function(){
   var b=document.querySelector('.totop');
   if(!b)return;
